@@ -37,7 +37,7 @@ const ParkInfo = () => {
               key={index}
               className="flex justify-between md:gap-0 gap-[20px]  items-center pb-4"
             >
-              <div className="border-r w-1/2 md:w-[60%] border-[#B0B0B0] h-[60px] xl:h-[100px] flex items-center">
+              <div className="border-r w-1/2 md:w-[70%] border-[#B0B0B0] h-[60px] xl:h-[100px] flex items-center">
                 <h1
                   dangerouslySetInnerHTML={{ __html: stat.value }}
                   className="leading-[111%] text-[24px] md:text-[32px] fpt-600 xl:text-[44px] text-[#E72430]"

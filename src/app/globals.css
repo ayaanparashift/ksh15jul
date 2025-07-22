@@ -453,7 +453,7 @@ h6:not(.spotlightheaddd) {
     transition: all 0.5s;
   }
   .park_name {
-    bottom: 15px !important;
+    bottom: 20px !important;
   }
 }
 .hotspot.active {

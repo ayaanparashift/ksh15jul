@@ -44,7 +44,7 @@ export const mapslided2 = [
   {
     parkimg: "/homepage/pcard/hosurmapbe.png",
     title: "KSH Hosur I",
-    city: "Hosur, Near Bangalore",
+    city: "Hosur (Near Bangalore)",
     tarea: "1.2 MN. SQ.FT.",
     parkLink: "/ksh-hosur-i",
     tbuild: "04 BUILDINGS",
@@ -54,7 +54,7 @@ export const mapslided3 = [
   {
     parkimg: "/homepage/pcard/hosurmapbe.png",
     title: "Upcoming",
-    city: "Hosur, Near Bangalore",
+    city: "Hosur (Near Bangalore)",
     tarea: "1 MN. SQ.FT.",
     parkLink: "/ksh-hosur-i",
     tbuild: "04 BUILDINGS",
