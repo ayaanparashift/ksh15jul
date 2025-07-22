@@ -76,7 +76,7 @@
 //             className="fsans-600 text-[#092241] pb-2 text-2xl md:text-3xl whitespace-nowrap overflow-hidden leading-[33px] border-b-[#092241] border-opacity-[0.34] border-b-[1px]"
 //           >
 //             Defining Characteristics of <br className="lg:hidden flex" />
-//             Hosur, Near Bangalore
+//             Hosur (Near Bangalore)
 //           </motion.h1>
 //         </div>
 
@@ -234,7 +234,7 @@ const CharSlide = () => {
             className="fsans-600 text-[#092241] pb-2 text-2xl md:text-3xl whitespace-nowrap overflow-hidden leading-[33px] border-b-[#092241] border-opacity-[0.34] border-b-[1px]"
           >
             Defining Characteristics of <br className="lg:hidden flex" />
-            Hosur, Near Bangalore
+            Hosur (Near Bangalore)
           </motion.h1>
         </div>
 

@@ -5,7 +5,7 @@ const ParkInfo = () => {
   const stats = [
     { value: "1.2 MN SQ. FT.", label: "Total <br/> Area" },
     { value: "04 No.", label: "Total<br/>Buildings" },
-    { value: "Hosur,<br/>Tamil Nadu", label: "Park<br/>Location" },
+    { value: "Hosur,<br/>(Near Bangalore)", label: "Park<br/>Location" },
   ];
 
   return (
