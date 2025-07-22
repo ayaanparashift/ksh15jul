@@ -426,7 +426,7 @@ const Usp = () => {
     {
       title: "3. Advanced Safety and Emergency Preparedness",
       content:
-        "Equipped with 24-hour security, CCTV, drone monitoring, and robust emergency response teams with on-site medical support, our parks prioritize safety at every level.",
+        "Our parks are equipped with round-the-clock security, comprehensive CCTV surveillance, and routine monitoring protocols, ensuring a safe and secure environment at all times.",
     },
     {
       title: "4. Sustainable and Smart Resource Management",

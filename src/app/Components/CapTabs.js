@@ -14,7 +14,7 @@ export const tabs = [
     title: "Capital Deployment",
     heading: <>Capital Deployment</>,
     content:
-      "Our smart capital deployment approach and strong partnerships help us build start-of-the-art facilities suitable for a whole range of industries.<br/><br/> We know how to use capital wisely to allocate resources across people, technology, and the environment to deliver infrastructure that exactly fits your business needs.",
+      "Our smart capital deployment approach and strong partnerships help us build  State-of-the-art facilities suitable for a whole range of industries.<br/><br/> We know how to use capital wisely to allocate resources across people, technology, and the environment to deliver infrastructure that exactly fits your business needs.",
     images: {
       top: ["/OurCapabilities/captf.png"],
       bottom1: ["/OurCapabilities/capBottom1_1.png"],
@@ -36,7 +36,7 @@ export const tabs = [
     title: "Leasing",
     heading: <>Leasing</>,
     content:
-      "We offer flexible leases that work for you. Choose custom-built spaces, move-in ready spaces or whichever option fits your business for a smooth start.",
+      "We offer flexible leasing options that work for you. Choose custom-built spaces, move-in ready spaces or whichever option fits your business for a smooth start.",
     images: {
       top: ["/OurCapabilities/leasef.png"],
       bottom1: ["/OurCapabilities/leb1.png"],

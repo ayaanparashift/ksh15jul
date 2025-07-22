@@ -47,7 +47,7 @@ export const mapslided2 = [
     city: "Hosur, Tamil Nadu",
     tarea: "1.2 MN. SQ.FT.",
     parkLink: "/ksh-hosur-i",
-    tbuild: "05 BUILDINGS",
+    tbuild: "04 BUILDINGS",
   },
 ];
 export const mapslided3 = [
@@ -57,7 +57,7 @@ export const mapslided3 = [
     city: "Hosur, Tamil Nadu",
     tarea: "1 MN. SQ.FT.",
     parkLink: "/ksh-hosur-i",
-    tbuild: "05 BUILDINGS",
+    tbuild: "04 BUILDINGS",
   },
 ];
 export const hotspotData = {
@@ -132,8 +132,7 @@ export const hotspotData = {
     {
       id: 3,
       park_no: "01",
-      park_name:
-        "Chennai<br/><span className='uptext text-red-500'>(Upcoming)</span>",
+      park_name: "KSH Chennai I",
       x: "48.7%",
       y: "71%",
       scale: 2,

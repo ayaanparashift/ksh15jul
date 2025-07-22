@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const ParkInfo = () => {
   const stats = [
     { value: "1.2 MN SQ. FT.", label: "Total <br/> Area" },
-    { value: "05 No.", label: "Total<br/>Buildings" },
+    { value: "04 No.", label: "Total<br/>Buildings" },
     { value: "Hosur,<br/>Tamil Nadu", label: "Park<br/>Location" },
   ];
 

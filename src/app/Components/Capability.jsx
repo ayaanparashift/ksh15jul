@@ -34,7 +34,7 @@ const Capabilities = () => {
         </>
       ),
       content:
-        "Our smart capital deployment approach and strong partnerships help us build start-of-the-art facilities suitable for a whole range of industries. We know how to use capital wisely to allocate resources across people, technology, and the environment to deliver infrastructure that fits exactly what your business needs.",
+        "Our smart capital deployment approach and strong partnerships help us build state-of-the-art facilities suitable for a whole range of industries. We know how to use capital wisely to allocate resources across people, technology, and the environment to deliver infrastructure that fits exactly what your business needs.",
       images: {
         top: ["/OurCapabilities/Cap_top1.png"],
         bottom1: ["/OurCapabilities/capBottom1_1.png"],
