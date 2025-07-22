@@ -72,7 +72,7 @@ const CharAcc = () => {
             <div className="overflow-x-hidden h-fit whitespace-nowrap">
               <h2 className="md:text-[44px] text-[22px] leading-[111%] w-full pb-[10px] border-b xl:mb-[66px] mb-[36px] text-[#092241] border-[#d7d7d7]">
                 Defining Characteristics of <br className="lg:hidden flex" />
-                Hosur, Tamil Nadu
+                Hosur, Near Bangalore
               </h2>
             </div>
           </div>
