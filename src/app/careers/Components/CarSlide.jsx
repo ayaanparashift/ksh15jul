@@ -347,7 +347,7 @@ import CareerSlideCard from "./CareerSlideCard";
 //     title: "Jeet Bhanushali",
 //     subtitle: "Leasing",
 //     description:
-//       "At KSH INFRA, business development goes beyond targets—it’s about ownership, collaboration, and client-focused growth. The environment here empowers you to lead, learn, and make an impact.",
+//       "At KSH INFRA, Business Development goes beyond targets—it’s about ownership, collaboration, and client-focused growth. The environment here empowers you to lead, learn, and make an impact.",
 //   },
 //   {
 //     simgs: "/Career/finalcareer/shubh.png",
@@ -463,7 +463,7 @@ const sld = [
     title: "Jeet Bhanushali",
     subtitle: "Leasing",
     description:
-      "At KSH INFRA, business development goes beyond targets—it’s about ownership, collaboration, and client-focused growth. The environment here empowers you to lead, learn, and make an impact.",
+      "At KSH INFRA, Business Development goes beyond targets—it’s about ownership, collaboration, and client-focused growth. The environment here empowers you to lead, learn, and make an impact.",
   },
 
   // Slide 2 (1 woman)

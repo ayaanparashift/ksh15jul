@@ -246,7 +246,7 @@ const aboutGrowthData = [
     delay: 0.2,
   },
   {
-    title: "Careers @KSH",
+    title: "Careers @ KSH INFRA",
     description:
       "Grow with a team that values innovation, collaboration, and professional development.",
     image: "./AboutPage/AboutGrowth/about-growth.png",

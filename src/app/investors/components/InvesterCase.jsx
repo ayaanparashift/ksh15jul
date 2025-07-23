@@ -345,7 +345,7 @@ const InvesterCase = () => {
                 // viewport={{ amount: 0.1, once: true }}
                 className="text-[#151515]  whitespace-nowrap overflow-hidden pb-2 text-3xl leading-[33px] border-b-[#464646] border-b-[1px]"
               >
-                Mapletree Investments - Singapore
+                Mapletree Investments
               </h1>
               <div
                 // initial={{ opacity: 0 }}

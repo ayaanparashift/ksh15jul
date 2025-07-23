@@ -33,8 +33,8 @@ const InvesterSec2 = () => {
             >
               <p>
                 Large global investors have placed their confidence in KSH
-                INFRA. We have built over 4 million square feet of warehousing
-                and industrial infrastructure for major global companies like
+                INFRA. We have built over 4 million square feet of Industrial &
+                Logistics Infrastructure for major global companies like
                 Kawasaki Motors, Jabil, Faurecia, Gedia, Rieter, Linamar,
                 Saleri, and Kimberly Clark.
               </p>{" "}

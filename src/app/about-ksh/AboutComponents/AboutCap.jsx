@@ -23,7 +23,7 @@ const tabs = [
     title: "KSH INTEGRATED LOGISTICS",
     heading: "SETTING UP MULTI-CLIENT WAREHOUSING SOLUTIONS PAN-INDIA",
     content:
-      "KSH has over half a million square feet of warehousing across key Indian markets. The facilities are plug-and-play, effectively adaptive to all our clients' needs.",
+      "KSH Integrated Logistics has over half a million square feet of warehousing across key Indian markets. The facilities are plug-and-play, effectively adaptive to all our clients' needs.",
     images: {
       top: ["/AboutPage/aboutSlide/il2.png"],
     },
@@ -33,7 +33,7 @@ const tabs = [
     title: "KSH INTERNATIONAL",
     heading: "A LEADING MAKER OF INSULATED CONDUCTORS ACROSS THE GLOBE.",
     content:
-      "KSH International is a leading manufacturer of bare and insulated Rectangular & round winding wires and transposed cables in India.",
+      "KSH International is a leading manufacturer of bare and insulated rectangular & round winding wires and transposed cables in India.",
     images: {
       top: ["/AboutPage/aboutSlide/kshcopper.png"],
       // top: ["/AboutPage/aboutSlide/int1.png"],
@@ -266,13 +266,12 @@ const AboutCap = () => {
           // transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
           className="text-[#202020] mt-[-45px] flex sm:w-full items-start text-[16px] fsans-600 leading-[26px]"
         >
-          The KSH Group has a storied past, leading to over 450 employees today
-          and a turnover exceeding INR 1,200 crore. Throughout its journey, the
-          KSH Group has strong ties to the logistics and manufacturing sectors.
-          The company’s foundation derives its strength from its core values and
-          a steadfast commitment to excellence. KSH INFRA adheres firmly to this
-          philosophy when undertaking projects for developing industrial and
-          logistics parks.
+          The KSH Group boasts a rich legacy, growing to employ over 450
+          professionals with a turnover surpassing INR 1,200 crore. Rooted in
+          the logistics and manufacturing sectors, the Group has built its
+          success on a foundation of strong core values and an unwavering
+          commitment to excellence. This philosophy continues to guide KSH INFRA
+          in the development of world-class industrial and logistics parks.
         </p>
       </div>
       <div className="bg-[#092241] md:h-[665px] flex items-end justify-end">

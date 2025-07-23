@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 //   "MD - KSH International": {
 //     role: "Leads the international arm of KSH, managing cross-border operations, partnerships, and market expansion.",
 //     expertise:
-//       "Strong background in global business development, operational management, and cultural integration strategies.",
+//       "Strong background in global Business Development, operational management, and cultural integration strategies.",
 //     commitment:
 //       "Focused on expanding KSH’s global footprint while maintaining operational excellence and international synergy.",
 //   },
@@ -104,7 +104,7 @@ const teamMembers = [
   {
     name: "Akhilesh Ayyappan",
     title: "Principal Investments (South), KSH INFRA",
-    description: `Akhilesh Ayyappan serves as Principal – Investments (South) at KSH INFRA, where he leads the company’s investment and expansion strategy across southern India. With many years of experience in real estate acquisitions, private equity partnerships, and business development, Akhilesh has held key roles at Mahindra Lifespaces and IndoSpace, contributing to his deep understanding of diverse asset classes in Tier I and II markets. At KSH INFRA, he is instrumental in sourcing strategic land opportunities, structuring investment deals, and forging partnerships that align with the company’s growth objectives in the Industrial & Logistics infrastructure sector.`,
+    description: `Akhilesh Ayyappan serves as Principal – Investments (South) at KSH INFRA, where he leads the company’s investment and expansion strategy across southern India. With many years of experience in real estate acquisitions, private equity partnerships, and Business Development, Akhilesh has held key roles at Mahindra Lifespaces and IndoSpace, contributing to his deep understanding of diverse asset classes in Tier I and II markets. At KSH INFRA, he is instrumental in sourcing strategic land opportunities, structuring investment deals, and forging partnerships that align with the company’s growth objectives in the Industrial & Logistics infrastructure sector.`,
     linkedin: "",
   },
   {
