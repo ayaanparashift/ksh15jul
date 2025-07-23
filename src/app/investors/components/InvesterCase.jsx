@@ -337,13 +337,14 @@ const InvesterCase = () => {
                 viewport={{ once: true, amount: 0.3 }} // Adjust amount to control trigger point
               /> */}
             </div>
-            <div className="RightCon max-w-1/2 flex flex-wrap wrap  xl-768:mt-14">
+            {/*  */}
+            <div className="RightCon flex-1 lg:p-4 xl-768:mt-14">
               <h1
                 // initial={{ width: 0 }}
                 // whileInView={{ width: "100%" }}
                 // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
                 // viewport={{ amount: 0.1, once: true }}
-                className="text-[#151515]  whitespace-nowrap overflow-hidden pb-2 text-3xl leading-[33px] border-b-[#464646] border-b-[1px]"
+                className="text-[#151515] whitespace-nowrap overflow-hidden pb-2 text-3xl leading-[33px] border-b-[#464646] border-b-[1px]"
               >
                 Mapletree Investments
               </h1>
