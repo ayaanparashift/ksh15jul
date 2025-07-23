@@ -96,14 +96,14 @@ const timelineData = [
   {
     year: 2019,
     content:
-      "KSH INFRA successfully built,leased and exited its project admeasuring 1.2 Million sqft to Mapletree Investments,Singapore",
+      "KSH INFRA successfully built,leased and exited its project admeasuring 1.2 Million sq. ft. to Mapletree Investments,Singapore",
     image: "https://source.unsplash.com/200x200/?building ,night",
     marginTop: "90px",
   },
   {
     year: 2021,
     content:
-      "KSH INFRA partnered with IndoSpace Capital to invest 1000 crores in a joint venture (JV) and commenced construction on its first project under the JV of 1.6 Million sqft with an aim to develop 10 Million sqft across key markets in India",
+      "KSH INFRA partnered with IndoSpace Capital to invest 1000 crores in a joint venture (JV) and commenced construction on its first project under the JV of 1.6 Million sq. ft. with an aim to develop 10 Million sq. ft. across key markets in India",
     image: "https://source.unsplash.com/200x200/?building ,night",
     marginTop: "90px",
   },
