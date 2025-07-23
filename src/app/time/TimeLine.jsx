@@ -72,7 +72,7 @@ const timelineData = [
     id: 11,
     year: 2018,
     content:
-      "Established two projects under 'KSH INFRA admeasuring 1 Million sqft, and successfully exited the projects to Morgan Stanley Investment Fund, USA",
+      "Established two projects under 'KSH INFRA admeasuring 1 Million sq. ft., and successfully exited the projects to Morgan Stanley Investment Fund, USA",
     image: "/time/t11.jpg",
   },
   {
