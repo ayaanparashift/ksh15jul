@@ -1003,7 +1003,7 @@ const Footer = () => {
             </div>
             <div className="">
               <div className="text-[#cfe6fc90] text-sm font-semibold leading-6 max-w-full ">
-                <p className="whitespace-nowrap text-white pb-1 fpt-600">
+                <p className="whitespace-nowrap text-white pb-1 fsans-600">
                   KSH INFRA, Mumbai
                 </p>
                 <p>
@@ -1017,7 +1017,7 @@ const Footer = () => {
           </div>
         </div>
         {/* Footer End */}
-        <div className="pt-[64px] w-[80%] mx-auto pb-[23px] flex flex-col md:flex-row gap-2 text-center items-center justify-center sm:justify-between text-[#6c8dab80] text-sm font-semibold leading-6">
+        <div className="lg:pt-[64px] pt-8 xl:w-[80%] xl:mx-auto pb-[23px] flex flex-col md:flex-row gap-2 lg:text-center lg:items-center justify-start sm:justify-between text-[#6c8dab80] text-sm font-semibold leading-6">
           <p className="text-[#cfe6fc90]">
             © 2025. KSH INFRA. All rights reserved.
           </p>
