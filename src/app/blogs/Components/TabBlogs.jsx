@@ -370,32 +370,200 @@
 
 // export default TabBlogs;
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{ SECOND BELOW }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// "use client";
+// import { useState } from "react";
+// import BlogCard from "./BlogCard";
+// import { motion, AnimatePresence } from "framer-motion";
+
+// const TabBlogs = ({ blogs }) => {
+//   // console.log(blogs, "----------");
+
+//   const tabs = [
+//     { title: "All", id: null },
+//     { title: "News", id: 18 }, // Replace with actual category ID from WordPress
+//     { title: "Blogs", id: 17 }, // Replace with actual category ID from WordPress
+//     //{ title: "Press Release", id: 8 }, // Replace with actual category ID from WordPress
+//   ];
+
+//   const [activeIndex, setActiveIndex] = useState(0);
+//   const [currentPage, setCurrentPage] = useState(1);
+//   const postsPerPage = 6;
+
+//   // Filter blogs based on active category
+//   const blogsToDisplay =
+//     activeIndex === 0
+//       ? blogs
+//       : blogs.filter((blog) => blog.categories.includes(tabs[activeIndex].id));
+
+//   // Pagination Logic
+//   const totalPages = Math.ceil(blogsToDisplay.length / postsPerPage);
+//   const startIndex = (currentPage - 1) * postsPerPage;
+//   const currentBlogs = blogsToDisplay.slice(
+//     startIndex,
+//     startIndex + postsPerPage
+//   );
+
+//   return (
+//     <>
+//       {/* Tabs Section */}
+//       <div className="w-full bg-[#092241]">
+//         <div className="fix12 pt-[50px] flex flex-col gap-[60px] pb-[30px]">
+//           <h2 className="fpt-600 md:text-[44px] sm:text-[32px] text-[24px] text-white">
+//             Other Blogs
+//           </h2>
+//           <div>
+//             <div className="fix12 flex overflow-x-auto scrollbar-hide items-center border-b-2 border-[#BFBFBF]">
+//               {tabs.map((tab, index) => (
+//                 <button
+//                   key={index}
+//                   className={`flex-1 lg:min-w-0 fsans-600 text-[20px] leading-[111%] min-w-[200px] text-center text-sm font-medium transition-colors pb-[15px] whitespace-nowrap ${
+//                     activeIndex === index
+//                       ? "text-[#F7E327] border-b-2 border-[#F7E327]"
+//                       : "text-white hover:text-gray-300"
+//                   }`}
+//                   onClick={() => {
+//                     setActiveIndex(index);
+//                     setCurrentPage(1); // Reset to first page when switching tabs
+//                   }}
+//                 >
+//                   {tab.title}
+//                 </button>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Blog Grid */}
+//       <AnimatePresence mode="wait">
+//         <motion.div
+//           key={currentBlogs.map((id) => id.id)}
+//           className="fix12 py-[70px] grid grid-cols-1 lg:grid-cols-2 gap-y-[65px]"
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: 1 }}
+//           transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
+//           exit={{
+//             opacity: 0,
+//             transition: { duration: 0.5, ease: [0.7, 0, 0.4, 1] },
+//           }}
+//         >
+//           {currentBlogs.length > 0 ? (
+//             currentBlogs.map((blog) => <BlogCard key={blog.id} blog={blog} />)
+//           ) : (
+//             <p className="text-white text-center col-span-2">
+//               No blogs available.
+//             </p>
+//           )}
+//         </motion.div>
+//       </AnimatePresence>
+//       {/* Pagination Controls */}
+//       <div className="pb-[70px]">
+//         {totalPages > 1 && (
+//           <div className="flex justify-center gap-2 mt-6">
+//             {Array.from({ length: totalPages }, (_, index) => (
+//               <button
+//                 key={index}
+//                 className={`px-4 py-2 border rounded ${
+//                   currentPage === index + 1
+//                     ? "bg-[#F7E327] text-black"
+//                     : "bg-gray-200"
+//                 }`}
+//                 onClick={() => setCurrentPage(index + 1)}
+//               >
+//                 {index + 1}
+//               </button>
+//             ))}
+//           </div>
+//         )}
+//       </div>
+//     </>
+//   );
+// };
+
+// export default TabBlogs;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 "use client";
 import { useState } from "react";
 import BlogCard from "./BlogCard";
 import { motion, AnimatePresence } from "framer-motion";
 
 const TabBlogs = ({ blogs }) => {
-  // console.log(blogs, "----------");
-
   const tabs = [
     { title: "All", id: null },
-    { title: "News", id: 18 }, // Replace with actual category ID from WordPress
-    { title: "Blogs", id: 17 }, // Replace with actual category ID from WordPress
-    //{ title: "Press Release", id: 8 }, // Replace with actual category ID from WordPress
+    { title: "News", id: 18 },
+    { title: "Blogs", id: 17 },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
 
-  // Filter blogs based on active category
-  const blogsToDisplay =
-    activeIndex === 0
-      ? blogs
-      : blogs.filter((blog) => blog.categories.includes(tabs[activeIndex].id));
+  const activeTabId = tabs[activeIndex].id;
 
-  // Pagination Logic
+  const blogsToDisplay =
+    activeTabId === null
+      ? blogs
+      : blogs.filter((blog) => blog.categories.includes(activeTabId));
+
   const totalPages = Math.ceil(blogsToDisplay.length / postsPerPage);
   const startIndex = (currentPage - 1) * postsPerPage;
   const currentBlogs = blogsToDisplay.slice(
@@ -405,7 +573,7 @@ const TabBlogs = ({ blogs }) => {
 
   return (
     <>
-      {/* Tabs Section */}
+      {/* Tabs */}
       <div className="w-full bg-[#092241]">
         <div className="fix12 pt-[50px] flex flex-col gap-[60px] pb-[30px]">
           <h2 className="fpt-600 md:text-[44px] sm:text-[32px] text-[24px] text-white">
@@ -423,7 +591,7 @@ const TabBlogs = ({ blogs }) => {
                   }`}
                   onClick={() => {
                     setActiveIndex(index);
-                    setCurrentPage(1); // Reset to first page when switching tabs
+                    setCurrentPage(1);
                   }}
                 >
                   {tab.title}
@@ -437,7 +605,7 @@ const TabBlogs = ({ blogs }) => {
       {/* Blog Grid */}
       <AnimatePresence mode="wait">
         <motion.div
-          key={currentBlogs.map((id) => id.id)}
+          key={currentBlogs.map((id) => id.id).join(",")}
           className="fix12 py-[70px] grid grid-cols-1 lg:grid-cols-2 gap-y-[65px]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -448,7 +616,9 @@ const TabBlogs = ({ blogs }) => {
           }}
         >
           {currentBlogs.length > 0 ? (
-            currentBlogs.map((blog) => <BlogCard key={blog.id} blog={blog} />)
+            currentBlogs.map((blog) => (
+              <BlogCard key={blog.id} blog={blog} activeTabId={activeTabId} />
+            ))
           ) : (
             <p className="text-white text-center col-span-2">
               No blogs available.
@@ -456,7 +626,8 @@ const TabBlogs = ({ blogs }) => {
           )}
         </motion.div>
       </AnimatePresence>
-      {/* Pagination Controls */}
+
+      {/* Pagination */}
       <div className="pb-[70px]">
         {totalPages > 1 && (
           <div className="flex justify-center gap-2 mt-6">
@@ -481,6 +652,36 @@ const TabBlogs = ({ blogs }) => {
 };
 
 export default TabBlogs;
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 // "use client";
 // import { useState, useEffect } from "react";
