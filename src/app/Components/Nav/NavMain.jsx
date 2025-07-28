@@ -135,6 +135,7 @@ export default function NavMain({ onClose }) {
           {/* Top Bar */}
           <div className="flex justify-between min-w-full bg-white ">
             <Link
+              onClick={onClose}
               href="/"
               className="w-[60%] flex items-center pl-[max(5%,calc((100vw-1250px)/2))] py-[20px] border-r border-[#0E3464]"
             >
