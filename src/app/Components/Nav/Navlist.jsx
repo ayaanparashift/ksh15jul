@@ -360,9 +360,9 @@ const Navlist = ({ onClose }) => {
       isDropdown: true,
       children: [
         { title: "Blogs", href: "/blogs" },
-        { title: "Case Studies", href: "#spotlight?tab=case-studies" },
-        { title: "News", href: "#spotlight?tab=news" },
-        { title: "Press Release", href: "#spotlight?tab=press-release" },
+        { title: "Case Studies", href: "/case-studies" },
+        { title: "News", href: "#spotlight" },
+        { title: "Press Release", href: "#spotlight" },
         { title: "Testimonials", href: "#testimonials" },
       ],
     },
