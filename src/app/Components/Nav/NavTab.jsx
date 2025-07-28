@@ -2,7 +2,7 @@ import React from "react";
 import TabSec from "./TabSec";
 import ParkOvBtn from "./ParkOvBtn";
 
-const NavTab = () => {
+const NavTab = ({ onClose }) => {
   // return (
   //   <div
   //     style={{
@@ -29,7 +29,7 @@ const NavTab = () => {
       <h1 className="text-white w-fit flex items-start text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
         Parks
       </h1>
-      <TabSec />
+      <TabSec onClose={onClose} />
       {/* <ParkOvBtn /> */}
     </div>
   );

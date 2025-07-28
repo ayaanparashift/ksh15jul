@@ -347,7 +347,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Navlist = () => {
+const Navlist = ({ onClose }) => {
   const [dropdownOpen, setDropdownOpen] = useState(null);
 
   const navItem = [
@@ -427,6 +427,7 @@ const Navlist = () => {
                   >
                     {item.children.map((child) => (
                       <Link
+                        onClick={onClose}
                         key={child.href}
                         href={child.href}
                         className="text-[#092F5F] fpt-500 text-[20px] first-of-type:pt-5 hover:text-[#E30613] transition-colors duration-300 w-full text-right"
@@ -445,6 +446,7 @@ const Navlist = () => {
               key={item.href}
             >
               <Link
+                onClick={onClose}
                 className="text-[#092F5F] fpt-600 2xl:text-[36px] xl:text-[30px] text-[24px] transition-colors hover:text-[#E30613] duration-[500ms]"
                 href={item.href}
               >

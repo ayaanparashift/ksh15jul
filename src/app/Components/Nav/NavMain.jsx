@@ -185,8 +185,8 @@ export default function NavMain({ onClose }) {
 
           {/* Main Layout: Tabs + List */}
           <div className="flex flex-col lg:flex-row flex-grow overflow-y-hidden">
-            <NavTab />
-            <Navlist />
+            <NavTab onClose={onClose} />
+            <Navlist onClose={onClose} />
           </div>
         </div>
       </motion.div>

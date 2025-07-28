@@ -164,7 +164,7 @@ const col1 = [
 
 const col2 = [{ href: "/ksh-hosur-i", text: "KSH Hosur I" }];
 
-const TabSec = () => {
+const TabSec = ({ onClose }) => {
   return (
     <div className="flex flex-col lg:flex-row justify-center items-start w-full min-1366:pt-[30px] min-1440:pt-[45px] gap-0 text-white">
       {/* Left Image */}
@@ -174,7 +174,7 @@ const TabSec = () => {
           alt="Facility"
           className="object-cover h-auto w-[220px] min-1440:w-[270px]"
         />
-        <ParkOvBtn />
+        <ParkOvBtn onClose={onClose} />
       </div>
 
       {/* Right Section */}
@@ -187,7 +187,7 @@ const TabSec = () => {
           <ul className="flex fsans-600 flex-col">
             {col1.map((item, index) => (
               <li key={index}>
-                <Link href={item.href}>
+                <Link onClick={onClose} href={item.href}>
                   <div className="tab-link border-b border-white/20 py-[16px] min-1440:py-[22px] flex gap-[24px]">
                     <p>—</p>
                     <p>{item.text}</p>
@@ -206,7 +206,7 @@ const TabSec = () => {
           <ul className="flex fsans-600 flex-col">
             {col2.map((item, index) => (
               <li key={index}>
-                <Link href={item.href}>
+                <Link onClick={onClose} href={item.href}>
                   <div className="tab-link border-b border-white/20 py-[16px] min-1440:py-[22px] flex gap-[24px]">
                     <p>—</p>
                     <p>{item.text}</p>
