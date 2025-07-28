@@ -6,14 +6,14 @@ const SustainSec2 = () => {
     <>
       <div className=" ">
         <div className="fix12 flex flex-col lg:flex-row justify-between gap-[20px] lg:gap-[6%] md:py-[90px] py-14">
-          <div className="flex-1 flex flex-col justify-center xl:w-[538px] xl:min-h-[540px] ">
+          <div className="flex-1 flex flex-col justify-start xl:w-[538px] xl:min-h-[540px] ">
             <div className="w-fit">
               <h1
                 // initial={{ opacity: 0, translateX: "-50px" }}
                 // whileInView={{ opacity: 1, translateX: 0 }}
                 // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
                 // viewport={{ amount: 0.1, once: true }}
-                className="text-[#141414] md:text-[44px] sm:text-[32px] text-[24px] fpt-500 md:leading-[48.84px] leading-[110%] pb-3"
+                className="text-[#141414] md:text-[44px] sm:text-[32px] text-[24px] fpt-500 md:leading-[48.84px] leading-[110%]"
               >
                 Where Profit Meets Planet.
               </h1>
