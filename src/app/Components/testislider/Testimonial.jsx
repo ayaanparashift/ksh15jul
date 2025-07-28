@@ -213,11 +213,11 @@ export default function Testimonial() {
   return (
     <div className="xl:py-[100px] py-[50px] bg-[#092241]" id="testimonials">
       <div className="fix12">
-        <h2 className="xl:text-5xl text-2xl font-semibold text-white">
+        <p className="leading-[26px] w-full spotlightheaddd text-[20px] pb-[20px] border-b xl:mb-[66px] mb-[36px] border-[${bclr}] border-opacity-[${bopacity}] fsans-600 text-[#fff] ${clr} linehead-text">
           What Our Clients Say
-        </h2>
+        </p>
 
-        <div className="relative xl:pt-[50px] py-5">
+        <div className="relative">
           <Swiper
             modules={[Navigation]}
             spaceBetween={30}

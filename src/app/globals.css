@@ -1105,3 +1105,9 @@ canvas {
   scrollbar-width: thin;
   scrollbar-color: #6c8dab transparent;
 }
+/* Hide scrollbar arrows (buttons) */
+.custom-scroll::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}

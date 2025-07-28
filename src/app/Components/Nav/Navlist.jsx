@@ -372,7 +372,7 @@ const Navlist = ({ onClose }) => {
   ];
 
   return (
-    <div className="py-[20px] pr-[max(5%,calc((100vw-1250px)/2))] flex flex-col bg-[#fff] border-t border-[#092241] w-[40%] relative">
+    <div className="py-[20px] pr-[max(5%,calc((100vw-1250px)/2))] flex flex-col bg-[#fff] border-t border-[#092241] w-[40%] relative overflow-y-auto custom-scroll">
       <motion.div
         layout
         className="flex flex-col gap-[10px] min-1440:pt-5 min-1366:pt-3 min-1366:gap-[30px] leading-[300%] min-1366:leading-[200%] h-full items-end"
@@ -428,7 +428,7 @@ const Navlist = ({ onClose }) => {
                     {item.children.map((child) => (
                       <Link
                         onClick={onClose}
-                        key={child.href}
+                        key={child.title}
                         href={child.href}
                         className="text-[#092F5F] fpt-500 text-[20px] first-of-type:pt-5 hover:text-[#E30613] transition-colors duration-300 w-full text-right"
                       >
