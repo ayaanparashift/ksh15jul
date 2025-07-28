@@ -440,7 +440,7 @@ const BentoSlider = () => {
   }, []);
 
   return (
-    <div className="bg-[#092241] lg:pt-0 pt-20">
+    <div className="bg-[#092241] lg:py-0 py-14">
       <div className="h-fit fix12">
         <div className="flex flex-col gap-[0px] sm:gap-[98px] md:pb-[85px] relative">
           <BentoHeaderF />

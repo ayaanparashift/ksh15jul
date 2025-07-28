@@ -81,10 +81,10 @@ export default async function Home() {
       <NewUSP />
       <PFetch />
       <TrustedPartners />
+      <Testimonial />
       <EsgF />
       <SlideSectionF />
       <BentoSlider />
-      <Testimonial />
       {/* <NavMain /> */}
       {/* <Navlist /> */}
     </>

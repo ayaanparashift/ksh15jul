@@ -168,72 +168,28 @@ import LineHead from "../Heading/LineHead";
 
 const testimonials = [
   {
-    text: "Legally Always has been an invaluable partner in navigating the complexities of business law.",
-    name: "Sarah Mitchell - Small Business Owner",
+    text: "Our experience at KSH Talegaon Park I has been truly exceptional. We chose this facility after it successfully met our rigorous standards for infrastructure quality, as well as our comprehensive safety and security requirements. What set this collaboration apart was the outstanding support and responsiveness of the KSH INFRA team—extending well beyond our initial move-in period. Their commitment to service and professionalism has been evident throughout our journey. We deeply value the partnership we have forged through this project.",
+    name: "Mr . Yogesh Barve, Managing Director, Klingspor",
   },
   {
-    text: "Their team guided us through a tricky merger with unmatched professionalism.",
-    name: "James Carter - CEO, TechWave",
+    text: "We were in search of a well-located and high-quality industrial infrastructure space for our business in Talegaon, and KSH INFRA emerged as the perfect partner. Even though KSH Talegaon I Park was their first project, we were impressed by the exceptional quality of construction and their professional, solution-oriented approach. The team's positive attitude and commitment to delivery made it a great experience collaborating with them. We are pleased to see KSH INFRA rapidly expanding its footprint across India, and we extend our best wishes for continued success and growth.",
+    name: "Mr. Inder Aurora, Director, Unisource.",
   },
   {
-    text: "I appreciate their proactive communication and transparent legal advice.",
-    name: "Ayesha Khan - Startup Founder",
+    text: "Working with KSH INFRA on their latest project, KSH INFRA Chakan Park 3 at Varale, has been an excellent experience. We are amazed at the speed and proficiency with which all the works were carried out and it was ensured that we got our building according to our plan, apart from the timely possession all other infrastructure works were also completed in time so as not to have any disturbance to our operations and there has been no delay in our project timelines, KSH Infra has also been very flexible to making adjustments to our changing project plans and scope! In a nut shell I will say that KSH Infra is extremely Customer centric  and understands and fulfils the needs of the clients. The Quality of work has been good and KSH Infra was very open to making any changes that we needed in order to suit our production & machine requirements. The entire Park layout is good and attention to details such as broad roads, parking, security etc is good. We look forward to continuing our partnership with them in future endeavours.",
+    name: "Mr. Shyam Datye, India Head, CTC Global",
   },
   {
-    text: "They bring clarity to complex legal issues, which is a rare and valuable trait.",
-    name: "David Brooks - Angel Investor",
+    text: "TEAM KSH has provided us a world-class facility in Chakan Industrial area for our manufacturing operations. Team KSH was extremely supportive and professional in developing the facility for us. We were able to commence operations within two months from moving-in which was very beneficial for us.",
+    name: "NAOKI MATSUMOTO, Chairman, India (Kawasaki)",
   },
   {
-    text: "Highly responsive and always working in our best interest — I trust them fully.",
-    name: "Meera Singh - Creative Director",
+    text: "KSH has been very instrumental during our facility setup and with their expertise in construction and understanding of our manufacturing needs, their collaborative approach allowed them to capture critical requirements to deliver our factory on time.",
+    name: "TODD RENNER, Global Business Unit Manager (Jabil)",
   },
   {
-    text: "I appreciate their proactive communication and transparent legal advice.",
-    name: "Ayesha Khan - Startup Founder",
-  },
-  {
-    text: "They bring clarity to complex legal issues, which is a rare and valuable trait.",
-    name: "David Brooks - Angel Investor",
-  },
-  {
-    text: "Highly responsive and always working in our best interest — I trust them fully.",
-    name: "Meera Singh - Creative Director",
-  },
-  {
-    text: "I appreciate their proactive communication and transparent legal advice.",
-    name: "Ayesha Khan - Startup Founder",
-  },
-  {
-    text: "They bring clarity to complex legal issues, which is a rare and valuable trait.",
-    name: "David Brooks - Angel Investor",
-  },
-  {
-    text: "Highly responsive and always working in our best interest — I trust them fully.",
-    name: "Meera Singh - Creative Director",
-  },
-  {
-    text: "I appreciate their proactive communication and transparent legal advice.",
-    name: "Ayesha Khan - Startup Founder",
-  },
-  {
-    text: "They bring clarity to complex legal issues, which is a rare and valuable trait.",
-    name: "David Brooks - Angel Investor",
-  },
-  {
-    text: "Highly responsive and always working in our best interest — I trust them fully.",
-    name: "Meera Singh - Creative Director",
-  },
-  {
-    text: "I appreciate their proactive communication and transparent legal advice.",
-    name: "Ayesha Khan - Startup Founder",
-  },
-  {
-    text: "They bring clarity to complex legal issues, which is a rare and valuable trait.",
-    name: "David Brooks - Angel Investor",
-  },
-  {
-    text: "Highly responsive and always working in our best interest — I trust them fully.",
-    name: "Meera Singh - Creative Director",
+    text: "KSH Industrial Park at Chakan is a world class industrial facility. We feel privileged to be established here as ease of doing business, safety and security of the plant & workers, infrastructure and service provided by KSH is unparalleled. Rohit Hegde and his team have provided us tremendous support in establishing the business.",
+    name: "RAJ GHOGALE, Managing Director (Callisons)",
   },
 ];
 
@@ -251,14 +207,13 @@ export default function Testimonial() {
   };
 
   return (
-    <div className="xl:py-[100px] py-[50px] bg-white">
-      <div className="fix12 px-4">
-        <LineHead heading="Testimonials" />
-        <h2 className="xl:text-5xl text-2xl font-semibold ">
+    <div className="xl:py-[100px] py-[50px] bg-[#092241]" id="testimonials">
+      <div className="fix12">
+        <h2 className="xl:text-5xl text-2xl font-semibold text-white">
           What Our Clients Say
         </h2>
 
-        <div className="relative xl:py-[50px] py-5">
+        <div className="relative xl:pt-[50px] py-5">
           <Swiper
             modules={[Navigation]}
             spaceBetween={30}
@@ -269,17 +224,21 @@ export default function Testimonial() {
             }}
             onSlideChange={onSlideChange}
             breakpoints={{
-              1366: { slidesPerView: 3.5 }, // ≥1366px
-              1024: { slidesPerView: 3 }, // ≥1024px
-              640: { slidesPerView: 1.2 }, // ≥640px (optional for tablets)
+              1366: { slidesPerView: 3 }, // ≥1024px
+
               0: { slidesPerView: 1 }, // default (mobile)
             }}
           >
             {testimonials.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="h-full flex flex-col">
-                  <div className="flex flex-col justify-between rounded-xl p-6 h-[200px] bg-[#EEF0F3] text-black shadow">
-                    <p className="text-lg leading-relaxed mb-6">{item.text}</p>
+                <div className="h-fit flex flex-col">
+                  <div className="flex flex-col justify-between p-6 h-[280px] bg-[#EEF0F3] text-black shadow">
+                    <div className="h-[177px] overflow-y-auto mb-5 lg:mb-6 custom-scroll">
+                      <p className="lg:text-[18px] text-[16px] leading-[150%] text-left">
+                        {item.text}
+                      </p>
+                    </div>
+
                     <div className="text-sm font-semibold">{item.name}</div>
                   </div>
                 </div>
@@ -288,29 +247,21 @@ export default function Testimonial() {
           </Swiper>
 
           {/* Progress bar */}
-          <div className="mt-6 relative h-1 bg-gray-200 rounded-full overflow-hidden">
+          {/* <div className="mt-6 relative h-1 bg-gray-200 rounded-full overflow-hidden">
             <div
-              className="absolute top-0 left-0 h-full bg-[#6C8DAB] transition-all duration-500"
+              className="absolute top-0 left-0 h-full bg-[#F7E327] transition-all duration-500"
               ref={progressRef}
               style={{ width: "0%" }}
             ></div>
-          </div>
+          </div> */}
 
           {/* Arrows */}
           <div className="flex gap-2 pt-5">
             <button className="swiper-prev">
-              <img
-                className="h-[41px] w-[41px]"
-                src="/ParkPage/parrowp.svg"
-                alt=""
-              />
+              <img className="h-[41px] w-[41px]" src="/landingr.svg" alt="" />
             </button>
             <button className="swiper-next">
-              <img
-                className="h-[41px] w-[41px]"
-                src="/ParkPage/parrown.svg"
-                alt=""
-              />
+              <img className="h-[41px] w-[41px]" src="/landingl.svg" alt="" />
             </button>
           </div>
         </div>

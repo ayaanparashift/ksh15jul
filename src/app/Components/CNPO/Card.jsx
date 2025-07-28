@@ -147,7 +147,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 const getLinkData = (acbtn) => {
   if (acbtn === "Case Studies") {
-    return { href: "/case-studies", text: "Explore Case Study" };
+    return { href: "/case-studies", text: "Explore Case Studies" };
   } else if (acbtn === "News") {
     return { href: "/blogs", text: "Explore News" };
   } else if (acbtn === "Press Release") {

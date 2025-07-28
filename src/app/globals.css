@@ -1087,3 +1087,21 @@ canvas {
     background-color: #f7e327;
   }
 }
+
+.custom-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #6c8dab;
+  border-radius: 9999px;
+}
+
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #6c8dab transparent;
+}
