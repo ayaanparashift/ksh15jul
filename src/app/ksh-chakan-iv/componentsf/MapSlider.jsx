@@ -106,7 +106,7 @@ const iframeUrls = [
   },
   {
     id: 3,
-    title: "Seaport 1",
+    title: "Seaport",
     km: 141,
     icon: "/ParkPage/mapicons/ship.svg",
     mapframe:

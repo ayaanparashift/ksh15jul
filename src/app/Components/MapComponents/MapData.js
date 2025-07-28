@@ -91,7 +91,7 @@ export const hotspotData = {
     {
       id: 3,
       park_no: "01",
-      park_name: "KSH Chennai I",
+      park_name: "Chennai<br />(Upcoming)",
       x: "52%",
       y: "73%",
       scale: 2,
@@ -132,7 +132,7 @@ export const hotspotData = {
     {
       id: 3,
       park_no: "01",
-      park_name: "KSH Chennai I",
+      park_name: "Chennai<br />(Upcoming)",
       x: "48.7%",
       y: "71%",
       scale: 2,
@@ -173,7 +173,7 @@ export const hotspotData = {
     {
       id: 3,
       park_no: "01",
-      park_name: "KSH Chennai I",
+      park_name: "Chennai<br />(Upcoming)",
       x: "42%",
       y: "75%",
       scale: 2,

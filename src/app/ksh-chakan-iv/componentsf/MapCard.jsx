@@ -155,7 +155,7 @@ const MapCard = ({ activeIndex, onSelectAirport }) => {
       km: 143,
       icon: "/ParkPage/mapicons/apl.svg",
     },
-    { id: 3, title: "Seaport 1", km: 141, icon: "/ParkPage/mapicons/ship.svg" },
+    { id: 3, title: "Seaport", km: 141, icon: "/ParkPage/mapicons/ship.svg" },
     {
       id: 4,
       title: "National Highways",

@@ -746,7 +746,7 @@ const SlideBlog = () => {
           {/* Heading Section */}
           <div className="px-[5%] md:px-0 xl-768:pr-[40px] w-full pt-[70px] border-b-[1px] pb-3 border-[#D7D7D7] border-opacity-50 w-full">
             <h1 className="text-xl pb-4 md:pb-0 text-white font-semibold">
-              Careers at KSH INFRA
+              Featured Blogs
             </h1>
           </div>
 

@@ -23,7 +23,7 @@ const page = () => {
       <CasINSpot />
       <CaseINSec2 />
       {/* <CaseINAbout /> */}
-      <VidT />
+      {/* <VidT />   */}
       <CaseINChalleng />
       <CaseSolution />
       {/* <CaseINBenefit /> */}

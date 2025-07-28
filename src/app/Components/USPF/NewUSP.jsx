@@ -443,7 +443,7 @@ const Usp = () => {
     <div className="bg-white uspcontainer w-full flex items-center justify-center flex-col overflow-hidden">
       <div className="flex flex-col max-w-[100vw] h-fit">
         <div className="relative z-10 pt-20 max-w-[1250px] w-[90%] mx-auto xl:pt-[92px] h-fit flex flex-col">
-          <LineHead heading={"What Sets KSH INFRA Parks Ahead"} />
+          <LineHead heading={"What Sets KSH INFRA Parks Apart"} />
         </div>
         <div className="flex xl:flex-row flex-col-reverse md:p-0 px-5 pt-0 max-h-fit lg:gap-0 gap-5 relative">
           <div className="xl:flex hidden items-end bottom-0 xl:bottom-[30px] justify-center mt-0 xl:absolute relative xl:left-0 w-full xl:w-[700px]">

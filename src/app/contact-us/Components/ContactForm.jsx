@@ -694,6 +694,7 @@ const ContactForm = () => {
               <option value="Sales Enquiry">Sales Enquiry</option>
               <option value="Support">Support</option>
               <option value="Partnership">Partnership</option>
+              <option value="Partnership">Careers</option>
             </select>
             {errors.user_subject && (
               <span className="text-sm text-red-400">

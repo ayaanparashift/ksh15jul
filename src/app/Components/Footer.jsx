@@ -658,7 +658,7 @@ const Footer = () => {
                 <Link
                   target="__blank"
                   href="https://www.linkedin.com/company/ksh-infra/?viewAsMember=true"
-                  className="group"
+                  className="group hover:-translate-y-[10px] transition-transform duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -679,7 +679,7 @@ const Footer = () => {
                 <Link
                   target="__blank"
                   href="https://www.youtube.com/channel/UCae7QNTK0AUOf7kxBF53hag"
-                  className="group"
+                  className="group hover:-translate-y-[10px] transition-transform duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -710,7 +710,7 @@ const Footer = () => {
                 <Link
                   target="__blank"
                   href="https://www.facebook.com/KSHInfraIndia/"
-                  className="group"
+                  className="group hover:-translate-y-[10px] transition-transform duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -731,7 +731,7 @@ const Footer = () => {
                 <Link
                   target="__blank"
                   href="https://www.instagram.com/kshinfrapark/"
-                  className="group"
+                  className="group hover:-translate-y-[10px] transition-transform duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -765,7 +765,7 @@ const Footer = () => {
                 <Link
                   target="__blank"
                   href="https://twitter.com/KshInfra/status/1687774451692343296"
-                  className="group"
+                  className="group hover:-translate-y-[10px] transition-transform duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
