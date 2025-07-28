@@ -85,13 +85,22 @@ export default async function BlogPage({ params }) {
             </div>
           </div>
           {/* Blog Featured Image */}
-          <div className="imgCon">
+          {/* <div className="imgCon">
             <Image
               src={blog.featuredImage}
               alt={blog.title.rendered}
               width={1200}
               height={600}
               className="w-full h-auto object-cover"
+              priority
+            />
+          </div> */}
+          <div className="imgCon h-[45vh] w-full relative">
+            <Image
+              src={blog.featuredImage}
+              alt={blog.title.rendered}
+              fill
+              className="object-cover"
               priority
             />
           </div>

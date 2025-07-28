@@ -441,19 +441,18 @@ h6:not(.spotlightheaddd) {
   border: 2px solid #f7e327;
   width: 100px !important;
   height: 100px !important;
+
   .park_name {
     color: #000000 !important;
     font-size: 10px !important;
     line-height: 12px !important;
+    bottom: 10px !important;
   }
   .park_no {
     background-color: #afafaf;
     width: 26px;
     height: 26px;
     transition: all 0.5s;
-  }
-  .park_name {
-    bottom: 10px !important;
   }
 }
 .hotspot.active {
@@ -843,6 +842,10 @@ li {
 }
 #bloginwy a {
   color: blue;
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 #bloginwy strong {
   font-size: 20px;
