@@ -342,13 +342,134 @@
 //
 //
 //
+// "use client";
+// import Link from "next/link";
+// import React, { useState } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+
+// const Navlist = ({ onClose }) => {
+//   const [dropdownOpen, setDropdownOpen] = useState(null);
+
+//   const navItem = [
+//     { title: "About Us", href: "/about-ksh" },
+//     { title: "Our Team", href: "/our-team" },
+//     { title: "Capabilities", href: "/capabilities" },
+//     { title: "Sustainability", href: "/sustainability" },
+//     {
+//       title: "Insights",
+//       isDropdown: true,
+//       children: [
+//         { title: "Blogs", href: "/blogs" },
+//         { title: "Case Studies", href: "/case-studies" },
+//         { title: "News", href: "/blogs?tab=news#tabsection" },
+//         { title: "Press Release", href: "/blogs?tab=press#tabsection" },
+//         { title: "Testimonials", href: "#testimonials" },
+//       ],
+//     },
+//     { title: "Investors", href: "/investors" },
+//     { title: "Careers", href: "/careers" },
+//     { title: "Contact us", href: "/contact-us" },
+//   ];
+
+//   return (
+//     <div className="py-[20px] pr-[max(5%,calc((100vw-1250px)/2))] flex flex-col bg-[#fff] border-t border-[#092241] w-[40%] relative overflow-y-auto custom-scroll">
+//       <motion.div
+//         layout
+//         className="flex flex-col gap-[10px] min-1440:pt-5 min-1366:pt-3 min-1366:gap-[40px] leading-[300%] min-1366:leading-[200%] h-full items-end"
+//       >
+//         {navItem.map((item, idx) =>
+//           item.isDropdown ? (
+//             <motion.div
+//               key={item.title}
+//               layout
+//               className="w-full flex flex-col items-end"
+//             >
+//               {/* Dropdown Toggle */}
+//               <button
+//                 onClick={() =>
+//                   setDropdownOpen(dropdownOpen === idx ? null : idx)
+//                 }
+//                 className={`flex flex-row-reverse items-center gap-2 ${
+//                   dropdownOpen !== null ? "text-[#E30613]" : "text-[#092F5F]"
+//                 } fpt-600 transition-colors hover:text-[#E30613] duration-[500ms]`}
+//               >
+//                 <h2 className="2xl:text-[36px] xl:text-[30px] text-[24px]">
+//                   {item.title}
+//                 </h2>
+//                 <svg
+//                   className={`w-5 h-5 transition-transform duration-300 ${
+//                     dropdownOpen === idx ? "rotate-180" : ""
+//                   }`}
+//                   fill="none"
+//                   stroke="currentColor"
+//                   strokeWidth={2}
+//                   viewBox="0 0 24 24"
+//                   xmlns="http://www.w3.org/2000/svg"
+//                 >
+//                   <path
+//                     strokeLinecap="round"
+//                     strokeLinejoin="round"
+//                     d="M19 9l-7 7-7-7"
+//                   />
+//                 </svg>
+//               </button>
+
+//               {/* Dropdown Content */}
+//               <AnimatePresence initial={false}>
+//                 {dropdownOpen === idx && (
+//                   <motion.div
+//                     layout
+//                     initial={{ height: 0 }}
+//                     animate={{ height: "auto" }}
+//                     exit={{ height: 0 }}
+//                     transition={{ duration: 0.4, ease: "easeInOut" }}
+//                     className="overflow-hidden leading-[150%] flex flex-col justify-end items-end gap-3 w-full"
+//                   >
+//                     {item.children.map((child) => (
+//                       <Link
+//                         onClick={onClose}
+//                         key={child.title}
+//                         href={child.href}
+//                         className="text-[#092F5F] fpt-500 text-[20px] first-of-type:pt-5 hover:text-[#E30613] transition-colors duration-300 w-full text-right"
+//                       >
+//                         {child.title}
+//                       </Link>
+//                     ))}
+//                   </motion.div>
+//                 )}
+//               </AnimatePresence>
+//             </motion.div>
+//           ) : (
+//             <motion.div
+//               layout
+//               className="flex justify-between items-end"
+//               key={item.href}
+//             >
+//               <Link
+//                 onClick={onClose}
+//                 className="text-[#092F5F] fpt-600 2xl:text-[36px] xl:text-[30px] text-[24px] transition-colors hover:text-[#E30613] duration-[500ms]"
+//                 href={item.href}
+//               >
+//                 <h2>{item.title}</h2>
+//               </Link>
+//             </motion.div>
+//           )
+//         )}
+//       </motion.div>
+//     </div>
+//   );
+// };
+
+// export default Navlist;
+
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navlist = ({ onClose }) => {
   const [dropdownOpen, setDropdownOpen] = useState(null);
+  const scrollRef = useRef(null);
 
   const navItem = [
     { title: "About Us", href: "/about-ksh" },
@@ -361,8 +482,8 @@ const Navlist = ({ onClose }) => {
       children: [
         { title: "Blogs", href: "/blogs" },
         { title: "Case Studies", href: "/case-studies" },
-        { title: "News", href: "#spotlight" },
-        { title: "Press Release", href: "#spotlight" },
+        { title: "News", href: "/blogs?tab=news#tabsection" },
+        { title: "Press Release", href: "/blogs?tab=press#tabsection" },
         { title: "Testimonials", href: "#testimonials" },
       ],
     },
@@ -371,11 +492,56 @@ const Navlist = ({ onClose }) => {
     { title: "Contact us", href: "/contact-us" },
   ];
 
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    // const updateProgress = () => {
+    //   const scrollHeight = el.scrollHeight;
+    //   const clientHeight = el.clientHeight;
+    //   const scrollTop = el.scrollTop;
+
+    //   if (scrollHeight > clientHeight) {
+    //     const scrollPercent = (scrollTop / (scrollHeight - clientHeight)) * 100;
+    //     el.style.setProperty("--scrollbar-height", `${scrollPercent}%`);
+    //   } else {
+    //     el.style.setProperty("--scrollbar-height", `0%`);
+    //   }
+    // };
+    const updateProgress = () => {
+      const scrollHeight = el.scrollHeight;
+      const clientHeight = el.clientHeight;
+      const scrollTop = el.scrollTop;
+
+      if (scrollHeight > clientHeight) {
+        const maxScroll = scrollHeight - clientHeight;
+        let scrollPercent = (scrollTop / maxScroll) * 122;
+
+        // 🔥 Snap to 100% if near bottom (due to rounding)
+        if (scrollTop + clientHeight >= scrollHeight - 1) {
+          scrollPercent = 122;
+        }
+
+        el.style.setProperty("--scrollbar-height", `${scrollPercent}%`);
+      } else {
+        el.style.setProperty("--scrollbar-height", `0%`);
+      }
+    };
+
+    el.addEventListener("scroll", updateProgress);
+    updateProgress();
+
+    return () => el.removeEventListener("scroll", updateProgress);
+  }, []);
+
   return (
-    <div className="py-[20px] pr-[max(5%,calc((100vw-1250px)/2))] flex flex-col bg-[#fff] border-t border-[#092241] w-[40%] relative overflow-y-auto custom-scroll">
+    <div
+      ref={scrollRef}
+      className="py-[20px]  pr-[max(5%,calc((100vw-1250px)/2))] flex flex-col bg-[#fff] border-t border-[#092241] w-[40%] relative overflow-y-auto custom-scroll"
+    >
       <motion.div
         layout
-        className="flex flex-col gap-[10px] min-1440:pt-5 min-1366:pt-3 min-1366:gap-[30px] leading-[300%] min-1366:leading-[200%] h-full items-end"
+        className="flex flex-col gap-[10px] min-1440:py-5 min-1366:py-3 min-1366:gap-[40px] leading-[300%] min-1366:leading-[200%] min-h-full items-end"
       >
         {navItem.map((item, idx) =>
           item.isDropdown ? (
@@ -384,7 +550,6 @@ const Navlist = ({ onClose }) => {
               layout
               className="w-full flex flex-col items-end"
             >
-              {/* Dropdown Toggle */}
               <button
                 onClick={() =>
                   setDropdownOpen(dropdownOpen === idx ? null : idx)
@@ -414,7 +579,6 @@ const Navlist = ({ onClose }) => {
                 </svg>
               </button>
 
-              {/* Dropdown Content */}
               <AnimatePresence initial={false}>
                 {dropdownOpen === idx && (
                   <motion.div
