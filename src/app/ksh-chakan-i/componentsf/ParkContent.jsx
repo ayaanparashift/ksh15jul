@@ -145,7 +145,7 @@ const ParkContent = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="w-full md:w-[80%] h-full xl-1280:min-h-[478px] md:min-h-[502px] flex items-center justify-center bg-black"
+          className="w-full md:w-[80%] min-h-full flex items-center justify-center bg-black"
         >
           <video
             src={selectedVideo}
