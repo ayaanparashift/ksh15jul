@@ -1,206 +1,5 @@
 // "use client";
 // import { useState } from "react";
-// import Link from "next/link";
-// import BlogCard from "./BlogCard";
-
-// const TabBlogs = () => {
-//   const tabs = [
-//     { title: "All", link: "#park-overview" },
-//     { title: "News", link: "#park-highlight" },
-//     { title: "Blogs", link: "#pi" },
-//     { title: "Press Release", link: "#db" },
-//   ];
-
-//   const [activeIndex, setActiveIndex] = useState(0);
-//   return (
-//     <>
-//       <div className="w-full  bg-[#092241]">
-//         <div className="fix12 pt-[50px] flex flex-col gap-[60px] pb-[30px]">
-//           <h2 className="fpt-600 md:text-[44px] sm:text-[32px] text-[24px] text-white">Other Blogs</h2>
-//           <div>
-//             <div className="fix12 flex overflow-x-auto scrollbar-hide items-center border-b-2 border-[#BFBFBF]">
-//               {tabs.map((tab, index) => (
-//                 <Link
-//                   href={tab.link}
-//                   key={index}
-//                   className={`
-//               flex-1 lg:min-w-0 fsans-600 text-[20px] leading-[111%] min-w-[200px] text-center text-sm font-medium transition-colors pb-[15px]
-//               ${
-//                 activeIndex === index
-//                   ? "text-[#F7E327] border-b-2 border-[#F7E327]"
-//                   : "text-white hover:text-gray-300"
-//               }
-//               whitespace-nowrap
-//             `}
-//                   onClick={() => setActiveIndex(index)}
-//                 >
-//                   {tab.title}
-//                 </Link>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="fix12 py-[70px] grid grid-cols-2 gap-y-[65px]">
-//         <BlogCard />
-//         <BlogCard />
-//         <BlogCard />
-//         <BlogCard />
-//         <BlogCard />
-//         <BlogCard />
-//         <BlogCard />
-//         <BlogCard />
-//         <BlogCard />
-//         <BlogCard />
-//         <BlogCard />
-//         <BlogCard />
-//         <BlogCard />
-//         <BlogCard />
-//         <BlogCard />
-//         <BlogCard />
-//         <BlogCard />
-//       </div>
-//     </>
-//   );
-// };
-
-// export default TabBlogs;
-
-////////////// 9999999999999999 %%%%%%%%%%%%%%%% ////////////////////////
-////////////// 9999999999999999 %%%%%%%%%%%%%%%% ////////////////////////
-////////////// 9999999999999999 %%%%%%%%%%%%%%%% ////////////////////////
-////////////// 9999999999999999 %%%%%%%%%%%%%%%% ////////////////////////
-////////////// 9999999999999999 %%%%%%%%%%%%%%%% ////////////////////////
-////////////// 9999999999999999 %%%%%%%%%%%%%%%% ////////////////////////
-////////////// 9999999999999999 %%%%%%%%%%%%%%%% ////////////////////////
-////////////// 9999999999999999 %%%%%%%%%%%%%%%% ////////////////////////
-
-// "use client";
-// import { useState } from "react";
-// import BlogCard from "./BlogCard";
-
-// const TabBlogs = () => {
-//   // Tabs with just titles (no link property)
-//   const tabs = [
-//     { title: "All" },
-//     { title: "News" },
-//     { title: "Blogs" },
-//     { title: "Press Release" },
-//   ];
-
-//   // Default active tab is "All" (index 0)
-//   const [activeIndex, setActiveIndex] = useState(0);
-
-//   // Sample blog data with two posts per category using the same image
-//   const blogData = {
-//     news: [
-//       {
-//         id: 1,
-//         category: "News",
-//         image: "/blog/blog2.png",
-//         title: `How Grade A Industrial Parks Aid the 7 Principles of Lean Manufacturing`,
-//       },
-//       {
-//         id: 2,
-//         category: "News",
-//         image: "/blog/blogin/blogin1.png",
-//         title: "Breaking: Market Trends Update",
-//       },
-//     ],
-//     blogs: [
-//       {
-//         id: 3,
-//         category: "Blogs",
-//         image: "/blog/blogin/blogin1.png",
-//         title:
-//           "Harnessing AI in Logistics: The Future of Supply Chain Optimization",
-//       },
-//       {
-//         id: 4,
-//         category: "Blogs",
-//         image: "/blog/blogin/blogin1.png",
-//         title: "Inside the World of Digital Transformation",
-//       },
-//     ],
-//     pressRelease: [
-//       {
-//         id: 5,
-//         category: "Press Release",
-//         image: "/blog/blogin/blogin1.png",
-//         title: "Company Announces New Partnership",
-//       },
-//       {
-//         id: 6,
-//         category: "Press Release",
-//         image: "/blog/blogin/blogin1.png",
-//         title: "Press Release: Quarterly Earnings Report",
-//       },
-//     ],
-//   };
-
-//   // Determine which blogs to display based on the active tab.
-//   let blogsToDisplay = [];
-//   if (activeIndex === 0) {
-//     // "All" tab: show all items
-//     blogsToDisplay = [
-//       ...blogData.news,
-//       ...blogData.blogs,
-//       ...blogData.pressRelease,
-//     ];
-//   } else if (activeIndex === 1) {
-//     blogsToDisplay = blogData.news;
-//   } else if (activeIndex === 2) {
-//     blogsToDisplay = blogData.blogs;
-//   } else if (activeIndex === 3) {
-//     blogsToDisplay = blogData.pressRelease;
-//   }
-
-//   return (
-//     <>
-//       <div className="w-full bg-[#092241]">
-//         <div className="fix12 pt-[50px] flex flex-col gap-[60px] pb-[30px]">
-//           <h2 className="fpt-600 md:text-[44px] sm:text-[32px] text-[24px] text-white">Other Blogs</h2>
-//           <div>
-//             <div className="fix12 flex overflow-x-auto scrollbar-hide items-center border-b-2 border-[#BFBFBF]">
-//               {tabs.map((tab, index) => (
-//                 <button
-//                   key={index}
-//                   className={`flex-1 lg:min-w-0 fsans-600 text-[20px] leading-[111%] min-w-[200px] text-center text-sm font-medium transition-colors pb-[15px] whitespace-nowrap ${
-//                     activeIndex === index
-//                       ? "text-[#F7E327] border-b-2 border-[#F7E327]"
-//                       : "text-white hover:text-gray-300"
-//                   }`}
-//                   onClick={() => setActiveIndex(index)}
-//                 >
-//                   {tab.title}
-//                 </button>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="fix12 py-[70px] grid grid-cols-2 gap-y-[65px]">
-//         {blogsToDisplay.map((blog) => (
-//           <BlogCard key={blog.id} blog={blog} />
-//         ))}
-//       </div>
-//     </>
-//   );
-// };
-
-// export default TabBlogs;
-
-////////////// 9999999999999999 %%%%%%%%%%%%%%%% ////////////////////////
-////////////// 9999999999999999 %%%%%%%%%%%%%%%% ////////////////////////
-////////////// 9999999999999999 %%%%%%%%%%%%%%%% ////////////////////////
-////////////// 9999999999999999 %%%%%%%%%%%%%%%% ////////////////////////
-////////////// 9999999999999999 %%%%%%%%%%%%%%%% ////////////////////////
-////////////// 9999999999999999 %%%%%%%%%%%%%%%% ////////////////////////
-////////////// 9999999999999999 %%%%%%%%%%%%%%%% ////////////////////////
-////////////// 9999999999999999 %%%%%%%%%%%%%%%% ////////////////////////
-
-// "use client";
-// import { useState } from "react";
 // import BlogCard from "./BlogCard";
 
 // const TabBlogs = ({ blogs }) => {
@@ -369,14 +168,6 @@
 // };
 
 // export default TabBlogs;
-
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -391,20 +182,6 @@
 //
 //
 // {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{ SECOND BELOW }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -1132,6 +909,778 @@
 //
 //
 
+// "use client";
+// import { useState, useEffect } from "react";
+// import BlogCard from "./BlogCard";
+// import { motion, AnimatePresence } from "framer-motion";
+
+// const PRESS_RELEASES = [
+//   {
+//     id: 6,
+//     title: "KSH INFRA forays into South India",
+//     content:
+//       "KSH INFRA forays into South India, plans to invest Rs 450 Cr. on Hosur logistics park",
+//     image: "/press/press1.png",
+//     href: "https://economictimes.indiatimes.com/industry/services/property-/-cstruction/ksh-infra-forays-into-south-india-plans-to-invest-rs-450-Cr.-on-hosur-logistics-park/articleshow/112503331.cms?from=mdr",
+//     newTab: true,
+//   },
+//   {
+//     id: 7,
+//     title: "KSH INFRA to invest Rs 450 crore",
+//     content:
+//       "KSH INFRA to invest Rs 450 crore to develop industrial & logistics park in Hosur",
+//     image: "/press/press3.png",
+//     href: "https://realty.economictimes.indiatimes.com/news/allied-industries/ksh-infra-to-invest-rs-450-crore-to-develop-industrial-logistics-park-in-hosur/112523130",
+//     newTab: true,
+//   },
+//   {
+//     id: 8,
+//     title: "KSH INFRA To Invest Nearly $54 Mn",
+//     content: "KSH INFRA To Invest Nearly $54 Mn In South India Logistics Park",
+//     image: "/press/press2.png",
+//     href: "https://www.vccircle.com/kshinfra-to-invest-nearly-54-mn-in-south-india-logistics-park",
+//     newTab: true,
+//   },
+// ];
+
+// const PressCard = ({ item }) => (
+//   <a
+//     href={item.href}
+//     target="_blank"
+//     rel="noopener noreferrer"
+//     className="flex group flex-col md:flex-row"
+//   >
+//     <div className="lg:w-[292px] w-full h-[300px] max-w-full overflow-hidden">
+//       <img
+//         src={item.image}
+//         alt={item.title}
+//         className="object-cover h-full w-full group-hover:scale-110 transition-transform duration-500"
+//       />
+//     </div>
+
+//     <div className="flex flex-col min-h-[250px] justify-between border-[#DDDDDD] border-t lg:border-l-0 border-l border-b border-r w-full lg:w-[310px] max-w-full pl-[30px] pr-[20px] py-[30px]">
+//       <div className="flex flex-col gap-[16px]">
+//         <h3 className="spotlightheaddd line-clamp-3 fsans-600 text-[20px] text-[#565656]">
+//           {item.title}
+//         </h3>
+//         <p className="text-[#565656]">{item.content}</p>
+//       </div>
+//       <div className="flex items-center gap-2">
+//         <div className="w-[30px] group-hover:-rotate-45 transition-transform duration-500 h-[30px] bg-[#EEF0F3] rounded-full flex items-center justify-center">
+//           <img src="/AboutPage/AboutGrowth/learnMore.svg" alt="Learn More" />
+//         </div>
+//         <p>Learn More</p>
+//       </div>
+//     </div>
+//   </a>
+// );
+
+// const TabBlogs = ({ blogs }) => {
+//   const tabs = [
+//     { title: "All", id: null },
+//     { title: "Blogs", id: 17 },
+//     { title: "News", id: 18 },
+//     { title: "Press Release", id: "press" },
+//   ];
+
+//   const [activeIndex, setActiveIndex] = useState(0);
+//   const [currentPage, setCurrentPage] = useState(1);
+//   const [newsBlogs, setNewsBlogs] = useState([]);
+//   const [loadingNews, setLoadingNews] = useState(false);
+
+//   const postsPerPage = 6;
+//   const activeTabId = tabs[activeIndex].id;
+//   const isPress = activeTabId === "press";
+//   const isNews = activeTabId === 18;
+
+//   // Fetch news blogs when News tab is selected
+//   useEffect(() => {
+//     if (isNews && newsBlogs.length === 0) {
+//       setLoadingNews(true);
+//       fetch(
+//         `https://www.kshinfra.com/wp-json/wp/v2/posts?categories=18&per_page=100&_embed`
+//       )
+//         .then((res) => res.json())
+//         .then((data) => {
+//           setNewsBlogs(data);
+//           setLoadingNews(false);
+//         })
+//         .catch(() => setLoadingNews(false));
+//     }
+//   }, [isNews]);
+
+//   // Filter logic for All / Blogs
+//   const filteredBlogs =
+//     activeTabId === null
+//       ? blogs
+//           .map((blog) => {
+//             const isNews = blog.categories.includes(18);
+//             const isBlog = blog.categories.includes(17);
+//             return isNews
+//               ? { ...blog, _priority: 18 }
+//               : isBlog
+//               ? { ...blog, _priority: 17 }
+//               : null;
+//           })
+//           .filter(Boolean)
+//       : activeTabId === 17
+//       ? blogs.filter((b) => b.categories.includes(17))
+//       : [];
+
+//   const itemsToDisplay = isPress
+//     ? PRESS_RELEASES
+//     : isNews
+//     ? newsBlogs
+//     : filteredBlogs;
+
+//   const totalPages = Math.ceil(itemsToDisplay.length / postsPerPage);
+//   const startIndex = (currentPage - 1) * postsPerPage;
+//   const currentItems = itemsToDisplay.slice(
+//     startIndex,
+//     startIndex + postsPerPage
+//   );
+
+//   return (
+//     <>
+//       {/* Tabs */}
+//       <div className="w-full bg-[#092241]">
+//         <div className="fix12 pt-[50px] flex flex-col gap-[60px] pb-[30px]">
+//           <h2 className="fpt-600 md:text-[44px] sm:text-[32px] text-[24px] text-white">
+//             Other Blogs
+//           </h2>
+//           <div>
+//             <div className="fix12 flex overflow-x-auto scrollbar-hide items-center border-b-2 border-[#BFBFBF]">
+//               {tabs.map((tab, i) => (
+//                 <button
+//                   key={i}
+//                   className={`flex-1 lg:min-w-0 fsans-600 text-[20px] leading-[111%] min-w-[200px] text-center text-sm font-medium transition-colors pb-[15px] whitespace-nowrap ${
+//                     activeIndex === i
+//                       ? "text-[#F7E327] border-b-2 border-[#F7E327]"
+//                       : "text-white hover:text-gray-300"
+//                   }`}
+//                   onClick={() => {
+//                     setActiveIndex(i);
+//                     setCurrentPage(1);
+//                   }}
+//                 >
+//                   {tab.title}
+//                 </button>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//       {/* Content */}
+//       <AnimatePresence mode="wait">
+//         <motion.div
+//           key={currentItems.map((it) => it.id).join(",")}
+//           className="fix12 py-[70px] grid grid-cols-1 lg:grid-cols-2 gap-y-[65px]"
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: 1 }}
+//           exit={{ opacity: 0 }}
+//           transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
+//         >
+//           {loadingNews ? (
+//             <p className="text-black fsans-600 md:text-[32px] text-[24px] col-span-2 text-center">
+//               Loading News...
+//             </p>
+//           ) : currentItems.length > 0 ? (
+//             currentItems.map((item) =>
+//               isPress ? (
+//                 <PressCard key={item.id} item={item} />
+//               ) : (
+//                 <BlogCard
+//                   key={item.id}
+//                   blog={item}
+//                   activeTabId={activeTabId ?? item._priority}
+//                 />
+//               )
+//             )
+//           ) : (
+//             <p className="text-white text-center col-span-2">
+//               No content available.
+//             </p>
+//           )}
+//         </motion.div>
+//       </AnimatePresence>
+//       {/* Pagination */}
+//       {/* <div className="pb-[70px]">
+//         {totalPages > 1 && (
+//           <div className="flex justify-center gap-2">
+//             {Array.from({ length: totalPages }).map((_, idx) => (
+//               <button
+//                 key={idx}
+//                 className={`px-4 py-2 border rounded ${
+//                   currentPage === idx + 1
+//                     ? "bg-[#F7E327] text-black"
+//                     : "bg-gray-200"
+//                 }`}
+//                 onClick={() => setCurrentPage(idx + 1)}
+//               >
+//                 {idx + 1}
+//               </button>
+//             ))}
+//           </div>
+//         )}
+//       </div> */}
+//       {/* Pagination */}
+//       {totalPages > 1 && currentItems.length > 0 && (
+//         <div className="pb-[70px]">
+//           <div className="flex justify-center gap-2">
+//             {Array.from({ length: totalPages }).map((_, idx) => (
+//               <button
+//                 key={idx}
+//                 className={`px-4 py-2 border rounded ${
+//                   currentPage === idx + 1
+//                     ? "bg-[#F7E327] text-black"
+//                     : "bg-gray-200"
+//                 }`}
+//                 onClick={() => setCurrentPage(idx + 1)}
+//               >
+//                 {idx + 1}
+//               </button>
+//             ))}
+//           </div>
+//         </div>
+//       )}
+//     </>
+//   );
+// };
+
+// export default TabBlogs;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// "use client";
+// import { useState, useEffect } from "react";
+// import BlogCard from "./BlogCard";
+// import { motion, AnimatePresence } from "framer-motion";
+
+// const PRESS_RELEASES = [
+//   {
+//     id: 6,
+//     title: "KSH INFRA forays into South India",
+//     content:
+//       "KSH INFRA forays into South India, plans to invest Rs 450 Cr. on Hosur logistics park",
+//     image: "/press/press1.png",
+//     href: "https://economictimes.indiatimes.com/industry/services/property-/-cstruction/ksh-infra-forays-into-south-india-plans-to-invest-rs-450-Cr.-on-hosur-logistics-park/articleshow/112503331.cms?from=mdr",
+//     newTab: true,
+//   },
+//   {
+//     id: 7,
+//     title: "KSH INFRA to invest Rs 450 crore",
+//     content:
+//       "KSH INFRA to invest Rs 450 crore to develop industrial & logistics park in Hosur",
+//     image: "/press/press3.png",
+//     href: "https://realty.economictimes.indiatimes.com/news/allied-industries/ksh-infra-to-invest-rs-450-crore-to-develop-industrial-logistics-park-in-hosur/112523130",
+//     newTab: true,
+//   },
+//   {
+//     id: 8,
+//     title: "KSH INFRA To Invest Nearly $54 Mn",
+//     content: "KSH INFRA To Invest Nearly $54 Mn In South India Logistics Park",
+//     image: "/press/press2.png",
+//     href: "https://www.vccircle.com/kshinfra-to-invest-nearly-54-mn-in-south-india-logistics-park",
+//     newTab: true,
+//   },
+// ];
+
+// const PressCard = ({ item }) => (
+//   <a
+//     href={item.href}
+//     target="_blank"
+//     rel="noopener noreferrer"
+//     className="flex group flex-col md:flex-row"
+//   >
+//     <div className="lg:w-[292px] w-full h-[300px] max-w-full overflow-hidden">
+//       <img
+//         src={item.image}
+//         alt={item.title}
+//         className="object-cover h-full w-full group-hover:scale-110 transition-transform duration-500"
+//       />
+//     </div>
+
+//     <div className="flex flex-col min-h-[250px] justify-between border-[#DDDDDD] border-t lg:border-l-0 border-l border-b border-r w-full lg:w-[310px] max-w-full pl-[30px] pr-[20px] py-[30px]">
+//       <div className="flex flex-col gap-[16px]">
+//         <h3 className="spotlightheaddd line-clamp-3 fsans-600 text-[20px] text-[#565656]">
+//           {item.title}
+//         </h3>
+//         <p className="text-[#565656]">{item.content}</p>
+//       </div>
+//       <div className="flex items-center gap-2">
+//         <div className="w-[30px] group-hover:-rotate-45 transition-transform duration-500 h-[30px] bg-[#EEF0F3] rounded-full flex items-center justify-center">
+//           <img src="/AboutPage/AboutGrowth/learnMore.svg" alt="Learn More" />
+//         </div>
+//         <p>Learn More</p>
+//       </div>
+//     </div>
+//   </a>
+// );
+
+// const TabBlogs = ({ blogs }) => {
+//   const tabs = [
+//     { title: "All", id: null },
+//     { title: "Blogs", id: 17 },
+//     { title: "News", id: 18 },
+//     { title: "Press Release", id: "press" },
+//   ];
+
+//   const [activeIndex, setActiveIndex] = useState(0);
+//   const [currentPage, setCurrentPage] = useState(1);
+//   const [newsBlogs, setNewsBlogs] = useState([]);
+//   const [loadingNews, setLoadingNews] = useState(false);
+
+//   const postsPerPage = 6;
+//   const activeTabId = tabs[activeIndex].id;
+//   const isPress = activeTabId === "press";
+//   const isNews = activeTabId === 18;
+
+//   useEffect(() => {
+//     let intervalId;
+
+//     const fetchNews = async () => {
+//       try {
+//         const res = await fetch(
+//           `https://www.kshinfra.com/wp-json/wp/v2/posts?categories=18&per_page=100&_embed`
+//         );
+//         if (!res.ok) throw new Error("Failed to fetch");
+//         const data = await res.json();
+//         setNewsBlogs(data);
+//         setLoadingNews(false);
+//         clearInterval(intervalId);
+//       } catch (err) {
+//         console.warn("News fetch failed, will retry...");
+//         setLoadingNews(false);
+//       }
+//     };
+
+//     if (isNews && newsBlogs.length === 0) {
+//       setLoadingNews(true);
+//       fetchNews();
+//       intervalId = setInterval(fetchNews, 10000); // Retry every 10s
+//     }
+
+//     return () => clearInterval(intervalId);
+//   }, [isNews, newsBlogs.length]);
+
+//   const filteredBlogs =
+//     activeTabId === null
+//       ? blogs
+//           .map((blog) => {
+//             const isNews = blog.categories.includes(18);
+//             const isBlog = blog.categories.includes(17);
+//             return isNews
+//               ? { ...blog, _priority: 18 }
+//               : isBlog
+//               ? { ...blog, _priority: 17 }
+//               : null;
+//           })
+//           .filter(Boolean)
+//       : activeTabId === 17
+//       ? blogs.filter((b) => b.categories.includes(17))
+//       : [];
+
+//   const itemsToDisplay = isPress
+//     ? PRESS_RELEASES
+//     : isNews
+//     ? newsBlogs
+//     : filteredBlogs;
+
+//   const totalPages = Math.ceil(itemsToDisplay.length / postsPerPage);
+//   const startIndex = (currentPage - 1) * postsPerPage;
+//   const currentItems = itemsToDisplay.slice(
+//     startIndex,
+//     startIndex + postsPerPage
+//   );
+
+//   return (
+//     <>
+//       {/* Tabs */}
+//       <div className="w-full bg-[#092241]">
+//         <div className="fix12 pt-[50px] flex flex-col gap-[60px] pb-[30px]">
+//           <h2 className="fpt-600 md:text-[44px] sm:text-[32px] text-[24px] text-white">
+//             Other Blogs
+//           </h2>
+//           <div>
+//             <div className="fix12 flex overflow-x-auto scrollbar-hide items-center border-b-2 border-[#BFBFBF]">
+//               {tabs.map((tab, i) => (
+//                 <button
+//                   key={i}
+//                   className={`flex-1 lg:min-w-0 fsans-600 text-[20px] leading-[111%] min-w-[200px] text-center text-sm font-medium transition-colors pb-[15px] whitespace-nowrap ${
+//                     activeIndex === i
+//                       ? "text-[#F7E327] border-b-2 border-[#F7E327]"
+//                       : "text-white hover:text-gray-300"
+//                   }`}
+//                   onClick={() => {
+//                     setActiveIndex(i);
+//                     setCurrentPage(1);
+//                   }}
+//                 >
+//                   {tab.title}
+//                 </button>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Content */}
+//       <AnimatePresence mode="wait">
+//         <motion.div
+//           key={currentItems.map((it) => it.id).join(",")}
+//           className="fix12 py-[70px] grid grid-cols-1 lg:grid-cols-2 gap-y-[65px]"
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: 1 }}
+//           exit={{ opacity: 0 }}
+//           transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
+//         >
+//           {loadingNews ? (
+//             <p className="text-black fsans-600 md:text-[32px] text-[24px] col-span-2 text-center">
+//               Loading News...
+//             </p>
+//           ) : currentItems.length > 0 ? (
+//             currentItems.map((item) =>
+//               isPress ? (
+//                 <PressCard key={item.id} item={item} />
+//               ) : (
+//                 <BlogCard
+//                   key={item.id}
+//                   blog={item}
+//                   activeTabId={activeTabId ?? item._priority}
+//                 />
+//               )
+//             )
+//           ) : (
+//             <p className="text-white text-center col-span-2">
+//               No content available.
+//             </p>
+//           )}
+//         </motion.div>
+//       </AnimatePresence>
+
+//       {/* Pagination */}
+//       {totalPages > 1 && currentItems.length > 0 && (
+//         <div className="pb-[70px]">
+//           <div className="flex justify-center gap-2">
+//             {Array.from({ length: totalPages }).map((_, idx) => (
+//               <button
+//                 key={idx}
+//                 className={`px-4 py-2 border rounded ${
+//                   currentPage === idx + 1
+//                     ? "bg-[#F7E327] text-black"
+//                     : "bg-gray-200"
+//                 }`}
+//                 onClick={() => setCurrentPage(idx + 1)}
+//               >
+//                 {idx + 1}
+//               </button>
+//             ))}
+//           </div>
+//         </div>
+//       )}
+//     </>
+//   );
+// };
+
+// export default TabBlogs;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// "use client";
+// import { useState, useEffect } from "react";
+// import BlogCard from "./BlogCard";
+// import { motion, AnimatePresence } from "framer-motion";
+
+// const PRESS_RELEASES = [
+//   {
+//     id: 6,
+//     title: "KSH INFRA forays into South India",
+//     content:
+//       "KSH INFRA forays into South India, plans to invest Rs 450 Cr. on Hosur logistics park",
+//     image: "/press/press1.png",
+//     href: "https://economictimes.indiatimes.com/industry/services/property-/-cstruction/ksh-infra-forays-into-south-india-plans-to-invest-rs-450-Cr.-on-hosur-logistics-park/articleshow/112503331.cms?from=mdr",
+//     newTab: true,
+//   },
+//   {
+//     id: 7,
+//     title: "KSH INFRA to invest Rs 450 crore",
+//     content:
+//       "KSH INFRA to invest Rs 450 crore to develop industrial & logistics park in Hosur",
+//     image: "/press/press3.png",
+//     href: "https://realty.economictimes.indiatimes.com/news/allied-industries/ksh-infra-to-invest-rs-450-crore-to-develop-industrial-logistics-park-in-hosur/112523130",
+//     newTab: true,
+//   },
+//   {
+//     id: 8,
+//     title: "KSH INFRA To Invest Nearly $54 Mn",
+//     content: "KSH INFRA To Invest Nearly $54 Mn In South India Logistics Park",
+//     image: "/press/press2.png",
+//     href: "https://www.vccircle.com/kshinfra-to-invest-nearly-54-mn-in-south-india-logistics-park",
+//     newTab: true,
+//   },
+// ];
+
+// const PressCard = ({ item }) => (
+//   <a
+//     href={item.href}
+//     target="_blank"
+//     rel="noopener noreferrer"
+//     className="flex group flex-col md:flex-row"
+//   >
+//     <div className="lg:w-[292px] w-full h-[300px] max-w-full overflow-hidden">
+//       <img
+//         src={item.image}
+//         alt={item.title}
+//         className="object-cover h-full w-full group-hover:scale-110 transition-transform duration-500"
+//       />
+//     </div>
+
+//     <div className="flex flex-col min-h-[250px] justify-between border-[#DDDDDD] border-t lg:border-l-0 border-l border-b border-r w-full lg:w-[310px] max-w-full pl-[30px] pr-[20px] py-[30px]">
+//       <div className="flex flex-col gap-[16px]">
+//         <h3 className="spotlightheaddd line-clamp-3 fsans-600 text-[20px] text-[#565656]">
+//           {item.title}
+//         </h3>
+//         <p className="text-[#565656]">{item.content}</p>
+//       </div>
+//       <div className="flex items-center gap-2">
+//         <div className="w-[30px] group-hover:-rotate-45 transition-transform duration-500 h-[30px] bg-[#EEF0F3] rounded-full flex items-center justify-center">
+//           <img src="/AboutPage/AboutGrowth/learnMore.svg" alt="Learn More" />
+//         </div>
+//         <p>Learn More</p>
+//       </div>
+//     </div>
+//   </a>
+// );
+
+// const TabBlogs = ({ blogs }) => {
+//   const tabs = [
+//     { title: "All", id: null },
+//     { title: "Blogs", id: 17 },
+//     { title: "News", id: 18 },
+//     { title: "Press Release", id: "press" },
+//   ];
+
+//   const [activeIndex, setActiveIndex] = useState(0);
+//   const [currentPage, setCurrentPage] = useState(1);
+//   const [newsBlogs, setNewsBlogs] = useState([]);
+//   const [loadingNews, setLoadingNews] = useState(false);
+//   const [loadingBlogs, setLoadingBlogs] = useState(false);
+
+//   const postsPerPage = 6;
+//   const activeTabId = tabs[activeIndex].id;
+//   const isPress = activeTabId === "press";
+//   const isNews = activeTabId === 18;
+//   const isBlogsTab = activeTabId === 17 || activeTabId === null;
+
+//   useEffect(() => {
+//     let intervalId;
+
+//     const fetchNews = async () => {
+//       try {
+//         const res = await fetch(
+//           `https://www.kshinfra.com/wp-json/wp/v2/posts?categories=18&per_page=100&_embed`
+//         );
+//         if (!res.ok) throw new Error("Failed to fetch");
+//         const data = await res.json();
+//         setNewsBlogs(data);
+//         setLoadingNews(false);
+//         clearInterval(intervalId);
+//       } catch (err) {
+//         console.warn("News fetch failed, will retry...");
+//         setLoadingNews(false);
+//       }
+//     };
+
+//     if (isNews && newsBlogs.length === 0) {
+//       setLoadingNews(true);
+//       fetchNews();
+//       intervalId = setInterval(fetchNews, 10000); // Retry every 10s
+//     }
+
+//     return () => clearInterval(intervalId);
+//   }, [isNews, newsBlogs.length]);
+
+//   const filteredBlogs =
+//     activeTabId === null
+//       ? blogs
+//           .map((blog) => {
+//             const isNews = blog.categories.includes(18);
+//             const isBlog = blog.categories.includes(17);
+//             return isNews
+//               ? { ...blog, _priority: 18 }
+//               : isBlog
+//               ? { ...blog, _priority: 17 }
+//               : null;
+//           })
+//           .filter(Boolean)
+//       : activeTabId === 17
+//       ? blogs.filter((b) => b.categories.includes(17))
+//       : [];
+
+//   const itemsToDisplay = isPress
+//     ? PRESS_RELEASES
+//     : isNews
+//     ? newsBlogs
+//     : filteredBlogs;
+
+//   const totalPages = Math.ceil(itemsToDisplay.length / postsPerPage);
+//   const startIndex = (currentPage - 1) * postsPerPage;
+//   const currentItems = itemsToDisplay.slice(
+//     startIndex,
+//     startIndex + postsPerPage
+//   );
+
+//   const showLoading =
+//     (isNews && loadingNews) || (isBlogsTab && blogs.length === 0);
+
+//   return (
+//     <>
+//       {/* Tabs */}
+//       <div className="w-full bg-[#092241]">
+//         <div className="fix12 pt-[50px] flex flex-col gap-[60px] pb-[30px]">
+//           <h2 className="fpt-600 md:text-[44px] sm:text-[32px] text-[24px] text-white">
+//             Other Blogs
+//           </h2>
+//           <div>
+//             <div className="fix12 flex overflow-x-auto scrollbar-hide items-center border-b-2 border-[#BFBFBF]">
+//               {tabs.map((tab, i) => (
+//                 <button
+//                   key={i}
+//                   className={`flex-1 lg:min-w-0 fsans-600 text-[20px] leading-[111%] min-w-[200px] text-center text-sm font-medium transition-colors pb-[15px] whitespace-nowrap ${
+//                     activeIndex === i
+//                       ? "text-[#F7E327] border-b-2 border-[#F7E327]"
+//                       : "text-white hover:text-gray-300"
+//                   }`}
+//                   onClick={() => {
+//                     setActiveIndex(i);
+//                     setCurrentPage(1);
+//                   }}
+//                 >
+//                   {tab.title}
+//                 </button>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Content */}
+//       <AnimatePresence mode="wait">
+//         <motion.div
+//           key={currentItems.map((it) => it.id).join(",")}
+//           className="fix12 py-[70px] grid grid-cols-1 lg:grid-cols-2 gap-y-[65px]"
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: 1 }}
+//           exit={{ opacity: 0 }}
+//           transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
+//         >
+//           {showLoading ? (
+//             <p className="text-black fsans-600 md:text-[32px] text-[24px] col-span-2 text-center">
+//               {isNews ? "Loading News..." : "Loading..."}
+//             </p>
+//           ) : currentItems.length > 0 ? (
+//             currentItems.map((item) =>
+//               isPress ? (
+//                 <PressCard key={item.id} item={item} />
+//               ) : (
+//                 <BlogCard
+//                   key={item.id}
+//                   blog={item}
+//                   activeTabId={activeTabId ?? item._priority}
+//                 />
+//               )
+//             )
+//           ) : (
+//             <p className="text-white text-center col-span-2">
+//               No content available.
+//             </p>
+//           )}
+//         </motion.div>
+//       </AnimatePresence>
+
+//       {/* Pagination */}
+//       {totalPages > 1 && currentItems.length > 0 && (
+//         <div className="pb-[70px]">
+//           <div className="flex justify-center gap-2">
+//             {Array.from({ length: totalPages }).map((_, idx) => (
+//               <button
+//                 key={idx}
+//                 className={`px-4 py-2 border rounded ${
+//                   currentPage === idx + 1
+//                     ? "bg-[#F7E327] text-black"
+//                     : "bg-gray-200"
+//                 }`}
+//                 onClick={() => setCurrentPage(idx + 1)}
+//               >
+//                 {idx + 1}
+//               </button>
+//             ))}
+//           </div>
+//         </div>
+//       )}
+//     </>
+//   );
+// };
+
+// export default TabBlogs;
+
 "use client";
 import { useState, useEffect } from "react";
 import BlogCard from "./BlogCard";
@@ -1198,7 +1747,7 @@ const PressCard = ({ item }) => (
   </a>
 );
 
-const TabBlogs = ({ blogs }) => {
+const TabBlogs = ({ blogs, loadingOverride = false }) => {
   const tabs = [
     { title: "All", id: null },
     { title: "Blogs", id: 17 },
@@ -1215,24 +1764,36 @@ const TabBlogs = ({ blogs }) => {
   const activeTabId = tabs[activeIndex].id;
   const isPress = activeTabId === "press";
   const isNews = activeTabId === 18;
+  const isBlogsTab = activeTabId === 17 || activeTabId === null;
 
-  // Fetch news blogs when News tab is selected
   useEffect(() => {
+    let intervalId;
+
+    const fetchNews = async () => {
+      try {
+        const res = await fetch(
+          `https://www.kshinfra.com/wp-json/wp/v2/posts?categories=18&per_page=100&_embed`
+        );
+        if (!res.ok) throw new Error("Failed to fetch");
+        const data = await res.json();
+        setNewsBlogs(data);
+        setLoadingNews(false);
+        clearInterval(intervalId);
+      } catch (err) {
+        console.warn("News fetch failed, will retry...");
+        setLoadingNews(false);
+      }
+    };
+
     if (isNews && newsBlogs.length === 0) {
       setLoadingNews(true);
-      fetch(
-        `https://www.kshinfra.com/wp-json/wp/v2/posts?categories=18&per_page=100&_embed`
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          setNewsBlogs(data);
-          setLoadingNews(false);
-        })
-        .catch(() => setLoadingNews(false));
+      fetchNews();
+      intervalId = setInterval(fetchNews, 10000);
     }
-  }, [isNews]);
 
-  // Filter logic for All / Blogs
+    return () => clearInterval(intervalId);
+  }, [isNews, newsBlogs.length]);
+
   const filteredBlogs =
     activeTabId === null
       ? blogs
@@ -1262,6 +1823,11 @@ const TabBlogs = ({ blogs }) => {
     startIndex,
     startIndex + postsPerPage
   );
+
+  const showLoading =
+    loadingOverride ||
+    (isNews && loadingNews) ||
+    (isBlogsTab && blogs.length === 0);
 
   return (
     <>
@@ -1293,19 +1859,26 @@ const TabBlogs = ({ blogs }) => {
           </div>
         </div>
       </div>
+
       {/* Content */}
       <AnimatePresence mode="wait">
         <motion.div
-          key={currentItems.map((it) => it.id).join(",")}
+          key={
+            activeIndex +
+            "-" +
+            currentItems.map((it) => it.id).join(",") +
+            "-" +
+            showLoading
+          }
           className="fix12 py-[70px] grid grid-cols-1 lg:grid-cols-2 gap-y-[65px]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
         >
-          {loadingNews ? (
+          {showLoading ? (
             <p className="text-black fsans-600 md:text-[32px] text-[24px] col-span-2 text-center">
-              Loading News...
+              {isNews ? "Loading News..." : "Loading..."}
             </p>
           ) : currentItems.length > 0 ? (
             currentItems.map((item) =>
@@ -1326,28 +1899,9 @@ const TabBlogs = ({ blogs }) => {
           )}
         </motion.div>
       </AnimatePresence>
+
       {/* Pagination */}
-      {/* <div className="pb-[70px]">
-        {totalPages > 1 && (
-          <div className="flex justify-center gap-2">
-            {Array.from({ length: totalPages }).map((_, idx) => (
-              <button
-                key={idx}
-                className={`px-4 py-2 border rounded ${
-                  currentPage === idx + 1
-                    ? "bg-[#F7E327] text-black"
-                    : "bg-gray-200"
-                }`}
-                onClick={() => setCurrentPage(idx + 1)}
-              >
-                {idx + 1}
-              </button>
-            ))}
-          </div>
-        )}
-      </div> */}
-      {/* Pagination */}
-      {totalPages > 1 && currentItems.length > 0 && (
+      {!showLoading && totalPages > 1 && currentItems.length > 0 && (
         <div className="pb-[70px]">
           <div className="flex justify-center gap-2">
             {Array.from({ length: totalPages }).map((_, idx) => (
