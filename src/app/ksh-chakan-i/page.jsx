@@ -22,7 +22,7 @@ const tabsData = [
   {
     title: "KSH Parks",
     image: "/ParkPage/chakan-1/cps.webp",
-    simage: "/ParkPage/chakan-1/cpb.webp",
+    simage: "/ParkPage/kshpb.webp",
   },
   {
     title: "Notable Industries",

@@ -19,7 +19,7 @@ const tabsData = [
   {
     title: "KSH Parks",
     image: "/ParkPage/talegaon-i/tps.webp",
-    simage: "/ParkPage/talegaon-i/tpb.webp",
+    simage: "/ParkPage/kshpb.webp",
   },
   {
     title: "Notable Industries",

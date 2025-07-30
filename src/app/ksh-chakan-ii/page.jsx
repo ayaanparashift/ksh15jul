@@ -20,7 +20,7 @@ const tabsData = [
   {
     title: "KSH Parks",
     image: "/ParkPage/chakan-1/cps.webp",
-    simage: "/ParkPage/chakan-1/cpb.webp",
+    simage: "/ParkPage/kshpb.webp",
   },
   {
     title: "Notable Industries",
@@ -39,9 +39,8 @@ const page = () => {
       <div className="bg-[#EEF0F3]">
         <ParkinSpot />
         <TabMenu />
-        {/* <ParkOverview /> */}
 
-          <PDTab
+        <PDTab
           bwidth={1140}
           tdata={tabsData}
           para="Chakan, located near Pune, is one of India’s fastest-growing integrated industrial zones, strategically developed by MIDC as a key manufacturing and logistics corridor. Home to global automotive giants like Volkswagen, Bajaj Auto, and Mercedes Benz, it offers ready infrastructure, robust connectivity, and a growing talent pool. With metro connectivity and rapid social infrastructure underway, Chakan is set to become a benchmark for modern industrial development. KSH INFRA’s parks in Chakan further reinforce its position as a central hub driving India’s industrial growth."
