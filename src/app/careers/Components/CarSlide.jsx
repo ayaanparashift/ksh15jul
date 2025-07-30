@@ -536,8 +536,8 @@ const sld = [
 
   // Slide 4 (1 woman)
   {
-    simgs: "/Career/finalcareer/dhan.jpg",
-    image: "/Career/finalcareer/dhan.jpg",
+    simgs: "/Career/finalcareer/dhana.jpg",
+    image: "/Career/finalcareer/dhana.jpg",
     title: "Dhanashri Sharma",
     subtitle: "Legal",
     description:
