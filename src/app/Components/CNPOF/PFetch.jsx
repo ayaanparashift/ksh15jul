@@ -24,7 +24,8 @@ export default function PFetch() {
       {
         id: 3,
         title: "Mapletree Investments Acquires KSH INFRA’s logistics asset",
-        content: "Mapletree Investments Acquires KSH INFRA’s logistics asset",
+        content:
+          "Mapletree Investments Acquires KSH INFRA’s logistics asset. (Dec 23, 2022)",
         image: "/blog/news/news1.jpg",
         href: "/blogs/mapletree-investments-acquires-ksh-infras-logistics-asset",
         newTab: false,
@@ -33,7 +34,7 @@ export default function PFetch() {
         id: 4,
         title: "Post covid-19 opportunities in India",
         content:
-          "The COVID-19 pandemic has disrupted every single industry over the course of just a few months.",
+          "The COVID-19 pandemic has disrupted every single industry over the course of just a few months. (Sept 28, 2022)",
         image: "/blog/news/news2.jpg",
         href: "/blogs/post-covid-19-opportunities-in-india",
         newTab: false,
@@ -42,7 +43,7 @@ export default function PFetch() {
         id: 5,
         title: "Benefits of moving into a sustainable Industrial Park",
         content:
-          "Prioritising Ergonomics in Industrial and Warehouse Operations",
+          "Prioritising Ergonomics in Industrial and Warehouse Operations. (Sept 28, 2022)",
         image: "/blog/news/news3.jpg",
         href: "/blogs/benefits-of-moving-into-a-sustainable-industrial-park",
         newTab: false,

@@ -348,7 +348,7 @@
 
 //       {/* Pagination Controls */}
 //       {totalPages > 1 && (
-//         <div className="flex justify-center gap-2 mt-6">
+//         <div className="flex justify-center gap-2">
 //           {Array.from({ length: totalPages }, (_, index) => (
 //             <button
 //               key={index}
@@ -503,7 +503,7 @@
 //       {/* Pagination Controls */}
 //       <div className="pb-[70px]">
 //         {totalPages > 1 && (
-//           <div className="flex justify-center gap-2 mt-6">
+//           <div className="flex justify-center gap-2">
 //             {Array.from({ length: totalPages }, (_, index) => (
 //               <button
 //                 key={index}
@@ -631,7 +631,7 @@
 //       {/* Pagination */}
 //       <div className="pb-[70px]">
 //         {totalPages > 1 && (
-//           <div className="flex justify-center gap-2 mt-6">
+//           <div className="flex justify-center gap-2">
 //             {Array.from({ length: totalPages }, (_, index) => (
 //               <button
 //                 key={index}
@@ -852,7 +852,7 @@
 //       {/* Pagination */}
 //       <div className="pb-[70px]">
 //         {totalPages > 1 && (
-//           <div className="flex justify-center gap-2 mt-6">
+//           <div className="flex justify-center gap-2">
 //             {Array.from({ length: totalPages }).map((_, idx) => (
 //               <button
 //                 key={idx}
@@ -1068,7 +1068,7 @@
 //       {/* Pagination */}
 //       <div className="pb-[70px]">
 //         {totalPages > 1 && (
-//           <div className="flex justify-center gap-2 mt-6">
+//           <div className="flex justify-center gap-2">
 //             {Array.from({ length: totalPages }).map((_, idx) => (
 //               <button
 //                 key={idx}
@@ -1293,7 +1293,6 @@ const TabBlogs = ({ blogs }) => {
           </div>
         </div>
       </div>
-
       {/* Content */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -1305,7 +1304,9 @@ const TabBlogs = ({ blogs }) => {
           transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
         >
           {loadingNews ? (
-            <p className="text-white col-span-2 text-center">Loading News...</p>
+            <p className="text-black fsans-600 text-[32px] col-span-2 text-center">
+              Loading News...
+            </p>
           ) : currentItems.length > 0 ? (
             currentItems.map((item) =>
               isPress ? (
@@ -1325,11 +1326,10 @@ const TabBlogs = ({ blogs }) => {
           )}
         </motion.div>
       </AnimatePresence>
-
       {/* Pagination */}
-      <div className="pb-[70px]">
+      {/* <div className="pb-[70px]">
         {totalPages > 1 && (
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-2">
             {Array.from({ length: totalPages }).map((_, idx) => (
               <button
                 key={idx}
@@ -1345,7 +1345,27 @@ const TabBlogs = ({ blogs }) => {
             ))}
           </div>
         )}
-      </div>
+      </div> */}
+      {/* Pagination */}
+      {totalPages > 1 && currentItems.length > 0 && (
+        <div className="pb-[70px]">
+          <div className="flex justify-center gap-2">
+            {Array.from({ length: totalPages }).map((_, idx) => (
+              <button
+                key={idx}
+                className={`px-4 py-2 border rounded ${
+                  currentPage === idx + 1
+                    ? "bg-[#F7E327] text-black"
+                    : "bg-gray-200"
+                }`}
+                onClick={() => setCurrentPage(idx + 1)}
+              >
+                {idx + 1}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </>
   );
 };
@@ -1507,7 +1527,7 @@ export default TabBlogs;
 //       {/* Pagination */}
 //       <div className="pb-[70px]">
 //         {totalPages > 1 && (
-//           <div className="flex justify-center gap-2 mt-6">
+//           <div className="flex justify-center gap-2">
 //             {Array.from({ length: totalPages }, (_, index) => (
 //               <button
 //                 key={index}

@@ -108,7 +108,7 @@ export default async function BlogPage({ params }) {
       </div>
 
       {/* Blog Content */}
-      <div className="fix12 md:px-10">
+      <div className="fix12">
         <div className="middleBlogContent flex md:flex-row flex-col-reverse lg:gap-20 gap-9 py-10 md:py-20 relative">
           {/* Social Icons */}
           <div className="colIcon h-fit sticky top-20">
@@ -169,7 +169,13 @@ export default async function BlogPage({ params }) {
       </div>
 
       {/* Related Blogs Section loaded via Suspense so it doesn’t block initial render */}
-      <Suspense fallback={<div>Loading related posts...</div>}>
+      <Suspense
+        fallback={
+          <div className="text-black fsans-600 text-[32px] col-span-2 text-center pb-10">
+            Loading related posts...
+          </div>
+        }
+      >
         <RelatedBlogs currentBlogId={blog.id} slug={params.slug} />
       </Suspense>
     </div>
