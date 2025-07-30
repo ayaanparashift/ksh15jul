@@ -171,7 +171,7 @@ export default async function BlogPage({ params }) {
       {/* Related Blogs Section loaded via Suspense so it doesn’t block initial render */}
       <Suspense
         fallback={
-          <div className="text-black fsans-600 text-[32px] col-span-2 text-center pb-10">
+          <div className="text-black fsans-600 md:text-[32px] text-[24px] col-span-2 text-center pb-10">
             Loading related posts...
           </div>
         }

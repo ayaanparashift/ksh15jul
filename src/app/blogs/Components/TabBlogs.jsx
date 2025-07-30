@@ -1304,7 +1304,7 @@ const TabBlogs = ({ blogs }) => {
           transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
         >
           {loadingNews ? (
-            <p className="text-black fsans-600 text-[32px] col-span-2 text-center">
+            <p className="text-black fsans-600 md:text-[32px] text-[24px] col-span-2 text-center">
               Loading News...
             </p>
           ) : currentItems.length > 0 ? (
