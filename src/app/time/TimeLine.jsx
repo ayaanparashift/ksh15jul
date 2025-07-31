@@ -218,7 +218,12 @@ const Timeline = () => {
                     )}
 
                     <div className="absolute top-[calc(80%-20px)] sm:top-[calc(42%-12px)] -translate-y-1/2 z-20">
-                      <div className="w-[70px] h-[28px] bg-[#46586F] border-2 border-[#fff] flex items-center justify-center">
+                      {/* <div className="w-[70px] h-[28px] bg-[#46586F] border-2 border-[#fff] flex items-center justify-center">
+                        <h2 className="text-[18px] fpt-600 text-[#F7E327]">
+                          {year}
+                        </h2>
+                      </div> */}
+                      <div className="w-[70px] h-[28px] bg-[#46586F] flex items-center justify-center">
                         <h2 className="text-[18px] fpt-600 text-[#F7E327]">
                           {year}
                         </h2>

@@ -41,7 +41,7 @@ const Landing2 = ({ isActive }) => {
       <div className="w-full flex items-center lg:justify-center justify-end xl-1600:max-h-fit md:h-screen h-[90vh] pb-[75px] pt-[0px] md:py-[92px] md:gap-[50px] gap-[20px] md:flex-row flex-col-reverse">
         {/* Left Side Content */}
         <motion.div
-          className="ml-[max(5%,calc((100vw-1250px)/2))] xl:mr-0 mr-[max(5%,calc((100vw-1250px)/2))] flex min-1920:mt-[190px] flex-col flex-1 max-w-full lg:gap-[30px] gap-5 xl:flex-[1] xl-1920:h-[500px] xl-1600:h-[500px] xl:h-[400px] md:h-[500px] md:justify-end h-full"
+          className="ml-[max(5%,calc((100vw-1250px)/2))] xl:mr-0 mr-[max(5%,calc((100vw-1250px)/2))] flex min-1920:mt-[190px] flex-col flex-1 max-w-full lg:gap-[30px] gap-2 xl:flex-[1] xl-1920:h-[500px] xl-1600:h-[500px] xl:h-[400px] md:h-[500px] md:justify-end h-full"
           variants={fadeIn2}
           initial="hidden"
           animate={isActive ? "visible" : "hidden"}
@@ -81,7 +81,7 @@ const Landing2 = ({ isActive }) => {
                 alt="Red Arrow Icon"
               />
               <p className="text-[#ffffff] text-[16px] fsans-600">
-                Explore Hosur Park 1
+                Explore Hosur Park I
               </p>
             </Link>
           </motion.div>
