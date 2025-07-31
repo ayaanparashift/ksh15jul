@@ -114,7 +114,8 @@ export default function BCSlider({ relatedBlogs }) {
           slidesPerView={2}
           navigation={false} // Hide default navigation
           breakpoints={{
-            768: { slidesPerView: 2 },
+            1280: { slidesPerView: 2 },
+            768: { slidesPerView: 1.5 },
             320: { slidesPerView: 1 }, // Show 1 card on small screens
           }}
           className="pb-10"

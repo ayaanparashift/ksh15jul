@@ -309,6 +309,127 @@
 //
 //
 
+// "use client";
+// import React, { useState, useEffect } from "react";
+// import Link from "next/link";
+
+// const fetchBlogByPage = async () => {
+//   try {
+//     const resp = await fetch(
+//       `https://www.kshinfra.com/wp-json/wp/v2/posts?per_page=6&page=1`,
+//       { next: { revalidate: 60 } }
+//     );
+//     if (!resp.ok) {
+//       return [];
+//     }
+//     const data = await resp.json();
+//     return data;
+//   } catch (error) {
+//     console.error("Fetch failed:", error);
+//     return [];
+//   }
+// };
+
+// const Bento2 = () => {
+//   const [blogs, setBlogs] = useState([]);
+//   const [loading, setLoading] = useState(true);
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       const blogData = await fetchBlogByPage();
+//       setBlogs(blogData);
+//       setLoading(false);
+//     };
+//     fetchData();
+//   }, []);
+
+//   if (loading || blogs.length < 6) return null;
+
+//   return (
+//     <div className="flex pt-0 md:pt-[20px] sm:flex-row flex-col gap-[20px] items-center justify-between h-fit">
+//       {/* Card 1 */}
+//       <Link
+//         href={`/blogs/${blogs[3].slug}`}
+//         className="relative h-[585px] md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out w-full sm:w-[33%] cursor-pointer xl:w-[385px] flex flex-col justify-end px-4 xl:px-[25px] pb-[20px] gap-[10px]"
+//         style={{
+//           background: `url(${blogs[3]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
+//           backgroundPosition: "center center",
+//           backgroundRepeat: "no-repeat",
+//           backgroundSize: "cover",
+//         }}
+//       >
+//         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
+//         <p
+//           dangerouslySetInnerHTML={{ __html: blogs[3].title?.rendered }}
+//           className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
+//         />
+//         <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
+//           15 Feb 25
+//         </p>
+//         <button className="relative z-50">
+//           <img className="h-10 w-10" src="/buttonarrows/bentor1.svg" alt="r1" />
+//         </button>
+//       </Link>
+
+//       {/* Card 2 */}
+//       <Link
+//         href={`/blogs/${blogs[4].slug}`}
+//         className="relative h-[585px] md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out w-full sm:w-[33%] cursor-pointer xl:w-[315px] flex flex-col justify-end px-4 xl:px-[31px] pb-[20px] sm:pt-[50px] gap-[10px]"
+//         style={{
+//           background: `url(${blogs[4]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
+//           backgroundPosition: "center center",
+//           backgroundRepeat: "no-repeat",
+//           backgroundSize: "cover",
+//         }}
+//       >
+//         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
+//         <p
+//           dangerouslySetInnerHTML={{ __html: blogs[4].title?.rendered }}
+//           className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
+//         />
+//         <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
+//           4 Jan 25
+//         </p>
+//         <button className="relative z-50">
+//           <img className="h-10 w-10" src="/buttonarrows/bentor1.svg" alt="r1" />
+//         </button>
+//       </Link>
+
+//       {/* Card 3 */}
+//       <div className="relative h-[578px] transition-[transform] duration-300 w-full sm:w-[33%] xl:w-[515px] flex justify-end flex-col-reverse sm:flex-col gap-[30px]">
+//         <Link
+//           href={`/blogs/${blogs[5].slug}`}
+//           className="relative md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out h-[479px] flex flex-col items-start justify-end px-4 xl:px-[50px] pb-[20px] gap-[10px] cursor-pointer"
+//           style={{
+//             background: `url(${blogs[5]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
+//             backgroundPosition: "center center",
+//             backgroundRepeat: "no-repeat",
+//             backgroundSize: "cover",
+//           }}
+//         >
+//           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
+//           <p
+//             dangerouslySetInnerHTML={{ __html: blogs[5].title?.rendered }}
+//             className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
+//           />
+//           <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
+//             4 Jan 25
+//           </p>
+//           <button className="relative z-50">
+//             <img
+//               className="h-10 w-10"
+//               src="/buttonarrows/bentor1.svg"
+//               alt="r1"
+//             />
+//           </button>
+//         </Link>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Bento2;
+
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -317,33 +438,33 @@ const fetchBlogByPage = async () => {
   try {
     const resp = await fetch(
       `https://www.kshinfra.com/wp-json/wp/v2/posts?per_page=6&page=1`,
-      { next: { revalidate: 60 } }
+      { next: { revalidate: 60 }, cache: "no-store" }
     );
-    if (!resp.ok) {
-      return [];
-    }
+    if (!resp.ok) return [];
     const data = await resp.json();
     return data;
   } catch (error) {
-    console.error("Fetch failed:", error);
+    console.error("Bento2 Fetch failed:", error);
     return [];
   }
 };
 
 const Bento2 = () => {
   const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    let ignore = false;
     const fetchData = async () => {
       const blogData = await fetchBlogByPage();
-      setBlogs(blogData);
-      setLoading(false);
+      if (!ignore && blogData.length >= 6) setBlogs(blogData);
     };
     fetchData();
+    return () => {
+      ignore = true;
+    };
   }, []);
 
-  if (loading || blogs.length < 6) return null;
+  if (blogs.length < 6) return null;
 
   return (
     <div className="flex pt-0 md:pt-[20px] sm:flex-row flex-col gap-[20px] items-center justify-between h-fit">

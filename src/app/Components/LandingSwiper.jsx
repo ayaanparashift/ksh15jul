@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import Landing from "./Landing";
 import VidLand from "./VidLand";
+import Landing2 from "./Landing2";
 
 const LandingSwiper = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -64,6 +65,15 @@ const LandingSwiper = () => {
             // transition={{ duration: 0.3, ease: [0.7, 0, 0.4, 1] }}
             >
               <Landing isActive={activeIndex === 1} />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+            // initial={{ width: 0 }}
+            // animate={{ width: activeIndex === 1 ? "100%" : 0 }}
+            // transition={{ duration: 0.3, ease: [0.7, 0, 0.4, 1] }}
+            >
+              <Landing2 isActive={activeIndex === 2} />
             </div>
           </SwiperSlide>
         </Swiper>

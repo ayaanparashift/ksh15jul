@@ -394,6 +394,7 @@ import BentoHeaderF from "./BentoHeaderF";
 import Bento from "./Bento";
 import Bento2 from "./Bento2";
 import BlogCard from "./BlogCard";
+import Bento3 from "./Bento3";
 
 const fetchBlogByPage = async () => {
   const resp = await fetch(
@@ -478,6 +479,9 @@ const BentoSlider = () => {
             >
               <SwiperSlide>
                 <Bento pointerEvents={!sliding} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Bento3 pointerEvents={!sliding} />
               </SwiperSlide>
               <SwiperSlide>
                 <Bento2 pointerEvents={!sliding} />

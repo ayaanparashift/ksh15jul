@@ -24,8 +24,8 @@ const tabsData = [
   },
   {
     title: "Notable Industries",
-    image: "/ParkPage/chakan-1/cis.webp",
-    simage: "/ParkPage/chakan-1/cib.webp",
+    image: "/ParkPage/chakan-1/chis.webp",
+    simage: "/ParkPage/chakan-1/chib.webp",
   },
   {
     title: "Connectivity",

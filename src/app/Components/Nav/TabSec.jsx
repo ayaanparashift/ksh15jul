@@ -201,7 +201,7 @@ const TabSec = ({ onClose }) => {
         {/* Hosur Section */}
         <div>
           <h3 className="text-[14px] spotlightheaddd fsan-400 text-[#CFCFCF] mb-4 border-b border-[#fff] border-opacity-60 pb-[10px]">
-            Bengalore
+            Bangalore
           </h3>
           <ul className="flex fsans-600 flex-col">
             {col2.map((item, index) => (
