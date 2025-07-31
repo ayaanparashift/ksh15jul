@@ -128,7 +128,7 @@ const Landing2 = ({ isActive }) => {
               exit="exit"
             >
               <motion.img
-                src="/homepage/hospothome.webp"
+                src="/homepage/hshomeph.png"
                 className="object-cover md:hidden inline-block"
                 alt="some"
                 variants={fadeIn}
