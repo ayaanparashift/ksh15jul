@@ -89,14 +89,14 @@ const Landing2 = ({ isActive }) => {
 
         {/* Right Side Image */}
         <motion.div
-          className="md:min-h-full min-h-fit h-fit flex-1 flex flex-col justify-center items-end xl:ml-0 ml-[max(5%,calc((100vw-1250px)/2))] xl:mr-0 mr-[max(5%,calc((100vw-1250px)/2))]"
+          className="md:min-h-full min-h-fit max-w-full md:w-auto w-full h-fit flex-1 flex flex-col justify-center items-end"
           variants={fadeIn}
           initial="hidden"
           animate={isActive ? "visible" : "hidden"}
           exit="exit"
         >
           <motion.div
-            className="flex items-end justify-center flex-col min-1600:h-[695px] pt-32 md:pt-[150px] min-1920:pt-[250px] xl:h-[595px] max-w-full"
+            className="flex items-end justify-center flex-col min-1600:h-[695px] pt-32 md:pt-[150px] min-1920:pt-[250px] xl:h-[595px] max-w-full md:w-auto w-full"
             variants={fadeIn}
           >
             {/* Desktop Image */}
@@ -126,10 +126,11 @@ const Landing2 = ({ isActive }) => {
               initial="hidden"
               animate="visible"
               exit="exit"
+              className="w-full max-w-[1250px] mx-auto px-5 md:hidden"
             >
               <motion.img
                 src="/homepage/hshomeph.png"
-                className="object-cover md:hidden inline-block"
+                className="object-cover w-full"
                 alt="some"
                 variants={fadeIn}
               />
