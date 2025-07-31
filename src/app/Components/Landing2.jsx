@@ -89,7 +89,7 @@ const Landing2 = ({ isActive }) => {
 
         {/* Right Side Image */}
         <motion.div
-          className="md:min-h-full min-h-fit h-fit flex-1 flex flex-col justify-center items-end ml-[max(5%,calc((100vw-1250px)/2))] xl:mr-0 mr-[max(5%,calc((100vw-1250px)/2))]"
+          className="md:min-h-full min-h-fit h-fit flex-1 flex flex-col justify-center items-end xl:ml-0 ml-[max(5%,calc((100vw-1250px)/2))] xl:mr-0 mr-[max(5%,calc((100vw-1250px)/2))]"
           variants={fadeIn}
           initial="hidden"
           animate={isActive ? "visible" : "hidden"}
