@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import LineHead from "../Components/Heading/LineHead";
 
-const timelineData = [
+const testidata = [
   {
     year: 1969,
     content:
@@ -151,11 +151,11 @@ const Timeline = () => {
           // loop={true}
           className="fix12"
         >
-          {/* Split timelineData into 3 slides */}
+          {/* Split testidata into 3 slides */}
           {[0, 1, 2].map((slideIndex) => (
             <SwiperSlide key={slideIndex}>
               <div className="relative w-fit flex items-center gap-[120px] xl-1366:gap-24 xl-1280:gap-[80px] xl-1024:gap-[60px] justify-center  bg-red-500 mb-8">
-                {timelineData
+                {testidata
                   .slice(slideIndex * 7, slideIndex * 7 + 7) // 3 items per slide
                   .map(({ year, marginTop }) => (
                     <div
@@ -200,7 +200,7 @@ const Timeline = () => {
             <div className="bg-red-500 xl-1024:w-[330px] w-[400px]">
               <img
                 src={
-                  timelineData.find((item) => item.year === selectedYear)?.image
+                  testidata.find((item) => item.year === selectedYear)?.image
                 }
                 alt="event"
                 className="w-32 h-32 rounded-md object-cover"
@@ -211,7 +211,7 @@ const Timeline = () => {
                 </h3>
                 <p className="text-gray-600">
                   {
-                    timelineData.find((item) => item.year === selectedYear)
+                    testidata.find((item) => item.year === selectedYear)
                       ?.content
                   }
                 </p>
@@ -242,3 +242,49 @@ const Timeline = () => {
 };
 
 export default Timeline;
+
+const MobileTimeline = () => {
+  return (
+    <div className="md:hidden w-full bg-gray-100 py-10 px-4">
+      <h2 className="text-2xl font-bold text-center mb-4">The KSH Legacy</h2>
+      <p className="text-center text-gray-600 mb-6 text-sm">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <Swiper
+        modules={[Pagination]}
+        spaceBetween={20}
+        pagination={{ clickable: true }}
+        slidesPerView={1}
+        className="w-full"
+      >
+        {testidata.map((item, idx) => (
+          <SwiperSlide key={item.year}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: idx * 0.05 }}
+              viewport={{ once: true }}
+              className="rounded-lg overflow-hidden bg-white shadow-md"
+            >
+              <div className="w-full h-[30vh]">
+                <img
+                  src={item.image}
+                  alt={item.year}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-red-600 mb-2">
+                  {item.year}
+                </h3>
+                <p className="text-gray-700 text-sm">{item.content}</p>
+              </div>
+            </motion.div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+};

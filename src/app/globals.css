@@ -1140,3 +1140,29 @@ canvas {
   transition: height 0.2s ease, top 0.2s ease;
   pointer-events: none;
 }
+/* Custom colored scrollbar using native scrollbars */
+
+.styled-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #6c8dab transparent;
+  overflow-y: overlay;
+}
+
+.styled-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.styled-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.styled-scroll::-webkit-scrollbar-thumb {
+  background-color: #6c8dab;
+  border-radius: 9999px;
+}
+
+.styled-scroll::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}

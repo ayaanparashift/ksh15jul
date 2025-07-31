@@ -44,6 +44,7 @@ import LandingSwiper from "./Components/LandingSwiper";
 import Testimonial from "./Components/testislider/Testimonial";
 import TestimonialsSlider from "./test/Final/TestimonialsSlider";
 import Bento from "./Components/Bento";
+import TestimonialF from "./test/Final/TestimonialF";
 
 export const metadata = {
   title: "KSH INFRA Leading Industrial Park and Warehouse Developers in India",
@@ -81,7 +82,7 @@ export default async function Home() {
       <NewUSP />
       <PFetch />
       <TrustedPartners />
-      <TestimonialsSlider />
+      <TestimonialF />
       <EsgF />
       <SlideSectionF />
       <BentoSlider />

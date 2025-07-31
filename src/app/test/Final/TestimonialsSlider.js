@@ -120,7 +120,7 @@ const testimonials = [
 
 const TestimonialSlider = () => {
   return (
-    <div className="w-full 2xl:min-h-[100vh] min-h-[110vh] min-1920:min-h-[60vh] flex flex-col gap-10 justify-center items-center py-16 bg-[url('/testimonial/testibg.webp')] bg-no-repeat bg-cover bg-center text-white">
+    <div className="w-full 2xl:min-h-[100vh] min-h-[110vh] min-1920:min-h-[60vh] lg:flex flex-col hidden gap-10 justify-center items-center py-16 bg-[url('/testimonial/testibg.webp')] bg-no-repeat bg-cover bg-center text-white">
       <div className="text-2xl fsans-600 fix12 border-b border-[#D7D7D7] pb-5">
         What Our Clients Say
       </div>
