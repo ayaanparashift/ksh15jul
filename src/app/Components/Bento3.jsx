@@ -6,7 +6,7 @@ const pressReleases = [
   {
     id: 6,
     title:
-      "KSH INFRA forays into South India<br/>plans to invest Rs 450 Cr. on Hosur logistics park",
+      "KSH INFRA forays into South India plans to invest Rs 450 Cr. on Hosur logistics park",
     content:
       "KSH INFRA forays into South India, plans to invest Rs 450 Cr. on Hosur logistics park",
     image: "/press/press1.png",
@@ -17,7 +17,7 @@ const pressReleases = [
   {
     id: 7,
     title:
-      "KSH INFRA to invest Rs 450 crore<br/>to develop logistics park in Hosur",
+      "KSH INFRA to invest Rs 450 crore to develop logistics park in Hosur",
     content:
       "KSH INFRA to invest Rs 450 crore to develop industrial & logistics park in Hosur",
     image: "/press/press3.png",
@@ -27,8 +27,7 @@ const pressReleases = [
   },
   {
     id: 8,
-    title:
-      "KSH INFRA To Invest Nearly $54 Mn<br/>In South India Logistics Park",
+    title: "KSH INFRA To Invest Nearly $54 Mn In South India Logistics Park",
     content: "KSH INFRA To Invest Nearly $54 Mn In South India Logistics Park",
     image: "/press/press2.png",
     href: "https://www.vccircle.com/kshinfra-to-invest-nearly-54-mn-in-south-india-logistics-park",
