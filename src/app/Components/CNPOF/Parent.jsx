@@ -62,7 +62,7 @@ const Parent = ({ staticData }) => {
   return (
     <div
       id="spotlight"
-      className="relative min-[1920px]:h-[75vh] lg:h-[105vh] h-[110vh] bg-[url(/spotlightbg.webp)] bg-cover bg-no-repeat bg-center"
+      className="relative lg:h-[105vh] h-[110vh]  min-1920:h-[75vh] bg-[url(/spotlightbg.webp)] bg-cover bg-no-repeat bg-center"
     >
       {/* Blur Overlay */}
       <div className="absolute inset-0 backdrop-blur-[0.2px] bg-black/40 z-0"></div>
