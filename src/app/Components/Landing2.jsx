@@ -38,7 +38,7 @@ const Landing2 = ({ isActive }) => {
       animate={isActive ? "visible" : "hidden"}
       exit="exit"
     >
-      <div className="w-full flex items-center lg:justify-center justify-end xl-1600:max-h-fit md:h-screen h-[90vh] pb-[75px] pt-[0px] md:py-[92px] xl:gap-[100px] md:gap-[50px] gap-[20px] md:flex-row flex-col-reverse">
+      <div className="w-full flex items-center lg:justify-center justify-end xl-1600:max-h-fit md:h-screen h-[90vh] pb-[75px] pt-[0px] md:py-[92px] md:gap-[50px] gap-[20px] md:flex-row flex-col-reverse">
         {/* Left Side Content */}
         <motion.div
           className="ml-[max(5%,calc((100vw-1250px)/2))] xl:mr-0 mr-[max(5%,calc((100vw-1250px)/2))] flex min-1920:mt-[190px] flex-col flex-1 max-w-full lg:gap-[30px] gap-5 xl:flex-[1] xl-1920:h-[500px] xl-1600:h-[500px] xl:h-[400px] md:h-[500px] md:justify-end h-full"
@@ -51,8 +51,7 @@ const Landing2 = ({ isActive }) => {
             className="fpt-600 max-w-fit min-1366:text-[65px] xl:text-[52px] lg:text-[40px] text-[28px] text-white border-b-[5px] md:border-b-[10px] border-[#F7E327] leading-[105%] min-1600:text-[70px]"
             variants={fadeIn2}
           >
-            South India’s Gateway to
-            <br /> Scalable Industrial Growth
+            South India’s Gateway to Scalable Industrial Growth
           </motion.h1>
           <motion.p
             className="fsans-500 text-[14px] lg:text-[18px] xl:text-[20px] leading-[26px]"
