@@ -96,7 +96,7 @@ const Landing2 = ({ isActive }) => {
           exit="exit"
         >
           <motion.div
-            className="flex items-end justify-center flex-col min-1600:h-[695px] pt-32 md:pt-[150px] xl:h-[595px] max-w-full"
+            className="flex items-end justify-center flex-col min-1600:h-[695px] pt-32 md:pt-[150px] min-1920:pt-[250px] xl:h-[595px] max-w-full"
             variants={fadeIn}
           >
             {/* Desktop Image */}
