@@ -178,7 +178,7 @@ const Card = ({ todos, activeSidebar, acbtn }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
-            className="fsans-600 min-1440:text-[28px] md:text-[24px] text-[20px] leading-[150%] text-white spotlightheaddd pt-[10px]"
+            className="fsans-600 min-1440:text-[28px] md:text-[24px] text-[18px] leading-[150%] text-white spotlightheaddd pt-[10px]"
           >
             {activeItem.content || "No Data Available"}
           </motion.h3>
@@ -192,7 +192,7 @@ const Card = ({ todos, activeSidebar, acbtn }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
-          className="flex cursor-pointer group items-center justify-between pt-[23px] font-semibold text-[#ffffff] text-[16px] h-fit w-fit"
+          className="flex cursor-pointer group items-center justify-between pt-[10px] font-semibold text-[#ffffff] text-[16px] h-fit w-fit"
         >
           <Link
             href={activeItem.href || "#"}
