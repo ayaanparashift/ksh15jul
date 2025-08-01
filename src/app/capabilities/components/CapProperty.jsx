@@ -84,7 +84,7 @@
 //             <img src="/Cap/capPro.png" alt="" />
 //           </div>
 //           <div className="conCap flex-1 flex flex-col justify-between">
-//             <h1 className="md:text-[30px] text-[24px] fpt-500 leading-[33px] text-white border-b-[#D7D7D7] border-b-[1px] pb-2">
+//             <h1 className="md:text-[30px] text-[24px] fpt-600 leading-[33px] text-white border-b-[#D7D7D7] border-b-[1px] pb-2">
 //               Property Management
 //             </h1>
 
@@ -279,7 +279,7 @@ const CapProperty = () => {
           <img src="/Cap/capPro.png" alt="Cap Project" />
         </div>
         <div className="conCap flex-1 flex flex-col justify-between">
-          <h1 className="md:text-[30px] text-[24px] fpt-500 leading-[33px] text-white border-b-[#D7D7D7] border-b-[1px] pb-2">
+          <h1 className="md:text-[30px] text-[24px] fpt-600 leading-[33px] text-white border-b-[#D7D7D7] border-b-[1px] pb-2">
             Property Management
           </h1>
           <div className="flex flex-col justify-between">

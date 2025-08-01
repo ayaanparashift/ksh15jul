@@ -156,7 +156,7 @@
 //     <div className="grid md:grid-cols-4 grid-cols-2 relative z-0 pb-0">
 //       <motion.div
 //         ref={plannedDevData.ref}
-//         className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#6C8DAB] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300"
+//         className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#E30613] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300"
 //       >
 //         <p className="xl:text-[18px] lg:text-[16px] text-[14px] fsans-600 text-[#092241] group-hover:text-white">
 //           <span className="fsans-600 min-1366:text-[40px] lg:text-[28px] text-[20px] leading-[111%]">
@@ -170,7 +170,7 @@
 //       </motion.div>
 //       <motion.div
 //         ref={plannedDevData.ref}
-//         className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#6C8DAB] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300"
+//         className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#E30613] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300"
 //       >
 //         <p className="xl:text-[18px] lg:text-[16px] text-[14px] fsans-600 text-[#092241] group-hover:text-white">
 //           <span className="fsans-600 min-1366:text-[40px] lg:text-[28px] text-[20px] leading-[111%]">
@@ -185,7 +185,7 @@
 
 //       <motion.div
 //         ref={puneDevData.ref}
-//         className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#6C8DAB] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300"
+//         className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#E30613] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300"
 //       >
 //         <p className="xl:text-[18px] lg:text-[16px] text-[14px] fsans-600 text-[#092241] group-hover:text-white">
 //           <span className="fsans-600 2xl:text-[40px] xl:text-[32px] lg:text-[28px] text-[20px] leading-[111%]">
@@ -200,7 +200,7 @@
 
 //       <motion.div
 //         ref={restDevData.ref}
-//         className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#6C8DAB] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300"
+//         className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#E30613] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300"
 //       >
 //         <p className="xl:text-[18px] lg:text-[16px] text-[14px] fsans-600 text-[#092241] group-hover:text-white">
 //           <span className="fsans-600 2xl:text-[40px] xl:text-[32px] lg:text-[28px] text-[20px] leading-[111%]">
@@ -221,7 +221,7 @@
 const AboutCounter = () => {
   return (
     <div className="grid md:grid-cols-4 grid-cols-2 relative z-0 pb-0">
-      <div className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#6C8DAB] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300">
+      <div className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#E30613] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300">
         <p className="xl:text-[18px] lg:text-[16px] text-[14px] fsans-600 text-[#092241] group-hover:text-white">
           <span className="fsans-600 min-1366:text-[40px] lg:text-[28px] text-[20px] leading-[111%]">
             06
@@ -233,7 +233,7 @@ const AboutCounter = () => {
         </p>
       </div>
 
-      <div className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#6C8DAB] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300">
+      <div className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#E30613] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300">
         <p className="xl:text-[18px] lg:text-[16px] text-[14px] fsans-600 text-[#092241] group-hover:text-white">
           <span className="fsans-600 min-1366:text-[40px] lg:text-[28px] text-[20px] leading-[111%]">
             10 MN
@@ -245,7 +245,7 @@ const AboutCounter = () => {
         </p>
       </div>
 
-      <div className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#6C8DAB] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300">
+      <div className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#E30613] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300">
         <p className="xl:text-[18px] lg:text-[16px] text-[14px] fsans-600 text-[#092241] group-hover:text-white">
           <span className="fsans-600 2xl:text-[40px] xl:text-[32px] lg:text-[28px] text-[20px] leading-[111%]">
             4 MN
@@ -257,7 +257,7 @@ const AboutCounter = () => {
         </p>
       </div>
 
-      <div className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#6C8DAB] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300">
+      <div className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#E30613] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300">
         <p className="xl:text-[18px] lg:text-[16px] text-[14px] fsans-600 text-[#092241] group-hover:text-white">
           <span className="fsans-600 2xl:text-[40px] xl:text-[32px] lg:text-[28px] text-[20px] leading-[111%]">
             3 MN

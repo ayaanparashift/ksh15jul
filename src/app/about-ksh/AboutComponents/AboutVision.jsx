@@ -163,7 +163,7 @@ const AboutVision = () => {
                       "linear-gradient(to top right, rgba(221, 221, 221, 0.89), rgba(221, 221, 221, 0)) 10",
                   }}
                 >
-                  <h1 className="text-3xl fpt-500 pb-[6px] text-white">
+                  <h1 className="text-3xl fpt-600 pb-[6px] text-white">
                     Leadership
                   </h1>
                   <p className="text-[#C1C1C1] text-sm">
@@ -183,7 +183,7 @@ const AboutVision = () => {
                   // viewport={{ amount: 0.1, once: true }}
                   className="flex-1 lg:h-[150px] xl-1024:h-auto  lg:pl-[35px] "
                 >
-                  <h1 className="text-3xl fpt-500 pb-[6px] text-white">
+                  <h1 className="text-3xl fpt-600 pb-[6px] text-white">
                     Teamwork
                   </h1>
                   <p className="text-[#C1C1C1] text-sm ">
@@ -209,7 +209,7 @@ const AboutVision = () => {
                       "linear-gradient(to top right, rgba(221, 221, 221, 0), rgba(185, 140, 140, 0.70)) 30",
                   }}
                 >
-                  <h1 className="text-3xl fpt-500 pb-[6px] text-white pt-5">
+                  <h1 className="text-3xl fpt-600 pb-[6px] text-white pt-5">
                     Responsible
                   </h1>
                   <p className="text-[#C1C1C1] text-sm ">
@@ -234,7 +234,7 @@ const AboutVision = () => {
                       "linear-gradient(to top right, rgba(221, 221, 221, 0), rgba(185, 140, 140, 0.70)) 30",
                   }}
                 >
-                  <h1 className="text-3xl fpt-500 pt-5 text-white ">Care</h1>
+                  <h1 className="text-3xl fpt-600 pt-5 text-white ">Care</h1>
                   <p className="text-[#C1C1C1] text-sm ">
                     Care for people, communities, and the planet. With care we
                     foster a supportive, inclusive, and respectful workplace

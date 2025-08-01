@@ -17,7 +17,7 @@ const SustainSocial = () => {
           // whileInView={{ width: "100%" }}
           // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
           // viewport={{ once: true, amount: 0.3 }}
-          className="text-[#092241] fpt-500 md:text-[44px] sm:text-[32px] text-[24px] border-b-[#D7D7D7] border-b-[1px] md:pb-3 overflow-hidden whitespace-nowrap"
+          className="text-[#092241] fpt-600 md:text-[44px] sm:text-[32px] text-[24px] border-b-[#D7D7D7] border-b-[1px] md:pb-3 overflow-hidden whitespace-nowrap"
         >
           Social Commitment
         </h1>

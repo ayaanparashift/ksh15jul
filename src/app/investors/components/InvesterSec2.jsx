@@ -11,7 +11,7 @@ const InvesterSec2 = () => {
           // whileInView={{ opacity: 1, translateX: 0 }}
           // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
           // viewport={{ amount: 0.1, once: true }}
-          className="fpt-500 text-[#141414] md:text-[44px] sm:text-[32px] text-[24px] md:leading-[48.84px] leading-[110%]"
+          className="fpt-600 text-[#092241] md:text-[44px] sm:text-[32px] text-[24px] md:leading-[48.84px] leading-[110%]"
         >
           Value. Vision. Wealth.
         </h1>

@@ -276,7 +276,7 @@
 //                 className="w-[165px] h-[138px] object-cover"
 //               />
 //               <div className="bg-white w-full pt-3 p-2 space-y-2">
-//                 <h3 className="fpt-500 text-4xl text-[#092241] leading-9 font-bold">
+//                 <h3 className="fpt-600 text-4xl text-[#092241] leading-9 font-bold">
 //                   {timelineData.find((item) => item.id === selectedYear)?.year}
 //                 </h3>
 //                 <p className="pt-2 fsans-400 text-sm text-[#474747]">
@@ -589,7 +589,7 @@ const Timeline = () => {
                 className="w-[165px] h-[138px] object-cover"
               />
               <div className="bg-white w-full pt-3 p-2 space-y-2">
-                <h3 className="fpt-500 text-4xl text-[#092241] leading-9 font-bold">
+                <h3 className="fpt-600 text-4xl text-[#092241] leading-9 font-bold">
                   {timelineData.find((item) => item.id === selectedYear)?.year}
                 </h3>
                 <p className="pt-2 fsans-400 text-sm text-[#474747]">

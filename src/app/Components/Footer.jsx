@@ -884,27 +884,6 @@ const Footer = () => {
                       </svg>
                     ),
                   },
-                  {
-                    href: "https://twitter.com/KshInfra/status/1687774451692343296",
-                    svg: (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="30"
-                        height="30"
-                        viewBox="0 0 40 40"
-                        fill="none"
-                      >
-                        <path
-                          d="M18.0028 21.353L6.41031 34.583M31.6028 5.41964L21.2945 17.5596M5.50781 5.41797L28.3745 34.5846H34.6745L11.8086 5.41797H5.50781Z"
-                          stroke="#fff"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="transition-all duration-300 ease group-hover:stroke-[#9acbf8]"
-                        />
-                      </svg>
-                    ),
-                  },
                 ].map((item, index) => (
                   // <Link
                   //   key={index}
@@ -1129,11 +1108,11 @@ const Footer = () => {
             </div>
 
             <div className="">
-              <div className="text-[#cfe6fc90] text-sm font-semibold leading-6 max-w-full ">
+              <div className="text-[#cfe6fc90] text-sm font-normal leading-6 max-w-full ">
                 <p className="whitespace-nowrap text-white pb-1 fsans-600">
                   KSH INFRA, Head Office: Pune
                 </p>
-                <p>
+                <p className="fsans-400">
                   Gokhale Sanchit, Office No. 4, <br /> Survey No. 846, Servants
                   of India Society, <br /> Near Marathwada College,
                   Shivajinagar,
@@ -1143,11 +1122,11 @@ const Footer = () => {
               </div>
             </div>
             <div className="">
-              <div className="text-[#cfe6fc90] text-sm font-semibold leading-6 max-w-full ">
+              <div className="text-[#cfe6fc90] text-sm font-normal leading-6 max-w-full ">
                 <p className="whitespace-nowrap text-white pb-1 fsans-600">
                   KSH INFRA, Mumbai
                 </p>
-                <p>
+                <p className="fsans-400">
                   Birla Centurion, Wing - B, PS/03/052,
                   <br /> 3rd Floor, COWRKS, Pandurang Budhkar Marg, <br />{" "}
                   Century Mills, Worli, Mumbai, <br />

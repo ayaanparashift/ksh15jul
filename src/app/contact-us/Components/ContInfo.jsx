@@ -187,28 +187,6 @@ const ContInfo = () => {
               />
             </svg>
           </Link>
-
-          <Link
-            href="https://twitter.com/KshInfra/status/1687774451692343296"
-            className="group"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-            >
-              <path
-                d="M18.0028 21.353L6.41031 34.583M31.6028 5.41964L21.2945 17.5596M5.50781 5.41797L28.3745 34.5846H34.6745L11.8086 5.41797H5.50781Z"
-                stroke="#6F6F70"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="transition-all duration-300 group-hover:stroke-[#092241]"
-              />
-            </svg>
-          </Link>
         </div>
       </div>
     </div>

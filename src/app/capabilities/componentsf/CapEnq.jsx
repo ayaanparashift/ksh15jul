@@ -22,7 +22,7 @@
 
 //   return (
 //     <div className="relative flex flex-col px-[max(5%,calc((100vw-1250px)/2))] items-center justify-center gap-6 capEnqBg lg:h-[292px] py-14 lg:py-0">
-//       <h1 className="fpt-500 text-2xl text-center md:text-3xl lg:text-[44px] lg:leading-[50px] text-white">
+//       <h1 className="fpt-600 text-2xl text-center md:text-3xl lg:text-[44px] lg:leading-[50px] text-white">
 //         Let's co-create the right solution for your business
 //       </h1>
 //       <button
@@ -84,7 +84,7 @@ const CapEnq = () => {
 
   return (
     <div className="relative flex flex-col px-[max(5%,calc((100vw-1250px)/2))] items-center justify-center gap-6 capEnqBg lg:h-[292px] py-14 lg:py-0">
-      <h1 className="fpt-500 text-2xl text-center md:text-3xl lg:text-[44px] lg:leading-[50px] text-white">
+      <h1 className="fpt-600 text-2xl text-center md:text-3xl lg:text-[44px] lg:leading-[50px] text-white">
         Let's co-create the right solution for your business
       </h1>
       <button

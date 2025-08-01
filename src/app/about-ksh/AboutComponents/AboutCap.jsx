@@ -142,7 +142,7 @@ const tabs = [
 //                   className="w-[90%]  xl:w-[516px] xl-1024:w-[400px] contentArea"
 //                 >
 //                   <div className="flex flex-col  md:h-[100px]">
-//                     <h1 className="text-[20px] xl-1024:text-[25px] pt-7 md:pt-[57px] pb-4 text-white fpt-500">
+//                     <h1 className="text-[20px] xl-1024:text-[25px] pt-7 md:pt-[57px] pb-4 text-white fpt-600">
 //                       {tabs[activeTab].heading}
 //                     </h1>
 //                     <p className="tabContent text-lg text-[#C1C1C1]  ">
@@ -311,7 +311,7 @@ const AboutCap = () => {
                   className="w-[90%] xl:w-[516px] xl-1024:w-[400px] contentArea"
                 >
                   <div className="flex flex-col md:h-[100px]">
-                    <h1 className="text-[20px] xl-1024:text-[25px] pt-7 md:pt-[57px] pb-4 text-white fpt-500">
+                    <h1 className="text-[20px] xl-1024:text-[25px] pt-7 md:pt-[57px] pb-4 text-white fpt-600">
                       {tabs[activeTab].heading}
                     </h1>
                     <p className="tabContent text-lg text-[#C1C1C1]">

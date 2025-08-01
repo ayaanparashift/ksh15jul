@@ -16,7 +16,7 @@ const AboutSec2 = () => {
                 // whileInView={{ opacity: 1, translateX: 0 }}
                 // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
                 // viewport={{ amount: 0.1, once: true }}
-                className="text-[#141414] text-[24px] sm:text-[44px] fpt-500 md:leading-[48.84px] leading-[110%] pb-3 whitespace-nowrap"
+                className="text-[#092241] text-[24px] sm:text-[44px] fpt-600 md:leading-[48.84px] leading-[110%] pb-3 whitespace-nowrap"
               >
                 Inspiring Green
                 <br className="md:flex hidden" /> Development

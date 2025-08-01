@@ -21,7 +21,7 @@ const BlogInsideSpot = () => {
             <p className="w-fit py-1 px-3 fsans-600 text-base bg-[#F7E327]">
               Brand
             </p>
-            <h1 className="fpt-500 md:text-[44px] sm:text-[32px] text-[24px] leading-[105%] text-white">
+            <h1 className="fpt-600 md:text-[44px] sm:text-[32px] text-[24px] leading-[105%] text-white">
               Global Trade Trends: How New Tariffs are set to Shape the
               Logistics Landscape
             </h1>

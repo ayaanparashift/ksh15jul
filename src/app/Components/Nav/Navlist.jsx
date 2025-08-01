@@ -149,7 +149,7 @@
 //                         <Link
 //                           key={child.href}
 //                           href={child.href}
-//                           className="text-[#092F5F] fpt-500 text-[20px] hover:text-[#E30613] transition-colors duration-300 w-full text-right"
+//                           className="text-[#092F5F] fpt-600 text-[20px] hover:text-[#E30613] transition-colors duration-300 w-full text-right"
 //                         >
 //                           {child.title}
 //                         </Link>
@@ -282,7 +282,7 @@
 //                         <Link
 //                           key={child.href}
 //                           href={child.href}
-//                           className="text-[#092F5F] fpt-500 text-[20px] hover:text-[#E30613] transition-colors duration-300 w-full text-right"
+//                           className="text-[#092F5F] fpt-600 text-[20px] hover:text-[#E30613] transition-colors duration-300 w-full text-right"
 //                         >
 //                           {child.title}
 //                         </Link>
@@ -430,7 +430,7 @@
 //                         onClick={onClose}
 //                         key={child.title}
 //                         href={child.href}
-//                         className="text-[#092F5F] fpt-500 text-[20px] first-of-type:pt-5 hover:text-[#E30613] transition-colors duration-300 w-full text-right"
+//                         className="text-[#092F5F] fpt-600 text-[20px] first-of-type:pt-5 hover:text-[#E30613] transition-colors duration-300 w-full text-right"
 //                       >
 //                         {child.title}
 //                       </Link>
@@ -556,7 +556,7 @@ const Navlist = ({ onClose }) => {
                 }
                 className={`flex flex-row-reverse items-center gap-2 ${
                   dropdownOpen !== null ? "text-[#E30613]" : "text-[#092F5F]"
-                } fpt-600 transition-colors hover:text-[#E30613] duration-[500ms]`}
+                } fpt-500 transition-colors hover:text-[#E30613] duration-[500ms]`}
               >
                 <h2 className="2xl:text-[36px] xl:text-[30px] text-[24px]">
                   {item.title}
@@ -594,7 +594,7 @@ const Navlist = ({ onClose }) => {
                         onClick={onClose}
                         key={child.title}
                         href={child.href}
-                        className="text-[#092F5F] fpt-500 text-[20px] first-of-type:pt-5 hover:text-[#E30613] transition-colors duration-300 w-full text-right"
+                        className="text-[#092F5F] fpt-600 text-[20px] first-of-type:pt-5 hover:text-[#E30613] transition-colors duration-300 w-full text-right"
                       >
                         {child.title}
                       </Link>
