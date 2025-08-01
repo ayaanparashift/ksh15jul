@@ -8,6 +8,7 @@ import SustainGovernence from "./susConpomentsF/SustainGovernence";
 import SustainDownload from "./susConpomentsF/SustainDownload";
 import SustainDownload2 from "./susConpomentsF/SustainDownload2";
 import PopForm from "./susConpomentsF/PopForm";
+import Awards from "./susConpomentsF/Awards";
 
 // const metadata = {
 //   title:
@@ -28,6 +29,7 @@ const page = () => {
       <SustainSec2 />
       <SustainDownload />
       <SustainDownload2 />
+      <Awards />
       <SustainEnviroment />
       <SustainSocial />
       <SustainGovernence />

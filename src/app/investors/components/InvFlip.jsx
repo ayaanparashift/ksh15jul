@@ -17,7 +17,7 @@ const investors = [
       "MSREI is the global real estate investment arm of Morgan Stanley. With 30+ years of experience and presence in 12 countries, it combines local knowledge and global legacy to manage investments effectively.",
   },
   {
-    image: "/investorRel/inmt.png",
+    image: "/investorRel/maplef.png",
     title: "Mapletree Investments",
     content:
       "Mapletree is a global real estate company focused on sustainable investment and development. Its diversified portfolio spans Asia Pacific, Europe, UK, and the US.",
