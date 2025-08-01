@@ -15,7 +15,7 @@ const TextT = () => {
               className="overflow-x-hidden h-fit md:whitespace-nowrap"
             >
               <h2
-                className={`leading-[26px] w-full xl:text-[44px] text-[24px] pb-[20px] border-b xl:mb-[66px] mb-[36px]  fpt-500 text-[#fff] linehead-text`}
+                className={`leading-[26px] w-full xl:text-[44px] text-[24px] pb-[20px] border-b xl:mb-[66px] mb-[36px]  fpt-600 text-[#fff] linehead-text`}
               >
                 What our clients say!
               </h2>

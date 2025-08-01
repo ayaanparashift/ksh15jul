@@ -10,7 +10,7 @@ const CareerSec3 = () => {
           // whileInView={{ opacity: 1, translateX: 0 }}
           // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
           // viewport={{ amount: 0.1, once: true }}
-          className="text-[#141414] md:text-[44px] sm:text-[32px] text-[24px] fpt-500 md:leading-[48.84px] leading-[110%] pb-3 fpt-600"
+          className="text-[#141414] md:text-[44px] sm:text-[32px] text-[24px] fpt-600 md:leading-[48.84px] leading-[110%] pb-3 fpt-600"
         >
           Commitment to Employee Well-Being & Growth
         </h1>

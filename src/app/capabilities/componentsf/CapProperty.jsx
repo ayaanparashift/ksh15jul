@@ -101,7 +101,7 @@ const CapProperty = () => {
             // whileInView={{ width: "100%" }}
             // viewport={{ once: true, amount: 0.1 }}
             // transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
-            className="md:text-[30px] text-[24px] overflow-hidden fpt-500 whitespace-nowrap leading-[33px] text-white border-b-[#D7D7D7] border-b-[1px] pb-2"
+            className="md:text-[30px] text-[24px] overflow-hidden fpt-600 whitespace-nowrap leading-[33px] text-white border-b-[#D7D7D7] border-b-[1px] pb-2"
           >
             Property Management
           </h1>

@@ -306,7 +306,7 @@ const CareerAcc = () => {
                   className="flex items-center justify-between cursor-pointer py-[25px]"
                   onClick={() => toggleAccordion(index)}
                 >
-                  <h1 className="text-[#7A7A7A] fsans-700 md:text-[22px] text-[18px]">
+                  <h1 className="text-[#000000] fsans-700 md:text-[22px] text-[18px]">
                     {item.title}
                   </h1>
                   <img

@@ -228,10 +228,39 @@ const Parkinfracard = ({ onSelectVideo, selectedVideo, videos, activeTab }) => {
               }}
               transition={{ duration: 0.8, ease: [0.7, 0, 0.4, 1] }}
               onClick={() => onSelectVideo(videoItem.video)}
-              className={`cursor-pointer [&:not(:last-child)]:border-b-[1px] overflow-hidden [&:not(:last-child)]:pb-[20px] transition-colors duration-300 ${
-                isActive
-                  ? "border-b-[#092241]"
-                  : " border-b-[#6C8DAB] hover:border-b-[#092241]"
+              className={`cursor-pointer hover:border-b-[#092241] group hover:text-[#092241] [&:not(:last-child)]:border-b-[1px] overflow-hidden [&:not(:last-child)]:pb-[20px] transition-colors duration-300 ${
+                isActive ? "border-b-[#092241]" : " border-b-[#6C8DAB] "
+              }`}
+            >
+              <p
+                className={`text-[16px] spotlightheaddd group-hover:text-[#092241] fsans-600 transition-colors duration-200  ${
+                  isActive ? "text-[#092241]" : "text-[#6C8DAB] "
+                }`}
+              >
+                {videoItem.title}
+              </p>
+            </motion.div>
+          );
+        })}
+      </AnimatePresence>
+      {/* <AnimatePresence mode="wait">
+        {videos.map((videoItem) => {
+          const isActive = videoItem.video === selectedVideo;
+          return (
+            <motion.div
+              // Generate a unique key for each card that updates on tab change.
+              key={`card-${activeTab}-${videoItem.id}`}
+              initial={{ x: activeTab === 2 ? "100%" : "-100%", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{
+                x: activeTab === 2 ? "100%" : "-100%",
+                opacity: 0,
+                transition: { duration: 0.8, ease: [0.7, 0, 0.4, 1] },
+              }}
+              transition={{ duration: 0.8, ease: [0.7, 0, 0.4, 1] }}
+              onClick={() => onSelectVideo(videoItem.video)}
+              className={`cursor-pointer hover:border-b-[#092241] hover:text-[#092241] [&:not(:last-child)]:border-b-[1px] overflow-hidden [&:not(:last-child)]:pb-[20px] transition-colors duration-300 ${
+                isActive ? "border-b-[#092241]" : " border-b-[#6C8DAB] "
               }`}
             >
               <p
@@ -246,7 +275,7 @@ const Parkinfracard = ({ onSelectVideo, selectedVideo, videos, activeTab }) => {
             </motion.div>
           );
         })}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 };

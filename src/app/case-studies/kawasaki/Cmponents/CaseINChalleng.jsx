@@ -5,7 +5,7 @@ const CaseINChalleng = () => {
     <div className="bg-[url('/caseInside/challengeSecBg.png')]">
       <div className="max-w-[1047px] mx-auto px-[20px] md:px-[0px] pt-[82px] pb-[95px]">
         <div className="topConetbnt flex flex-col items-center text-center gap-[24px] pb-[60px]">
-          <h1 className="w-fit fpt-500 md:text-[44px] sm:text-[32px] text-[24px] leading-[120%] border-b-[4px] border-b-[#F7E327]">
+          <h1 className="w-fit fpt-600 md:text-[44px] sm:text-[32px] text-[24px] leading-[120%] border-b-[4px] border-b-[#F7E327]">
             CHALLENGES
           </h1>
           <p className="fsans-600 text-lg text-[#101021]">

@@ -156,7 +156,7 @@ const Capabilities = () => {
                 className="w-[516px] xl-1024:w-[400px] contentArea xl-768:w-full"
               >
                 <div className="flex flex-col  xl:pt-10 gap-7 xl-1280:h-[350px]  xl-1366:h-[300px] xl-768:w-full  w-[516px] xl-1024:w-[400px] contentArea xl-1024:h-[300px] h-[250px] xl-768:h-auto xl-768:gap-10 xl-1440:h-[330px] 2xl:h-[390px] ">
-                  <h1 className="tabHeading text-4xl md:text-[40px] md:leading-[66px] lg:text-[60px] fpt-500 text-white font-medium border-b-[8px] border-[#F7E327] ]">
+                  <h1 className="tabHeading text-4xl md:text-[40px] md:leading-[66px] lg:text-[60px] fpt-600 text-white font-medium border-b-[8px] border-[#F7E327] ]">
                     {tabs[activeTab].heading}
                     {/* dangerouslySetInnerHTML= {{ __html: tabs[activeTab].heading }} */}
                   </h1>

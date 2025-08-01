@@ -14,7 +14,7 @@ const CareerSec2 = () => {
                 // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
                 // viewport={{ amount: 0.1, once: true }}
                 // className="text-[#141414] md:text-[30px] text-[24px] fpt-600 md:leading-[48.84px] leading-[110%] pb-3"
-                className="text-[#141414] text-[24px] sm:text-[44px] fpt-500 md:leading-[48.84px] leading-[110%] pb-3 whitespace-nowrap"
+                className="text-[#141414] text-[24px] sm:text-[44px] fpt-600 md:leading-[48.84px] leading-[110%] pb-3 whitespace-nowrap"
               >
                 We Make Leaders
                 {/* <br /> GROW WITH US.

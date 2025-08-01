@@ -206,7 +206,7 @@
 // // //                   className="w-full contentArea overflow-hidden"
 // // //                 >
 // // //                   <div className="flex flex-col min-1440:pt-10 min-1024:pt-5 gap-4 xl-768:gap-10 h-[400px] md:mr-10 mr-0 overflow-hidden">
-// // //                     <h1 className="tabHeading w-[40%] text-2xl md:text-[40px] md:leading-[50px] lg:text-[40px] fpt-500 text-white font-medium border-b-[8px] border-[#F7E327]">
+// // //                     <h1 className="tabHeading w-[40%] text-2xl md:text-[40px] md:leading-[50px] lg:text-[40px] fpt-600 text-white font-medium border-b-[8px] border-[#F7E327]">
 // // //                       {tabs[activeTab].heading}
 // // //                     </h1>
 // // //                     <p className="tabContent fsans-400 text-[20px] gradinetText leading-[26px]">
@@ -559,7 +559,7 @@
 // //                   className="w-full contentArea overflow-hidden"
 // //                 >
 // //                   <div className="flex flex-col pt-5 2xl:pt-10 gap-4 xl-768:gap-10 h-[400px] xl:h-[300px] md:mr-10 mr-0 overflow-hidden">
-// //                     <h1 className="tabHeading text-2xl max-w-fit md:text-[40px] md:leading-[40px] lg:text-[30px] fpt-500 text-white font-medium border-b-[8px] border-[#F7E327]">
+// //                     <h1 className="tabHeading text-2xl max-w-fit md:text-[40px] md:leading-[40px] lg:text-[30px] fpt-600 text-white font-medium border-b-[8px] border-[#F7E327]">
 // //                       {tabs[activeTab].heading}
 // //                     </h1>
 // //                     <p
@@ -1025,7 +1025,7 @@
 // // //                   className="w-full contentArea overflow-hidden"
 // // //                 >
 // // //                   <div className="flex flex-col min-1440:pt-10 min-1024:pt-5 gap-4 xl-768:gap-10 h-[400px] md:mr-10 mr-0 overflow-hidden">
-// // //                     <h1 className="tabHeading w-[40%] text-2xl md:text-[40px] md:leading-[50px] lg:text-[40px] fpt-500 text-white font-medium border-b-[8px] border-[#F7E327]">
+// // //                     <h1 className="tabHeading w-[40%] text-2xl md:text-[40px] md:leading-[50px] lg:text-[40px] fpt-600 text-white font-medium border-b-[8px] border-[#F7E327]">
 // // //                       {tabs[activeTab].heading}
 // // //                     </h1>
 // // //                     <p className="tabContent fsans-400 text-[20px] gradinetText leading-[26px]">
@@ -1363,7 +1363,7 @@
 //                   className="w-full contentArea overflow-hidden"
 //                 >
 //                   <div className="flex flex-col pt-5 2xl:pt-10 gap-4 xl-768:gap-10 h-[400px] xl:h-[300px] md:mr-10 mr-0 overflow-hidden">
-//                     <h1 className="tabHeading text-2xl max-w-fit md:text-[40px] md:leading-[40px] lg:text-[30px] fpt-500 text-white font-medium border-b-[8px] border-[#F7E327]">
+//                     <h1 className="tabHeading text-2xl max-w-fit md:text-[40px] md:leading-[40px] lg:text-[30px] fpt-600 text-white font-medium border-b-[8px] border-[#F7E327]">
 //                       {tabs[activeTab].heading}
 //                     </h1>
 //                     <p
