@@ -49,6 +49,11 @@ const ParkInfo = () => {
               />
             </div>
           ))}
+          <div>
+            <p className="fsans-600 text-[#00000050] text-[16px]">
+              *Nearing Completion in December 2025
+            </p>
+          </div>
         </motion.div>
       </div>
     </div>

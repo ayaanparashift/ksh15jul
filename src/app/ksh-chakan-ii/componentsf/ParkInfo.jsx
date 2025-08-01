@@ -49,6 +49,11 @@ const ParkInfo = () => {
               />
             </div>
           ))}
+          <div>
+            <p className="fsans-600 text-[#00000050] text-[16px]">
+              *Successfully exited to Mapletree in 2022
+            </p>
+          </div>
         </motion.div>
       </div>
     </div>
