@@ -1937,6 +1937,7 @@
 
 "use client";
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation"; // ✅ import this
 import BlogCard from "./BlogCard";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTab } from "../../context/TabContext"; // <-- Add this line
@@ -2002,7 +2003,7 @@ const PressCard = ({ item }) => (
 
 const TabBlogs = ({ blogs, loadingOverride = false }) => {
   const { tab } = useTab(); // <-- context here
-
+  const searchParams = useSearchParams(); // ✅
   const tabs = [
     { title: "All", id: null },
     { title: "Blogs", id: 17 },
@@ -2021,13 +2022,22 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
   const isNews = activeTabId === 18;
   const isBlogsTab = activeTabId === 17 || activeTabId === null;
 
-  // 👇 set tab index from context on mount
+  // // 👇 set tab index from context on mount
+  // useEffect(() => {
+  //   if (tab === "news") setActiveIndex(2);
+  //   else if (tab === "press") setActiveIndex(3);
+  //   else if (tab === "blogs") setActiveIndex(1);
+  //   else setActiveIndex(0);
+  // }, [tab]);
+  // 👇 update useEffect
   useEffect(() => {
-    if (tab === "news") setActiveIndex(2);
-    else if (tab === "press") setActiveIndex(3);
-    else if (tab === "blogs") setActiveIndex(1);
+    const urlTab = searchParams.get("tab");
+
+    if (tab === "news" || urlTab === "news") setActiveIndex(2);
+    else if (tab === "press" || urlTab === "press") setActiveIndex(3);
+    else if (tab === "blogs" || urlTab === "blogs") setActiveIndex(1);
     else setActiveIndex(0);
-  }, [tab]);
+  }, [tab, searchParams]);
 
   useEffect(() => {
     let intervalId;

@@ -713,7 +713,7 @@ export const CarSlide = () => {
               <SwiperSlide key={index}>
                 <div className="flex overflow-visible lg:flex-row flex-col w-full gap-[20px] lg:gap-[40px] pt-[20px] lg:pt-[55px]">
                   <motion.div
-                    initial={{ y: "-50px", opacity: 0 }}
+                    initial={{ y: "50px", opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, ease: [0.7, 0, 0.4, 1] }}
                     viewport={{ amount: 0.1, once: false }}
