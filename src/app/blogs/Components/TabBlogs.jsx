@@ -2142,7 +2142,7 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
   return (
     <>
       {/* Tabs */}
-      <div className="w-full bg-[#092241]">
+      <div id="tabsection" className="w-full bg-[#092241]">
         <div className="fix12 pt-[50px] flex flex-col gap-[60px] pb-[30px]">
           <h2 className="fpt-600 md:text-[44px] sm:text-[32px] text-[24px] text-white">
             Other Blogs
