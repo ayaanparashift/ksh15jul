@@ -1,5 +1,5 @@
 // "use client";
-// import React from "react";
+//
 // import { motion } from "framer-motion";
 // const InvesterCase = () => {
 //   return (
@@ -259,7 +259,7 @@
 // /////////////////////////////////////////////////////////////////////////////////////
 
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 const InvesterCase = () => {
   return (

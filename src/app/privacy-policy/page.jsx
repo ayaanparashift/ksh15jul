@@ -1,5 +1,3 @@
-import React from "react";
-
 export const metadata = {
   title: "Privacy Policy - KSH INFRA",
   description: "Privacy Policy - KSH INFRA",

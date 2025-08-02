@@ -1,5 +1,5 @@
 // import Link from "next/link";
-// import React from "react";
+//
 
 // const MapSCMob = ({ parkimg, title, city, tarea, tbuild, parkLink }) => {
 //   return (
@@ -73,7 +73,7 @@
 ////
 ////
 // import Link from "next/link";
-// import React from "react";
+//
 
 // const MapSCMob = ({ parkimg, title, city, tarea, tbuild, parkLink }) => {
 //   return (
@@ -144,7 +144,6 @@
 // export default MapSCMob;
 
 import Link from "next/link";
-import React from "react";
 
 const MapSCMob = ({ parkimg, title, city, tarea, tbuild, parkLink }) => {
   return (

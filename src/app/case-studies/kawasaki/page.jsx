@@ -1,4 +1,3 @@
-import React from "react";
 import CaseINSec2 from "./Cmponents/CaseINSec2";
 import CaseINAbout from "./Cmponents/CaseINAbout";
 import CaseINChalleng from "./Cmponents/CaseINChalleng";

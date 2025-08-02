@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 
 // All 4 investor data from the blue sections

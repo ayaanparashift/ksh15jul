@@ -1,5 +1,3 @@
-import React from "react";
-
 const TextT = () => {
   return (
     <div className="w-full bg-[url('/caseInside/cstbg.webp')] min-h-[450px] py-6 xl:py-[50px] bg-no-repeat bg-cover ">

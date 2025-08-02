@@ -1,5 +1,5 @@
 // app/about/page.js (or wherever your route is)
-import React from "react";
+
 import AboutSec2 from "./AboutComponents/AboutSec2";
 import AboutVision from "./AboutComponents/AboutVision";
 import AboutOurLeadership from "./AboutComponents/AboutOurLeadership";

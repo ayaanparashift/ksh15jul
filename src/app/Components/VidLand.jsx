@@ -1,4 +1,4 @@
-// // import React from "react";
+// //
 // // import { motion } from "framer-motion";
 
 // // const VidLand = () => {
@@ -26,7 +26,7 @@
 
 // // export default VidLand;
 // "use client";
-// import React from "react";
+//
 // import { motion } from "framer-motion";
 
 // // const VidLand = () => {
@@ -112,7 +112,7 @@
 
 // export default VidLand;
 
-// import React from "react";
+//
 // import { motion } from "framer-motion";
 
 // const VidLand = () => {
@@ -140,7 +140,7 @@
 
 // export default VidLand;
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 
 // const VidLand = () => {

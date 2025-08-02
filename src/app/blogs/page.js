@@ -1,4 +1,4 @@
-// import React from "react";
+//
 // import Link from "next/link";
 // import BlogSpot from "./Components/BlogSpot";
 // import SlideBlog from "./Components/SlideBlog";
@@ -116,7 +116,7 @@
 // }
 
 // app/blog/page.jsx
-import React from "react";
+
 import Link from "next/link";
 import BlogSpot from "./Components/BlogSpot";
 import SlideBlog from "./Components/SlideBlog";

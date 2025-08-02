@@ -1,5 +1,5 @@
 // "use client";
-// import React from "react";
+//
 // import { motion } from "framer-motion";
 
 // const award = {
@@ -74,7 +74,7 @@
 // export default CertCard;
 
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 
 const certs = [

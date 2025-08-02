@@ -1,5 +1,3 @@
-import React from "react";
-
 const Swiperbtns = () => {
   return (
     <div className="flex gap-10 items-center lg:justify-start justify-between">

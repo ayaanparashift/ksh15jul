@@ -1,5 +1,3 @@
-import React from "react";
-
 const CaseINBenefit = () => {
   return (
     <div className="bg-[url('/caseInside/caseInBenefitsBg.png')] sm:px-0 px-[20px] bg-no-repeat bg-cover">

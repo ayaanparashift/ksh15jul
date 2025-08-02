@@ -1,4 +1,4 @@
-// import React from "react";
+//
 
 // const MapImgHotspot = ({
 //   active,
@@ -81,7 +81,6 @@
 //
 //
 //
-import React from "react";
 
 const MapImgHotspot = ({
   active,

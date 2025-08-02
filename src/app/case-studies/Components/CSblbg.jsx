@@ -1,6 +1,6 @@
 // "use client";
 // import Link from "next/link";
-// import React from "react";
+//
 // import { useState } from "react";
 // import EnquireNow from "../../Components/EnquireNow";
 // import { AnimatePresence, motion } from "framer-motion"; // Import motion
@@ -75,7 +75,7 @@
 // export default CSbgbl;
 "use client";
 import Link from "next/link";
-import React from "react";
+
 import { useState } from "react";
 import EnquireNow from "../../Components/EnquireNow";
 import { AnimatePresence, motion } from "framer-motion"; // Import motion

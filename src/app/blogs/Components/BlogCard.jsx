@@ -1,5 +1,5 @@
 // import Link from "next/link";
-// import React from "react";
+//
 
 // const BlogCard = ({ blog }) => {
 //   return (
@@ -42,7 +42,7 @@
 /////////////////////////// 99999999999999999999999999 %%%%%%%%%%%%%%%%%%%%%%%%%%% /////////////////////
 
 // import Link from "next/link";
-// import React from "react";
+//
 
 // const BlogCard = ({ blog, activeTabId }) => {
 //   // Define category labels
@@ -107,7 +107,7 @@
 ////////////////////////////////////// 99999999999 %%%%%%%%%%%%%%%%%%% ?////////////////////////
 ////////////////////////////////////// 99999999999 %%%%%%%%%%%%%%%%%%% ?////////////////////////
 // import Link from "next/link";
-// import React from "react";
+//
 
 // const BlogCard = ({ blog, activeTabId }) => {
 //   console.log(blog, "-------BlogCard---------");
@@ -214,7 +214,6 @@
 //
 
 import Link from "next/link";
-import React from "react";
 
 const BlogCard = ({ blog, activeTabId }) => {
   let categoryToShow = "Uncategorized";

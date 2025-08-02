@@ -1,4 +1,3 @@
-import React from "react";
 import CSpot from "./Components/CSpot";
 // import CaseSlide from "./Components/CaseSlide";
 // import FormSec from "./Components/FormSec";

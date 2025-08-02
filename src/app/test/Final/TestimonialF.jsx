@@ -1,4 +1,3 @@
-import React from "react";
 import TestimonialSliderMobile from "./TestimonialSliderMobile";
 import TestimonialSlider from "./TestimonialsSlider";
 

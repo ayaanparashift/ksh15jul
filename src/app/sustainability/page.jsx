@@ -1,4 +1,3 @@
-import React from "react";
 import SustainSpotLigth from "./susConpomentsF/SustainSpotLigth";
 import SustainSec2 from "./susConpomentsF/SustainSec2";
 import SustainSocial from "./susConpomentsF/SustainSocial";

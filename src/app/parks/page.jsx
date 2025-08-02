@@ -1,4 +1,3 @@
-import React from "react";
 import ParkOverviewContent from "./ParkOverviewContent";
 import TrustedPartners from "../Components/TrustedPartners";
 import WhyKsh from "./WhyKsh";

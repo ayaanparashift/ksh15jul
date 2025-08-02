@@ -1,5 +1,5 @@
 // // "use client";
-// // import React from "react";
+// //
 // // import { motion } from "framer-motion";
 
 // // const GenLineHead = ({ heading, acbtn, setAcBtn }) => {
@@ -45,7 +45,7 @@
 // // export default GenLineHead;
 
 // "use client";
-// import React from "react";
+//
 // import { motion } from "framer-motion";
 
 // const GenLineHead = ({
@@ -105,7 +105,7 @@
 // export default GenLineHead;
 
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 
 const GenLineHead = ({

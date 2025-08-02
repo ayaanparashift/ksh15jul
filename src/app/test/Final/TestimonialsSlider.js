@@ -1,6 +1,5 @@
 "use client";
-
-import React from "react";
+import { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, FreeMode, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
@@ -20,7 +19,7 @@ const testimonials = [
   {
     id: 2,
     image: "/blog/blog2.png",
-    logo: "/testimonial/gedialogo.png",
+    logo: "/testimonial/cttf.png",
     company: "CTC Global",
     content:
       "Working with KSH INFRA on their latest project, KSH INFRA Chakan Park 3 at Varale, has been an excellent experience. We are amazed at the speed and proficiency with which all the works were carried out and it was ensured that we got our building according to our plan, apart from the timely possession all other infrastructure works were also completed in time so as not to have any disturbance to our operations and there has been no delay in our project timelines, KSH INFRA has also been very flexible to making adjustments to our changing project plans and scope! In a nut shell I will say that KSH INFRA is extremely Customer centric  and understands and fulfils the needs of the clients. The Quality of work has been good and KSH INFRA was very open to making any changes that we needed in order to suit our production & machine requirements. The entire Park layout is good and attention to details such as broad roads, parking, security etc is good. We look forward to continuing our partnership with them in future endeavours.",
@@ -30,7 +29,7 @@ const testimonials = [
   {
     id: 3,
     image: "/blog/blog2.png",
-    logo: "/testimonial/gedialogo.png",
+    logo: "/testimonial/kltf.png",
     company: "Klingspor",
     content:
       "Our experience at KSH Talegaon Park I has been truly exceptional. We chose this facility after it successfully met our rigorous standards for infrastructure quality, as well as our comprehensive safety and security requirements. What set this collaboration apart was the outstanding support and responsiveness of the KSH INFRA team—extending well beyond our initial move-in period. Their commitment to service and professionalism has been evident throughout our journey. We deeply value the partnership we have forged through this project.",
@@ -40,7 +39,7 @@ const testimonials = [
   {
     id: 4,
     image: "/blog/blog2.png",
-    logo: "/testimonial/gedialogo.png",
+    logo: "/testimonial/untf.png",
     company: "Unisource",
     content:
       "We were in search of a well-located and high-quality industrial infrastructure space for our business in Talegaon, and KSH INFRA emerged as the perfect partner. Even though KSH Talegaon I Park was their first project, we were impressed by the exceptional quality of construction and their professional, solution-oriented approach. The team's positive attitude and commitment to delivery made it a great experience collaborating with them. We are pleased to see KSH INFRA rapidly expanding its footprint across India, and we extend our best wishes for continued success and growth.",
@@ -50,7 +49,7 @@ const testimonials = [
   {
     id: 5,
     image: "/blog/blog2.png",
-    logo: "/testimonial/gedialogo.png",
+    logo: "/testimonial/kwtf.png",
     company: "Kawasaki",
     content:
       "TEAM KSH has provided us a world-class facility in Chakan Industrial area for our manufacturing operations. Team KSH was extremely supportive and professional in developing the facility for us. We were able to commence operations within two months from moving-in which was very beneficial for us.",
@@ -60,7 +59,7 @@ const testimonials = [
   {
     id: 6,
     image: "/blog/blog2.png",
-    logo: "/testimonial/gedialogo.png",
+    logo: "/testimonial/jbtf.png",
     company: "Jabil",
     content:
       "KSH has been very instrumental during our facility setup and with their expertise in construction and understanding of our manufacturing needs, their collaborative approach allowed them to capture critical requirements to deliver our factory on time.",
@@ -70,7 +69,7 @@ const testimonials = [
   {
     id: 7,
     image: "/blog/blog2.png",
-    logo: "/testimonial/gedialogo.png",
+    logo: "/testimonial/cltf.png",
     company: "Callisons",
     content:
       "KSH Industrial Park at Chakan is a world class industrial facility. We feel privileged to be established here as ease of doing business, safety and security of the plant & workers, infrastructure and service provided by KSH is unparalleled. Rohit Hegde and his team have provided us tremendous support in establishing the business.",
@@ -138,8 +137,58 @@ const testimonials = [
 //     </div>
 //   );
 // };
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 const TestimonialSlider = () => {
+  // const scrollRef = useRef(null);
+  // useEffect(() => {
+  //   const el = scrollRef.current;
+  //   if (!el) return;
+  //   const updateProgress = () => {
+  //     const scrollHeight = el.scrollHeight;
+  //     const clientHeight = el.clientHeight;
+  //     const scrollTop = el.scrollTop;
+
+  //     if (scrollHeight > clientHeight) {
+  //       const maxScroll = scrollHeight - clientHeight;
+  //       let scrollPercent = (scrollTop / maxScroll) * 122;
+  //       if (scrollTop + clientHeight >= scrollHeight - 1) {
+  //         scrollPercent = 122;
+  //       }
+  //       el.style.setProperty("--scrollbar-height", `${scrollPercent}%`);
+  //     } else {
+  //       el.style.setProperty("--scrollbar-height", `0%`);
+  //     }
+  //   };
+
+  //   el.addEventListener("scroll", updateProgress);
+  //   updateProgress();
+  //   return () => el.removeEventListener("scroll", updateProgress);
+  // }, []);
   return (
     <div className="w-full 2xl:min-h-[100vh] min-h-[110vh] min-1920:min-h-[60vh] lg:flex flex-col hidden gap-10 justify-center items-center py-16 bg-[url('/testimonial/testibg.webp')] bg-no-repeat bg-cover bg-center text-white">
       <div className="text-2xl fsans-600 fix12 border-b border-[#D7D7D7] pb-5">
@@ -177,7 +226,7 @@ const TestimonialSlider = () => {
           <SwiperSlide key={item.id}>
             {({ isActive }) => (
               <div
-                className={`transition-all w-full 2xl:h-[540px] h-[75vh] duration-500 ease-in-out shadow-xl bg-white text-black mx-auto flex items-center justify-between ${
+                className={`transition-all w-full 2xl:h-[450px] h-[75vh] duration-500 ease-in-out shadow-xl bg-white text-black mx-auto flex items-center justify-between ${
                   isActive
                     ? "scale-100 opacity-100 z-20"
                     : "scale-90 opacity-60 z-10"
@@ -191,13 +240,13 @@ const TestimonialSlider = () => {
                       className="min-w-full min-h-full object-cover"
                     />
                   </div>
-                  <div className="md:w-[65%] w-full p-10 flex flex-col justify-center  gap-5 2xl:gap-[15px]">
+                  <div className="md:w-[65%] w-full p-10 flex flex-col justify-center  gap-5 xl:gap-[25px]">
                     <img
                       src={item.logo}
                       alt={`${item.company} logo`}
                       className="w-auto 2xl:max-w-[255px] max-w-[150px] 2xl:h-[48px]"
                     />
-                    <p className="fsans-400 text-[14px] 2xl:text-[16px] leading-[20px] 2xl:leading-[24px] text-[#6C8DAB]">
+                    <p className="fsans-400 styled-scroll2 h-[150px] custom-scroll text-[14px] 2xl:text-[16px] leading-[20px] 2xl:leading-[24px] text-[#6C8DAB]">
                       {item.content}
                     </p>
                     <div className="w-full flex justify-between items-center">

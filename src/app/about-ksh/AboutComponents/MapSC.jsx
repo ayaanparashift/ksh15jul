@@ -1,5 +1,3 @@
-import React from "react";
-
 const MapSC = () => {
   return (
     <div className="h-[272px] flex items-center justify-between px-10 bg-blue-300 gap-10 w-full">

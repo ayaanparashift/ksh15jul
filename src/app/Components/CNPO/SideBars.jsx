@@ -1,5 +1,5 @@
 // "use client";
-// import React from "react";
+//
 
 // const SideBars = ({ todos, activeSidebar, setActiveSidebar }) => {
 //   return (
@@ -36,7 +36,7 @@
 // export default SideBars;
 
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 
 const SideBars = ({ todos, activeSidebar, setActiveSidebar }) => {

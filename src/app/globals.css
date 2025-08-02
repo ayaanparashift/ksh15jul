@@ -1166,3 +1166,28 @@ canvas {
   height: 0;
   width: 0;
 }
+
+.styled-scroll2 {
+  scrollbar-width: thin;
+  scrollbar-color: #6c8dab40 transparent;
+  overflow-y: overlay;
+}
+
+.styled-scroll2::-webkit-scrollbar {
+  width: 2px;
+}
+
+.styled-scroll2::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.styled-scroll2::-webkit-scrollbar-thumb {
+  background-color: #6c8dab40;
+  border-radius: 9999px;
+}
+
+.styled-scroll2::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}

@@ -1,4 +1,3 @@
-import React from "react";
 import TabSec from "./TabSec";
 import ParkOvBtn from "./ParkOvBtn";
 

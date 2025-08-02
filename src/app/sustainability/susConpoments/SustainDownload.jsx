@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 const SustainDownload = () => {
   return (
@@ -38,7 +38,7 @@ const SustainDownload = () => {
 export default SustainDownload;
 
 // "use client";
-// import React from "react";
+//
 
 // import { motion } from "framer-motion";
 // const SustainSpotLigth = () => {

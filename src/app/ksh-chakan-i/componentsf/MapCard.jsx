@@ -1,5 +1,5 @@
 // "use client";
-// import React from "react";
+//
 
 // const MapCard = ({ onSelectAirport }) => {
 //   const airports = [
@@ -74,7 +74,7 @@
 
 // export default MapCard;
 // "use client";
-// import React from "react";
+//
 
 // const MapCard = ({ onSelectAirport }) => {
 //   const airports = [
@@ -139,7 +139,7 @@
 // export default MapCard;
 
 "use client";
-import React from "react";
+
 const MapCard = ({ activeIndex, onSelectAirport }) => {
   const airports = [
     {

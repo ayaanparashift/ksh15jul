@@ -1,4 +1,3 @@
-import React from "react";
 import InvesterSec2 from "./components/InvesterSec2";
 import InvesterCase from "./components/InvesterCase";
 import InvesRelaSpot from "./components/InvesRelaSpot";

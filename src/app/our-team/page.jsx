@@ -1,4 +1,3 @@
-import React from "react";
 import Spotlight from "./Components/Spotlight";
 import TabTeam from "./Components/TabTeam";
 

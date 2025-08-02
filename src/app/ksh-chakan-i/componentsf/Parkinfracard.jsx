@@ -1,5 +1,5 @@
 // // Parkinfracard.js
-// import React from "react";
+//
 
 // const Parkinfracard = ({ onSelectVideo }) => {
 //   // List of card items with a corresponding video URL for each
@@ -58,7 +58,7 @@
 
 // export default Parkinfracard;
 
-// import React from "react";
+//
 
 // const Parkinfracard = ({ onSelectVideo, selectedVideo }) => {
 //   const parkinfra = [
@@ -128,7 +128,7 @@
 
 //*************************** */
 // import { AnimatePresence, motion } from "framer-motion";
-// import React from "react";
+//
 
 // const Parkinfracard = ({ onSelectVideo, selectedVideo, videos, activeTab }) => {
 //   return (
@@ -168,7 +168,6 @@
 // export default Parkinfracard;
 
 import { AnimatePresence, motion } from "framer-motion";
-import React from "react";
 
 const Parkinfracard = ({ onSelectVideo, selectedVideo, videos, activeTab }) => {
   // return (

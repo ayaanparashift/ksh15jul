@@ -1,5 +1,3 @@
-import React from "react";
-
 const CaseINChalleng = () => {
   return (
     <div className="bg-[url('/caseInside/challengeSecBg.png')]">

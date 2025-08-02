@@ -73,7 +73,7 @@ const SustainSec2 = () => {
 export default SustainSec2;
 
 // "use client";
-// import React from "react";
+//
 // import { motion } from "framer-motion";
 // import Countersec from "../../Components/Counter/Countersec";
 // import AboutCounter from "./AboutCounter";

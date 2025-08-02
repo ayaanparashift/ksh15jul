@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import Countersec from "../../Components/Counter/Countersec";
 import AboutCounter from "./AboutCounter";

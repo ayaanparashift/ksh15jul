@@ -1,5 +1,5 @@
 // "use client";
-// import React from "react";
+//
 // import { motion } from "framer-motion";
 // import { isLeftHandSideExpression } from "typescript";
 
@@ -66,7 +66,7 @@
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 99999999999999999999999999
 
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 import { isLeftHandSideExpression } from "typescript";
 
@@ -158,7 +158,7 @@ export default MapLineHead;
 //
 
 // "use client";
-// import React from "react";
+//
 // import { motion } from "framer-motion";
 // import { isLeftHandSideExpression } from "typescript";
 

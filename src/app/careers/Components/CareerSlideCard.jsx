@@ -1,5 +1,3 @@
-import React from "react";
-
 const CareerSlideCard = ({ image, title, des }) => {
   return (
     <div className="flex flex-col w-[320px] h-fit lg:h-[295px] p-0 md:p-4 gap-0 md:gap-[10px] max-w-full">

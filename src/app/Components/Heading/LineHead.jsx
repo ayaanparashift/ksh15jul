@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 
 const LineHead = ({ heading, clr, bclr, bopacity, fontSize, lineHeigth }) => {

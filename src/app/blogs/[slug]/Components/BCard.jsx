@@ -1,5 +1,5 @@
 // import Link from "next/link";
-// import React from "react";
+//
 
 // const BCard = ({ blog, activeTabId, image }) => {
 //   // Category Labels
@@ -103,7 +103,7 @@
 //
 
 // import Link from "next/link";
-// import React from "react";
+//
 
 // const BCard = ({ blog, activeTabId, image }) => {
 //   const categoryLabels = {
@@ -179,7 +179,6 @@
 
 // export default BCard;
 import Link from "next/link";
-import React from "react";
 
 const BCard = ({ blog, activeTabId, image }) => {
   const categoryLabels = {

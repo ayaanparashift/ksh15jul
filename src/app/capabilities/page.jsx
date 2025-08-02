@@ -1,4 +1,3 @@
-import React from "react";
 import CapAbout from "./componentsf/CapAbout";
 import CapLand from "./componentsf/CapLand";
 import CapLeasing from "./componentsf/CapLeasing";

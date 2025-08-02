@@ -1,4 +1,3 @@
-import React from "react";
 import ParkinSpot from "./componentsf/ParkinSpot";
 import TabMenu from "./componentsf/TabsMenu";
 import ParkOverview from "./componentsf/ParkOverview";

@@ -1,5 +1,3 @@
-import React from "react";
-
 const TestiCard = ({ item }) => {
   return (
     <div className="w-full h-[75vh] pb-5 bg-white text-black overflow-hidden flex flex-col">

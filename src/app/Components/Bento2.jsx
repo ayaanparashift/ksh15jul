@@ -1,4 +1,4 @@
-// import React from "react";
+//
 // import LineHead from "./Heading/LineHead";
 // import Link from "next/link";
 
@@ -71,7 +71,7 @@
 
 // export default Bento2;
 
-// import React from "react";
+//
 // import Link from "next/link";
 
 // const Bento2 = () => {

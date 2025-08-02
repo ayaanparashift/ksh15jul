@@ -63,7 +63,7 @@
 
 // export default ParkContent;
 
-// import React from "react";
+//
 // import Parkinfracard from "./Parkinfracard";
 
 // const ParkContent = ({ selectedVideo, setSelectedVideo, videos }) => {
@@ -93,7 +93,7 @@
 
 // export default ParkContent;
 //************************ */
-import React from "react";
+
 import Parkinfracard from "./Parkinfracard";
 import { motion, AnimatePresence } from "framer-motion";
 

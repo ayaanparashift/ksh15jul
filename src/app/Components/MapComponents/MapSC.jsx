@@ -1,6 +1,6 @@
 // "use client";
 // import Link from "next/link";
-// import React from "react";
+//
 // import { motion } from "framer-motion";
 // const MapSC = ({ parkimg, title, city, tarea, tbuild, parkLink }) => {
 //   return (
@@ -59,7 +59,7 @@
 
 "use client";
 import Link from "next/link";
-import React from "react";
+
 import { motion } from "framer-motion";
 
 const MapSC = ({

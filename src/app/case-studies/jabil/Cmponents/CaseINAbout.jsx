@@ -1,5 +1,3 @@
-import React from "react";
-
 const CaseINAbout = () => {
   return (
     <div className="bg-[#092241]">

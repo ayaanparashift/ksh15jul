@@ -1,4 +1,3 @@
-import React from "react";
 import LineHead from "../../Components/Heading/LineHead";
 import CertCard from "./CertCard";
 

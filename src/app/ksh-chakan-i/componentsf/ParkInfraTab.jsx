@@ -1,5 +1,5 @@
 // "use client";
-// import React from "react";
+//
 // import { motion } from "framer-motion";
 
 // const ParkInfraTab = ({ heading, activeTab, setActiveTab }) => {
@@ -51,7 +51,7 @@
 // export default ParkInfraTab;
 
 // "use client";
-// import React from "react";
+//
 // import { motion } from "framer-motion";
 
 // const ParkInfraTab = ({ heading, activeTab, setActiveTab }) => {
@@ -103,7 +103,7 @@
 // export default ParkInfraTab;
 
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 
 const ParkInfraTab = ({ heading, activeTab, setActiveTab }) => {

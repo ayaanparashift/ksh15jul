@@ -1,5 +1,3 @@
-import React from "react";
-
 const CharCard = ({ charnum, charcont, charTitle }) => {
   return (
     <div className="md:w-[350px] w-full max-w-full select-none gap-[25px] flex flex-col items-start justify-between h-[380px] md:h-[450px] bg-white border-[1px] border-[#6C8DAB] border-opacity-[0.5] p-[20px] md:p-[40px]">
