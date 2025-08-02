@@ -2022,22 +2022,59 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
   const isNews = activeTabId === 18;
   const isBlogsTab = activeTabId === 17 || activeTabId === null;
 
-  // // 👇 set tab index from context on mount
   // useEffect(() => {
-  //   if (tab === "news") setActiveIndex(2);
-  //   else if (tab === "press") setActiveIndex(3);
-  //   else if (tab === "blogs") setActiveIndex(1);
+  //   const urlTab = searchParams.get("tab");
+
+  //   if (tab === "news" || urlTab === "news") setActiveIndex(2);
+  //   else if (tab === "press" || urlTab === "press") setActiveIndex(3);
+  //   else if (tab === "blogs" || urlTab === "blogs") setActiveIndex(1);
   //   else setActiveIndex(0);
-  // }, [tab]);
-  // 👇 update useEffect
+  // }, [tab, searchParams]);
+
   useEffect(() => {
     const urlTab = searchParams.get("tab");
 
-    if (tab === "news" || urlTab === "news") setActiveIndex(2);
-    else if (tab === "press" || urlTab === "press") setActiveIndex(3);
-    else if (tab === "blogs" || urlTab === "blogs") setActiveIndex(1);
-    else setActiveIndex(0);
+    if (tab === "news" || urlTab === "news") {
+      setActiveIndex(2);
+      setLoadingNews(true); // ✅ Trigger loading early
+    } else if (tab === "press" || urlTab === "press") {
+      setActiveIndex(3);
+    } else if (tab === "blogs" || urlTab === "blogs") {
+      setActiveIndex(1);
+    } else {
+      setActiveIndex(0);
+    }
+
+    setCurrentPage(1); // ✅ Reset pagination
   }, [tab, searchParams]);
+
+  // useEffect(() => {
+  //   let intervalId;
+
+  //   const fetchNews = async () => {
+  //     try {
+  //       const res = await fetch(
+  //         `https://www.kshinfra.com/wp-json/wp/v2/posts?categories=18&per_page=100&_embed`
+  //       );
+  //       if (!res.ok) throw new Error("Failed to fetch");
+  //       const data = await res.json();
+  //       setNewsBlogs(data);
+  //       setLoadingNews(false);
+  //       clearInterval(intervalId);
+  //     } catch (err) {
+  //       console.warn("News fetch failed, will retry...");
+  //       setLoadingNews(false);
+  //     }
+  //   };
+
+  //   if (isNews && newsBlogs.length === 0) {
+  //     setLoadingNews(true);
+  //     fetchNews();
+  //     intervalId = setInterval(fetchNews, 10000);
+  //   }
+
+  //   return () => clearInterval(intervalId);
+  // }, [isNews, newsBlogs.length]);
 
   useEffect(() => {
     let intervalId;
@@ -2058,14 +2095,14 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
       }
     };
 
-    if (isNews && newsBlogs.length === 0) {
-      setLoadingNews(true);
+    if (isNews) {
+      setLoadingNews(true); // ✅ Always set loading
       fetchNews();
       intervalId = setInterval(fetchNews, 10000);
     }
 
     return () => clearInterval(intervalId);
-  }, [isNews, newsBlogs.length]);
+  }, [isNews]);
 
   const filteredBlogs =
     activeTabId === null
