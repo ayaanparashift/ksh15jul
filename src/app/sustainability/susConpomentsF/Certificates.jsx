@@ -1,20 +1,20 @@
 import React from "react";
 import LineHead from "../../Components/Heading/LineHead";
-import AwardCard from "./AwardCard";
+import CertCard from "./CertCard";
 
-const Awards = () => {
+const Certificates = () => {
   return (
     <div className="w-full bg-[#092241] mt-10">
       <div className="flex fix12 flex-col justify-center py-[80px]">
         <div>
-          <LineHead heading="Awards" clr="text-white" />
+          <LineHead heading="Certificates" clr="text-white" />
         </div>
         <div>
-          <AwardCard />
+          <CertCard />
         </div>
       </div>
     </div>
   );
 };
 
-export default Awards;
+export default Certificates;

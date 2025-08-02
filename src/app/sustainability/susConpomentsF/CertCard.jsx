@@ -12,11 +12,11 @@
 //   image: "/Sustainability/awards/awc1.png",
 // };
 
-// const AwardCard = () => {
+// const CertCard = () => {
 //   return (
 //     <div className="text-black">
 //       <div className="flex">
-//         <SingleAwardCard
+//         <SingleCertCard
 //           image={award.image}
 //           title={award.title}
 //           heading={award.heading}
@@ -27,7 +27,7 @@
 //   );
 // };
 
-// const SingleAwardCard = ({ image, title, heading, content }) => {
+// const SingleCertCard = ({ image, title, heading, content }) => {
 //   return (
 //     <div>
 //       {/* Desktop Hover Card */}
@@ -71,35 +71,42 @@
 //   );
 // };
 
-// export default AwardCard;
+// export default CertCard;
 
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
 
-const awards = [
+const certs = [
   {
     id: 1,
-    heading:
-      "Realty + Conclave & Excellence Awards 2025 – Emerging Developer of the Year, Industrial & Warehousing",
-    title: "Realty + Conclave",
+    heading: "IGBC-PLATINUM Certification",
+    title: "IGBC",
     content:
-      "KSH INFRA has been celebrated as a rising force in the industrial and warehousing sector. The organization has made significant strides through continuous innovation, timely execution, and the development of future-ready infrastructure.",
-    image: "/Sustainability/awards/awc1.png",
+      "The vision of the Indian Green Building Council (IGBC)—a Confederation of Indian Industry (CII) initiative—envisions a sustainably built environment for all. KSH INFRA Chakan Park II Industrial Park is undergoing a stringent innovation and improvement process to achieve IGBC Platinum certification, the recognized global standard for green infrastructure.",
+    image: "/Sustainability/awards/igflip.png",
+  },
+  {
+    id: 2,
+    heading: "KSH INFRA Parks are EDGE-Certified",
+    title: "EDGE",
+    content:
+      "Excellence in Design for Greater Efficiency (EDGE) is the global standard for green building certifications. Adopted in over 150 countries, EDGE ensures that industrial real estate is resource efficient and sustainable. KSH INFRA is proud to have this badge of honour with KSH INFRA Parks being EDGE certified, reinforcing our commitment to creating a green industrial future.",
+    image: "/Sustainability/awards/edflip.png",
   },
 ];
 
-const AwardCard = () => {
+const CertCard = () => {
   return (
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
-      {awards.map((award) => (
-        <SingleAwardCard key={award.id} {...award} />
+      {certs.map((cert) => (
+        <SingleCertCard key={cert.id} {...cert} />
       ))}
     </div>
   );
 };
 
-const SingleAwardCard = ({ image, title, heading, content }) => {
+const SingleCertCard = ({ image, title, heading, content }) => {
   return (
     <div>
       {/* Desktop Hover Card */}
@@ -155,4 +162,4 @@ const SingleAwardCard = ({ image, title, heading, content }) => {
   );
 };
 
-export default AwardCard;
+export default CertCard;
