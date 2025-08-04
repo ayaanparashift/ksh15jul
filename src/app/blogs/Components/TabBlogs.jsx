@@ -2022,15 +2022,6 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
   const isNews = activeTabId === 18;
   const isBlogsTab = activeTabId === 17 || activeTabId === null;
 
-  // useEffect(() => {
-  //   const urlTab = searchParams.get("tab");
-
-  //   if (tab === "news" || urlTab === "news") setActiveIndex(2);
-  //   else if (tab === "press" || urlTab === "press") setActiveIndex(3);
-  //   else if (tab === "blogs" || urlTab === "blogs") setActiveIndex(1);
-  //   else setActiveIndex(0);
-  // }, [tab, searchParams]);
-
   useEffect(() => {
     const urlTab = searchParams.get("tab");
 
@@ -2047,34 +2038,6 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
 
     setCurrentPage(1); // ✅ Reset pagination
   }, [tab, searchParams]);
-
-  // useEffect(() => {
-  //   let intervalId;
-
-  //   const fetchNews = async () => {
-  //     try {
-  //       const res = await fetch(
-  //         `https://www.kshinfra.com/wp-json/wp/v2/posts?categories=18&per_page=100&_embed`
-  //       );
-  //       if (!res.ok) throw new Error("Failed to fetch");
-  //       const data = await res.json();
-  //       setNewsBlogs(data);
-  //       setLoadingNews(false);
-  //       clearInterval(intervalId);
-  //     } catch (err) {
-  //       console.warn("News fetch failed, will retry...");
-  //       setLoadingNews(false);
-  //     }
-  //   };
-
-  //   if (isNews && newsBlogs.length === 0) {
-  //     setLoadingNews(true);
-  //     fetchNews();
-  //     intervalId = setInterval(fetchNews, 10000);
-  //   }
-
-  //   return () => clearInterval(intervalId);
-  // }, [isNews, newsBlogs.length]);
 
   useEffect(() => {
     let intervalId;

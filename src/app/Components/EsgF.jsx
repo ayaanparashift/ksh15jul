@@ -388,7 +388,7 @@ const EsgF = () => {
           <div className="hidden lg:w-[60%] md:flex items-center justify-center">
             <video
               ref={videoRef}
-              src="/homepage/susvidf.mp4"
+              src="/homepage/esgfvid.mp4"
               loop
               autoPlay
               muted

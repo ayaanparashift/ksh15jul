@@ -1,20 +1,20 @@
 const TestiCard = ({ item }) => {
   return (
-    <div className="w-full h-[75vh] pb-5 bg-white text-black overflow-hidden flex flex-col">
-      <div className="h-[30%] w-full">
+    <div className="w-full h-[50vh] pb-5 bg-white text-black overflow-hidden flex flex-col">
+      <div className="h-[40%] w-full">
         <img
           src={item.image}
           alt={item.company}
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="h-[70%] styled-scroll p-5 flex flex-col justify-between gap-4 overflow-y-auto">
+      <div className="h-[60%] p-5 flex flex-col justify-between gap-4 overflow-y-auto">
         <img
           src={item.logo}
           alt={`${item.company} logo`}
-          className="max-w-[180px] h-auto"
+          className="max-w-[180px] h-[48px]"
         />
-        <p className="fsans-400 text-sm leading-[20px] text-[#6C8DAB]">
+        <p className="fsans-400 text-sm leading-[20px] text-[#6C8DAB] h-[150px]  styled-scroll2">
           {item.content}
         </p>
         <div className="flex flex-col gap-1">

@@ -49,13 +49,13 @@ const ParkInfo = () => {
               />
             </div>
           ))}
-          <div>
+          {/* <div>
             <p className="fsans-600 text-[#00000050] text-[16px]">
               *Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
               tempore deserunt illo ex laudantium, quia eius accusamus nemo
               consequatur veniam!
             </p>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </div>

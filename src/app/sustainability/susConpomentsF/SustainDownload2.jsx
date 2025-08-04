@@ -209,55 +209,55 @@ import { motion, AnimatePresence } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
 const tabs = [
+  {
+    id: 1,
+    heading: "IGBC-PLATINUM Certification",
+    title: "IGBC",
+    content:
+      "The vision of the Indian Green Building Council (IGBC)—a Confederation of Indian Industry (CII) initiative—envisions a sustainably built environment for all. KSH INFRA Chakan Park II Industrial Park is undergoing a stringent innovation and improvement process to achieve IGBC Platinum certification, the recognized global standard for green infrastructure.",
+    image: "./Sustainability/sustainDowloadLSlides/igbc.png",
+  },
+  {
+    id: 2,
+    heading: "KSH INFRA Parks are EDGE-Certified",
+    title: "EDGE",
+    content:
+      "Excellence in Design for Greater Efficiency (EDGE) is the global standard for green building certifications. Adopted in over 150 countries, EDGE ensures that industrial real estate is resource efficient and sustainable. KSH INFRA is proud to have this badge of honour with KSH INFRA Parks being EDGE certified, reinforcing our commitment to creating a green industrial future.",
+    image: "/Sustainability/sustainDowloadLSlides/edgec.png",
+  },
   // {
-  //   id: 1,
-  //   heading: "IGBC-PLATINUM Certification",
-  //   title: "IGBC",
+  //   id: 3,
+  //   heading: "Excellence in Industrial Real Estate",
+  //   title: "Real Estate",
   //   content:
-  //     "The vision of the Indian Green Building Council (IGBC)—a Confederation of Indian Industry (CII) initiative—envisions a sustainably built environment for all. KSH INFRA Chakan Park II Industrial Park is undergoing a stringent innovation and improvement process to achieve IGBC Platinum certification, the recognized global standard for green infrastructure.",
-  //   image: "./Sustainability/sustainDowloadLSlides/igbc.png",
+  //     "KSH INFRA has been recognized for its outstanding achievement in developing, designing, and delivering high-impact industrial spaces. The company has set new benchmarks in operational efficiency, innovative design, and sustainable development.",
+  //   image: "/Sustainability/sustainDowloadLSlides/3rdtab.png",
   // },
   // {
-  //   id: 2,
-  //   heading: "KSH INFRA Parks are EDGE-Certified",
-  //   title: "EDGE",
+  //   id: 4,
+  //   heading: "Excellence in Sustainable Industrial Infrastructure",
+  //   title: "Industrial Infrastructure",
   //   content:
-  //     "Excellence in Design for Greater Efficiency (EDGE) is the global standard for green building certifications. Adopted in over 150 countries, EDGE ensures that industrial real estate is resource efficient and sustainable. KSH INFRA is proud to have this badge of honour with KSH INFRA Parks being EDGE certified, reinforcing our commitment to creating a green industrial future.",
-  //   image: "/Sustainability/sustainDowloadLSlides/edgec.png",
+  //     "KSH INFRA has been honored for its exceptional commitment to building environmentally responsible industrial parks. The team has prioritized sustainability, energy efficiency, and long-term ecological impact across all projects.",
+  //   image: "/Sustainability/sustainDowloadLSlides/4thtab.png",
   // },
-  {
-    id: 3,
-    heading: "Excellence in Industrial Real Estate",
-    title: "Real Estate",
-    content:
-      "KSH INFRA has been recognized for its outstanding achievement in developing, designing, and delivering high-impact industrial spaces. The company has set new benchmarks in operational efficiency, innovative design, and sustainable development.",
-    image: "/Sustainability/sustainDowloadLSlides/3rdtab.png",
-  },
-  {
-    id: 4,
-    heading: "Excellence in Sustainable Industrial Infrastructure",
-    title: "Industrial Infrastructure",
-    content:
-      "KSH INFRA has been honored for its exceptional commitment to building environmentally responsible industrial parks. The team has prioritized sustainability, energy efficiency, and long-term ecological impact across all projects.",
-    image: "/Sustainability/sustainDowloadLSlides/4thtab.png",
-  },
-  {
-    id: 5,
-    heading:
-      "Realty + Conclave & Excellence Awards 2025 – Emerging Developer of the Year, Industrial & Warehousing",
-    title: "Realty + Conclave",
-    content:
-      "KSH INFRA has been celebrated as a rising force in the industrial and warehousing sector. The organization has made significant strides through continuous innovation, timely execution, and the development of future-ready infrastructure.",
-    image: "/Sustainability/sustainDowloadLSlides/5thtab.png",
-  },
-  {
-    id: 6,
-    heading: "ET Edge Best Realty Brands 2025",
-    title: "ET Edge",
-    content:
-      "KSH INFRA has been recognized among the most trusted and visionary real estate brands in the country. The company has demonstrated excellence, credibility, and a strong customer-centric approach in all its developments.",
-    image: "/Sustainability/sustainDowloadLSlides/6thtab.png",
-  },
+  // {
+  //   id: 5,
+  //   heading:
+  //     "Realty + Conclave & Excellence Awards 2025 – Emerging Developer of the Year, Industrial & Warehousing",
+  //   title: "Realty + Conclave",
+  //   content:
+  //     "KSH INFRA has been celebrated as a rising force in the industrial and warehousing sector. The organization has made significant strides through continuous innovation, timely execution, and the development of future-ready infrastructure.",
+  //   image: "/Sustainability/sustainDowloadLSlides/5thtab.png",
+  // },
+  // {
+  //   id: 6,
+  //   heading: "ET Edge Best Realty Brands 2025",
+  //   title: "ET Edge",
+  //   content:
+  //     "KSH INFRA has been recognized among the most trusted and visionary real estate brands in the country. The company has demonstrated excellence, credibility, and a strong customer-centric approach in all its developments.",
+  //   image: "/Sustainability/sustainDowloadLSlides/6thtab.png",
+  // },
 ];
 const SustainDownload2 = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -290,7 +290,7 @@ const SustainDownload2 = () => {
 
   return (
     <div
-      className="h-auto lg:h-[610px] flex overflow-hidden"
+      className="h-auto flex overflow-hidden"
       style={{
         backgroundImage:
           "linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, white 50%), url('/Sustainability/SustainabilitySec3Bg.png')",
@@ -310,7 +310,7 @@ const SustainDownload2 = () => {
 
           <div className="px-[5%] md:px-0 md:flex items-center justify-between xl-1024:w-[90%] xl-768:pr-[40px] lg:w-[600px] pt-14 md:pt-[70px] border-b-[1px] pb-3 border-[#D7D7D7] border-opacity-50 xl-1920:w-[80%]">
             <h1 className="text-xl pb-4 md:pb-0 text-white font-semibold">
-              Awards
+              Certificates
             </h1>
           </div>
           {/* Tabs */}

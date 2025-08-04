@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import LineHead from "../../Components/Heading/LineHead";
 
 // All 4 investor data from the blue sections
 const investors = [
@@ -34,6 +35,8 @@ const InvFlip = () => {
   return (
     <div className="bg-[#092241] py-16">
       <div className="fix12">
+        <LineHead clr="text-[#fff]" heading="Our Investors" />
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
           {investors.map((item, idx) => (
             <InvFlipCard

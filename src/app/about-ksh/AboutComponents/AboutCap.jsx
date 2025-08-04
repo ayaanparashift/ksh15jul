@@ -13,7 +13,7 @@ const tabs = [
     title: "KSH DISTRIPARKS",
     heading: "ROBUST SOLUTIONS. ENHANCED SUPPLY CHAINS.",
     content:
-      "The KSH Container Depot spans 17 acres in Talegaon I, a vital convergence point of NH4 and the Mumbai-Pune Expressway.",
+      "Enhancing supply chains through cost-effective solutions. The company has 2 container depots located at Talegaon spread over combined 32 acres with a capacity of 3,50,000 TEU’s.",
     images: {
       top: ["/AboutPage/aboutSlide/dparks.png"],
     },
@@ -23,7 +23,7 @@ const tabs = [
     title: "KSH INTEGRATED LOGISTICS",
     heading: "SETTING UP MULTI-CLIENT WAREHOUSING SOLUTIONS PAN-INDIA",
     content:
-      "KSH Integrated Logistics has over half a million square feet of warehousing across key Indian markets. The facilities are plug-and-play, effectively adaptive to all our clients' needs.",
+      "Setting up multi-client warehousing solutions pan-India. The company has over 1.5 million square feet of warehousing across key Indian markets. The facilities are plug-and- play, effectively and efficiently adaptive to all our clients' needs.",
     images: {
       top: ["/AboutPage/aboutSlide/il2.png"],
     },
@@ -33,11 +33,9 @@ const tabs = [
     title: "KSH INTERNATIONAL",
     heading: "A LEADING MAKER OF INSULATED CONDUCTORS ACROSS THE GLOBE.",
     content:
-      "KSH International is a leading manufacturer of bare and insulated rectangular & round winding wires and transposed cables in India.",
+      "The company is a leading provider of insulated/covered conductors across the globe and is a leading manufacturer of bare and insulated rectangular & round winding wires and transposed cables in India.",
     images: {
       top: ["/AboutPage/aboutSlide/kshcopper.png"],
-      // top: ["/AboutPage/aboutSlide/int1.png"],
-      // top: ["/AboutPage/aboutSlide/int2.png"],
     },
     links: "https://kshinternational.com/",
   },
@@ -266,8 +264,8 @@ const AboutCap = () => {
           // transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
           className="text-[#202020] mt-[-45px] flex sm:w-full items-start text-[16px] fsans-600 leading-[26px]"
         >
-          The KSH Group boasts a rich legacy, growing to employ over 450
-          professionals with a turnover surpassing INR 1,200 crore. Rooted in
+          The KSH Group boasts a rich legacy, growing to employ over 550
+          professionals with a turnover surpassing INR 2,000 crore. Rooted in
           the logistics and manufacturing sectors, the Group has built its
           success on a foundation of strong core values and an unwavering
           commitment to excellence. This philosophy continues to guide KSH INFRA
@@ -275,7 +273,7 @@ const AboutCap = () => {
         </p>
       </div>
       <div className="bg-[#092241] md:h-[665px] flex items-end justify-end">
-        <div className="border-white w-full md:mr-0 ml-[max(5%,calc((100vw-1250px)/2))] mr-[max(5%,calc((100vw-1250px)/2))] lg:pb-0 pb-[100px] lg:gap-0 gap-[50px] flex lg:flex-row flex-col overflow-hidden relative z-[1]">
+        <div className="border-white w-full md:mr-0 ml-[max(5%,calc((100vw-1250px)/2))] mr-[max(5%,calc((100vw-1250px)/2))] lg:gap-0 gap-[50px] flex lg:flex-row flex-col overflow-hidden relative z-[1]">
           <div
             // initial={{ opacity: 0 }}
             // whileInView={{ opacity: 1 }}
@@ -285,7 +283,7 @@ const AboutCap = () => {
             //   delay: 0.2,
             // }}
             // viewport={{ once: true, amount: 0.3 }}
-            className="leftCon flex-1 flex flex-col justify-center min-h-[665px]"
+            className="leftCon flex-1 flex flex-col justify-center min-h-[600px] lg:pt-0 pt-10 lg:min-h-[665px]"
           >
             <div className="tabs flex flex-wrap overflow-x-scroll overflow-y-hidden gap-4 xl-768:w-[95%] xl-1024:w-[90%] xl-1280:w-[90%] xl-1440:w-[90%]">
               {tabs.map((tab, index) => (
@@ -321,8 +319,45 @@ const AboutCap = () => {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <div className="flex flex-col gap-7 pt-12 xl-1024:pt-20 xl:w-[60%] xl-1280:w-[80%] xl-1024:w-[90%] xl-1440:w-[90%] md:w-[70%] w-[100%] justify-between">
+            {/* <div className="flex flex-col gap-7 pt-12 xl-1024:pt-20 xl:w-[60%] xl-1280:w-[80%] xl-1024:w-[90%] xl-1440:w-[90%] md:w-[70%] w-[100%] justify-between">
               <div className="flex items-center gap-2">
+                <h1 className="text-[14px] fpt-700 text-[#fff]">
+                  FIND OUT MORE :
+                </h1>
+                <span className="text-[#F7E327] text-base">
+                  <a
+                    href={tabs[activeTab].links}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {tabs[activeTab].links}
+                  </a>
+                </span>
+              </div>
+              <div className="flex gap-3 items-center">
+                <button
+                  className="rounded-full border flex items-center justify-center disabled:opacity-50"
+                  onClick={() => setActiveTab((prev) => Math.max(prev - 1, 0))}
+                  disabled={activeTab === 0}
+                >
+                  <img className="w-10 h-10" src="/landingr.svg" alt="" />
+                </button>
+                <div className="text-base text-[#6C8DAB]">
+                  {activeTab + 1} / {tabs.length}
+                </div>
+                <button
+                  className="rounded-full border border-[#D7D7D7] border-opacity-50 w-10 h-10 flex items-center justify-center disabled:opacity-50"
+                  onClick={() =>
+                    setActiveTab((prev) => Math.min(prev + 1, tabs.length - 1))
+                  }
+                  disabled={activeTab === tabs.length - 1}
+                >
+                  <img className="w-10 h-10" src="/landingl.svg" alt="" />
+                </button>
+              </div>
+            </div> */}
+            <div className="flex flex-col gap-7 pt-12 lg:pt-20 justify-between">
+              <div className="flex md:flex-row flex-col items-start md:items-center gap-2">
                 <h1 className="text-[14px] fpt-700 text-[#fff]">
                   FIND OUT MORE :
                 </h1>

@@ -415,7 +415,7 @@ const TestimonialSlider = () => {
           <SwiperSlide key={item.id}>
             {({ isActive }) => (
               <div
-                className={`transition-all w-full 2xl:h-[450px] h-[75vh] duration-500 ease-in-out shadow-xl bg-white text-black mx-auto flex items-center justify-between ${
+                className={`transition-all w-full 2xl:h-[500px] h-[75vh] duration-500 ease-in-out shadow-xl bg-white text-black mx-auto flex items-center justify-between ${
                   isActive
                     ? "scale-100 opacity-100 z-20"
                     : "scale-90 opacity-60 z-10"
@@ -435,7 +435,7 @@ const TestimonialSlider = () => {
                       alt={`${item.company} logo`}
                       className="w-auto 2xl:max-w-[255px] max-w-[150px] 2xl:h-[48px]"
                     />
-                    <p className="fsans-400 styled-scroll2 h-[150px] custom-scroll text-[14px] 2xl:text-[16px] leading-[20px] 2xl:leading-[24px] text-[#6C8DAB]">
+                    <p className="fsans-400 styled-scroll2 h-[180px] custom-scroll text-[14px] 2xl:text-[16px] leading-[20px] 2xl:leading-[24px] text-[#6C8DAB]">
                       {item.content}
                     </p>
                     <div className="w-full flex justify-between items-center">
