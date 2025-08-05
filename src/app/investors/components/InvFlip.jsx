@@ -24,7 +24,7 @@ const investors = [
       "Mapletree is a global real estate company focused on sustainable investment and development. Its diversified portfolio spans Asia Pacific, Europe, UK, and the US.",
   },
   {
-    image: "/investorRel/inpc.png",
+    image: "/investorRel/pcgflip.png",
     title: "Pacific Century Group",
     content:
       "Pacific Century Group (PCG), founded in 1993, is an Asia-based investment group focusing on TMT, financial services, and property. It has a strong network and investment track record across the region.",
