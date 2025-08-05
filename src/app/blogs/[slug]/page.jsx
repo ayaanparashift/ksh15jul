@@ -297,13 +297,21 @@ export default async function BlogPage({ params }) {
                 />
               </div>
             </div>
-            <div className="imgCon h-[45vh] w-full relative">
+            {/* <div className="imgCon h-[45vh] w-full relative">
               <Image
                 src={blog.featuredImage}
                 alt={blog.title.rendered}
                 fill
                 className="object-cover"
                 priority
+              />
+            </div> */}
+            <div className="imgCon h-[45vh] w-full relative overflow-hidden">
+              <img
+                src={blog.featuredImage}
+                alt={blog.title.rendered}
+                className="object-cover w-full h-full absolute top-0 left-0"
+                loading="lazy"
               />
             </div>
           </div>
