@@ -820,7 +820,7 @@ li {
   line-height: 130%;
   color: #101021 !important;
   &:not(:first-child) {
-    margin-top: 50px;
+    margin-top: 20px;
   }
 }
 @media (max-width: 800px) {
@@ -840,11 +840,14 @@ li {
   font-family: "Open Sans", sans-serif !important;
   font-weight: 500 !important;
   font-size: 18px !important;
-  line-height: 30px !important;
-  /* padding-bottom: 20px; */
+  line-height: 150% !important;
+}
+#bloginwy li {
+  margin-left: 20px;
+  list-style-type: disc;
 }
 #bloginwy a {
-  color: blue;
+  color: #6c8dab;
   transition: opacity 0.3s ease;
   &:hover {
     opacity: 0.6;
