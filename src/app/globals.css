@@ -819,6 +819,9 @@ li {
   font-size: 28px;
   line-height: 130%;
   color: #101021 !important;
+  &:not(:first-child) {
+    margin-top: 50px;
+  }
 }
 @media (max-width: 800px) {
   #bloginwy h2,
@@ -848,7 +851,7 @@ li {
   }
 }
 #bloginwy strong {
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 20px;
 }
 
