@@ -226,7 +226,7 @@ const BCard = ({ blog, activeTabId, image }) => {
       </div>
 
       {/* Blog Content */}
-      <div className="flex flex-col min-h-full justify-between border-[#DDDDDD] border-t border-b border-r w-full max-w-full pl-[30px] pr-[20px] py-[30px]">
+      <div className="flex flex-col min-h-full justify-between border-[#DDDDDD] lg:border-l-0 border-l border-t border-b border-r w-full max-w-full pl-[30px] pr-[20px] py-[30px]">
         <div className="flex flex-col gap-[16px]">
           {/* Category Tag */}
           <p

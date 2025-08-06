@@ -759,7 +759,7 @@ export default async function BlogPage({ params }) {
               </p>
             </div>
 
-            <div className="imgCon min-h-[80vh] w-full relative overflow-hidden">
+            <div className="imgCon min-h-[40vh] lg:min-h-[80vh] w-full relative overflow-hidden">
               <img
                 src={blog.featuredImage}
                 alt={blog.title.rendered}
