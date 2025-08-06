@@ -830,7 +830,8 @@ li {
   #bloginwy h6 {
     font-size: 24px !important;
   }
-  #bloginwy p {
+  #bloginwy p,
+  #bloginwy a {
     font-size: 16px !important;
     line-height: 26px;
   }
@@ -849,6 +850,7 @@ li {
 #bloginwy a {
   color: #6c8dab;
   transition: all 0.3s ease;
+  font-size: 18px;
   &:hover {
     color: #1757a7 !important;
   }
