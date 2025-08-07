@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const TrustedPartners = ({ paddingB }) => {
   return (
     <div
-      className='merqueMain h-auto xl-1280:pt-20 pt-16  bg-[url("/tpfiles/marqueBg.webp")] flex-col bg-cover bg-center flex justify-end'
+      className="merqueMain h-auto xl-1280:pt-20 pt-16  bg-[url(/tpfiles/marqueBg.webp)] flex-col bg-cover bg-center flex justify-end"
       style={{ paddingBottom: paddingB }}
     >
       <div className="max-w-[1250px] w-[90%] mx-auto  pb-9 ">
