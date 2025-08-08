@@ -24,73 +24,10 @@ const CaseSolution = () => {
       <div className="relative">
         <img
           src="/caseInside/casebgline.svg"
-          className="absolute left-[50%] top-[-40px] h-[100%]"
+          className="absolute left-[50%] top-[-40px] h-[108%]"
           alt=""
         />
-        {/* <div className="space-y-8">
-          <div className="text-white flex items-center max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
-            <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 sm:text-center text-base leading-[130%]">
-              Installation of a 100-tonne gantry crane transported on rails: A
-              temporary foundation were made outside the facility to install and
-              transport the crane.
-            </p>
-          </div>
-          <div className="text-white flex items-center max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
-            <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 sm:text-center text-base leading-[130%]">
-              The existing shopfloor was reengineered and reinforced: This
-              allowed the crane to move 100 metres within the facility.
-            </p>
-          </div>
-          <div className="text-white flex items-start max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
-            <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 leading-[130%]">
-              Jabil was provided with a ground-plus first-floor office block.
-              This included the following facilities:
-              <div className="list-disc ml-[20px] w-full lg:grid-cols-3 grid pt-5 gap-2">
-                <ul className="list-disc">
-                  <li>Reception</li>
-                  <li>Canteen</li>
-                  <li>Locker rooms</li>
-                </ul>
-                <ul className="list-disc">
-                  <li>Toilet blocks</li>
-                  <li>Work stations</li>
-                  <li>Conference room</li>
-                </ul>
 
-                <ul className="list-disc">
-                  <li>Additional cloakrooms</li>
-                </ul>
-              </div>
-            </p>
-          </div>
-          <div className="text-white flex items-start max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
-            <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 sm:text-start text-base leading-[130%]">
-              Enhanced fire and safety standards to meet Jabil's approval
-              requirements.
-              <ul className="list-disc ml-[20px] w-full flex flex-col items-start pt-5 gap-2">
-                <li>
-                  The existing sprinklers were upgraded to FM-approved
-                  sprinklers.
-                </li>
-                <li>
-                  A 1000 KVA substation was installed with the required
-                  approvals from MSEDCL.
-                </li>
-              </ul>
-            </p>
-          </div>
-          <div className="text-white flex items-center max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
-            <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 sm:text-center text-base leading-[130%]">
-              Installing 300-lux LED lighting for efficient long-term energy
-              use.
-            </p>
-          </div>
-        </div> */}
         <div className="space-y-8">
           <div className="text-white flex items-start max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
@@ -108,14 +45,6 @@ const CaseSolution = () => {
                   Widening of loading ramps for better vehicle and equipment
                   movement.
                 </li>
-              </ul>
-            </p>
-          </div>
-
-          <div className="text-white flex items-start max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
-            <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 leading-[130%]">
-              <ul className="list-disc ml-[20px] pt-1 space-y-1">
                 <li>Additional curved ramps in external utilities area.</li>
                 <li>
                   Installation of 5m x 5m motorized shutters for quick
@@ -142,16 +71,23 @@ const CaseSolution = () => {
                 </li>
                 <li>
                   Internal functional spaces developed:
-                  <ul className="list-disc ml-5 pt-2 space-y-1">
-                    <li>
-                      Additional Male and Female toilet blocks and locker rooms
-                    </li>
-                    <li>Panel room, tool room, maintenance rooms, workshop</li>
-                    <li>Inward/outward goods handling rooms</li>
-                    <li>R&D protolab and inspection room</li>
-                    <li>Safety and quarantine rooms</li>
-                    <li>Two temperature-controlled rooms</li>
-                    <li>UPS room</li>
+                  <ul className="list-disc ml-5 pt-2 space-y-1 flex lg:flex-row flex-col lg:gap-[80px] gap-0">
+                    <div>
+                      <li>
+                        Additional Male and Female toilet blocks and locker
+                        rooms
+                      </li>
+                      <li>
+                        Panel room, tool room, maintenance rooms, workshop
+                      </li>
+                      <li>Inward/outward goods handling rooms</li>
+                      <li>R&D protolab and inspection room</li>
+                    </div>
+                    <div>
+                      <li>Safety and quarantine rooms</li>
+                      <li>Two temperature-controlled rooms</li>
+                      <li>UPS room</li>
+                    </div>
                   </ul>
                 </li>
               </ul>
@@ -162,12 +98,16 @@ const CaseSolution = () => {
             <img src="/caseInside/caseSolshape.svg" alt="" />
             <p className="fsans-400 leading-[130%]">
               <strong>External Utility Infrastructure</strong>
-              <ul className="list-disc ml-[20px] pt-5 space-y-1">
-                <li>ETP tank and platform</li>
-                <li>Gas bank platform</li>
-                <li>Oil storage rooms</li>
-                <li>Scrap yards</li>
-                <li>Creche facility for employee welfare</li>
+              <ul className="list-disc ml-[20px] pt-2 flex lg:flex-row flex-col space-y-1 lg:gap-[80px] gap-0">
+                <div>
+                  <li>ETP tank and platform</li>
+                  <li>Gas bank platform</li>
+                  <li>Oil storage rooms</li>
+                </div>
+                <div>
+                  <li>Scrap yards</li>
+                  <li>Creche facility for employee welfare</li>
+                </div>
               </ul>
             </p>
           </div>
