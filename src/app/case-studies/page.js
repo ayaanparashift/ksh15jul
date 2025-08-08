@@ -1,4 +1,4 @@
-import CSpot from "./Components/CSpot";
+import CSpot from "./Components2/CSpot";
 // import CaseSlide from "./Components/CaseSlide";
 // import FormSec from "./Components/FormSec";
 import CSbgbl from "./Components/CSblbg";
