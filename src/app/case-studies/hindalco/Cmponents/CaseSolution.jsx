@@ -141,15 +141,19 @@ const CaseSolution = () => {
                 </li>
                 <li>
                   Featured:
-                  <ul className="list-disc ml-5 pt-2 space-y-1">
-                    <li>Workstations, conference and meeting rooms</li>
-                    <li>Training room</li>
-                    <li>Canteen and washrooms</li>
-                    <li>Recreational area</li>
-                    <li>
-                      Double-height reception area for an impactful corporate
-                      presence
-                    </li>
+                  <ul className="list-disc ml-5 pt-2 space-y-1 flex lg:flex-row flex-col lg:gap-[80px] gap-0">
+                    <div>
+                      <li>Workstations, conference and meeting rooms</li>
+                      <li>Training room</li>
+                      <li>Canteen and washrooms</li>
+                    </div>
+                    <div>
+                      <li>Recreational area</li>
+                      <li>
+                        Double-height reception area for an impactful corporate
+                        presence
+                      </li>
+                    </div>
                   </ul>
                 </li>
               </ul>
