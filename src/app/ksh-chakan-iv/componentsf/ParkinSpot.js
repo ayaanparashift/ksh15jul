@@ -32,7 +32,7 @@
 //   //               whileInView={{ x: 0, opacity: 1 }}
 //   //               transition={{ duration: 1.2, ease: [0.7, 0, 0.4, 1] }}
 //   //               viewport={{ once: true, amount: 0 }}
-//   //               className="fpt-600 xl:text-[50px] lg:text-[40px] md:text-[32px] text-[20px] text-white leading-[150%] md:leading-[105%] 2xl:text-[64px]"
+//   //               className="fpt-500 xl:text-[50px] lg:text-[40px] md:text-[32px] text-[20px] text-white leading-[150%] md:leading-[105%] 2xl:text-[64px]"
 //   //             >
 //   //               KSH INFRA Chakan IV Park
 //   //             </motion.h1>
@@ -181,7 +181,7 @@
 //                 whileInView={{ x: 0, opacity: 1 }}
 //                 transition={{ duration: 1.2, ease: [0.7, 0, 0.4, 1] }}
 //                 viewport={{ once: true, amount: 0 }}
-//                 className="fpt-600 xl:text-[50px] lg:text-[40px] md:text-[32px] text-[20px] text-white leading-[150%] md:leading-[105%] 2xl:text-[64px]"
+//                 className="fpt-500 xl:text-[50px] lg:text-[40px] md:text-[32px] text-[20px] text-white leading-[150%] md:leading-[105%] 2xl:text-[64px]"
 //               >
 //                 KSH INFRA Chakan IV Park
 //               </motion.h1>
@@ -339,7 +339,7 @@ const ParkinSpot = ({}) => {
           {/* Left Side Content */}
           <div className="flex flex-col flex-1 max-w-full gap-5 min-1366:gap-10 justify-center relative">
             <div className="flex flex-col max-w-fit">
-              <motion.h1 className="fpt-600 xl:text-[50px] lg:text-[40px] md:text-[32px] text-[20px] text-white leading-[150%] md:leading-[105%] 2xl:text-[64px]">
+              <motion.h1 className="fpt-500 xl:text-[50px] lg:text-[40px] md:text-[32px] text-[20px] text-white leading-[150%] md:leading-[105%] 2xl:text-[64px]">
                 KSH INFRA Chakan IV Park
               </motion.h1>
               <motion.div className="bg-[#F7E327] h-[10px] w-full" />

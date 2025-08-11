@@ -20,20 +20,13 @@ const page = () => {
   return (
     <>
       <CasINSpot />
-      {/* <CaseINSec2 /> */}
+      <CaseINSec2 />
       {/* <CaseINAbout /> */}
       {/* <TextT /> */}
       <CaseINChalleng />
       <CaseSolution />
       {/* <CaseINBenefit /> */}
-      <Res
-        respara="KSH INFRA handed over the facility for operational readiness in August 2025.
-Barnes received a fully customized, crane-ready manufacturing facility with high-
-capacity power, utility infrastructure, and thermal controls in place.<br/><br/>
-With 11 cranes operating under one roof and power infrastructure delivered in
-phases without delays, this project stands out as a technically sound and well-
-coordinated industrial success."
-      />
+      <Res respara="KSH INFRA handed over the facility for operational readiness in August 2025. Barnes received a fully customised, crane-ready manufacturing unit with phased high-capacity power supply, robust utility infrastructure, and advanced thermal controls. With 11 cranes operating under one roof and critical power delivered on schedule, the project stands as a technically precise and well-coordinated industrial build." />
       {/* <FormSec /> */}
       <CSbgbl />
     </>
