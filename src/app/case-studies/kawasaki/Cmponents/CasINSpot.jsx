@@ -49,7 +49,7 @@ const CasINSpot = () => {
             // whileInView={{ opacity: 1, translateY: 0 }}
             // transition={{ duration: 1.5, ease: [0.7, 0, 0.4, 1] }}
             // viewport={{ amount: 0.1, once: true }}
-            src="/caseInside/caseInsideSpot.png"
+            src="/caseInside/kwspot.jpg"
             alt=""
           />
         </div>

@@ -94,7 +94,7 @@ export default function PFetch() {
         title: "Creating opportunities for Kawasaki",
         content:
           "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first Indian integrated Unit.",
-        image: "/caseInside/caseInsideSpot.png",
+        image: "/caseInside/kwspot.jpg",
         href: "/case-studies/kawasaki",
         newTab: false,
         date: "",
@@ -103,7 +103,7 @@ export default function PFetch() {
         id: 2,
         title: "Jabil + KSH INFRA",
         content: "Done and Delivered. On Time",
-        image: "/caseInside/jabilspot.png",
+        image: "/caseInside/jabspot.jpg",
         href: "/case-studies/jabil",
         newTab: false,
         date: "",

@@ -30,7 +30,7 @@
 //   },
 // };
 
-// const Landing2 = ({ isActive }) => {
+// const Landing3 = ({ isActive }) => {
 //   return (
 //     <motion.div
 //       className="bg-[url(/fistfold.png)] bg-cover bg-center min-w-screen"
@@ -51,8 +51,9 @@
 //             className="fpt-500 max-w-fit  xl:text-[52px] lg:text-[40px] min-1366:text-[70px] text-[28px] text-white border-b-[5px] md:border-b-[10px] border-[#F7E327] leading-[105%] min-1600:text-[70px]"
 //             variants={fadeIn2}
 //           >
-//             Launching <br />
-//             KSH Hosur Park 1 <br />- Near Bangalore
+//             In the Works - <br />
+//             KSH INFRA Park <br />
+//             in Chennai
 //           </motion.h1>
 //           <motion.p
 //             className="fsans-500 text-[14px] lg:text-[18px] xl:text-[20px] leading-[26px]"
@@ -65,13 +66,13 @@
 //             }}
 //             variants={fadeIn2}
 //           >
-//             KSH’s newest park in the thriving Bangalore–Hosur corridor offers
-//             1.2 million sq. ft. of ready Grade A industrial and logistics
-//             infrastructure—built for speed, safety, and growth.
+//             Spanning 60 acres in Chennai’s prime industrial hub, this upcoming
+//             Grade A logistics park is designed for businesses aiming to expand
+//             across Tamil Nadu and beyond.
 //           </motion.p>
 //           <motion.div variants={fadeIn}>
 //             <Link
-//               href="/ksh-hosur-i"
+//               href="/parks"
 //               className="flex group w-full transition-transform duration-[400ms] items-center justify-start gap-3"
 //             >
 //               <img
@@ -82,7 +83,7 @@
 //                 alt="Red Arrow Icon"
 //               />
 //               <p className="text-[#ffffff] text-[16px] fsans-600">
-//                 Explore Hosur Park I
+//                 Explore More Parks
 //               </p>
 //             </Link>
 //           </motion.div>
@@ -108,13 +109,13 @@
 //               exit="exit"
 //             >
 //               <motion.img
-//                 src="/homepage/hospot.png"
+//                 src="/homepage/chomespot.png"
 //                 className="object-cover w-[704px] min-1600:inline-block hidden"
 //                 alt="some"
 //                 variants={fadeIn}
 //               />
 //               <motion.img
-//                 src="/homepage/hospot.png"
+//                 src="/homepage/chomespot.png"
 //                 className="object-cover w-[704px] min-1600:hidden md:inline-block hidden"
 //                 alt="some"
 //                 variants={fadeIn}
@@ -130,7 +131,7 @@
 //               className="w-full max-w-[1250px] mx-auto px-5 md:hidden"
 //             >
 //               <motion.img
-//                 src="/homepage/hshomeph.png"
+//                 src="/homepage/chomespot.png"
 //                 className="object-cover w-full"
 //                 alt="some"
 //                 variants={fadeIn}
@@ -143,19 +144,20 @@
 //   );
 // };
 
-// export default Landing2;
+// export default Landing3;
 
 import Link from "next/link";
 
-const Landing2 = () => {
+const Landing3 = () => {
   return (
     <div className="bg-[url(/fistfold.png)] bg-cover bg-center min-w-screen">
       <div className="w-full flex items-center lg:justify-center justify-end xl-1600:max-h-fit md:h-screen h-[90vh] pb-[75px] pt-[0px] md:py-[92px] md:gap-[50px] gap-[20px] md:flex-row flex-col-reverse">
         {/* Left Side Content */}
         <div className="ml-[max(5%,calc((100vw-1250px)/2))] xl:mr-0 mr-[max(5%,calc((100vw-1250px)/2))] flex min-1920:mt-[190px] flex-col flex-1 max-w-full lg:gap-[30px] gap-2 xl:flex-[1] xl-1920:h-[500px] xl-1600:h-[500px] xl:h-[400px] md:h-[500px] md:justify-end h-full">
           <h1 className="fpt-500 max-w-fit xl:text-[52px] lg:text-[40px] min-1366:text-[70px] text-[28px] text-white border-b-[5px] md:border-b-[10px] border-[#F7E327] leading-[105%] min-1600:text-[70px]">
-            Launching <br />
-            KSH Hosur Park 1 <br />- Near Bangalore
+            In the Works - <br />
+            KSH INFRA Park <br />
+            in Chennai
           </h1>
           <p
             className="fsans-500 text-[14px] lg:text-[18px] xl:text-[20px] leading-[26px]"
@@ -167,13 +169,13 @@ const Landing2 = () => {
               color: "transparent",
             }}
           >
-            KSH’s newest park in the thriving Bangalore–Hosur corridor offers
-            1.2 million sq. ft. of ready Grade A industrial and logistics
-            infrastructure—built for speed, safety, and growth.
+            Spanning 60 acres in Chennai’s prime industrial hub, this upcoming
+            Grade A logistics park is designed for businesses aiming to expand
+            across Tamil Nadu and beyond.
           </p>
           <div>
             <Link
-              href="/ksh-hosur-i"
+              href="/parks"
               className="flex group w-full transition-transform duration-[400ms] items-center justify-start gap-3"
             >
               <img
@@ -184,7 +186,7 @@ const Landing2 = () => {
                 alt="Red Arrow Icon"
               />
               <p className="text-[#ffffff] text-[16px] fsans-600">
-                Explore Hosur Park I
+                Explore More Parks
               </p>
             </Link>
           </div>
@@ -197,7 +199,7 @@ const Landing2 = () => {
             <div>
               <div className="min-1600:inline-block hidden">
                 <img
-                  src="/homepage/hospot.png"
+                  src="/homepage/chomespot.png"
                   alt="some"
                   width={704}
                   height={500}
@@ -206,7 +208,7 @@ const Landing2 = () => {
               </div>
               <div className="min-1600:hidden md:inline-block hidden">
                 <img
-                  src="/homepage/hospot.png"
+                  src="/homepage/chomespot.png"
                   alt="some"
                   width={704}
                   height={500}
@@ -218,7 +220,7 @@ const Landing2 = () => {
             {/* Mobile Image */}
             <div className="w-full max-w-[1250px] mx-auto px-5 md:hidden">
               <img
-                src="/homepage/hshomeph.png"
+                src="/homepage/chomespot.png"
                 alt="some"
                 width={800}
                 height={600}
@@ -232,4 +234,4 @@ const Landing2 = () => {
   );
 };
 
-export default Landing2;
+export default Landing3;

@@ -108,13 +108,13 @@ const CaseStudy = () => {
         </>
       ),
       url: "/case-studies/jabil",
-      Image: "/caseInside/jabilspot.png",
+      Image: "/caseInside/jabspot.jpg",
     },
     {
       Title:
         "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first integrated unit.",
       url: "/case-studies/kawasaki",
-      Image: "/caseInside/caseInsideSpot.png",
+      Image: "/caseInside/kwspot.jpg",
     },
     {
       Title: "Hindalco, a flagship company of the Aditya Birla Group",
@@ -133,6 +133,8 @@ const CaseStudy = () => {
       <div className="fix12">
         <Swiper
           spaceBetween={30}
+          speed={1000}
+          slidesPerGroup={2}
           slidesPerView={1}
           modules={[Navigation]}
           navigation={{
@@ -140,7 +142,7 @@ const CaseStudy = () => {
             nextEl: ".custom-next",
           }}
           breakpoints={{
-            1024: { slidesPerView: 2 },
+            1024: { slidesPerView: 2, slidesPerGroup: 2 },
           }}
         >
           {CaseStudyContent.map((content, index) => (

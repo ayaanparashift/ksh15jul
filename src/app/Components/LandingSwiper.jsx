@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation } from "swiper/modules";
+import { FreeMode, Navigation, Autoplay } from "swiper/modules";
 import { AnimatePresence, motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -9,6 +9,7 @@ import "swiper/css/scrollbar";
 import Landing from "./Landing";
 import VidLand from "./VidLand";
 import Landing2 from "./Landing2";
+import Landing3 from "./Landing3";
 
 const LandingSwiper = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -42,9 +43,14 @@ const LandingSwiper = () => {
           slidesPerGroup={1}
           className="max-w-full"
           speed={1000}
+          // loop={true}
           spaceBetween={0}
-          modules={[FreeMode, Navigation]}
+          modules={[FreeMode, Navigation, Autoplay]}
           navigation={{ nextEl: ".landingr", prevEl: ".landingl" }}
+          autoplay={{
+            delay: 6000,
+            disableOnInteraction: false, // keeps autoplay after user swipes
+          }}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
         >
           <SwiperSlide>
@@ -74,6 +80,15 @@ const LandingSwiper = () => {
             // transition={{ duration: 0.3, ease: [0.7, 0, 0.4, 1] }}
             >
               <Landing2 isActive={activeIndex === 2} />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+            // initial={{ width: 0 }}
+            // animate={{ width: activeIndex === 1 ? "100%" : 0 }}
+            // transition={{ duration: 0.3, ease: [0.7, 0, 0.4, 1] }}
+            >
+              <Landing2 isActive={activeIndex === 3} />
             </div>
           </SwiperSlide>
         </Swiper>
