@@ -101,14 +101,16 @@ import "swiper/css/navigation";
 const CaseStudy = () => {
   const CaseStudyContent = [
     {
-      Title: (
-        <>
-          Done and Delivered. On Time
-          <br />— Jabil KSH INFRA
-        </>
-      ),
+      Title: "Done and Delivered. On Time<br />— Jabil",
+
       url: "/case-studies/jabil",
       Image: "/caseInside/jabspot.jpg",
+    },
+    {
+      Title:
+        "Large-Scale, Built-to-Spec Facility —<br/>Delivered to Hindalco in Eight Months",
+      url: "/case-studies/hindalco",
+      Image: "/caseInside/hindspot.png",
     },
     {
       Title:
@@ -117,12 +119,8 @@ const CaseStudy = () => {
       Image: "/caseInside/kwspot.jpg",
     },
     {
-      Title: "Hindalco, a flagship company of the Aditya Birla Group.",
-      url: "/case-studies/hindalco",
-      Image: "/caseInside/hindspot.png",
-    },
-    {
-      Title: "Barnes, a global moulding solutions manufacturer.",
+      Title:
+        "Crane-Ready, High-Capacity Manufacturing Facility — Delivered to Barnes",
       url: "/case-studies/barnes",
       Image: "/caseInside/barnes.png",
     },

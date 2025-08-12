@@ -331,13 +331,13 @@ const TestimonialSlider = ({ testimonials }) => {
                       className="min-w-full min-h-full object-cover"
                     />
                   </div>
-                  <div className="md:w-[65%] w-full p-10 flex flex-col justify-center  gap-5 xl:gap-[25px]">
+                  <div className="md:w-[65%] w-full py-10 pl-10 pr-20 flex flex-col justify-center  gap-5 xl:gap-[25px]">
                     <img
                       src={item.logo}
                       alt={`${item.company} logo`}
                       className="w-auto 2xl:max-w-[255px] max-w-[150px] 2xl:h-[48px]"
                     />
-                    <p className="fsans-400 styled-scroll2 h-[180px] custom-scroll text-[14px] 2xl:text-[16px] leading-[20px] 2xl:leading-[24px] text-[#6C8DAB]">
+                    <p className="fsans-400 styled-scroll2 h-[117px] custom-scroll text-[14px] 2xl:text-[16px] leading-[20px] 2xl:leading-[24px] text-[#6C8DAB]">
                       {item.content}
                     </p>
                     <div className="w-full flex justify-between items-center">

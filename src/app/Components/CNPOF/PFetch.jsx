@@ -91,6 +91,26 @@ export default function PFetch() {
     "Case Studies": [
       {
         id: 1,
+        title: "Hindalco",
+        content:
+          "Large-Scale, Built-to-Spec Facility — Delivered to Hindalco in Eight Months",
+        image: "/caseInside/hindspot.png",
+        href: "/case-studies/hindalco",
+        newTab: false,
+        date: "",
+      },
+      {
+        id: 2,
+        title: "Barnes",
+        content:
+          "Crane-Ready, High-Capacity Manufacturing Facility — Delivered to Barnes",
+        image: "/caseInside/barnes.png",
+        href: "/case-studies/barnes",
+        newTab: false,
+        date: "",
+      },
+      {
+        id: 3,
         title: "Creating opportunities for Kawasaki",
         content:
           "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first Indian integrated Unit.",
@@ -100,29 +120,11 @@ export default function PFetch() {
         date: "",
       },
       {
-        id: 2,
+        id: 4,
         title: "Jabil + KSH INFRA",
         content: "Done and Delivered. On Time",
         image: "/caseInside/jabspot.jpg",
         href: "/case-studies/jabil",
-        newTab: false,
-        date: "",
-      },
-      {
-        id: 3,
-        title: "Hindalco",
-        content: "A flagship company of the Aditya Birla Group",
-        image: "/caseInside/hindspot.png",
-        href: "/case-studies/hindalco",
-        newTab: false,
-        date: "",
-      },
-      {
-        id: 4,
-        title: "Barnes",
-        content: "A flagship company of the Aditya Birla Group",
-        image: "/caseInside/barnes.png",
-        href: "/case-studies/barnes",
         newTab: false,
         date: "",
       },

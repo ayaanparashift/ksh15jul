@@ -8,12 +8,12 @@ const CaseSolution = () => {
       className="flex flex-col items-center gap-[66px] md:px-[0px] px-[20px] pt-[71px] pb-[85px] caseSolBgGradients"
     >
       <h1 className="text-white w-fit fpt-600 md:text-[44px] sm:text-[32px] text-[24px] leading-[120%] border-b-[4px] border-b-[#F7E327]">
-        SOLUTION
+        The Solution
       </h1>
-      <h4 className="fsans-400 text-[16px] text-[#fff]">
+      <p className="fsans-400 text-[16px] text-[#fff] lg:text-center">
         The KSH INFRA team utilized their in-house expertise to successfully
         execute the customization plan. This is how we did it:{" "}
-      </h4>
+      </p>
       <div className="relative">
         <img
           src="/caseInside/casebgline.svg"
@@ -21,24 +21,24 @@ const CaseSolution = () => {
           alt=""
         />
         <div className="space-y-8">
-          <div className="text-white flex items-center max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
+          <div className="text-white flex max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 sm:text-center text-base leading-[130%]">
+            <p className="fsans-400 text-base leading-[130%]">
               Installation of a 100-tonne gantry crane transported on rails: A
               temporary foundation were made outside the facility to install and
               transport the crane.
             </p>
           </div>
-          <div className="text-white flex items-center max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
+          <div className="text-white flex max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 sm:text-center text-base leading-[130%]">
+            <p className="fsans-400 text-base leading-[130%]">
               The existing shopfloor was reengineered and reinforced: This
               allowed the crane to move 100 metres within the facility.
             </p>
           </div>
           <div className="text-white flex items-start max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 leading-[130%]">
+            <p className="fsans-400 leading-[130%] w-full">
               Jabil was provided with a ground-plus first-floor office block.
               This included the following facilities:
               <div className="list-disc ml-[20px] w-full lg:grid-cols-3 grid pt-5 gap-2">
@@ -61,7 +61,7 @@ const CaseSolution = () => {
           </div>
           <div className="text-white flex items-start max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 sm:text-start text-base leading-[130%]">
+            <p className="fsans-400 sm:text-start text-base leading-[130%] w-full">
               Enhanced fire and safety standards to meet Jabil's approval
               requirements.
               <ul className="list-disc ml-[20px] w-full flex flex-col items-start pt-5 gap-2">
@@ -76,9 +76,9 @@ const CaseSolution = () => {
               </ul>
             </p>
           </div>
-          <div className="text-white flex items-center max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
+          <div className="text-white flex max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 sm:text-center text-base leading-[130%]">
+            <p className="fsans-400 text-base leading-[130%] w-full">
               Installing 300-lux LED lighting for efficient long-term energy
               use.
             </p>

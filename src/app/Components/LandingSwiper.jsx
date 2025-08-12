@@ -70,15 +70,6 @@ const LandingSwiper = () => {
             // animate={{ width: activeIndex === 1 ? "100%" : 0 }}
             // transition={{ duration: 0.3, ease: [0.7, 0, 0.4, 1] }}
             >
-              <Landing isActive={activeIndex === 1} />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div
-            // initial={{ width: 0 }}
-            // animate={{ width: activeIndex === 1 ? "100%" : 0 }}
-            // transition={{ duration: 0.3, ease: [0.7, 0, 0.4, 1] }}
-            >
               <Landing2 isActive={activeIndex === 2} />
             </div>
           </SwiperSlide>
@@ -89,6 +80,15 @@ const LandingSwiper = () => {
             // transition={{ duration: 0.3, ease: [0.7, 0, 0.4, 1] }}
             >
               <Landing3 isActive={activeIndex === 3} />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+            // initial={{ width: 0 }}
+            // animate={{ width: activeIndex === 1 ? "100%" : 0 }}
+            // transition={{ duration: 0.3, ease: [0.7, 0, 0.4, 1] }}
+            >
+              <Landing isActive={activeIndex === 1} />
             </div>
           </SwiperSlide>
         </Swiper>

@@ -8,9 +8,9 @@ const CaseSolution = () => {
       className="flex flex-col items-center gap-[66px] md:px-[0px] px-[20px] pt-[71px] pb-[85px] caseSolBgGradients"
     >
       <h1 className="text-white w-fit fpt-600 md:text-[44px] sm:text-[32px] text-[24px] leading-[120%] border-b-[4px] border-b-[#F7E327]">
-        SOLUTION
+        The Solution
       </h1>
-      <h4 className="fsans-400 text-[16px] text-[#fff] fix12">
+      <p className="fsans-400 text-[16px] text-[#fff] lg:text-center max-w-[975px]">
         KSH INFRA delivered a 200,000 sq. ft. turnkey facility with extensive
         customisation in structure, utilities, and support infrastructure.
         Before the PEB order was finalised, Hindalco requested non-standard
@@ -24,7 +24,7 @@ const CaseSolution = () => {
         <br />
         <br />
         Key Deliverables:
-      </h4>
+      </p>
       <div className="relative">
         <img
           src="/caseInside/casebgline.svg"
@@ -65,7 +65,7 @@ const CaseSolution = () => {
 
           <div className="text-white flex items-start max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 leading-[130%]">
+            <p className="fsans-400 leading-[130%] w-full">
               <strong>Internal Infrastructure</strong>
               <ul className="list-disc ml-[20px] pt-5 space-y-1">
                 <li>
@@ -102,16 +102,18 @@ const CaseSolution = () => {
 
           <div className="text-white flex items-start max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 leading-[130%]">
+            <p className="fsans-400 leading-[130%]  w-full">
               <strong>External Utility Infrastructure</strong>
               <ul className="list-disc ml-[20px] pt-2 flex lg:flex-row flex-col space-y-1 lg:gap-[80px] gap-0">
                 <div>
                   <li>ETP tank and platform.</li>
                   <li>Gas bank platform.</li>
-                  <li>Oil storage rooms.</li>
                 </div>
                 <div>
+                  <li>Oil storage rooms.</li>
                   <li>Scrap yards.</li>
+                </div>
+                <div>
                   <li>Creche facility for employee welfare.</li>
                 </div>
               </ul>
@@ -120,7 +122,7 @@ const CaseSolution = () => {
 
           <div className="text-white flex items-start max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 leading-[130%]">
+            <p className="fsans-400 leading-[130%] w-full">
               <strong>Power & Compliance</strong>
               <ul className="list-disc ml-[20px] pt-5 space-y-1">
                 <li>

@@ -15,9 +15,11 @@ const SlideCard = ({ title, image, url }) => {
         </div>
       </div>
       <div className="flex flex-col justify-between max-h-[180px] min-h-[180px] px-[30px] py-[20px]">
-        <h3 className="fsans-600 text-[18px] md:text-[24px] spotlightheaddd">
-          {title}
-        </h3>
+        <h3
+          className="fsans-600 text-[18px] md:text-[24px] spotlightheaddd"
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
+
         <div className="flex cursor-pointer group items-center justify-center font-semibold text-[#ffffff] text-[16px] h-[50px] w-fit">
           <Link
             href={url}

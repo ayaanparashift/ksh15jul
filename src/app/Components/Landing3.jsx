@@ -186,7 +186,7 @@ const Landing3 = () => {
                 alt="Red Arrow Icon"
               />
               <p className="text-[#ffffff] text-[16px] fsans-600">
-                Explore More Parks
+                Explore Our Parks
               </p>
             </Link>
           </div>

@@ -8,11 +8,11 @@ const CaseSolution = () => {
       className="flex flex-col items-center gap-[66px] md:px-[0px] px-[20px] pt-[71px] pb-[85px] caseSolBgGradients"
     >
       <h1 className="text-white w-fit fpt-600 md:text-[44px] sm:text-[32px] text-[24px] leading-[120%] border-b-[4px] border-b-[#F7E327]">
-        SOLUTION
+        The Solution
       </h1>
-      <p className="fsans-600 text-[16px] text-[#fff] fix12 text-center">
-        KSH INFRA delivered a <strong className="">180,000 sq. ft.</strong>{" "}
-        facility meeting Barnes’ operational and technical standards.
+      <p className="fsans-400 text-[16px] text-[#fff] lg:w-[975px] text-center">
+        KSH INFRA delivered a 180,000 sq. ft. facility meeting Barnes’
+        operational and technical standards.
         <br />
         <br />
         Key Deliverables:
@@ -77,15 +77,19 @@ const CaseSolution = () => {
 
           <div className="text-white flex items-start max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 leading-[130%]">
+            <p className="fsans-400 leading-[130%] w-full">
               External Utilities & Civil Works
-              <div className="list-disc justify-start ml-[20px] w-full lg:grid-cols-2 grid pt-5 gap-10">
-                <ul className="list-disc">
+              <div className="list-disc ml-[20px] max-w-full flex lg:flex-row flex-col justify-between pt-5 gap-10">
+                <ul className="list-disc max-w-fit">
                   <li>Cooling tower platform.</li>
+                </ul>
+                <ul className="list-disc whitespace-nowrap max-w-fit">
                   <li>Liquid nitrogen storage zone.</li>
                 </ul>
-                <ul className="list-disc">
+                <ul className="list-disc max-w-fit">
                   <li>Scrap yard.</li>
+                </ul>
+                <ul className="list-disc max-w-fit">
                   <li>Compressor room.</li>
                 </ul>
               </div>
