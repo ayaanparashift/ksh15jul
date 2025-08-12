@@ -4,8 +4,8 @@ const CaseINSec2 = () => {
       <div>
         <div className="fix12 pt-[72px] pb-[84px]">
           <h1 className="fpt-600 md:text-[40px] text-[24px] text-[#040404] leading-[30px] md:leading-[48px] border-b-[1px] border-b-[#D7D7D7] pb-4">
-            Crane-Ready, High-Capacity Manufacturing Facility — Delivered to
-            Barnes
+            Crane-Ready, High-Capacity Manufacturing Facility <br />— Delivered
+            to Barnes
           </h1>
           <p className="text-[#434343] text-base fsans-400 pt-[35px]">
             Barnes, a global moulding solutions manufacturer, partnered with KSH

@@ -4,8 +4,8 @@ const CaseINSec2 = () => {
       <div>
         <div className="fix12 pt-[72px] pb-[84px]">
           <h1 className="fpt-600 md:text-[40px] text-[24px] text-[#040404] leading-[30px] md:leading-[48px] border-b-[1px] border-b-[#D7D7D7] pb-4">
-            Large-Scale, Built-to-Spec Facility — Delivered to Hindalco in Eight
-            Months
+            Large-Scale, Built-to-Spec Facility <br />— Delivered to Hindalco in
+            Eight Months
           </h1>
           <p className="text-[#434343] text-base fsans-400 pt-[35px]">
             Hindalco, a flagship company of the Aditya Birla Group, was setting
