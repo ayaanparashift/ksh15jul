@@ -128,7 +128,7 @@
 //                     className="flex flex-col flex-1"
 //                   >
 //                     <div className="flex flex-col gap-[10px] lg:gap-[30px]">
-//                       <h3 className="fsans-600 text-[26px] md:text-[36px] text-[#181818]">
+//                       <h3 className="fsans-600 text-[26px] md:text-[36px] text-[#fff]">
 //                         {slide.title}
 //                       </h3>
 //                       <p className="md:text-[22px] text-[18px] text-[#4F4F4F] leading-[130%]">
@@ -149,7 +149,7 @@
 //               overflow: visible !important;
 //               * {
 //                 color: black;
-//                 transition: color 0.8s;
+//                 transition: color 0.5s;
 //               }
 //             }
 //             .thumb-swiper .swiper-slide-thumb-active {
@@ -539,7 +539,7 @@ const sld = [
 //                     className="flex flex-col flex-1"
 //                   >
 //                     <div className="flex flex-col gap-[10px] lg:gap-[30px]">
-//                       <h3 className="fsans-600 text-[26px] md:text-[36px] text-[#181818]">
+//                       <h3 className="fsans-600 text-[26px] md:text-[36px] text-[#fff]">
 //                         {slide.title}
 //                       </h3>
 //                       <p className="md:text-[22px] text-[18px] text-[#4F4F4F] leading-[130%]">
@@ -559,7 +559,7 @@ const sld = [
 //               overflow: visible !important;
 //               * {
 //                 color: black;
-//                 transition: color 0.8s;
+//                 transition: color 0.5s;
 //               }
 //             }
 //             .thumb-swiper .swiper-slide-thumb-active {
@@ -676,7 +676,7 @@ export const CarSlide = () => {
 
                   <div className="flex flex-col flex-1">
                     <div className="flex flex-col gap-[10px] lg:gap-[30px]">
-                      <h3 className="fsans-600 text-[26px] md:text-[36px] text-[#181818]">
+                      <h3 className="fsans-600 text-[26px] md:text-[36px] text-[#fff]">
                         {slide.title}
                       </h3>
                       <p className="md:text-[22px] text-[18px] text-[#4F4F4F] leading-[130%]">
@@ -691,22 +691,67 @@ export const CarSlide = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <style jsx global>{`
+          {/* <style jsx global>{`
             .main-swiper .swiper-slide {
               overflow: visible !important;
               * {
                 color: black;
-                transition: color 0.8s;
+                transition: all 0.5s;
+              }
+            }
+            .swiper-slide {
+              transition: all 0.5s;
+              h3 {
+                transition: all 0.5s;
               }
             }
             .thumb-swiper .swiper-slide-thumb-active {
+              transition: all 0.5s;
               background-color: #6c8dab;
               h3 {
+                transitiona: all 0.5s;
                 color: #ffffff;
               }
               * {
                 color: #ffffff;
               }
+            }
+          `}</style> */}
+          <style jsx global>{`
+            /* Default thumb slide styles */
+            .thumb-swiper .swiper-slide {
+              background-color: transparent;
+              cursor: pointer;
+              color: #ffffff60;
+              transition: background-color 0.5s, color 0.5s;
+            }
+
+            .thumb-swiper .swiper-slide p {
+              color: #a7a7a7;
+              transition: color 0.5s;
+            }
+
+            /* Active thumb slide styles */
+            .thumb-swiper .swiper-slide-thumb-active {
+              background-color: #6c8dab;
+              transition: background-color 0.5s, color 0.5s;
+            }
+
+            .thumb-swiper .swiper-slide-thumb-active p {
+              color: #ffffff;
+              transition: color 0.5s;
+            }
+
+            /* Main swiper */
+            .main-swiper .swiper-slide {
+              overflow: visible !important;
+              transition: all 0.5s;
+            }
+
+            .main-swiper .swiper-slide *,
+            .main-swiper .swiper-slide h3 {
+              color: black;
+              transition: color 0.5s;
             }
           `}</style>
         </div>
