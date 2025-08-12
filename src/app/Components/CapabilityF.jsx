@@ -108,7 +108,7 @@
 //                 href="/capabilities"
 //                 className="flex group transition-transform duration-300 items-center gap-3"
 //               >
-//                 <img
+//                 <img loading="eager"
 //                   src="/buttonarrows/redarico.svg"
 //                   className="h-10 w-10 rotate-45 group-hover:rotate-0 group-hover:scale-[120%] transition-transform duration-300"
 //                   alt="Red Arrow Icon"
@@ -126,7 +126,7 @@
 //                   }}
 //                   disabled={activeTab === 0}
 //                 >
-//                   <img src="/landingr.svg" className="w-10 h-10" alt="Prev" />
+//                   <img loading="eager" src="/landingr.svg" className="w-10 h-10" alt="Prev" />
 //                 </button>
 //                 <button
 //                   className="flex items-center justify-center disabled:brightness-75 hover:brightness-200"
@@ -138,7 +138,7 @@
 //                   }}
 //                   disabled={activeTab === tabs.length - 1}
 //                 >
-//                   <img src="/landingl.svg" className="w-10 h-10" alt="Next" />
+//                   <img loading="eager" src="/landingl.svg" className="w-10 h-10" alt="Next" />
 //                 </button>
 //               </div>
 //             </div>
@@ -167,7 +167,7 @@
 //                     >
 //                       {tab.images.top.map((img) => (
 //                         <SwiperSlide key={img}>
-//                           <img
+//                           <img loading="eager"
 //                             src={img}
 //                             alt=""
 //                             className="min-h-full min-w-full object-cover"
@@ -205,7 +205,7 @@
 //                       >
 //                         {tab.images.bottom1.map((img) => (
 //                           <SwiperSlide key={img}>
-//                             <img
+//                             <img loading="eager"
 //                               src={img}
 //                               alt=""
 //                               className="w-full h-full object-cover"
@@ -242,7 +242,7 @@
 //                       >
 //                         {tab.images.bottom2.map((img) => (
 //                           <SwiperSlide key={img}>
-//                             <img
+//                             <img loading="eager"
 //                               src={img}
 //                               alt=""
 //                               className="w-full h-full object-cover"
@@ -299,8 +299,8 @@ const CapabilitiesF = () => {
   };
 
   return (
-    <div className="bg-[#092241] overflow-hidden xl:h-[110vh] min-1920:h-[80vh]">
-      <div className="bg-[#092241] md:py-0 py-10 xl:h-[110vh] min-1920:h-[80vh] overflow-hidden">
+    <div className="bg-[#092241] overflow-hidden xl:h-[110vh] min-1920:h-[90vh]">
+      <div className="bg-[#092241] md:py-0 py-10 xl:h-[110vh] min-1920:h-[90vh] overflow-hidden">
         <div className="ml-[max(5%,calc((100vw-1250px)/2))] h-full mr-[max(5%,calc((100vw-1250px)/2))] sm:mr-0 lg:gap-0 gap-[50px] flex lg:flex-row flex-col md:justify-normal justify-center">
           {/* Left Container */}
           <div className="leftCon xl:pr-10 2xl:pr-20 w-full xl:w-1/2 md:py-5 flex flex-col min-h-full justify-center">
@@ -374,6 +374,7 @@ const CapabilitiesF = () => {
                 className="flex group transition-transform duration-300 items-center gap-3"
               >
                 <img
+                  loading="eager"
                   src="/buttonarrows/redarico.svg"
                   className="h-10 w-10 rotate-45 group-hover:rotate-0 group-hover:scale-[120%] transition-transform duration-300"
                   alt="Red Arrow Icon"
@@ -391,7 +392,12 @@ const CapabilitiesF = () => {
                   }}
                   disabled={activeTab === 0}
                 >
-                  <img src="/landingr.svg" className="w-10 h-10" alt="Prev" />
+                  <img
+                    loading="eager"
+                    src="/landingr.svg"
+                    className="w-10 h-10"
+                    alt="Prev"
+                  />
                 </button>
                 <button
                   className="flex items-center justify-center disabled:brightness-75 hover:brightness-200"
@@ -403,7 +409,12 @@ const CapabilitiesF = () => {
                   }}
                   disabled={activeTab === tabs.length - 1}
                 >
-                  <img src="/landingl.svg" className="w-10 h-10" alt="Next" />
+                  <img
+                    loading="eager"
+                    src="/landingl.svg"
+                    className="w-10 h-10"
+                    alt="Next"
+                  />
                 </button>
               </div>
             </div>
@@ -438,6 +449,7 @@ const CapabilitiesF = () => {
                       {tab.images.top.map((img) => (
                         <SwiperSlide key={img}>
                           <img
+                            loading="eager"
                             src={img}
                             alt=""
                             className="min-h-full min-w-full object-cover brightness-110"
@@ -478,6 +490,7 @@ const CapabilitiesF = () => {
                         {tab.images.bottom1.map((img) => (
                           <SwiperSlide key={img}>
                             <img
+                              loading="eager"
                               src={img}
                               alt=""
                               className="w-full h-full object-cover brightness-110"
@@ -516,6 +529,7 @@ const CapabilitiesF = () => {
                         {tab.images.bottom2.map((img) => (
                           <SwiperSlide key={img}>
                             <img
+                              loading="eager"
                               src={img}
                               alt=""
                               className="w-full h-full object-cover brightness-110"
@@ -608,7 +622,7 @@ const CapabilitiesF = () => {
   //               href="/capabilities"
   //               className="flex group transition-transform duration-300 items-center gap-3"
   //             >
-  //               <img
+  //               <img loading="eager"
   //                 src="/buttonarrows/redarico.svg"
   //                 className="h-10 w-10 rotate-45 group-hover:rotate-0 group-hover:scale-[120%] transition-transform duration-300"
   //                 alt="Red Arrow Icon"
@@ -626,7 +640,7 @@ const CapabilitiesF = () => {
   //                 }}
   //                 disabled={activeTab === 0}
   //               >
-  //                 <img src="/landingr.svg" className="w-10 h-10" alt="Prev" />
+  //                 <img loading="eager" src="/landingr.svg" className="w-10 h-10" alt="Prev" />
   //               </button>
   //               <button
   //                 className="flex items-center justify-center disabled:brightness-75 hover:brightness-200"
@@ -638,7 +652,7 @@ const CapabilitiesF = () => {
   //                 }}
   //                 disabled={activeTab === tabs.length - 1}
   //               >
-  //                 <img src="/landingl.svg" className="w-10 h-10" alt="Next" />
+  //                 <img loading="eager" src="/landingl.svg" className="w-10 h-10" alt="Next" />
   //               </button>
   //             </div>
   //           </div>
@@ -671,7 +685,7 @@ const CapabilitiesF = () => {
   //                   >
   //                     {tab.images.top.map((img) => (
   //                       <SwiperSlide key={img}>
-  //                         <img
+  //                         <img loading="eager"
   //                           src={img}
   //                           alt=""
   //                           className="min-h-full min-w-full object-cover brightness-110"
@@ -710,7 +724,7 @@ const CapabilitiesF = () => {
   //                     >
   //                       {tab.images.bottom1.map((img) => (
   //                         <SwiperSlide key={img}>
-  //                           <img
+  //                           <img loading="eager"
   //                             src={img}
   //                             alt=""
   //                             className="w-full h-full object-cover brightness-110"
@@ -748,7 +762,7 @@ const CapabilitiesF = () => {
   //                     >
   //                       {tab.images.bottom2.map((img) => (
   //                         <SwiperSlide key={img}>
-  //                           <img
+  //                           <img loading="eager"
   //                             src={img}
   //                             alt=""
   //                             className="w-full h-full object-cover brightness-110"

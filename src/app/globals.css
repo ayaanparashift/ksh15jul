@@ -685,7 +685,7 @@ span.park_name {
 }
 
 .hotspot-active-image {
-  background: url("/public/bentobg1.png");
+  /* background: url("/public/bentobg1.png"); */
   /* width: 30px;
   height: 30px; */
 
