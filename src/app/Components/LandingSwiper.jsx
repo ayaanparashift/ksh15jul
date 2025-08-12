@@ -48,7 +48,7 @@ const LandingSwiper = () => {
           modules={[FreeMode, Navigation, Autoplay]}
           navigation={{ nextEl: ".landingr", prevEl: ".landingl" }}
           autoplay={{
-            delay: 6000,
+            delay: 48000,
             disableOnInteraction: false, // keeps autoplay after user swipes
           }}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
