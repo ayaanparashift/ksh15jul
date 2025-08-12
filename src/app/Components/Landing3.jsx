@@ -220,7 +220,7 @@ const Landing3 = () => {
             {/* Mobile Image */}
             <div className="w-full max-w-[1250px] mx-auto px-5 md:hidden">
               <img
-                src="/homepage/chomespot.png"
+                src="/homepage/chspotph.png"
                 alt="some"
                 width={800}
                 height={600}
