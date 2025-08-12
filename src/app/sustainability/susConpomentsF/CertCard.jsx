@@ -382,10 +382,10 @@ const SingleCertCard = ({ image, title, heading, content }) => {
           }}
           transition={{ duration: 0.6, ease: [0.7, 0, 0.4, 1] }}
         >
-          <div className="text-[24px] leading-[180%] fsans-600 mb-5">
+          <div className="text-[26px] leading-[36px] text-black fpt-600 mb-5">
             {heading}
           </div>
-          <div className="text-[18px] fsans-400 leading-[180%]">{content}</div>
+          <div className="text-[18px] fsans-400 leading-[150%]">{content}</div>
         </motion.div>
       </motion.div>
 
