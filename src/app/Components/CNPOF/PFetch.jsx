@@ -163,16 +163,6 @@ export default function PFetch() {
     "Press Release": [
       {
         id: 6,
-        title: "KSH INFRA forays into South India",
-        content:
-          "KSH INFRA forays into South India, plans to invest Rs 450 Cr. on Hosur logistics park",
-        image: "/press/press1.png",
-        href: "https://economictimes.indiatimes.com/industry/services/property-/-cstruction/ksh-infra-forays-into-south-india-plans-to-invest-rs-450-Cr.-on-hosur-logistics-park/articleshow/112503331.cms?from=mdr",
-        newTab: true,
-        date: "13 Aug 2024",
-      },
-      {
-        id: 7,
         title: "KSH INFRA to invest Rs 450 crore",
         content:
           "KSH INFRA to invest Rs 450 crore to develop industrial & logistics park in Hosur",
@@ -182,7 +172,7 @@ export default function PFetch() {
         date: "14 Aug 2024",
       },
       {
-        id: 8,
+        id: 7,
         title: "KSH INFRA To Invest Nearly $54 Mn",
         content:
           "KSH INFRA To Invest Nearly $54 Mn In South India Logistics Park",
@@ -190,6 +180,16 @@ export default function PFetch() {
         href: "https://www.vccircle.com/kshinfra-to-invest-nearly-54-mn-in-south-india-logistics-park",
         newTab: true,
         date: "14 Aug 2024",
+      },
+      {
+        id: 8,
+        title: "KSH INFRA forays into South India",
+        content:
+          "KSH INFRA forays into South India, plans to invest Rs 450 Cr. on Hosur logistics park",
+        image: "/press/press1.png",
+        href: "https://economictimes.indiatimes.com/industry/services/property-/-cstruction/ksh-infra-forays-into-south-india-plans-to-invest-rs-450-Cr.-on-hosur-logistics-park/articleshow/112503331.cms?from=mdr",
+        newTab: true,
+        date: "13 Aug 2024",
       },
     ],
   };

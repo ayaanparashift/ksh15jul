@@ -9,7 +9,8 @@ const testimonials = [
     content:
       "Our experience with KSH INFRA has been outstanding in every aspect. From the very beginning, their team showed a deep understanding of our requirements. Since our customer is one of the most reputed automotive OEMs a number of special requirements need to be executed in the factory floor for our production equipment. KSH willingly accepted to make all such changes and delivered a facility that reflects the highest standards of construction quality. The entire project was executed with remarkable timeliness, and the transaction process was smooth, transparent, and highly professional. KSH INFRA has truly performed beyond our expectations — not just as a developer, but as a trusted partner who enabled us to set up a world-class manufacturing facility with complete peace of mind. We deeply value this association and look forward to future collaborations.",
     name: "Mr. Amitabh Mathur",
-    designation: "Managing Director, GEDIA India Automotive Components",
+    designation:
+      "Managing Director & CEO, GEDIA India Automotive Components Pvt. Ltd.",
   },
   {
     id: 2,

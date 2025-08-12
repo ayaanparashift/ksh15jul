@@ -16,7 +16,7 @@ const AboutVision = () => {
                 className="text-transparent z-10 fpt-700 text-6xl xl:text-[140px] font-bold stroke-[#6C8DAB] xl:mb-[-30px] mt-[-20px] mb-[-7px]"
                 style={{ WebkitTextStroke: "1px #6C8DAB" }}
               >
-                Purpose
+                Our Purpose
               </h1>
 
               <div className="relative z-20 overflow-hidden mt-[20px]">
@@ -31,7 +31,7 @@ const AboutVision = () => {
                   <p className="md:p-[35px] p-[20px] gradinetText2 ">
                     Reimagining and inspiring a green industrial future by
                     focusing efforts on developing sustainable industrial and
-                    warehousing infrastructure
+                    logistics infrastructure
                   </p>
                 </div>
                 {/* <motion.div
@@ -69,7 +69,7 @@ const AboutVision = () => {
                 <div className="bg-white text-base fsans-600">
                   <p className="md:p-[35px] p-[20px] gradinetText2 ">
                     Creating highly functional, transformative, carbon-neutral,
-                    and sustainable warehousing and industrial park solutions
+                    and sustainable industrial and logistics park solutions
                     across key markets in India
                   </p>
                 </div>
