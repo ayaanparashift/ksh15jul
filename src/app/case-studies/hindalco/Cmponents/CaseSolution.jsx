@@ -23,12 +23,12 @@ const CaseSolution = () => {
         MEP teams ensured smooth execution across all phases.
         <br />
         <br />
-        <strong>Key Deliverables:</strong>
+        Key Deliverables:
       </p>
       <div className="relative">
         <img
           src="/caseInside/casebgline.svg"
-          className="absolute left-[50%] top-[-40px] h-[108%]"
+          className="absolute left-[50%] top-[-40px] h-[105%] lg:h-[108%] "
           alt=""
         />
 

@@ -114,7 +114,7 @@ const timelineData = [
     id: 17,
     year: 2025,
     content:
-      "Significant expansion planned in Southern India, an initiative that underscores KSH INFRA commitment to broadening our footprint n strategically important regions.",
+      "Significant expansion planned in Southern India, an initiative that underscores KSH INFRA commitment to broadening our footprint in strategically important regions.",
     image: "/time/t24.jpg",
   },
 ];

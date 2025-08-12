@@ -17,11 +17,11 @@ const CaseSolution = () => {
       <div className="relative">
         <img
           src="/caseInside/casebgline.svg"
-          className="absolute left-[50%] top-[-40px] h-[112%]"
+          className="absolute left-[50%] top-[-40px] h-[108%] lg:h-[112%]"
           alt=""
         />
         <div className="space-y-8">
-          <div className="text-white flex max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
+          <div className="text-white flex max-w-[975px] caseSolGlass border-[1px] border-white items-start  justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
             <p className="fsans-400 text-base leading-[130%]">
               Installation of a 100-tonne gantry crane transported on rails: A
@@ -29,7 +29,7 @@ const CaseSolution = () => {
               transport the crane.
             </p>
           </div>
-          <div className="text-white flex max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
+          <div className="text-white flex max-w-[975px] caseSolGlass border-[1px] border-white items-start  justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
             <p className="fsans-400 text-base leading-[130%]">
               The existing shopfloor was reengineered and reinforced: This
@@ -76,7 +76,7 @@ const CaseSolution = () => {
               </ul>
             </p>
           </div>
-          <div className="text-white flex max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
+          <div className="text-white flex max-w-[975px] caseSolGlass border-[1px] border-white items-start  justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
             <p className="fsans-400 text-base leading-[130%] w-full">
               Installing 300-lux LED lighting for efficient long-term energy

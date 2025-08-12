@@ -15,12 +15,12 @@ const CaseSolution = () => {
         operational and technical standards.
         <br />
         <br />
-        <strong>Key Deliverables:</strong>
+        Key Deliverables:
       </p>
       <div className="relative">
         <img
           src="/caseInside/casebgline.svg"
-          className="absolute left-[50%] top-[-40px] h-[112%]"
+          className="absolute left-[50%] top-[-40px] h-[108%] lg:h-[112%]"
           alt=""
         />
         <div className="space-y-8">
@@ -79,7 +79,7 @@ const CaseSolution = () => {
             <img src="/caseInside/caseSolshape.svg" alt="" />
             <p className="fsans-400 leading-[130%] w-full">
               External Utilities & Civil Works
-              <div className="list-disc ml-[20px] max-w-full flex lg:flex-row flex-col justify-between pt-5 gap-10">
+              <div className="list-disc ml-[20px] max-w-full flex lg:flex-row flex-col justify-between pt-5 gap-2 lg:gap-10">
                 <ul className="list-disc max-w-fit">
                   <li>Cooling tower platform.</li>
                 </ul>

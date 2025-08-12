@@ -132,7 +132,7 @@ const CaseStudy = () => {
         <Swiper
           spaceBetween={30}
           speed={1000}
-          slidesPerGroup={2}
+          slidesPerGroup={1}
           slidesPerView={1}
           modules={[Navigation]}
           navigation={{
