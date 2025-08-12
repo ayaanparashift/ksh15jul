@@ -102,7 +102,10 @@ const TestimonialSliderMobile = ({ testimonials }) => {
   //   </div>
   // );
   return (
-    <div className="w-full min-h-fit lg:hidden flex flex-col bg-[url('/testimonial/testibg.webp')] bg-no-repeat bg-cover bg-center text-white py-12 px-4">
+    <div
+      id="testimonials"
+      className="w-full min-h-fit lg:hidden flex flex-col bg-[url('/testimonial/testibg.webp')] bg-no-repeat bg-cover bg-center text-white py-12 px-4"
+    >
       <div className="text-xl fsans-600 border-b border-[#D7D7D7] pb-4 mb-6">
         What Our Clients Say
       </div>

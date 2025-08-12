@@ -1,6 +1,6 @@
 const TestiCard = ({ item }) => {
   return (
-    <div className="w-full h-[50vh] pb-5 bg-white text-black overflow-hidden flex flex-col">
+    <div className="w-full h-[65vh] pb-5 bg-white text-black overflow-hidden flex flex-col">
       <div className="h-[40%] w-full">
         <img
           src={item.image}
