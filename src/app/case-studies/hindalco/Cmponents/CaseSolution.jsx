@@ -140,7 +140,7 @@ const CaseSolution = () => {
 
           <div className="text-white flex items-start max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 leading-[130%]">
+            <p className="fsans-400 leading-[130%] w-full">
               <strong>Office Fit-Out</strong>
               <ul className="list-disc ml-[20px] pt-5 space-y-1">
                 <li>

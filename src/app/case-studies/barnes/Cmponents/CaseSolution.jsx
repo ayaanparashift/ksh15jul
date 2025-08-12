@@ -26,7 +26,7 @@ const CaseSolution = () => {
         <div className="space-y-8">
           <div className="text-white flex items-start max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 sm:text-start text-base leading-[130%]">
+            <p className="fsans-400 sm:text-start text-base leading-[130%] w-full">
               Structural Engineering
               <ul className="list-disc ml-[20px] w-full flex flex-col items-start pt-5 gap-2">
                 <li>
@@ -47,7 +47,7 @@ const CaseSolution = () => {
           </div>
           <div className="text-white flex items-start max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 sm:text-start text-base leading-[130%]">
+            <p className="fsans-400 sm:text-start text-base leading-[130%] w-full">
               Electrical Infrastructure
               <ul className="list-disc ml-[20px] w-full flex flex-col items-start pt-5 gap-2">
                 <li>
@@ -60,7 +60,7 @@ const CaseSolution = () => {
           </div>
           <div className="text-white flex items-start max-w-[975px] caseSolGlass border-[1px] border-white justify-start sm:justify-center gap-5 p-7">
             <img src="/caseInside/caseSolshape.svg" alt="" />
-            <p className="fsans-400 sm:text-start text-base leading-[130%]">
+            <p className="fsans-400 sm:text-start text-base leading-[130%] w-full">
               Thermal Insulation
               <ul className="list-disc ml-[20px] w-full flex flex-col items-start pt-5 gap-2">
                 <li>
