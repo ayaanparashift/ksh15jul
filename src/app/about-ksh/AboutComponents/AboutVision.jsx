@@ -16,7 +16,7 @@ const AboutVision = () => {
                 className="text-transparent z-10 fpt-700 text-6xl xl:text-[140px] font-bold stroke-[#6C8DAB] xl:mb-[-30px] mt-[-20px] mb-[-7px]"
                 style={{ WebkitTextStroke: "1px #6C8DAB" }}
               >
-                Our Purpose
+                Purpose
               </h1>
 
               <div className="relative z-20 overflow-hidden mt-[20px]">
