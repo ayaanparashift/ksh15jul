@@ -201,7 +201,7 @@ const ParkinSpot = ({}) => {
             </div>
             <div className="w-full flex justify-start">
               <p className="text-[#3D5F89] text-[14px] fsans-400 leading-[26px] pt-[12px]">
-                *Successfully exited to "Mapletree" in 2021.
+                *Successfully exited to Mapletree in 2022
               </p>
             </div>
           </div>

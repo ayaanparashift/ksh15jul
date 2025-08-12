@@ -27,12 +27,9 @@ const page = () => {
       <CaseSolution />
       {/* <CaseINBenefit /> */}
       <Res
-        respara="KSH INFRA handed over the facility meeting all timelines and technical
-requirements. Hindalco received a fully compliant, operational-ready facility—from
-shop floor to executive office—exactly as per their mandate.<br/><br/>
-Impressed with the delivery and professionalism, Hindalco entrusted KSH INFRA
-with their second facility of 2,35,000 sq. ft., reinforcing the strength of our partnership
-and trust."
+        respara="KSH INFRA handed over the facility within the stipulated timeline, meeting all technical and compliance requirements. Hindalco received a fully operational, compliant facility—from shop floor to executive office—delivered exactly as specified.
+<br/><br/>
+Satisfied with the delivery and professionalism, Hindalco awarded KSH INFRA a second facility of 235,000 sq. ft., further strengthening the partnership."
       />
       {/* <FormSec /> */}
       <CSbgbl />

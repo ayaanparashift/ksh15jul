@@ -288,7 +288,7 @@ const Accordion = ({ accordionData, acch, accw }) => {
   //   );
   return (
     <div
-      className={`w-full min-1920:max-w-[90%] pl-0 md:pl-[max(5%,calc((100vw-1250px)/2))] md:pr-[max(5%,calc((100vw-1250px)/2))] xl:pl-0 xl:ml-auto flex flex-col gap-[16px] ${
+      className={`w-full min-1920:max-w-[90%] pl-0 md:pl-[max(5%,calc((100vw-1250px)/2))] md:pr-[max(5%,calc((100vw-1250px)/2))] xl:pl-0 xl:ml-auto flex flex-col gap-[8px] ${
         acch > 450 ? "xl:h-[550px]" : "xl:h-[450px]"
       } ${accw > 80 ? "w-full" : "xl:w-[90%]"}`}
     >
@@ -299,7 +299,7 @@ const Accordion = ({ accordionData, acch, accw }) => {
           <div
             key={index}
             onClick={() => setActiveIndex(index)}
-            className={`w-full cursor-pointer rounded-[10px] p-5 backdrop-blur-md border border-transparent ${
+            className={`w-full cursor-pointer p-5 backdrop-blur-md border border-transparent ${
               isActive ? "bg-[#6C8DAB]" : "bg-[#EEF0F390]"
             } transition-colors duration-300`}
           >

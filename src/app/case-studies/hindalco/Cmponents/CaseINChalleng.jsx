@@ -7,41 +7,38 @@ const CaseINChalleng = () => {
             CHALLENGES
           </h1>
           <p className="fsans-600 text-lg text-[#101021]">
-            The project required a built-to-suit facility from foundation level,
-            with strict compliance to global corporate specifications, and a
-            hard deadline of eight months for go-live. Their vision demanded
-            significant customization, including:
+            The project required a built-to-suit facility from the foundation
+            up, designed in strict compliance with Hindalco’s global corporate
+            specifications. The scope demanded:
           </p>
         </div>
         <div className="caseStChallengebtmCon">
           <ul className="grid grid-cols-1 md:grid-cols-2 fsans-400 text-base leading-[26px] text-[#101021] abc">
             <li className="pl-3 ml-[40px]">
-              Hindalco required wider spans—specifically 15m × 27m in two
-              bays—to meet their operational needs.
+              Wider spans of 15m × 27m in two bays to meet operational needs.
             </li>
             <li className="pl-3 ml-[40px]">
-              Merging and redesigning two office blocks into a single, expansive
-              corporate space.
+              Merging and redesigning two office blocks into one large corporate
+              space.
             </li>
             <li className="pl-3 ml-[40px]">
-              Extensive infrastructure for utilities and services, both internal
-              and external.
+              Extensive internal and external utility infrastructure.
             </li>
             <li className="pl-3 ml-[40px]">
-              Category conversion of the industrial park from Orange to Red,
-              aligned with regulatory needs.
+              Category conversion of the industrial park from Orange to Red in
+              line with regulatory requirements.
             </li>
             <li className="pl-3 ml-[40px]">
-              Power requirements totalling 5000 kVA (5 MW) through express
-              feeder.
+              5,000 kVA (5 MW) power supply through an express feeder.
             </li>
           </ul>
         </div>
         <div className="topConetbnt flex flex-col items-center text-center gap-[32px] pt-[85px]">
           <p className="fsans-600 text-lg text-[#101021]">
-            With large machinery orders already in motion, timely execution was
-            non-negotiable, and compliance across fire, safety, and
-            environmental requirements had to be fast- tracked.
+            With major machinery orders already in process, adherence to
+            timelines was critical. Compliance with fire, safety, and
+            environmental standards had to be fast-tracked without compromising
+            execution quality.
           </p>
         </div>
       </div>

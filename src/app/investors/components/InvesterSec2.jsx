@@ -117,9 +117,9 @@ const InvesterSec2 = () => {
         </div>
 
         {/* RIGHT: Image */}
-        <div className="w-full lg:w-1/2 overflow-hidden relative aspect-square">
+        <div className="w-full lg:w-1/2 overflow-hidden relative">
           <img
-            src="./investorRel/InvesSpotSec2.png"
+            src="./investorRel/invsecimg.png"
             className="w-full h-full object-cover"
             alt=""
           />

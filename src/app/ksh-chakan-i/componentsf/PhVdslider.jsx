@@ -700,7 +700,7 @@ const PhVdslider = () => {
               </Swiper>
               <div className="w-full flex justify-start">
                 <p className="text-[#B9B9B9] text-[14px] fsans-400 leading-[26px] pt-[12px]">
-                  *Successfully exited to "Mapletree" in 2021.
+                  *Successfully exited to Mapletree in 2021
                 </p>
               </div>
               {hasMultipleImages && (
@@ -764,7 +764,7 @@ const PhVdslider = () => {
               </Swiper>
               <div className="w-full flex justify-start">
                 <p className="text-[#B9B9B9] text-[14px] fsans-400 leading-[26px] pt-[12px]">
-                  *Successfully exited to "Mapletree" in 2021.
+                  *Successfully exited to Mapletree in 2021
                 </p>
               </div>
               {hasMultipleImages && (
@@ -839,7 +839,7 @@ const PhVdslider = () => {
               </Swiper>
               <div className="w-full flex justify-start">
                 <p className="text-[#B9B9B9] text-[14px] fsans-400 leading-[26px] pt-[12px]">
-                  *Successfully exited to "Mapletree" in 2021.
+                  *Successfully exited to Mapletree in 2021
                 </p>
               </div>
               {hasMultipleVideos && (

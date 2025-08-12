@@ -117,14 +117,14 @@ const CaseStudy = () => {
       Image: "/caseInside/kwspot.jpg",
     },
     {
-      Title: "Hindalco, a flagship company of the Aditya Birla Group",
+      Title: "Hindalco, a flagship company of the Aditya Birla Group.",
       url: "/case-studies/hindalco",
-      Image: "/caseInside/caseInsideSpot.png",
+      Image: "/caseInside/hindspot.png",
     },
     {
-      Title: "Barnes, a global moulding solutions manufacturer,",
+      Title: "Barnes, a global moulding solutions manufacturer.",
       url: "/case-studies/barnes",
-      Image: "/caseInside/caseInsideSpot.png",
+      Image: "/caseInside/barnes.png",
     },
   ];
 

@@ -108,6 +108,24 @@ export default function PFetch() {
         newTab: false,
         date: "",
       },
+      {
+        id: 3,
+        title: "Hindalco",
+        content: "A flagship company of the Aditya Birla Group",
+        image: "/caseInside/hindspot.png",
+        href: "/case-studies/hindalco",
+        newTab: false,
+        date: "",
+      },
+      {
+        id: 4,
+        title: "Barnes",
+        content: "A flagship company of the Aditya Birla Group",
+        image: "/caseInside/barnes.png",
+        href: "/case-studies/barnes",
+        newTab: false,
+        date: "",
+      },
     ],
     News: [
       {
