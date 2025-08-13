@@ -1,3 +1,82 @@
+// "use client";
+// import { motion } from "framer-motion";
+
+// const SustainSec2 = () => {
+//   return (
+//     <>
+//       <div className=" ">
+//         <div className="fix12 flex flex-col lg:flex-row justify-between gap-[20px] lg:gap-[6%] md:py-[90px] py-14">
+//           <div className="flex-1 flex flex-col justify-start xl:w-[538px] xl:min-h-[540px] ">
+//             <div className="w-fit">
+//               <h1
+//                 // initial={{ opacity: 0, translateX: "-50px" }}
+//                 // whileInView={{ opacity: 1, translateX: 0 }}
+//                 // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
+//                 // viewport={{ amount: 0.1, once: true }}
+//                 className="text-[#092241] md:text-[44px] fpt-600 sm:text-[32px] text-[24px] fpt-600 md:leading-[48.84px] leading-[110%]"
+//               >
+//                 Where Profit Meets Planet.
+//               </h1>
+//               <div
+//                 // initial={{ opacity: 0, translateX: "-100px" }}
+//                 // whileInView={{ opacity: 1, translateX: 0 }}
+//                 // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
+//                 // viewport={{ amount: 0.1, once: true }}
+//                 className="bg-[#F7E327] h-[8px] w-[100%]"
+//               ></div>
+//             </div>{" "}
+//             <div
+//               // initial={{ opacity: 0, translateX: "-150px" }}
+//               // whileInView={{ opacity: 1, translateX: 0 }}
+//               // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
+//               // viewport={{ amount: 0.1, once: true }}
+//               className="text-[#434343] text-base flex flex-col justify-between pt-9 gap-3"
+//             >
+//               <p>
+//                 At KSH INFRA, we are passionate about creating a sustainable
+//                 future. We believe your business success and environmental
+//                 responsibility go hand-in-hand. Therefore, every initiative,
+//                 every project follows strict Green Building standards,
+//               </p>
+//               <p>
+//                 {" "}
+//                 We are proud of our EDGE Certification and IGBC Platinum—it's
+//                 how we bring you industrial parks that are high-quality,
+//                 efficient, and kind to our planet at the same time. When you
+//                 choose KSH INFRA, you join our commitment to making a
+//                 sustainable tomorrow.
+//               </p>
+//             </div>
+//           </div>
+
+//           <div className="flex-1 relative overflow-hidden md:flex-none lg:flex-1 xl:flex-none xl-768:h-[300px] xl-768:pt-4  xl:w-[640px] xl:min-h-[540px]  ">
+//             <img
+//               src="/AboutPage/sussec2img.png"
+//               className="w-full h-full object-cover"
+//               alt=""
+//             />
+//           </div>
+//         </div>
+//         {/* <AboutCounter /> */}
+//       </div>
+//     </>
+//   );
+// };
+
+// export default SustainSec2;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 "use client";
 import { motion } from "framer-motion";
 
@@ -6,7 +85,7 @@ const SustainSec2 = () => {
     <>
       <div className=" ">
         <div className="fix12 flex flex-col lg:flex-row justify-between gap-[20px] lg:gap-[6%] md:py-[90px] py-14">
-          <div className="flex-1 flex flex-col justify-start xl:w-[538px] xl:min-h-[540px] ">
+          <div className="flex-1 flex flex-col justify-start ">
             <div className="w-fit">
               <h1
                 // initial={{ opacity: 0, translateX: "-50px" }}
@@ -22,7 +101,7 @@ const SustainSec2 = () => {
                 // whileInView={{ opacity: 1, translateX: 0 }}
                 // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
                 // viewport={{ amount: 0.1, once: true }}
-                className="bg-[#F7E327] h-[5px] w-[100%]"
+                className="bg-[#F7E327] h-[8px] w-[100%]"
               ></div>
             </div>{" "}
             <div
@@ -49,19 +128,12 @@ const SustainSec2 = () => {
             </div>
           </div>
 
-          <div className="flex-1 relative overflow-hidden md:flex-none lg:flex-1 xl:flex-none xl-768:h-[300px] xl-768:pt-4  xl:w-[640px] xl:min-h-[540px]  ">
+          <div className="flex-1 relative overflow-hidden h-[350px]">
             <img
-              src="/AboutPage/sussec2.png"
+              src="/AboutPage/sussec2img.png"
               className="w-full h-full object-cover"
               alt=""
             />
-            {/* <motion.div
-              className="absolute top-0 left-0 w-full h-full bg-white"
-              initial={{ x: 0 }}
-              whileInView={{ x: "-100%" }}
-              transition={{ duration: 1.7, ease: [0.7, 0, 0.4, 1] }}
-              viewport={{ once: true, amount: 0.3 }} // Adjust amount to control trigger point
-            /> */}
           </div>
         </div>
         {/* <AboutCounter /> */}
@@ -71,7 +143,25 @@ const SustainSec2 = () => {
 };
 
 export default SustainSec2;
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // "use client";
 //
 // import { motion } from "framer-motion";

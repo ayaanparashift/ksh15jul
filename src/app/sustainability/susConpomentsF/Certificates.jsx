@@ -4,7 +4,7 @@ import CertCard from "./CertCard";
 const Certificates = () => {
   return (
     <div className="w-full bg-[#092241] ">
-      <div className="flex fix12 flex-col justify-center py-[80px]">
+      <div className="flex fix12 flex-col justify-center py-[50px] md:py-[80px]">
         <div>
           <LineHead heading="Awards" clr="text-white" />
         </div>

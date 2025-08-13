@@ -6,7 +6,7 @@ const CareerSec2 = () => {
     <>
       <div className=" ">
         <div className="fix12 flex flex-col lg:flex-row justify-between gap-[20px] lg:gap-[6%] md:py-[90px] py-14">
-          <div className="flex-1  xl:w-[538px] xl:min-h-[540px] ">
+          <div className="flex-1  lg:w-[50%]">
             <div className="w-fit">
               <h1
                 // initial={{ opacity: 0, translateX: "-50px" }}
@@ -14,7 +14,7 @@ const CareerSec2 = () => {
                 // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
                 // viewport={{ amount: 0.1, once: true }}
                 // className="text-[#141414] md:text-[30px] text-[24px] fpt-600 md:leading-[48.84px] leading-[110%] pb-3"
-                className="text-[#141414] text-[24px] sm:text-[44px] fpt-600 md:leading-[48.84px] leading-[110%] pb-3 whitespace-nowrap"
+                className="text-[#141414] text-[24px] sm:text-[44px] fpt-600 md:leading-[48.84px] leading-[110%] whitespace-nowrap"
               >
                 We Make Leaders
                 {/* <br /> GROW WITH US.
@@ -25,7 +25,7 @@ const CareerSec2 = () => {
                 // whileInView={{ opacity: 1, translateX: 0 }}
                 // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
                 // viewport={{ amount: 0.1, once: true }}
-                className="bg-[#F7E327] h-[5px] w-full"
+                className="bg-[#F7E327] h-[8px] w-full"
               ></div>
             </div>
             <div
@@ -33,7 +33,7 @@ const CareerSec2 = () => {
               // whileInView={{ opacity: 1, translateX: 0 }}
               // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
               // viewport={{ amount: 0.1, once: true }}
-              className="text-[#434343] text-base flex flex-col justify-between pt-9 gap-3"
+              className="text-[#434343] text-base flex flex-col justify-between lg:pt-9 pt-5 gap-3"
             >
               <p>GROW WITH US. TRANSFORM THE WORLD!</p>
               <p>
@@ -53,7 +53,7 @@ const CareerSec2 = () => {
             </div>
           </div>
 
-          <div className="flex-1 relative overflow-hidden md:flex-none lg:flex-1 xl:flex-none xl-768:h-[300px] xl-768:pt-4  xl:w-[640px] xl:min-h-[540px]  ">
+          <div className="flex-1 relative overflow-hidden md:flex-none lg:flex-1 xl:flex-none xl-768:h-[300px] xl-768:pt-4 lg:h-[400px] lg:w-[50%]">
             <img
               src="/Career/sec2imgcar.png"
               className="w-full h-full object-cover"

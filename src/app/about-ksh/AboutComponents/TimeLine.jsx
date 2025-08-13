@@ -204,7 +204,7 @@
 //       className="bg-cover bg-no-repeat bg-center py-10"
 //       style={{ backgroundImage: "url('/AboutPage/timeline/timeLineBG.png')" }}
 //     >
-//       <h2 className="w-fit text-4xl font-bold ml-[max(5%,calc((100vw-1250px)/2))] text-white border-b-[6px] border-b-[#F7E327]">
+//       <h2 className="w-fit text-4xl font-bold ml-[max(5%,calc((100vw-1250px)/2))] text-white border-b-[8px] border-b-[#F7E327]">
 //         The KSH Legacy
 //       </h2>
 //       <div className="px-10 pb-12 relative flex flex-col items-center">
@@ -517,7 +517,7 @@ const Timeline = () => {
       className="bg-cover bg-no-repeat bg-center py-10"
       style={{ backgroundImage: "url('/AboutPage/timeline/timeLineBG.png')" }}
     >
-      <h2 className="w-fit text-4xl font-bold ml-[max(5%,calc((100vw-1250px)/2))] text-white border-b-[6px] border-b-[#F7E327]">
+      <h2 className="w-fit text-4xl font-bold ml-[max(5%,calc((100vw-1250px)/2))] text-white border-b-[8px] border-b-[#F7E327]">
         The KSH Legacy
       </h2>
       <div className="px-10 pb-12 relative flex flex-col items-center">

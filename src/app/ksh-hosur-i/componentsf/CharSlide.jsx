@@ -18,7 +18,7 @@
 //     charTitle: "The Dual Talent Advantage",
 //     charnum: "02",
 //     charcont:
-//       "With its proximity to Bangalore, Hosur draws from a vast, skilled talent pool across Tamil Nadu and Karnataka, making it an attractive base for industries requiring specialized manpower.",
+//       "With its proximity to Bengaluru, Hosur draws from a vast, skilled talent pool across Tamil Nadu and Karnataka, making it an attractive base for industries requiring specialized manpower.",
 //   },
 //   {
 //     charTitle: "The Best of Two States",
@@ -76,7 +76,7 @@
 //             className="fsans-600 text-[#092241] pb-2 text-2xl md:text-3xl whitespace-nowrap overflow-hidden leading-[33px] border-b-[#092241] border-opacity-[0.34] border-b-[1px]"
 //           >
 //             Defining Characteristics of <br className="lg:hidden flex" />
-//             Hosur (Near Bangalore)
+//             Hosur (Near Bengaluru)
 //           </motion.h1>
 //         </div>
 
@@ -176,7 +176,7 @@ const CardContent = [
     charTitle: "The Dual Talent Advantage",
     charnum: "02",
     charcont:
-      "With its proximity to Bangalore, Hosur draws from a vast, skilled talent pool across Tamil Nadu and Karnataka, making it an attractive base for industries requiring specialized manpower.",
+      "With its proximity to Bengaluru, Hosur draws from a vast, skilled talent pool across Tamil Nadu and Karnataka, making it an attractive base for industries requiring specialized manpower.",
   },
   {
     charTitle: "The Best of Two States",
@@ -234,7 +234,7 @@ const CharSlide = () => {
             className="fsans-600 text-[#092241] pb-2 text-2xl md:text-3xl whitespace-nowrap overflow-hidden leading-[33px] border-b-[#092241] border-opacity-[0.34] border-b-[1px]"
           >
             Defining Characteristics of <br className="lg:hidden flex" />
-            Hosur (Near Bangalore)
+            Hosur (Near Bengaluru)
           </motion.h1>
         </div>
 

@@ -1003,7 +1003,8 @@ const SlideSectionF = () => {
           {/* Heading & Tabs */}
           <div className="md:flex items-center justify-between xl-1024:w-[90%] lg:w-[600px] pt-8 md:pt-[70px] border-b-[1px] md:pb-3 border-[#D7D7D7] border-opacity-50 xl-1920:w-[80%]">
             <h1 className="text-xl pb-4 md:pb-0 text-white font-semibold">
-              Careers at KSH INFRA
+              Careers at <br />
+              KSH INFRA
             </h1>
             {/* <div className="tabs md:justify-center justify-between flex gap-4">
               {tabsData.map((tab, index) => (
@@ -1049,7 +1050,7 @@ const SlideSectionF = () => {
                 transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
                 className="text-white"
               >
-                <h1 className="text-3xl md:text-6xl font-medium border-b-[8px] border-[#F7E327] w-fit pb-3 pt-5 md:pt-10">
+                <h1 className="text-3xl md:text-6xl font-medium border-b-[8px] border-[#F7E327] w-fit pt-5 md:pt-10">
                   {tabsData[activeIndex].title}
                 </h1>
                 <p className="lg:w-[60%] max-w-full md:mx-0 mx-auto pt-6 md:pt-5 md:pb-5 text-base text-[#6C8DAB]">

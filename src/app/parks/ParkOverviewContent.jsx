@@ -25,7 +25,7 @@ const ParkOverviewContent = () => {
           <p>
             We're establishing new benchmarks for sustainable industrial spaces
             and logistics solutions. With major ready-to-move industrial parks
-            in Chakan, Talegaon in Pune, Hosur near Bangalore and Sriperumbudur
+            in Chakan, Talegaon in Pune, Hosur near Bengaluru and Sriperumbudur
             near Chennai, we're strengthening the strategic industrial corridor
             as a manufacturing and logistics hub.
           </p>{" "}

@@ -58,7 +58,7 @@ const LastSw = () => {
           <h3 className="fsans-600 leading-[111%] max-w-fit lwlightheaddd text-[24px] md:text-[44px] text-[#092241]">
             Other Parks
           </h3>
-          <div className="bg-[#F7E327] h-[5px]  w-full " />
+          <div className="bg-[#F7E327] h-[8px]  w-full " />
         </div>
         <div className="flex gap-[14px] items-center justify-center">
           <button className="swiper-button-prev-landing h-[41px] w-[41px]">

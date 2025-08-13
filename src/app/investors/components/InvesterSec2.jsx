@@ -20,7 +20,7 @@ import { motion } from "framer-motion";
 //           // whileInView={{ opacity: 1, translateX: 0 }}
 //           // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
 //           // viewport={{ amount: 0.1, once: true }}
-//           className="bg-[#F7E327] h-[5px] w-full"
+//           className="bg-[#F7E327] h-[8px] w-full"
 //         ></div>
 //         <div className=" flex flex-col lg:flex-row justify-between gap-[20px] lg:gap-[5%] pt-[30px]">
 //           <div className="flex-1 xl:w-[538px] h-fit ">
@@ -94,7 +94,7 @@ const InvesterSec2 = () => {
             <h1 className="fpt-600 text-[#092241] md:text-[44px] sm:text-[32px] text-[24px] md:leading-[48.84px] leading-[110%]">
               Value. Vision. Wealth.
             </h1>
-            <div className="bg-[#F7E327] h-[5px] w-full mt-2"></div>
+            <div className="bg-[#F7E327] h-[8px] w-full mt-2"></div>
           </div>
 
           {/* Paragraphs */}

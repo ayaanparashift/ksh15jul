@@ -22,7 +22,7 @@ const SustainSec2 = () => {
                 whileInView={{ opacity: 1, translateX: 0 }}
                 transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
                 viewport={{ amount: 0.1, once: true }}
-                className="bg-[#F7E327] h-[5px] w-full"
+                className="bg-[#F7E327] h-[8px] w-full"
               ></motion.div>
             </div>{" "}
             <motion.div

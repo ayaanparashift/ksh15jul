@@ -28,7 +28,7 @@ const ParkOverview = () => {
   //       }}
   //     >
   //       <div className="ml-[max(5%,calc((100vw-1250px)/2))] md:mr-0 mr-[max(5%,calc((100vw-1250px)/2))]  flex flex-col w-auto lg:w-[75%] xl:w-[40%] py-[70px]">
-  //         <LineHead heading="About Hosur (Near Bangalore)" />
+  //         <LineHead heading="About Hosur (Near Bengaluru)" />
   //         <motion.h3
   //           initial={{ opacity: 0 }}
   //           whileInView={{ opacity: 1 }}
@@ -54,13 +54,13 @@ const ParkOverview = () => {
   //           className="xl-1280:text-[22px] gradinetText3 leading-[130%] pt-[16px] spotlightheaddd fsans-400 text-[18px]"
   //         >
   //           Hosur has become a top choice for manufacturing and industry,
-  //           sitting right next to Bangalore with excellent transportation links.
+  //           sitting right next to Bengaluru with excellent transportation links.
   //           Major companies like Titan, Ashok Leyland, TVS Motors, and
   //           Schaeffler already call it home, creating a strong industrial
   //           community. With a well-developed industrial base, skilled workforce,
   //           and growing support from Tamil Nadu’s progressive industrial
   //           policies, Hosur is poised for accelerated expansion. Its
-  //           connectivity to Bangalore and access to southern ports make it an
+  //           connectivity to Bengaluru and access to southern ports make it an
   //           ideal location for your industrial operations.
   //         </motion.p>
   //       </div>
@@ -82,16 +82,16 @@ h-fit lg:h-[502px] flex flex-col overflow-hidden bg-white"
       >
         <div className="flex lg:flex-row flex-col w-full h-full items-center gap-10">
           <div className="min-h-full justify-start ml-[max(5%,calc((100vw-1250px)/2))] md:mr-0 mr-[max(5%,calc((100vw-1250px)/2))]  flex flex-col w-auto lg:w-[75%] xl:w-[40%] py-0 lg:py-[70px]">
-            <LineHead heading="About Hosur, Bangalore" />
+            <LineHead heading="About Hosur, Bengaluru" />
             <motion.h3 className="xl-1280:text-[22px] gradinetText3 leading-[130%] spotlightheaddd fsans-400 text-[20px] mt-[-20px] xl:1024:mt-[-40px] xl-1280:mt-[-20px]">
               Hosur has become a top choice for manufacturing and industry,
-              sitting right next to Bangalore with excellent transportation
+              sitting right next to Bengaluru with excellent transportation
               links. Major companies like Tata, Titan, Ashok Leyland, TVS
               Motors, and Schaeffler already call it home, creating a strong and
               diverse industrial community. With a well-developed industrial
-              base, skilled workforce, and growing support from Bangalore’s
+              base, skilled workforce, and growing support from Bengaluru’s
               progressive industrial policies, Hosur is poised for accelerated
-              expansion. Its connectivity to Bangalore and access to southern
+              expansion. Its connectivity to Bengaluru and access to southern
               ports make it an ideal location for your industrial operations.
             </motion.h3>
           </div>

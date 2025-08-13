@@ -60,7 +60,7 @@
 //                   viewport={{ once: true, amount: 0.3 }}
 //                   className="text-[16px] fsans-600 leading-[26px] text-[#092241] border-b border-[#D7D7D7] pb-[15px]"
 //                 >
-//                   <span className="font-bold text-red-700 pr-[11px]">01</span>{" "}
+//                   <span className="font-bold text-[#E30613] pr-[11px]">01</span>{" "}
 //                   Enviroment
 //                 </motion.p>
 //                 <motion.p
@@ -68,7 +68,7 @@
 //                   viewport={{ once: true, amount: 0.3 }}
 //                   className="text-[16px] fsans-600 leading-[26px] text-[#092241] border-b border-[#D7D7D7] pb-[15px]"
 //                 >
-//                   <span className="font-bold text-red-700 pr-[11px]">02</span>{" "}
+//                   <span className="font-bold text-[#E30613] pr-[11px]">02</span>{" "}
 //                   Social
 //                 </motion.p>
 //                 <motion.p
@@ -76,7 +76,7 @@
 //                   viewport={{ once: true, amount: 0.3 }}
 //                   className="text-[16px] fsans-600 leading-[26px] text-[#092241] border-b border-[#D7D7D7] pb-[15px]"
 //                 >
-//                   <span className="font-bold text-red-700 pr-[11px]">03</span>{" "}
+//                   <span className="font-bold text-[#E30613] pr-[11px]">03</span>{" "}
 //                   Governance
 //                 </motion.p>
 //               </div>
@@ -196,7 +196,7 @@
 //                   viewport={{ once: true, amount: 0.3 }}
 //                   className="text-[16px] fsans-600 leading-[26px] text-[#092241] border-b border-[#D7D7D7] pb-[15px]"
 //                 >
-//                   <span className="font-bold text-red-700 pr-[11px]">01</span>{" "}
+//                   <span className="font-bold text-[#E30613] pr-[11px]">01</span>{" "}
 //                   Enviroment
 //                 </motion.p>
 //                 <motion.p
@@ -204,7 +204,7 @@
 //                   viewport={{ once: true, amount: 0.3 }}
 //                   className="text-[16px] fsans-600 leading-[26px] text-[#092241] border-b border-[#D7D7D7] pb-[15px]"
 //                 >
-//                   <span className="font-bold text-red-700 pr-[11px]">02</span>{" "}
+//                   <span className="font-bold text-[#E30613] pr-[11px]">02</span>{" "}
 //                   Social
 //                 </motion.p>
 //                 <motion.p
@@ -212,7 +212,7 @@
 //                   viewport={{ once: true, amount: 0.3 }}
 //                   className="text-[16px] fsans-600 leading-[26px] text-[#092241] border-b border-[#D7D7D7] pb-[15px]"
 //                 >
-//                   <span className="font-bold text-red-700 pr-[11px]">03</span>{" "}
+//                   <span className="font-bold text-[#E30613] pr-[11px]">03</span>{" "}
 //                   Governance
 //                 </motion.p>
 //               </div>
@@ -344,7 +344,7 @@ const EsgF = () => {
                   // viewport={{ once: true, amount: 0.3 }}
                   className="text-[16px] fsans-600 leading-[26px] text-[#092241] border-b border-[#D7D7D7] pb-[15px]"
                 >
-                  <span className="font-bold text-red-700 pr-[11px]">01</span>{" "}
+                  <span className="font-bold text-[#E30613] pr-[11px]">01</span>{" "}
                   Environment
                 </p>
                 <p
@@ -352,7 +352,7 @@ const EsgF = () => {
                   // viewport={{ once: true, amount: 0.3 }}
                   className="text-[16px] fsans-600 leading-[26px] text-[#092241] border-b border-[#D7D7D7] pb-[15px]"
                 >
-                  <span className="font-bold text-red-700 pr-[11px]">02</span>{" "}
+                  <span className="font-bold text-[#E30613] pr-[11px]">02</span>{" "}
                   Social
                 </p>
                 <p
@@ -360,7 +360,7 @@ const EsgF = () => {
                   // viewport={{ once: true, amount: 0.3 }}
                   className="text-[16px] fsans-600 leading-[26px] text-[#092241] border-b border-[#D7D7D7] pb-[15px]"
                 >
-                  <span className="font-bold text-red-700 pr-[11px]">03</span>{" "}
+                  <span className="font-bold text-[#E30613] pr-[11px]">03</span>{" "}
                   Governance
                 </p>
               </div>

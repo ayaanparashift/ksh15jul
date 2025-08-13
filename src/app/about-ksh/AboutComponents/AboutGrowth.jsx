@@ -5,7 +5,7 @@
 //     <div className="Main fix12 py-16 lg:py-[100px]">
 //       <div className="lg:flex items-center justify-between xl-1280:gap-[5%] xl-1024:gap-[30px]">
 //         <div className="xl-1024:w-full xl:w-[521px] xl-1280:w-[50%] flex ">
-//           <h1 className="text-[#092241] pb-2 text-3xl lg:text-6xl fpt-600 border-[#F7E327] border-b-[6px]">
+//           <h1 className="text-[#092241] pb-2 text-3xl lg:text-6xl fpt-600 border-[#F7E327] border-b-[8px]">
 //             Impact. Growth. Opportunity.
 //           </h1>
 //         </div>
@@ -106,7 +106,7 @@ import Link from "next/link";
 //             whileInView={{ width: "fit-content" }}
 //             transition={{ duration: 1.7, ease: [0.7, 0, 0.4, 1] }}
 //             viewport={{ amount: 0.1, once: true }}
-//             className="text-[#092241] select-none pb-2 whitespace-nowrap overflow-hidden text-3xl xl-1024:text-5xl min-1280:text-6xl fpt-600 border-[#F7E327] border-b-[6px]"
+//             className="text-[#092241] select-none pb-2 whitespace-nowrap overflow-hidden text-3xl xl-1024:text-5xl min-1280:text-6xl fpt-600 border-[#F7E327] border-b-[8px]"
 //           >
 //             Trust. Growth.
 //             <br /> Opportunity. &nbsp;&nbsp;&nbsp;&nbsp;
@@ -265,7 +265,7 @@ const AboutGrowth = () => {
             // whileInView={{ width: "fit-content" }}
             // transition={{ duration: 1.7, ease: [0.7, 0, 0.4, 1] }}
             // viewport={{ amount: 0.1, once: true }}
-            className="text-[#092241] select-none pb-2 whitespace-nowrap overflow-hidden text-3xl xl-1024:text-5xl min-1280:text-6xl fpt-600 border-[#F7E327] border-b-[6px]"
+            className="text-[#092241] select-none pb-2 whitespace-nowrap overflow-hidden text-3xl xl-1024:text-5xl min-1280:text-6xl fpt-600 border-[#F7E327] border-b-[8px]"
           >
             Trust. Growth.
             <br /> Opportunity. &nbsp;&nbsp;&nbsp;&nbsp;

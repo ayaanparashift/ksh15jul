@@ -34,7 +34,7 @@ const ParkinSpot = ({}) => {
             </div>
 
             <motion.p className="fsans-500 gradinetText text-[14px] lg:text-[14px] min-1366:text-[16px] leading-[26px]">
-              Located near Bangalore, KSH Hosur Park 1 puts you right in India's
+              Located near Bengaluru, KSH Hosur Park 1 puts you right in India's
               thriving industrial and tech corridor. The Hosur region is growing
               fast, making this the perfect location for companies ready to
               expand across South India. <br /> <br />

@@ -52,7 +52,7 @@ const PhVdslider = () => {
     },
 
     {
-      labl: "Route Video- Bangalore International Airport to KSH Hosur Park I",
+      labl: "Route Video- Bengaluru International Airport to KSH Hosur Park I",
       vid: "https://player.vimeo.com/video/1081769476",
     },
   ];

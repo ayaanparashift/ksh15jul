@@ -125,7 +125,7 @@ const AboutVision = () => {
 
           {/* Bottom */}
           <div className=" xl-1024:pt-20 xl:pt-28  gap-11 flex flex-col lg:flex-row justify-between items-center xl-1024:items-end xl-768:items-start pt-11 lg:pt-0">
-            <div className="flex-1 xl:flex-none xl:w-[531px]">
+            <div className="flex-1 xl:flex-none xl:mt-[-100px] xl:w-[531px]">
               <h1
                 // initial={{ y: 100 }}
                 // whileInView={{ y: 0 }}

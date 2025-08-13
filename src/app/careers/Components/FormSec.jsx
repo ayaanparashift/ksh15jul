@@ -187,7 +187,7 @@ export default function FormSec() {
                   // whileInView={{ x: 0, opacity: 1 }}
                   // transition={{ duration: 1.2, ease: [0.7, 0, 0.4, 1] }}
                   // viewport={{ once: true, amount: 0 }}
-                  className="bg-[#F7E327] h-[5px] md:h-[10px] w-full"
+                  className="bg-[#F7E327] h-[8px] md:h-[10px] w-full"
                 />
               </div>
             </>

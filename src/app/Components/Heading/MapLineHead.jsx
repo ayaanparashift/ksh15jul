@@ -73,7 +73,7 @@ import { isLeftHandSideExpression } from "typescript";
 const MapLineHead = ({ heading, hideopen, ach }) => {
   const spotlight_btn_content = [
     { title: "Pune", hid: 1, poE: "auto" },
-    { title: "Bangalore", hid: 2, poE: "auto" },
+    { title: "Bengaluru", hid: 2, poE: "auto" },
     { title: "Chennai", hid: 3, poE: "none" },
   ];
   return (
@@ -165,7 +165,7 @@ export default MapLineHead;
 // const MapLineHead = ({ heading, hideopen, ach }) => {
 //   const spotlight_btn_content = [
 //     { title: "Pune", hid: 1, poE: "auto" },
-//     { title: "Bangalore", hid: 2, poE: "auto" },
+//     { title: "Bengaluru", hid: 2, poE: "auto" },
 //     { title: "Chennai", hid: 3, poE: "none" },
 //   ];
 //   return (

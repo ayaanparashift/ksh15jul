@@ -304,17 +304,17 @@ const SustainDownload2 = () => {
           // whileInView={{ opacity: 1 }}
           // transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
           // viewport={{ amount: 0.3, once: true }}
-          className="leftCon overflow-hidden bg-[#141D28] w-full lg:w-[60%] xl-1920:pl-[21%] xl-1600:pl-[174px] xl-1536:pl-[140px] xl-1440:pl-[90px] xl-1366:pl-[70px] xl-1280:pl-[64px] xl-1024:pl-[50px] xl-768:pl-[40px]"
+          className="leftCon overflow-hidden bg-[#141D28] w-full lg:w-[60%] md:px-0 px-[5%] xl-1920:pl-[21%] xl-1600:pl-[174px] xl-1536:pl-[140px] xl-1440:pl-[90px] xl-1366:pl-[70px] xl-1280:pl-[64px] xl-1024:pl-[50px] xl-768:pl-[40px]"
         >
           {/* Heading  */}
 
-          <div className="px-[5%] md:px-0 md:flex items-center justify-between xl-1024:w-[90%] xl-768:pr-[40px] lg:w-[600px] pt-14 md:pt-[70px] border-b-[1px] pb-3 border-[#D7D7D7] border-opacity-50 xl-1920:w-[80%]">
+          <div className="md:flex items-center justify-between xl-1024:w-[90%] xl-768:pr-[40px] lg:w-[600px] pt-14 md:pt-[70px] border-b-[1px] pb-3 border-[#D7D7D7] border-opacity-50 xl-1920:w-[80%]">
             <h1 className="text-xl pb-4 md:pb-0 text-white font-semibold">
               Certificates
             </h1>
           </div>
           {/* Tabs */}
-          <div className="pt-[40px] md:px-0 px-[5%] mr-0 md:mr-24">
+          <div className="md:pt-[40px] pt-5 mr-0 md:mr-24">
             <div className="tabs flex flex-wrap gap-2">
               {tabs.map((tab, index) => (
                 <button
@@ -333,7 +333,7 @@ const SustainDownload2 = () => {
           </div>
 
           {/* Animated Content Section */}
-          <div className="relative xl-1920:w-[80%] pt-5 xl-1024:w-[90%] lg:w-[600px] h-[300px] md:h-[250px] overflow-hidden px-[5%] md:px-0">
+          <div className="relative xl-1920:w-[80%] pt-5 xl-1024:w-[90%] lg:w-[600px] h-[300px] md:h-[250px] overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeIndex}
@@ -343,17 +343,17 @@ const SustainDownload2 = () => {
                 transition={{ duration: 0.2, ease: [0.7, 0, 0.4, 1] }}
                 className="absolute text-white"
               >
-                <h2 className="text-[20px] max-w-fit xl:text-[28px] md:text-[24px] font-medium leading-[110%] md:border-b-[8px] border-b-[5px] border-[#F7E327]  pb-0 pt-5">
+                <h2 className="text-[20px] max-w-fit xl:text-[28px] md:text-[24px] font-medium leading-[110%] md:border-b-[8px] border-b-[5px] border-[#F7E327]  pb-0">
                   {tabs[activeIndex].heading}
                 </h2>
-                <p className="pt-6 md:pt-2 text-base text-[#6C8DAB]">
+                <p className="pt-2 text-base text-[#6C8DAB]">
                   {tabs[activeIndex].content}
                 </p>
               </motion.div>
             </AnimatePresence>
           </div>
           {/* Navigation Buttons */}
-          <div className="flex md:pb-0 pb-5 items-center md:pt-[5px] px-[5%] md:px-0 md:w-[60%] justify-between ">
+          <div className="flex md:pb-0 pb-5 items-center md:pt-[5px] md:w-[60%] justify-between ">
             <div className="flex gap-2 items-center">
               <button
                 className="w-10 h-10 flex items-center justify-center disabled:opacity-50"

@@ -44,7 +44,7 @@ export const mapslided2 = [
   {
     parkimg: "/homepage/pcard/hosurmapbe.png",
     title: "KSH Hosur I",
-    city: "Hosur (Near Bangalore)",
+    city: "Hosur (Near Bengaluru)",
     tarea: "1.2 MN. SQ.FT.",
     parkLink: "/ksh-hosur-i",
     tbuild: "04 BUILDINGS",
@@ -54,7 +54,7 @@ export const mapslided3 = [
   {
     parkimg: "/homepage/pcard/hosurmapbe.png",
     title: "Upcoming",
-    city: "Hosur (Near Bangalore)",
+    city: "Hosur (Near Bengaluru)",
     tarea: "1 MN. SQ.FT.",
     parkLink: "/ksh-hosur-i",
     tbuild: "04 BUILDINGS",
@@ -78,7 +78,7 @@ export const hotspotData = {
     {
       id: 2,
       park_no: "01",
-      park_name: "Bangalore",
+      park_name: "Bengaluru",
       x: "48.7%",
       y: "70%",
       scale: 2,
@@ -119,7 +119,7 @@ export const hotspotData = {
     {
       id: 2,
       park_no: "01",
-      park_name: "Bangalore",
+      park_name: "Bengaluru",
       x: "42%",
       y: "65%",
       scale: 1.8,
@@ -160,7 +160,7 @@ export const hotspotData = {
     {
       id: 2,
       park_no: "01",
-      park_name: "Bangalore",
+      park_name: "Bengaluru",
       x: "36%",
       y: "69%",
       scale: 2,

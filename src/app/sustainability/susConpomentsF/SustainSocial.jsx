@@ -172,7 +172,7 @@ const SustainSocial = () => {
         </div>
 
         {/* Swiper Buttons */}
-        <div className="pt-12 flex items-center gap-4">
+        <div className="lg:pt-12 pt-5 flex items-center gap-4">
           <div className="cursor-pointer leftBtn w-10 h-10 border-2 border-[#D7D7D7] rounded-full flex items-center justify-center">
             <img src="/Sustainability/socialLeft.svg" alt="Left Arrow" />
           </div>

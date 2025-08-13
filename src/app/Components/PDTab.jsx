@@ -118,7 +118,7 @@
 //                 transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
 //                 className="text-white"
 //               >
-//                 <h1 className="text-3xl md:text-6xl font-medium border-b-[8px] border-[#F7E327] w-fit pb-3 pt-5 md:pt-10">
+//                 <h1 className="text-3xl md:text-6xl font-medium border-b-[8px] border-[#F7E327] w-fit pt-5 md:pt-10">
 //                   {tdata[activeIndex].title}
 //                 </h1>
 //                 <p className="lg:w-[60%] max-w-full md:mx-0 mx-auto pt-6 md:pt-5 md:pb-5 text-base text-[#6C8DAB]">

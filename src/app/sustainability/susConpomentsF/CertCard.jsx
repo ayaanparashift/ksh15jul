@@ -366,7 +366,7 @@ const SingleCertCard = ({ image, title, heading, content }) => {
           </div>
 
           {/* Always-visible Title */}
-          <div className="bg-white py-2 px-4">
+          <div className="bg-white py-5 px-4">
             <div className="text-black text-[18px] fsans-700 uppercase text-center">
               {title}
             </div>
@@ -390,17 +390,17 @@ const SingleCertCard = ({ image, title, heading, content }) => {
       </motion.div>
 
       {/* Mobile Static Card */}
-      <div className="sm:hidden w-full overflow-hidden flex flex-col mb-6">
+      <div className="sm:hidden w-full h-[650px] overflow-hidden flex flex-col bg-white p-4">
         {/* Image + Title stacked vertically */}
-        <div className="w-full flex flex-col gap-0 bg-white">
-          <div className="h-fit w-full flex items-end justify-center overflow-hidden py-5 px-4">
+        <div className="w-full h-full flex flex-col gap-0 bg-white">
+          <div className="h-full w-full flex items-center justify-center overflow-hidden">
             <img
               src={image}
               alt={title}
               className="max-w-full max-h-full object-contain"
             />
           </div>
-          <div className="py-2 px-4">
+          <div className="py-2">
             <div className="text-black text-[18px] fsans-700 uppercase">
               {title}
             </div>
@@ -408,9 +408,11 @@ const SingleCertCard = ({ image, title, heading, content }) => {
         </div>
 
         {/* Description */}
-        <div className="bg-white text-[#474747] p-4 flex flex-col gap-2">
-          <div className="text-[18px] fsans-600">{heading}</div>
-          <div className="text-[14px] fsans-400">{content}</div>
+        <div className="bg-white text-[#474747] flex flex-col gap-2">
+          <div className="text-[18px] text-black fpt-600">{heading}</div>
+          <div className="text-[14px] fsans-400 h-[70px] styled-scroll">
+            {content}
+          </div>
         </div>
       </div>
     </div>

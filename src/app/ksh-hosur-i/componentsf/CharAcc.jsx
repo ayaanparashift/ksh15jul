@@ -45,7 +45,7 @@ const CharAcc = () => {
     {
       title: "The Dual Talent Advantage",
       content:
-        "With its proximity to Bangalore, Hosur draws from a vast, skilled talent pool across Tamil Nadu and Karnataka, making it an attractive base for industries requiring specialized manpower.",
+        "With its proximity to Bengaluru, Hosur draws from a vast, skilled talent pool across Tamil Nadu and Karnataka, making it an attractive base for industries requiring specialized manpower.",
     },
     {
       title: "The Best of Two States",
@@ -72,7 +72,7 @@ const CharAcc = () => {
             <div className="overflow-x-hidden h-fit whitespace-nowrap">
               <h2 className="md:text-[44px] text-[22px] leading-[111%] w-full pb-[10px] border-b xl:mb-[66px] mb-[36px] text-[#092241] border-[#d7d7d7]">
                 Defining Characteristics of <br className="lg:hidden flex" />
-                Hosur (Near Bangalore)
+                Hosur (Near Bengaluru)
               </h2>
             </div>
           </div>

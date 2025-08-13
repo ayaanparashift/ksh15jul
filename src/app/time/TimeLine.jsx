@@ -143,7 +143,7 @@ const Timeline = () => {
       <Particlecom />
       <div className="relative py-28 overflow-hidden">
         {/* Heading */}
-        <h2 className="w-fit text-4xl font-bold ml-[max(5%,calc((100vw-1250px)/2))] relative z-10 text-white border-b-[6px] border-b-[#F7E327]">
+        <h2 className="w-fit text-4xl font-bold ml-[max(5%,calc((100vw-1250px)/2))] relative z-10 text-white border-b-[8px] border-b-[#F7E327]">
           The KSH Legacy
         </h2>
 

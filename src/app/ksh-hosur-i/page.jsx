@@ -38,7 +38,7 @@ const page = () => {
         <PDTab
           bwidth={838}
           tdata={tabsData}
-          para="Hosur, located on the outskirts of Bangalore, is fast becoming a leading destination for manufacturing and industrial expansion. Its strategic location, seamless connectivity, and access to a skilled workforce have attracted major players like Tata Electronics and a thriving network of companies in automotive, electronics, and engineering. With Bangalore’s innovation ecosystem next door and robust infrastructure on the rise, Hosur offers the perfect blend of scale, speed, and future-readiness for modern industrial growth."
+          para="Hosur, located on the outskirts of Bengaluru, is fast becoming a leading destination for manufacturing and industrial expansion. Its strategic location, seamless connectivity, and access to a skilled workforce have attracted major players like Tata Electronics and a thriving network of companies in automotive, electronics, and engineering. With Bengaluru’s innovation ecosystem next door and robust infrastructure on the rise, Hosur offers the perfect blend of scale, speed, and future-readiness for modern industrial growth."
           title="Hosur: The Next Industrial Powerhouse"
         />
         {/* <PDTab /> */}
