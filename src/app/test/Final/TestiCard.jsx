@@ -12,7 +12,7 @@ const TestiCard = ({ item }) => {
         <img
           src={item.logo}
           alt={`${item.company} logo`}
-          className="max-w-[180px] h-[48px]"
+          className="w-[170px] h-auto"
         />
         <p className="fsans-400 text-sm leading-[20px] text-[#6C8DAB] h-[150px]  styled-scroll2">
           {item.content}

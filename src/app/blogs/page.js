@@ -164,28 +164,76 @@
 // };
 
 // export default BlogPage;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// import BlogSpot from "./Components/BlogSpot";
+// import BlogsLoader from "./Components/BlogsLoader";
+// import CapEnq from "../capabilities/componentsf/CapEnq";
+
+// export const metadata = {
+//   title:
+//     "KSH INFRA Blog | Expert Insights on Industrial & Logistics Park Trends, Warehouse Development in India",
+//   description:
+//     "Explore the KSH INFRA blog for the latest trends, insights, and updates on industrial parks, logistics park developments, and Warehouse solutions in India.",
+// };
+
+// const BlogPage = ({ searchParams }) => {
+//   const currentPage = parseInt(searchParams.page || "1", 10);
+
+//   return (
+//     <>
+//       <BlogSpot />
+//       {/* Client-side loader for blogs */}
+//       <BlogsLoader currentPage={currentPage} />
+//       <CapEnq />
+//     </>
+//   );
+// };
+
+// export default BlogPage;
+
+// BlogPage.jsx
 import BlogSpot from "./Components/BlogSpot";
-import BlogsLoader from "./Components/BlogsLoader";
 import CapEnq from "../capabilities/componentsf/CapEnq";
+import BlogsServer from "./Components/BlogsServer"; // server fetch component
+import { Suspense } from "react";
 
 export const metadata = {
-  title:
-    "KSH INFRA Blog | Expert Insights on Industrial & Logistics Park Trends, Warehouse Development in India",
-  description:
-    "Explore the KSH INFRA blog for the latest trends, insights, and updates on industrial parks, logistics park developments, and Warehouse solutions in India.",
+  /* ... */
 };
 
-const BlogPage = ({ searchParams }) => {
+export default function BlogPage({ searchParams }) {
   const currentPage = parseInt(searchParams.page || "1", 10);
 
   return (
     <>
       <BlogSpot />
-      {/* Client-side loader for blogs */}
-      <BlogsLoader currentPage={currentPage} />
+      <Suspense
+        fallback={
+          <div className="text-center py-20 fsans-600 text-black">
+            Loading Posts...
+          </div>
+        }
+      >
+        <BlogsServer currentPage={currentPage} />
+      </Suspense>
       <CapEnq />
     </>
   );
-};
-
-export default BlogPage;
+}
