@@ -226,7 +226,7 @@ export default function BlogPage({ searchParams }) {
       <BlogSpot />
       <Suspense
         fallback={
-          <div className="text-center py-20 fsans-600 text-black">
+          <div className="text-center text-[24px] py-20 fsans-600 text-black">
             Loading Posts...
           </div>
         }
