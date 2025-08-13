@@ -18,25 +18,25 @@
 //           <br />— Jabil KSH INFRA
 //         </>
 //       ),
-//       url: "/case-studies/jabil",
+//       comp: "hildalco",url: "/case-studies/jabil",
 //       Image: "/caseInside/jabilspot.png",
 //     },
 //     {
 //       Title:
 //         "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first integrated unit.",
-//       url: "/case-studies/kawasaki",
+//       comp: "hildalco",url: "/case-studies/kawasaki",
 //       Image: "/caseInside/caseInsideSpot.png",
 //     },
 //     {
 //       Title:
 //         "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first integrated unit.",
-//       url: "/case-studies/kawasaki",
+//       comp: "hildalco",url: "/case-studies/kawasaki",
 //       Image: "/caseInside/caseInsideSpot.png",
 //     },
 //     {
 //       Title:
 //         "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first integrated unit.",
-//       url: "/case-studies/kawasaki",
+//       comp: "hildalco",url: "/case-studies/kawasaki",
 //       Image: "/caseInside/caseInsideSpot.png",
 //     },
 //     // Add more items here if needed...
@@ -102,25 +102,28 @@ const CaseStudy = () => {
   const CaseStudyContent = [
     {
       Title: "Done and Delivered. On Time<br />— Jabil",
-
+      comp: "Jabil",
       url: "/case-studies/jabil",
       Image: "/caseInside/jabspot.jpg",
     },
     {
       Title:
-        "Large-Scale, Built-to-Spec Facility —<br/>Delivered to Hindalco in Eight Months",
+        "Large-Scale, Built-to-Spec Facility — Delivered to Hindalco in Eight Months",
+      comp: "Hindalco",
       url: "/case-studies/hindalco",
       Image: "/caseInside/hindspot.png",
     },
     {
       Title:
         "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first integrated unit.",
+      comp: "Kawasaki",
       url: "/case-studies/kawasaki",
       Image: "/caseInside/kwspot.jpg",
     },
     {
       Title:
         "Crane-Ready, High-Capacity Manufacturing Facility — Delivered to Barnes",
+      comp: "Barnes",
       url: "/case-studies/barnes",
       Image: "/caseInside/barnes.png",
     },
@@ -146,6 +149,7 @@ const CaseStudy = () => {
           {CaseStudyContent.map((content, index) => (
             <SwiperSlide key={index}>
               <SlideCard
+                comp={content.comp}
                 title={content.Title}
                 image={content.Image}
                 url={content.url}

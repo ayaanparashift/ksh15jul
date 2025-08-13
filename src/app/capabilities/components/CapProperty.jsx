@@ -95,7 +95,7 @@
 //                 </h1>
 //                 <p className="text-lg fsans-400 leading-7 text-[#CECECE]">
 //                   At KSH INFRA, we manage our properties to keep everything
-//                   functioning seamlessly. Our property management team
+//                   functioning seamlessly. Our Property Management team
 //                   prioritizes tenant satisfaction above all else. Our property
 //                   management approach spans several focus areas:
 //                 </p>
@@ -289,8 +289,8 @@ const CapProperty = () => {
               </h1>
               <p className="text-lg fsans-400 leading-7 text-[#CECECE]">
                 At KSH INFRA, we manage our properties to keep everything
-                functioning seamlessly. Our property management team prioritizes
-                tenant satisfaction above all else. Our property management
+                functioning seamlessly. Our Property Management team prioritizes
+                tenant satisfaction above all else. Our Property Management
                 approach spans several focus areas:
               </p>
             </div>

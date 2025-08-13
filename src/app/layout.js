@@ -1,12 +1,12 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Nav from "./Components/Nav/Nav";
 import GlobalEnquire from "./Components/GlobalEnquire";
 import { Toaster } from "react-hot-toast";
 import { TabProvider } from "./context/TabContext";
 import { BlogProvider } from "./context/BlogContext";
+import FooterF from "./Components/FooterF";
 
 export const metadata = {
   title: "KSH INFRA",
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
               <Toaster position="top-center" reverseOrder={false} />
               {children}
 
-              <Footer />
+              <FooterF />
             </GlobalEnquire>
           </TabProvider>
         </BlogProvider>

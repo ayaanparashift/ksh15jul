@@ -91,43 +91,46 @@ export default function PFetch() {
     "Case Studies": [
       {
         id: 1,
-        title: "Hindalco",
+        title:
+          "Large-Scale, Built-to-Spec Facility — Delivered to Hindalco in Eight Months",
         content:
           "Large-Scale, Built-to-Spec Facility — Delivered to Hindalco in Eight Months",
         image: "/caseInside/hindspot.png",
         href: "/case-studies/hindalco",
         newTab: false,
-        date: "",
+        date: "Hindalco",
       },
       {
         id: 2,
-        title: "Barnes",
+        title:
+          "Crane-Ready, High-Capacity Manufacturing Facility — Delivered to Barnes",
         content:
           "Crane-Ready, High-Capacity Manufacturing Facility — Delivered to Barnes",
         image: "/caseInside/barnes.png",
         href: "/case-studies/barnes",
         newTab: false,
-        date: "",
+        date: "Barnes",
       },
       {
         id: 3,
-        title: "Creating opportunities for Kawasaki",
+        title:
+          "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first Indian integrated Unit.",
         content:
           "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first Indian integrated Unit.",
         image: "/caseInside/kwspot.jpg",
         href: "/case-studies/kawasaki",
         newTab: false,
-        date: "",
+        date: "Kawasaki",
       },
-      {
-        id: 4,
-        title: "Jabil + KSH INFRA",
-        content: "Done and Delivered. On Time",
-        image: "/caseInside/jabspot.jpg",
-        href: "/case-studies/jabil",
-        newTab: false,
-        date: "",
-      },
+      // {
+      //   id: 4,
+      //   title: "Done and Delivered. On Time — Jabil",
+      //   content: "Done and Delivered. On Time — Jabil",
+      //   image: "/caseInside/jabspot.jpg",
+      //   href: "/case-studies/jabil",
+      //   newTab: false,
+      //   date: "Jabil",
+      // },
     ],
     News: [
       {
@@ -141,7 +144,8 @@ export default function PFetch() {
       },
       {
         id: 4,
-        title: "Post covid-19 opportunities in India",
+        title:
+          "The COVID-19 pandemic has disrupted every single industry over the course of just a few months.",
         content:
           "The COVID-19 pandemic has disrupted every single industry over the course of just a few months.",
         image: "/blog/news/news2.jpg",
@@ -151,7 +155,8 @@ export default function PFetch() {
       },
       {
         id: 5,
-        title: "Benefits of moving into a sustainable Industrial Park",
+        title:
+          "Prioritising Ergonomics in Industrial and Warehouse Operations.",
         content:
           "Prioritising Ergonomics in Industrial and Warehouse Operations.",
         image: "/blog/news/news3.jpg",

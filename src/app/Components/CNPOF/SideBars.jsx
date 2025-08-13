@@ -46,7 +46,7 @@ const SideBars = ({ todos, activeSidebar, setActiveSidebar }) => {
           <motion.p
             key={item.id}
             onClick={() => setActiveSidebar(item.id)}
-            className="cursor-pointer border-b min-1366:pb-[20px] min-1366:pr-[25px] pr-[10px] pb-[10px] w-full lg:max-w-[400px] min-1366:max-w-[305px] transition-colors duration-300 fsans-600"
+            className="cursor-pointer border-b min-1366:pb-[20px] min-1366:pr-[25px] pr-[10px] pb-[10px] w-full xl:w-[400px] transition-colors duration-300 fsans-600"
             style={{
               color:
                 activeSidebar === item.id ? "#ffffff" : "rgba(255,255,255,0.4)",

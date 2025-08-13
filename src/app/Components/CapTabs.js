@@ -14,7 +14,7 @@ export const tabs = [
     title: "Capital Deployment",
     heading: <>Capital Deployment</>,
     content:
-      "Our smart capital deployment approach and strong partnerships help us build  State-of-the-art facilities suitable for a whole range of industries.<br/><br/> We know how to use capital wisely to allocate resources across people, technology, and the environment to deliver infrastructure that exactly fits your business needs.",
+      "Our smart approach towards capital deployment and strong partnerships help us build State-of-the-art facilities suitable for a whole range of industries<br/><br/> We know how to use capital wisely to allocate resources across people, technology, and the environment to deliver infrastructure that exactly fits your business needs.",
     images: {
       top: ["/OurCapabilities/captf.png"],
       bottom1: ["/OurCapabilities/capBottom1_1.png"],
@@ -47,7 +47,7 @@ export const tabs = [
   //   title: "Property Management",
   //   heading: <>Property Management</>,
   //   content:
-  //     "Our property management team keeps everything running smoothly. We handle all maintenance so that you can focus completely on your core business.<br /><br />We take care of your facility needs day in and day out. No hassles and no worries—just well-maintained properties that support your operations.",
+  //     "Our Property Management team keeps everything running smoothly. We handle all maintenance so that you can focus completely on your core business.<br /><br />We take care of your facility needs day in and day out. No hassles and no worries—just well-maintained properties that support your operations.",
   //   images: {
   //     top: ["/OurCapabilities/propertyTop.png"],
   //     bottom1: ["/OurCapabilities/propertyBottom1.png"],
@@ -58,7 +58,7 @@ export const tabs = [
     title: "Property Management",
     heading: <>Property Management</>,
     content:
-      "Our dedicated property management team ensures your experience is hassle-free from day one. We take full responsibility for the day-to-day upkeep and maintenance of the park, so your operations remain uninterrupted.<br/><br/> From infrastructure to facility management, we handle it all — allowing you to concentrate on growing your core business with complete peace of mind.",
+      "Our dedicated Property Management team ensures your experience is hassle-free from day one. We take full responsibility for the day-to-day upkeep and maintenance of the park, so your operations remain uninterrupted.<br/><br/> From infrastructure to facility management, we handle it all — allowing you to concentrate on growing your core business with complete peace of mind.",
     images: {
       top: ["/OurCapabilities/proptop.png"],
       bottom1: ["/OurCapabilities/prob1.png"],

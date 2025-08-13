@@ -127,7 +127,10 @@ export default function NavMain({ onClose }) {
         key="navmain"
         initial={{ height: 0 }}
         animate={{ height: "100vh" }}
-        exit={{ height: 0, transition: { duration: DURATION, ease: EASING } }}
+        exit={{
+          height: 0,
+          transition: { duration: DURATION, ease: EASING },
+        }}
         transition={{ duration: DURATION, ease: EASING }}
         className="fixed top-0 left-0 w-full z-[10000000] overflow-hidden"
       >

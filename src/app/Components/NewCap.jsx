@@ -72,7 +72,7 @@
 // // //         </>
 // // //       ),
 // // //       content:
-// // //         "Our property management team keeps everything running smoothly. We handle all maintenance so that you can focus completely on your core business.\nWe take care of your facility needs day in and day out. No hassles and no worries—just well-maintained properties that support your operations.",
+// // //         "Our Property Management team keeps everything running smoothly. We handle all maintenance so that you can focus completely on your core business.\nWe take care of your facility needs day in and day out. No hassles and no worries—just well-maintained properties that support your operations.",
 // // //       images: {
 // // //         top: ["/OurCapabilities/propertyTop.png"],
 // // //         bottom1: ["/OurCapabilities/propertyBottom1.png"],
@@ -435,7 +435,7 @@
 // //       title: "Property Management",
 // //       heading: <>Property Management</>,
 // //       content:
-// //         "Our property management team keeps everything running smoothly. We handle all maintenance so that you can focus completely on your core business.<br /><br />We take care of your facility needs day in and day out. No hassles and no worries—just well-maintained properties that support your operations.",
+// //         "Our Property Management team keeps everything running smoothly. We handle all maintenance so that you can focus completely on your core business.<br /><br />We take care of your facility needs day in and day out. No hassles and no worries—just well-maintained properties that support your operations.",
 // //       images: {
 // //         top: ["/OurCapabilities/propertyTop.png"],
 // //         bottom1: ["/OurCapabilities/propertyBottom1.png"],
@@ -891,7 +891,7 @@
 // // //         </>
 // // //       ),
 // // //       content:
-// // //         "Our property management team keeps everything running smoothly. We handle all maintenance so that you can focus completely on your core business.\nWe take care of your facility needs day in and day out. No hassles and no worries—just well-maintained properties that support your operations.",
+// // //         "Our Property Management team keeps everything running smoothly. We handle all maintenance so that you can focus completely on your core business.\nWe take care of your facility needs day in and day out. No hassles and no worries—just well-maintained properties that support your operations.",
 // // //       images: {
 // // //         top: ["/OurCapabilities/propertyTop.png"],
 // // //         bottom1: ["/OurCapabilities/propertyBottom1.png"],
@@ -1277,7 +1277,7 @@
 //       title: "Property Management",
 //       heading: <>Property Management</>,
 //       content:
-//         "Our property management team keeps everything running smoothly. We handle all maintenance so that you can focus completely on your core business.<br /><br />We take care of your facility needs day in and day out. No hassles and no worries—just well-maintained properties that support your operations.",
+//         "Our Property Management team keeps everything running smoothly. We handle all maintenance so that you can focus completely on your core business.<br /><br />We take care of your facility needs day in and day out. No hassles and no worries—just well-maintained properties that support your operations.",
 //       images: {
 //         top: ["/OurCapabilities/propertyTop.png"],
 //         bottom1: ["/OurCapabilities/propertyBottom1.png"],

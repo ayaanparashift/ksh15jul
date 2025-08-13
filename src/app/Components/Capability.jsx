@@ -72,7 +72,7 @@ const Capabilities = () => {
         </>
       ),
       content:
-        "Our dedicated property management services ensure the continuous maintenance and operational efficiency of our parks, providing clients with a hassle-free experience and allowing them to focus on their core business activities.",
+        "Our dedicated Property Management services ensure the continuous maintenance and operational efficiency of our parks, providing clients with a hassle-free experience and allowing them to focus on their core business activities.",
       images: {
         top: ["/OurCapabilities/propertyTop.png"],
         bottom1: ["/OurCapabilities/propertyBottom1.png"],

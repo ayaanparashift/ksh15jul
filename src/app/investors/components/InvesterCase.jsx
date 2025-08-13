@@ -102,7 +102,7 @@
 //               >
 //                 <p className="text-[#303030] text-base fsans-400 leading-[26px] ">
 //                   Mapletree is a global company specializing in real estate
-//                   development, investment, capital, and property management,
+//                   development, investment, capital, and Property Management,
 //                   with a strong commitment to sustainability. The company
 //                   continually creates new investment opportunities to meet the
 //                   evolving needs of investors and aims to expand its presence by
@@ -357,7 +357,7 @@ const InvesterCase = () => {
               >
                 <p className="text-[#303030] text-base fsans-400 leading-[26px] ">
                   Mapletree is a global company specializing in real estate
-                  development, investment, capital, and property management,
+                  development, investment, capital, and Property Management,
                   with a strong commitment to sustainability. The company
                   continually creates new investment opportunities to meet the
                   evolving needs of investors and aims to expand its presence by

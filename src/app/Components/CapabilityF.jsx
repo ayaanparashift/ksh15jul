@@ -421,7 +421,7 @@ const CapabilitiesF = () => {
           </div>
           {/*  */}
           {/* Right Container */}
-          <div className="rightCon min-h-full w-full min-1920:min-h-[870px] min-1440:min-h-[780.5px] min-1920:max-h-[870px] xl:w-1/2 hidden md:flex flex-col overflow-hidden relative">
+          <div className="rightCon min-h-full w-full xl:w-1/2 hidden md:flex flex-col overflow-hidden relative">
             <div className="relative flex-[0.65] h-full">
               {/* <div className="relative min-1920:flex-[0.55] flex-[0.65] h-full"> */}
               <AnimatePresence>
