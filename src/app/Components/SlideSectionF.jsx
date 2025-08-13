@@ -1003,7 +1003,7 @@ const SlideSectionF = () => {
           {/* Heading & Tabs */}
           <div className="md:flex items-center justify-between xl-1024:w-[90%] lg:w-[600px] pt-8 md:pt-[70px] border-b-[1px] md:pb-3 border-[#D7D7D7] border-opacity-50 xl-1920:w-[80%]">
             <h1 className="text-xl pb-4 md:pb-0 text-white font-semibold">
-              Careers at <br />
+              Careers at <br className="lg:flex hidden" />
               KSH INFRA
             </h1>
             {/* <div className="tabs md:justify-center justify-between flex gap-4">
