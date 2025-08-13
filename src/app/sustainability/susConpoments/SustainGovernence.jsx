@@ -39,13 +39,13 @@ const SustainGovernence = () => {
             initial={{ width: 0 }}
             whileInView={{ width: "100%" }}
             transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
-            className="ftp-500 md:text-[44px] sm:text-[32px] text-[24px] whitespace-nowrap overflow-hidden text-white border-[#D7D7D7] border-b-[1px] w-[90%] mx-auto lg:w-full"
+            className="fpt-500 md:text-[44px] sm:text-[32px] text-[24px] whitespace-nowrap overflow-hidden text-white border-[#D7D7D7] border-b-[1px] w-[90%] mx-auto lg:w-full"
           >
             Governance
           </motion.h1> */}
 
           <div className="origin-left w-full">
-            <h1 className="ftp-500 md:text-[44px] sm:text-[32px] text-[24px] whitespace-nowrap overflow-hidden text-white border-[#D7D7D7] border-b-[1px] w-[90%] mx-auto lg:w-full">
+            <h1 className="fpt-500 md:text-[44px] sm:text-[32px] text-[24px] whitespace-nowrap overflow-hidden text-white border-[#D7D7D7] border-b-[1px] w-[90%] mx-auto lg:w-full">
               Governance
             </h1>
           </div>

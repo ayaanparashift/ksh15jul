@@ -80,7 +80,7 @@ export default async function BlogContent({ slug }) {
                 dangerouslySetInnerHTML={{ __html: categoryToShow }}
               />
               <h1
-                className="fpt-700 md:text-[44px] sm:text-[32px] text-[24px] leading-[105%] text-white"
+                className="fpt-500 md:text-[44px] sm:text-[32px] text-[24px] leading-[105%] text-white"
                 dangerouslySetInnerHTML={{ __html: blog.title.rendered }}
               />
             </div>

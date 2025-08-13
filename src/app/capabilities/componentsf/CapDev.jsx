@@ -38,7 +38,7 @@
 //             whileInView={{ width: "100%" }}
 //             viewport={{ once: true, amount: 0.3 }}
 //             transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
-//             className="text-3xl ftp-500 text-[#fff] leading-[33px] border-b-[#828282] border-b-[1px] pb-2 overflow-hidden whitespace-nowrap"
+//             className="text-3xl fpt-500 text-[#fff] leading-[33px] border-b-[#828282] border-b-[1px] pb-2 overflow-hidden whitespace-nowrap"
 //           >
 //             Development
 //           </motion.h1>
@@ -183,7 +183,7 @@ const CapDev = () => {
             // whileInView={{ width: "100%" }}
             // viewport={{ once: true, amount: 0.3 }}
             // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
-            className="text-3xl ftp-500 text-[#ffffff] leading-[33px] border-b-[#828282] border-b-[1px] pb-2 overflow-hidden whitespace-nowrap"
+            className="text-3xl fpt-500 text-[#ffffff] leading-[33px] border-b-[#828282] border-b-[1px] pb-2 overflow-hidden whitespace-nowrap"
           >
             Development
           </h1>

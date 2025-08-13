@@ -22,7 +22,7 @@ const CapLeasing = () => {
             // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
             className="rigCon flex-1 flex flex-col gap-10"
           >
-            <h1 className="text-3xl ftp-500 text-[#092241] leading-[33px] border-b-[#040404] border-b-[1px] pb-2">
+            <h1 className="text-3xl fpt-500 text-[#092241] leading-[33px] border-b-[#040404] border-b-[1px] pb-2">
               Leasing
             </h1>
 

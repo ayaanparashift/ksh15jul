@@ -26,7 +26,7 @@ const AboutStop = () => {
           // whileInView={{ width: "fit-content" }}
           // transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
           // viewport={{ amount: 0.1, once: true }}
-          className="text-[30px] sm:text-[60px] relative z-0 max-w-fit ftp-500 text-white border-b-[8px] border-[#F7E327] whitespace-nowrap overflow-hidden"
+          className="text-[30px] sm:text-[60px] relative z-0 max-w-fit fpt-500 text-white border-b-[8px] border-[#F7E327] whitespace-nowrap overflow-hidden"
         >
           About Us
         </h1>

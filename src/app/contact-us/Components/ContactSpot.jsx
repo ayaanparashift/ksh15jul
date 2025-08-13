@@ -29,7 +29,7 @@ const ContactSpot = () => {
           // whileInView={{ width: "fit-content" }}
           // transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
           // viewport={{ amount: 0.1, once: true }}
-          className="md:text-[60px] text-[30px] md:w-[400px] w-fit ftp-500 text-white border-b-[8px] border-[#F7E327] whitespace-nowrap overflow-hidden max-w-fit"
+          className="md:text-[60px] text-[30px] md:w-[400px] w-fit fpt-500 text-white border-b-[8px] border-[#F7E327] whitespace-nowrap overflow-hidden max-w-fit"
         >
           Contact Us
         </h1>
@@ -75,7 +75,7 @@ export default ContactSpot;
 //           whileInView={{ width: "fit-content" }}
 //           transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
 //           viewport={{ amount: 0.1, once: true }}
-//           className="md:text-[60px] text-[30px] text-[24px] md:w-[400px] w-fit ftp-500 text-white border-b-[8px] border-[#F7E327] whitespace-nowrap overflow-hidden"
+//           className="md:text-[60px] text-[30px] text-[24px] md:w-[400px] w-fit fpt-500 text-white border-b-[8px] border-[#F7E327] whitespace-nowrap overflow-hidden"
 //         >
 //           Sustainability
 //         </motion.h1>

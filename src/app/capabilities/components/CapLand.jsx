@@ -7,7 +7,7 @@ const CapLand = () => {
             <img src="/Cap/caplandacquisiton.png" alt="" />
           </div>
           <div className="rigCon flex-1 flex flex-col gap-10">
-            <h1 className="text-3xl ftp-500 text-white leading-[33px] border-b-[#D7D7D7] border-b-[1px] pb-2">
+            <h1 className="text-3xl fpt-500 text-white leading-[33px] border-b-[#D7D7D7] border-b-[1px] pb-2">
               Land Acquisition
             </h1>
 
@@ -37,7 +37,7 @@ const CapLand = () => {
             <img src="/Cap/capCapital.png" alt="" />
           </div>
           <div className="rigCon flex-1 flex flex-col gap-10">
-            <h1 className="text-3xl ftp-500 text-[#092241] leading-[33px] border-b-[#828282] border-b-[1px] pb-2">
+            <h1 className="text-3xl fpt-500 text-[#092241] leading-[33px] border-b-[#828282] border-b-[1px] pb-2">
               Capital Deployment
             </h1>
 
