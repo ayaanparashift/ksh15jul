@@ -58,7 +58,7 @@ import SlideSectionF from "../Components/SlideSectionF";
 import BentoSlider from "../Components/BentoSlider";
 import LandingSwiper from "../Components/LandingSwiper";
 import Testimonial from "../Components/testislider/Testimonial";
-import TestimonialsSlider from "./test/Final/TestimonialsSlider";
+import TestimonialsSlider from "../test/Final/TestimonialsSlider";
 import Bento from "../Components/Bento";
 import TestimonialF from "../test/Final/TestimonialF";
 
