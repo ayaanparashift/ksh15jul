@@ -13,7 +13,7 @@ const timelineData = [
     id: 1,
     year: 1969,
     content:
-      "Mr. Kushal Subbaya Hegde established his first business Kamal Motors’, an exclusive Bosch products’ distribution business in Ahmednagar District, Maharashtra",
+      "Mr. Kushal Subbaya Hegde established his first business Kamal Motors’, an exclusive Bosch products’ distribution business in Ahmednagar District, Maharashtra.",
     image: "/time/t2.jpg",
   },
 
@@ -21,7 +21,7 @@ const timelineData = [
     id: 3,
     year: 1981,
     content:
-      "Founded 'KSH International’ - Mumbai plant, with 360 MT annual commercial production of Paper Insulated Copper Conductors (PICC)and forayed into manufacturing",
+      "Founded 'KSH International’ - Mumbai plant, with 360 MT annual commercial production of Paper Insulated Copper Conductors (PICC)and forayed into manufacturing.",
     image: "/time/t4.jpg",
   },
 
@@ -58,21 +58,21 @@ const timelineData = [
     id: 9,
     year: 2012,
     content:
-      "Investment received from Pacific Century Group of HK/Singapore to expand KSH Logistics, KSH Distriparks and set up ‘KSH INFRA’ to expand into the INFRA space",
+      "Investment received from Pacific Century Group of HK/Singapore to expand KSH Logistics, KSH Distriparks and set up ‘KSH INFRA’ to expand into the INFRA space.",
     image: "/time/t9.jpg",
   },
   {
     id: 10,
     year: 2016,
     content:
-      "KSH International became the market leader with annual manufacturing ‘capacity of 20,000 MT of ‘which 12,000 MT comprises of Continuously Transposed Conductors (CTC)",
+      "KSH International became the market leader with annual manufacturing ‘capacity of 20,000 MT of ‘which 12,000 MT comprises of Continuously Transposed Conductors (CTC).",
     image: "/time/t10.jpg",
   },
   {
     id: 11,
     year: 2018,
     content:
-      "Established two projects under 'KSH INFRA admeasuring 1 Million sq. ft., and successfully exited the projects to Morgan Stanley Investment Fund, USA",
+      "Established two projects under 'KSH INFRA admeasuring 1 Million sq. ft., and successfully exited the projects to Morgan Stanley Investment Fund, USA.",
     image: "/time/t11.jpg",
   },
   {

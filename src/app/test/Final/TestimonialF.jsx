@@ -14,7 +14,7 @@ const testimonials = [
   },
   {
     id: 2,
-    image: "/homepage/tes/CTC-Global.png",
+    image: "/homepage/tes/ct2f.png",
     logo: "/testimonial/cttf.png",
     company: "CTC Global",
     content:
@@ -34,7 +34,7 @@ const testimonials = [
   },
   {
     id: 4,
-    image: "/homepage/tes/Unisource.png",
+    image: "/homepage/tes/uni2f.png",
     logo: "/testimonial/untf.png",
     company: "Unisource",
     content:
