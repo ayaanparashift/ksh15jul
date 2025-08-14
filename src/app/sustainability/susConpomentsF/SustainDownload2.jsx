@@ -214,7 +214,7 @@ const tabs = [
     heading: "IGBC-PLATINUM Certification",
     title: "IGBC",
     content:
-      "The vision of the Indian Green Building Council (IGBC)—a Confederation of Indian Industry (CII) initiative—envisions a sustainably built environment for all. KSH INFRA Chakan Park II Industrial Park is undergoing a stringent innovation and improvement process to achieve IGBC Platinum certification, the recognized global standard for green infrastructure.",
+      "The Indian Green Building Council (IGBC)—an initiative of the Confederation of Indian Industry (CII)—envisions a sustainably built environment for all. At KSH INFRA, our Industrial Parks are designed and developed through a rigorous process of innovation and continuous improvement to achieve the IGBC Platinum certification—one of the world’s most respected benchmarks for green infrastructure.",
     image: "./Sustainability/sustainDowloadLSlides/igbc.png",
   },
   {

@@ -281,7 +281,7 @@ const certs = [
       "Realty + Conclave & Excellence Awards 2025 – Emerging Developer of the Year, Industrial & Warehousing",
     title: "Realty + Conclave",
     content:
-      "KSH INFRA has been celebrated as a rising force in the industrial and warehousing sector. The organization has made significant strides through continuous innovation, timely execution, and the development of future-ready infrastructure.",
+      "KSH INFRA has been celebrated as a rising force in the Industrial and Logistics  sector. The organization has made significant strides through continuous innovation, timely execution, and the development of future-ready infrastructure.",
     image: "/Sustainability/sustslidesf/flip1f.png",
   },
   {
