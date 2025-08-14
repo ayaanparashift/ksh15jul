@@ -3,7 +3,7 @@ import TestimonialSlider from "./TestimonialsSlider";
 const testimonials = [
   {
     id: 1,
-    image: "/homepage/tes/Gedia.png",
+    image: "/homepage/tes/ged2f.png",
     logo: "/testimonial/gedialogo.png",
     company: "GEDIA",
     content:
@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     id: 3,
-    image: "/homepage/tes/klingspor.png",
+    image: "/homepage/tes/kli2f.png",
     logo: "/testimonial/kltf.png",
     company: "Klingspor",
     content:
@@ -44,7 +44,7 @@ const testimonials = [
   },
   {
     id: 5,
-    image: "/homepage/tes/kawasaki.png",
+    image: "/homepage/tes/kaw2f.png",
     logo: "/testimonial/kwtf.png",
     company: "Kawasaki",
     content:
@@ -54,7 +54,7 @@ const testimonials = [
   },
   {
     id: 6,
-    image: "/homepage/tes/Jabil.png",
+    image: "/homepage/tes/jab2f.png",
     logo: "/testimonial/jbtf.png",
     company: "Jabil",
     content:
@@ -64,7 +64,7 @@ const testimonials = [
   },
   {
     id: 7,
-    image: "/homepage/tes/Callisons.png",
+    image: "/homepage/tes/cal2f.png",
     logo: "/testimonial/cltf.png",
     company: "Callisons",
     content:
