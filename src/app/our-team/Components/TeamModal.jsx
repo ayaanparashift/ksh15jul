@@ -1,63 +1,5 @@
 import { motion } from "framer-motion";
 
-// const designationContent = {
-//   Chairman: {
-//     role: "Provides strategic direction and governance to the organization, ensuring long-term vision and ethical leadership.",
-//     expertise:
-//       "Extensive experience in steering corporate growth, fostering stakeholder relationships, and ensuring robust governance practices.",
-//     commitment:
-//       "Dedicated to upholding the company’s legacy and driving impactful, sustainable development across business verticals.",
-//   },
-//   "MD - KSH International": {
-//     role: "Leads the international arm of KSH, managing cross-border operations, partnerships, and market expansion.",
-//     expertise:
-//       "Strong background in global Business Development, operational management, and cultural integration strategies.",
-//     commitment:
-//       "Focused on expanding KSH’s global footprint while maintaining operational excellence and international synergy.",
-//   },
-//   "Managing Director": {
-//     role: "Oversees company-wide operations and leads strategic initiatives for overall organizational success.",
-//     expertise:
-//       "Proven track record in leadership, business transformation, and execution of high-impact strategies.",
-//     commitment:
-//       "Committed to steering KSH toward growth, sustainability, and innovation in all its endeavors.",
-//   },
-//   "Chief Executive Director": {
-//     role: "Responsible for strategic leadership and execution of corporate vision and high-level business initiatives.",
-//     expertise:
-//       "Deep knowledge in corporate leadership, stakeholder alignment, and long-term growth planning.",
-//     commitment:
-//       "Dedicated to cultivating a culture of excellence and driving the company toward continued success.",
-//   },
-//   "Chief Financial Officer": {
-//     role: "Oversees financial planning, risk management, and budgeting to ensure financial stability and growth.",
-//     expertise:
-//       "Strong experience in financial strategy, investment management, and fiscal governance.",
-//     commitment:
-//       "Focused on building financial resilience and optimizing capital structures to support business expansion.",
-//   },
-//   "Chief Operating Officer": {
-//     role: "Leads the operational strategy and ensures efficient execution across all departments to achieve business objectives.",
-//     expertise:
-//       "Strong command over operational processes, team leadership, and cross-functional coordination to drive results.",
-//     commitment:
-//       "Dedicated to enhancing organizational efficiency, streamlining operations, and fostering a performance-driven culture.",
-//   },
-//   "Chief Customer Officer": {
-//     role: "Leads the customer strategy and experience design across all customer touchpoints.",
-//     expertise:
-//       "Expert in customer engagement, loyalty programs, and omni-channel experience strategies.",
-//     commitment:
-//       "Committed to creating unparalleled customer value and fostering lasting relationships.",
-//   },
-//   "Principal Investments": {
-//     role: "Manages strategic investment initiatives and evaluates opportunities aligned with the company’s growth goals.",
-//     expertise:
-//       "Proficient in financial modeling, market analysis, and portfolio diversification.",
-//     commitment:
-//       "Dedicated to identifying high-impact investments that contribute to long-term value creation.",
-//   },
-// };
 const teamMembers = [
   {
     name: "Kushal Hegde",
@@ -124,7 +66,7 @@ const TeamModal = ({ member, onClose }) => {
       onClick={onClose}
     >
       <motion.div
-        className="bg-white xl:w-[1000px] px-[30px] py-[40px] max-w-[1000px] flex flex-col gap-[50px]"
+        className="bg-white xl:w-[1000px] px-[30px] py-[40px] xl:max-w-[1000px] w-[90vw] flex flex-col gap-[50px]"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 50, opacity: 0 }}

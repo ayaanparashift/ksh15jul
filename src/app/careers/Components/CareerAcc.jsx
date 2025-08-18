@@ -294,7 +294,7 @@ const CareerAcc = () => {
             // whileInView={{ opacity: 1 }}
             // transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
             // viewport={{ once: true, amount: 0.3 }}
-            className="w-full h-auto max-h-[732px] lg:min-h-[732px] lg:h-[732px] flex justify-center flex-col"
+            className="w-full h-[fit] lg:max-h-[732px] lg:min-h-[732px] lg:h-[732px] flex justify-center flex-col"
           >
             {accordionData.map((item, index) => (
               <div
