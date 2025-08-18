@@ -2,17 +2,17 @@ const CapLeasing = () => {
   return (
     <>
       <div className="bg-[#fff]">
-        <div className="fix12 flex flex-col lg:flex-row gap-10 py-24 lg:flex-row-reverse">
+        <div className="fix12 flex flex-col lg:flex-row lg:gap-10 gap-5 lg:py-24 py-10 lg:flex-row-reverse">
           <div className="LeftCon flex-1">
             <img src="/Cap/CapLeas.png" alt="" />
           </div>
-          <div className="rigCon flex-1 flex flex-col gap-10">
+          <div className="rigCon flex-1 flex flex-col lg:gap-10 gap-5">
             <h1 className="text-3xl fpt-500 text-[#092241] leading-[33px] border-b-[#828282] border-b-[1px] pb-2">
               Leasing
             </h1>
 
             <div className="">
-              <h1 className="text-xl fsans-600 leading-[26px] text-[#1C1C1C] pb-[34px]">
+              <h1 className="text-xl fsans-600 leading-[26px] text-[#1C1C1C] lg:pb-[34px] pb-5">
                 Matching Diverse Business Needs
               </h1>
               <p className="text-lg leading-[28px] fsans-400 text-[#434343]">

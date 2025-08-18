@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const CapAbout = () => {
   return (
     <div>
-      <div className="fix12 pt-[72px] pb-[84px]">
+      <div className="fix12 lg:pt-[72px] lg:pb-[84px] py-10">
         <h1
           // initial={{ width: 0 }}
           // whileInView={{ width: "100%" }}
@@ -18,7 +18,7 @@ const CapAbout = () => {
           // whileInView={{ opacity: 1 }}
           // viewport={{ once: true, amount: 0.3 }}
           // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
-          className="text-[#434343] text-base fsans-400 pt-[35px]"
+          className="text-[#434343] text-base fsans-400 lg:pt-[35px] pt-5"
         >
           We combine deep market knowledge with hands-on expertise to deliver
           complete success for your industrial real estate needs. From finding

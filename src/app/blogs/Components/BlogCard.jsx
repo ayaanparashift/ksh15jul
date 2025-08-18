@@ -343,7 +343,10 @@ const BlogCard = ({ blog, activeTabId }) => {
         </div>
 
         {/* Learn More Link */}
-        <Link href={`/blogs/${blog.slug}`} className="flex items-center gap-2">
+        <Link
+          href={`/blogs/${blog.slug}`}
+          className="flex items-center gap-2 lg:pt-0 pt-5"
+        >
           <div className="w-[30px] group-hover:-rotate-45 transition-transform duration-500 h-[30px] bg-[#EEF0F3] rounded-full flex items-center justify-center">
             <img src="/AboutPage/AboutGrowth/learnMore.svg" alt="Learn More" />
           </div>

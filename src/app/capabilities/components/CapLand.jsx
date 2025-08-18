@@ -2,17 +2,17 @@ const CapLand = () => {
   return (
     <>
       <div className="bg-[#092241]">
-        <div className="fix12 flex flex-col lg:flex-row gap-10 py-24">
+        <div className="fix12 flex flex-col lg:flex-row lg:gap-10 gap-5 lg:py-24 py-10">
           <div className="LeftCon flex-1">
             <img src="/Cap/caplandacquisiton.png" alt="" />
           </div>
-          <div className="rigCon flex-1 flex flex-col gap-10">
+          <div className="rigCon flex-1 flex flex-col lg:gap-10 gap-5">
             <h1 className="text-3xl fpt-500 text-white leading-[33px] border-b-[#D7D7D7] border-b-[1px] pb-2">
               Land Acquisition
             </h1>
 
             <div className="">
-              <h1 className="text-xl fsans-600 leading-[26px] text-[#E6E6E6] pb-[34px]">
+              <h1 className="text-xl fsans-600 leading-[26px] text-[#E6E6E6] lg:pb-[34px] pb-5">
                 Strategic Locations for Business Advantage
               </h1>
               <p className="text-lg leading-[28px] fsans-400 text-[#CECECE]">
@@ -32,17 +32,17 @@ const CapLand = () => {
 
       {/* Capital */}
       <div className="bg-[#fff]">
-        <div className="fix12 flex flex-col lg:flex-row gap-10 py-24 flex-row-reverse">
+        <div className="fix12 flex flex-col lg:flex-row lg:gap-10 gap-5 lg:py-24 py-10 flex-row-reverse">
           <div className="LeftCon flex-1">
             <img src="/Cap/capCapital.png" alt="" />
           </div>
-          <div className="rigCon flex-1 flex flex-col gap-10">
+          <div className="rigCon flex-1 flex flex-col lg:gap-10 gap-5">
             <h1 className="text-3xl fpt-500 text-[#092241] leading-[33px] border-b-[#828282] border-b-[1px] pb-2">
               Capital Deployment
             </h1>
 
             <div className="">
-              <h1 className="text-xl fsans-600 leading-[26px] text-[#1C1C1C] pb-[34px]">
+              <h1 className="text-xl fsans-600 leading-[26px] text-[#1C1C1C] lg:pb-[34px] pb-5">
                 Creating Value for Businesses
               </h1>
               <p className="text-lg leading-[28px] fsans-400 text-[#434343]">

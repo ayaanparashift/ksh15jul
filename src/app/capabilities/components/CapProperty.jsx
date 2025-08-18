@@ -79,7 +79,7 @@
 //   return (
 //     <>
 //       <div className="bg-[#092241]">
-//         <div className="fix12 py-[100px] lg:flex gap-10">
+//         <div className="fix12 lg:py-[100px] lg:flex lg:gap-10 py-10 gap-5">
 //           <div className="imgCap flex-1 pb-8 lg:pb-0">
 //             <img src="/Cap/capPro.png" alt="" />
 //           </div>
@@ -89,7 +89,7 @@
 //             </h1>
 
 //             <div className="flex flex-col justify-between ">
-//               <div className="flex flex-col gap-[34px] py-10  ">
+//               <div className="flex flex-col lg:gap-[34px] lg:py-10 py-5 gap-5  ">
 //                 <h1 className="text-xl leading-[26px] fsans-600 text-[#E6E6E6]">
 //                   Customer Delight. First.
 //                 </h1>
@@ -274,7 +274,7 @@ const CapProperty = () => {
 
   return (
     <div className="bg-[#092241]">
-      <div className="fix12 py-[100px] lg:flex gap-10">
+      <div className="fix12 lg:py-[100px] lg:flex lg:gap-10 py-10 gap-5">
         <div className="imgCap flex-1 pb-8 lg:pb-0">
           <img src="/Cap/capPro.png" alt="Cap Project" />
         </div>
@@ -283,7 +283,7 @@ const CapProperty = () => {
             Property Management
           </h1>
           <div className="flex flex-col justify-between">
-            <div className="flex flex-col gap-[34px] py-10">
+            <div className="flex flex-col lg:gap-[34px] lg:py-10 py-5 gap-5">
               <h1 className="text-xl leading-[26px] fsans-600 text-[#E6E6E6]">
                 Customer Delight. First.
               </h1>

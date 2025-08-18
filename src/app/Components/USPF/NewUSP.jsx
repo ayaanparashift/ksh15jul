@@ -442,7 +442,7 @@ const Usp = () => {
   return (
     <div className="bg-white uspcontainer w-full flex items-center justify-center flex-col overflow-hidden">
       <div className="flex flex-col max-w-[100vw] h-fit">
-        <div className="relative z-10 pt-20 max-w-[1250px] w-[90%] mx-auto xl:pt-[92px] h-fit flex flex-col">
+        <div className="relative z-10 lg:pt-20 pt-10 max-w-[1250px] w-[90%] mx-auto xl:pt-[92px] h-fit flex flex-col">
           <LineHead heading={"What Sets KSH INFRA Parks Apart"} />
         </div>
         <div className="flex xl:flex-row flex-col-reverse md:p-0 px-5 pt-0 max-h-fit lg:gap-0 gap-5 relative">
@@ -455,7 +455,7 @@ const Usp = () => {
             ></video>
           </div>
 
-          <div className="xl:w-full mx-auto flex flex-col h-fit max-w-full justify-center items-start gap-[33px] pb-20 xl:pb-[110px] xl:pl-[565px]">
+          <div className="xl:w-full mx-auto flex flex-col h-fit max-w-full justify-center items-start gap-[33px] lg:pb-20 pb-10 xl:pb-[110px] xl:pl-[565px]">
             {/* Text & Navigation Buttons */}
             <motion.div className="flex sm:flex-row flex-col sm:items-center items-start justify-start gap-[20px] sm:gap-[92px] w-full sm:w-[90%] sm:mx-auto xl:w-auto xl-1024:mr-[50px] xl-1280:mr-[59px] xl-1366:mr-[55px] xl-1600:mr-[171px] xl-1536:mr-[145px] xl-1440:mr-[90px] xl-1920:mr-[29%]">
               <p className="fsans-400 text-[18px] leading-[26px] text-[#6C8DAB] z-[1]">

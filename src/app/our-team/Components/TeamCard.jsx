@@ -80,8 +80,8 @@
 
 const TeamCard = ({ member, onClick }) => {
   return (
-    <div className="cursor-pointer w-fit h-fit" onClick={onClick}>
-      <div className="group sm:w-[360px] w-[300px] sm:max-h-[542px] h-[572px] bg-white border border-[#DDDDDD] overflow-hidden">
+    <div className="cursor-pointer sm:w-fit w-full h-fit" onClick={onClick}>
+      <div className="group sm:w-[360px] w-full sm:max-h-[542px] sm:h-[572px] h-fit bg-white border border-[#DDDDDD] overflow-hidden">
         <div className="h-[410px] overflow-hidden">
           <img
             src={member.image}
@@ -91,7 +91,7 @@ const TeamCard = ({ member, onClick }) => {
         </div>
         <div className="py-[27px] px-[20px] flex-col gap-[10px] flex">
           <div className="flex w-full items-center justify-between h-[41px]">
-            <h3 className="spotlightheaddd fsans-600 text-[18px]">
+            <h3 className="spotlightheaddd fsans-600 text-[20px]">
               {member.name}
             </h3>
             {member.linkedin && (

@@ -4,7 +4,7 @@ const CapLand = () => {
   return (
     <>
       <div className="bg-[#092241]">
-        <div className="fix12 flex flex-col lg:flex-row gap-10 py-24">
+        <div className="fix12 flex flex-col lg:flex-row lg:gap-10 gap-5 lg:py-24 py-10">
           <div className="LeftCon flex-1 relative overflow-hidden">
             <img src="/Cap/caplan.png" alt="" />
             {/* <motion.div
@@ -20,7 +20,7 @@ const CapLand = () => {
             // whileInView={{ opacity: 1 }}
             // viewport={{ once: true, amount: 0.3 }}
             // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
-            className="rigCon flex-1 flex flex-col gap-10"
+            className="rigCon flex-1 flex flex-col lg:gap-10 gap-5"
           >
             <h1
               className="text-3xl fpt-500 text-white leading-[33px] border-b-[#D7D7D7] border-b-[1px] pb-2"
@@ -30,7 +30,7 @@ const CapLand = () => {
             </h1>
 
             <div className="">
-              <h1 className="text-xl fsans-600 leading-[26px] text-[#E6E6E6] pb-[34px]">
+              <h1 className="text-xl fsans-600 leading-[26px] text-[#E6E6E6] lg:pb-[34px] pb-5">
                 Strategic Locations for Business Advantage
               </h1>
               <p className="text-lg leading-[28px] fsans-400 text-[#CECECE]">
@@ -50,7 +50,7 @@ const CapLand = () => {
 
       {/* Capital */}
       <div className="bg-[#fff]">
-        <div className="fix12 flex lg:flex-row-reverse flex-col gap-10 py-24">
+        <div className="fix12 flex lg:flex-row-reverse flex-col lg:gap-10 gap-5 lg:py-24 py-10">
           <div className="LeftCon flex-1 relative overflow-hidden">
             {/* <img src="/Cap/capCapital.png" alt="" /> */}
             <img src="/OurCapabilities/captf.png" alt="" />
@@ -67,14 +67,14 @@ const CapLand = () => {
             // whileInView={{ opacity: 1 }}
             // viewport={{ once: true, amount: 0.3 }}
             // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
-            className="rigCon flex-1 flex flex-col gap-10"
+            className="rigCon flex-1 flex flex-col lg:gap-10 gap-5"
           >
             <h1 className="text-3xl fpt-500 text-[#092241] leading-[33px] border-b-[#040404] border-b-[1px] pb-2">
               Capital Deployment
             </h1>
 
             <div className="">
-              <h1 className="text-xl fsans-600 leading-[26px] text-[#1C1C1C] pb-[34px]">
+              <h1 className="text-xl fsans-600 leading-[26px] text-[#1C1C1C] lg:pb-[34px] pb-5">
                 Creating Value for Businesses
               </h1>
               <p className="text-lg leading-[28px] fsans-400 text-[#434343]">

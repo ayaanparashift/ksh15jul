@@ -52,7 +52,7 @@
 //     },
 //   ];
 //   return (
-//     <div className="bg-white pt-[72px] pb-[95px] flex gap-[49px] flex-col w-full overflow-hidden">
+//     <div className="bg-white lg:pt-[72px] lg:pb-[95px] py-10 flex lg:gap-[49px] gap-5 flex-col w-full overflow-hidden">
 //       <div className="flex md:flex-row flex-col items-start md:gap-0 gap-[20px] fix12 justify-between">
 //         <div>
 //           <motion.h3
@@ -236,7 +236,7 @@ const LastSw = () => {
     },
   ];
   return (
-    <div className="bg-white pt-[72px] pb-[95px] flex gap-[49px] flex-col w-full overflow-hidden">
+    <div className="bg-white lg:pt-[72px] lg:pb-[95px] py-10 flex lg:gap-[49px] gap-5 flex-col w-full overflow-hidden">
       <div className="flex md:flex-row flex-col items-start md:gap-0 gap-[20px] fix12 justify-between">
         <div>
           <h3 className="fsans-600 leading-[111%] max-w-fit lwlightheaddd text-[24px] md:text-[44px] text-[#092241]">

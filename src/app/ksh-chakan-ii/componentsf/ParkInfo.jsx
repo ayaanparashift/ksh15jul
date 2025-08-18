@@ -10,11 +10,11 @@ const ParkInfo = () => {
 
   return (
     <div
-      className="flex py-[84px] w-full justify-between items-center"
+      className="flex pt-10 lg:pb-20 pb-10 w-full justify-between items-center"
       id="park-highlight"
     >
       {/* Left Image */}
-      <div className="flex md:flex-row flex-col fix12 justify-between items-center xl:gap-[160px] gap-[80px]">
+      <div className="flex md:flex-row flex-col fix12 justify-between items-center xl:gap-[160px] lg:gap-[80px] gap-10">
         <div className="md:w-1/2 w-full relative">
           <img
             src="/ParkPage/chakan-2/c2sp.png"

@@ -152,7 +152,7 @@ const TabTeam = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3, ease: [0.7, 0, 0.4, 1] }}
-              className="w-fit"
+              className="sm:w-fit w-full"
             >
               <TeamCard
                 member={member}

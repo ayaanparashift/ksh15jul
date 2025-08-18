@@ -3,7 +3,7 @@ const AboutVision = () => {
   return (
     <>
       <div className="flex ">
-        <div className="bg-[#092241] py-32 px-[5%] lg:px-0 lg:w-full  lg:pl-[7%] lg:pr-[5%] xl-1920:pl-[17%]">
+        <div className="bg-[#092241] lg:py-32 sm:py-20 py-10 px-[5%] lg:px-0 lg:w-full  lg:pl-[7%] lg:pr-[5%] xl-1920:pl-[17%]">
           <div className="flex flex-col min-768:flex-row gap-11 xl-1024:gap-11 xl:flex-row justify-between h-fit">
             <div className="hidden xl:block xl:w-[531px]" />
 
@@ -124,7 +124,7 @@ const AboutVision = () => {
           </div>
 
           {/* Bottom */}
-          <div className=" xl-1024:pt-20 xl:pt-28  gap-11 flex flex-col lg:flex-row justify-between items-center xl-1024:items-end xl-768:items-start pt-11 lg:pt-0">
+          <div className=" xl-1024:pt-20 xl:pt-28  lg:gap-11 gap-6 flex flex-col lg:flex-row justify-between items-center xl-1024:items-end xl-768:items-start pt-11 lg:pt-0">
             <div className="flex-1 xl:flex-none xl:mt-[-100px] xl:w-[531px]">
               <h1
                 // initial={{ y: 100 }}
@@ -234,7 +234,7 @@ const AboutVision = () => {
                       "linear-gradient(to top right, rgba(221, 221, 221, 0), rgba(185, 140, 140, 0.70)) 30",
                   }}
                 >
-                  <h1 className="text-3xl fpt-600 pt-5 text-white ">Care</h1>
+                  <h1 className="text-3xl fpt-600 lg:pt-5 text-white ">Care</h1>
                   <p className="text-[#C1C1C1] text-sm ">
                     Care for people, communities, and the planet. With care we
                     foster a supportive, inclusive, and respectful workplace

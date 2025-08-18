@@ -85,7 +85,7 @@ import { motion } from "framer-motion";
 
 const InvesterSec2 = () => {
   return (
-    <div className="fix12 py-[98px]">
+    <div className="fix12 lg:py-[98px] py-[40px]">
       <div className="flex flex-col lg:flex-row justify-between gap-[20px] lg:gap-[5%]">
         {/* LEFT: Content */}
         <div className="w-full lg:w-1/2 flex flex-col gap-6">

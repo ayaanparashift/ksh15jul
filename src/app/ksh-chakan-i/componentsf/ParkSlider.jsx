@@ -260,7 +260,7 @@ const ParkSlider = ({ videos, onSelectVideo, selectedVideo }) => {
 
         {/* Navigation Buttons */}
         <div className="flex items-start w-full">
-          <div className="flex gap-[12px] md:gap-[14px] items-center w-full justify-start">
+          <div className="flex gap-[12px] md:gap-[14px] items-center w-full mt-5 justify-start">
             <button className="swiper-button-prev-video h-[41px] w-[41px]">
               <img
                 className="h-[41px] w-[41px]"

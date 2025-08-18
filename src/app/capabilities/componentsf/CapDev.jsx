@@ -32,7 +32,7 @@
 //   return (
 //     <div className="bg-[#092241] py-[100px]">
 //       <div className="fix12">
-//         <div className="rigCon flex-1 flex flex-col gap-10 pb-12">
+//         <div className="rigCon flex-1 flex flex-col lg:gap-10 gap-5 pb-12">
 //           <motion.h1
 //             initial={{ width: 0 }}
 //             whileInView={{ width: "100%" }}
@@ -175,9 +175,9 @@ const CapDev = () => {
   const [activeIndex, setActiveIndex] = useState(0); // Tracks which tab is active
 
   return (
-    <div className="bg-[#092241] min-h-[1229px] md:min-h-[930px] py-[100px]">
+    <div className="bg-[#092241] min-h-[1110px] md:min-h-[930px] lg:py-[100px] py-10">
       <div className="fix12">
-        <div className="rigCon flex-1 flex flex-col gap-10 pb-12">
+        <div className="rigCon flex-1 flex flex-col lg:gap-10 gap-5 pb-12">
           <h1
             // initial={{ width: 0 }}
             // whileInView={{ width: "100%" }}

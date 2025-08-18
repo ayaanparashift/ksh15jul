@@ -123,7 +123,7 @@ const GenLineHead = ({
   ].filter(Boolean); // Remove falsy values (false, undefined, null)
 
   return (
-    <div className="pb-[20px] relative border-b mb-[60px] border-[#D7D7D7] overflow-hidden whitespace-nowrap max-w-[1280px] tablinehead flex-nowrap">
+    <div className="pb-[20px] relative border-b lg:mb-[60px] mb-5 border-[#D7D7D7] overflow-hidden whitespace-nowrap max-w-[1280px] tablinehead flex-nowrap">
       {/* White masking div that slides out */}
       {/* <div
         className="absolute top-0 left-0 w-full h-full bg-[#EEF0F3] z-50"

@@ -2,18 +2,18 @@ const CaseINSec2 = () => {
   return (
     <>
       <div>
-        <div className="fix12 pt-[72px] pb-[84px]">
+        <div className="fix12 lg:pt-[72px] lg:pb-[84px] py-10">
           <h1 className="fpt-600 md:text-[40px] text-[24px] text-[#040404] leading-[30px] md:leading-[48px] border-b-[1px] border-b-[#D7D7D7] pb-4">
             Done and Delivered. On Time
           </h1>
-          <p className="text-[#434343] text-base fsans-400 pt-[35px]">
+          <p className="text-[#434343] text-base fsans-400 lg:pt-[35px] pt-5">
             Jabil is an American electronics manufacturing multinational with
             more than 140,000 employees in over 25 countries. They produce over
             300 of the biggest brands in the world in every market from
             healthcare, clean energy, automotive, defence, aerospace,
             telecommunications and to packaging and smartphones.
           </p>
-          <p className="text-[#434343] text-base fsans-400 pt-[35px]">
+          <p className="text-[#434343] text-base fsans-400 lg:pt-[35px] pt-5">
             Jabil wanted to set up a light engineering and assembly plant for
             manufacturing Nacelle, an aircraft component. They needed a 75,000
             square feet facility in Chakan, Pune. Jabil approached KSH INFRA for

@@ -32,7 +32,7 @@ const CapDev = () => {
   return (
     <div className="bg-[#092241] py-[100px]">
       <div className="fix12">
-        <div className="rigCon flex-1 flex flex-col gap-10 pb-12">
+        <div className="rigCon flex-1 flex flex-col lg:gap-10 gap-5 pb-12">
           <h1 className="text-3xl fpt-500 text-[#fff] leading-[33px] border-b-[#828282] border-b-[1px] pb-2">
             Leasing
           </h1>

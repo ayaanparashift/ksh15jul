@@ -55,7 +55,7 @@
 //         </Swiper>
 
 //         {/* Navigation Buttons */}
-//         <div className="flex items-center justify-start mt-2">
+//         <div className="flex items-center justify-start mt-5 mb-10">
 //           <button className="swiper-button-prev-iframe h-[41px] w-[41px] mr-2">
 //             <img
 //               className="h-[41px] w-[41px]"
@@ -184,7 +184,7 @@ const MapSlider = ({ onSelect }) => {
         </Swiper>
 
         {/* Navigation Buttons */}
-        <div className="flex items-center justify-start mt-2">
+        <div className="flex items-center justify-start mt-5 mb-10">
           <button className="swiper-button-prev-iframe h-[41px] w-[41px] mr-2">
             <img
               className="h-[41px] w-[41px]"

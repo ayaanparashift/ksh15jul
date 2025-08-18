@@ -141,14 +141,14 @@ const Timeline = () => {
   return (
     <div className="h-fit relative">
       <Particlecom />
-      <div className="relative py-28 overflow-hidden">
+      <div className="relative lg:py-28 py-10 overflow-hidden">
         {/* Heading */}
         <h2 className="w-fit text-4xl font-bold ml-[max(5%,calc((100vw-1250px)/2))] relative z-10 text-white border-b-[8px] border-b-[#F7E327]">
           The KSH Legacy
         </h2>
 
         {/* Timeline Swiper */}
-        <div className="relative max-[1536px]:h-[100vh] flex items-center z-10 pt-20 fix12">
+        <div className="relative max-[1536px]:h-[100vh] flex items-center z-10 lg:pt-20 pt-10 fix12">
           {/* Center horizontal line */}
           <div className="absolute w-[200vw] -left-[100%] right-0 top-[80%] sm:top-[46.8%] -translate-y-1/2 h-[1px] bg-white z-0" />
 

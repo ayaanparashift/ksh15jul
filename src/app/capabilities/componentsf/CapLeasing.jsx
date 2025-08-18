@@ -4,7 +4,7 @@ const CapLeasing = () => {
   return (
     <>
       <div className="bg-[#fff]">
-        <div className="fix12 flex flex-col gap-10 py-24 lg:flex-row-reverse">
+        <div className="fix12 flex flex-col lg:gap-10 lg:py-24 gap-5 py-10 lg:flex-row-reverse">
           <div className="LeftCon flex-1 relative overflow-hidden">
             <img src="/Cap/caplea.png" alt="" />
             {/* <div
@@ -20,14 +20,14 @@ const CapLeasing = () => {
             // whileInView={{ opacity: 1 }}
             // viewport={{ once: true, amount: 0.3 }}
             // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
-            className="rigCon flex-1 flex flex-col gap-10"
+            className="rigCon flex-1 flex flex-col lg:gap-10 gap-5"
           >
             <h1 className="text-3xl fpt-500 text-[#092241] leading-[33px] border-b-[#040404] border-b-[1px] pb-2">
               Leasing
             </h1>
 
             <div className="">
-              <h1 className="text-xl fsans-600 leading-[26px] text-[#1C1C1C] pb-[34px]">
+              <h1 className="text-xl fsans-600 leading-[26px] text-[#1C1C1C] lg:pb-[34px] pb-5">
                 Matching Diverse Business Needs
               </h1>
               <p className="text-lg leading-[28px] fsans-400 text-[#434343]">

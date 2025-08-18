@@ -639,7 +639,7 @@ export const CarSlide = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div className="w-full pt-[5%] lg:pt-[70px] overflow-visible">
+    <div className="w-full pt-[70px] overflow-visible">
       {/* Main Section */}
       <div className="w-full lg:bg-[linear-gradient(to_bottom,#ffffff_90%,#092241_10%)]">
         <div className="fix12 !overflow-visible">

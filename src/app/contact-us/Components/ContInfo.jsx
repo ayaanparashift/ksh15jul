@@ -8,9 +8,9 @@ const ContInfo = () => {
       // whileInView={{ opacity: 1 }}
       // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
       // viewport={{ amount: 0.3, once: true }}
-      className="flex flex-col gap-[30px] xl:gap-[60px] xl:pb-0 pb-10"
+      className="flex flex-col gap-[30px] xl:gap-[60px] xl:pb-0"
     >
-      <div className="flex flex-col gap-[10px] xl:gap-[30px]">
+      <div className="flex flex-col gap-[20px] xl:gap-[30px]">
         {/* email */}
         <div className="flex gap-[10px] items-center justify-center w-fit">
           <div>

@@ -2229,7 +2229,7 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
             "-" +
             showLoading
           }
-          className="fix12 py-[70px] grid grid-cols-1 lg:grid-cols-2 gap-y-[65px]"
+          className="fix12 py-[70px] grid grid-cols-1 lg:grid-cols-2 md:gap-y-[65px] gap-y-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

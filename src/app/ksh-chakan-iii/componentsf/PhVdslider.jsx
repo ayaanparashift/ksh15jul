@@ -27,7 +27,7 @@
 //   const videoUrls = ["https://player.vimeo.com/video/754714577"];
 
 //   return (
-//     <div className="py-[65px] overflow-hidden w-full">
+//     <div className="lg:py-[65px] py-10 overflow-hidden w-full">
 //       <div className="fix12">
 //         <GenLineHead heading="Park Gallery" acbtn={acbtn} setAcBtn={setAcBtn} />
 //       </div>
@@ -374,7 +374,7 @@
 //   }, [acbtn]);
 
 //   return (
-//     <div className="py-[65px] overflow-hidden w-full">
+//     <div className="lg:py-[65px] py-10 overflow-hidden w-full">
 //       <div className="fix12">
 //         <GenLineHead heading="Park Gallery" acbtn={acbtn} setAcBtn={setAcBtn} />
 //       </div>
@@ -687,7 +687,7 @@ const PhVdslider = () => {
   }, [showRenders, showPhotos, showVids, acbtn]);
 
   return (
-    <div className="py-[65px] overflow-hidden w-full">
+    <div className="lg:py-[65px] py-10 overflow-hidden w-full">
       <div className="fix12">
         <GenLineHead
           heading="Park Gallery"
