@@ -1,6 +1,7 @@
 import ContactSpot from "./Components/ContactSpot";
 import Contact from "./Components/Contact";
 import Map from "./Components/Map";
+import MapTab from "./Components/MapTab";
 
 export const metadata = {
   title:
@@ -13,7 +14,7 @@ const page = () => {
     <>
       <ContactSpot />
       <Contact />
-      <Map />
+      <MapTab />
     </>
   );
 };

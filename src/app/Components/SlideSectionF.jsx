@@ -1006,21 +1006,7 @@ const SlideSectionF = () => {
               Careers at <br className="lg:flex hidden" />
               KSH INFRA
             </h1>
-            {/* <div className="tabs md:justify-center justify-between flex gap-4">
-              {tabsData.map((tab, index) => (
-                <button
-                  key={tab.title}
-                  className={`px-3 h-[46px] transition-colors duration-500 border-[#D7D7D7] border-opacity-50 border-0 md:border-[2px] text-white rounded-[10px] ${
-                    activeIndex === index
-                      ? "md:bg-red-700 text-red-700 border-red-700"
-                      : "bg-transparent"
-                  }`}
-                  onClick={() => handleTabClick(index)}
-                >
-                  {tab.title}
-                </button>
-              ))}
-            </div> */}
+
             <div className="tabs md:justify-center justify-between flex gap-4">
               {tabsData.map((tab, index) => (
                 <button
