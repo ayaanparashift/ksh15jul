@@ -578,7 +578,7 @@ const ContactForm = () => {
   // }
 
   return (
-    <div className="bg-[#092241] md:min-h-screen min-h-[700px] flex-1 px-[5%] md:px-[40px] pt-[47px] pb-[47px] xl:mt-[50px] xl:w-auto md:max-w-[50%]">
+    <div className="bg-[#092241] md:min-h-fit min-h-[700px] flex-1 px-[5%] md:px-[40px] pt-[47px] pb-[47px] xl:mt-[50px] xl:w-auto md:max-w-[50%]">
       <Toaster position="top-center" />
 
       {!isSubmitted ? (

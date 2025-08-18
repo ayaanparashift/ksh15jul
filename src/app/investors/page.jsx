@@ -2,6 +2,7 @@ import InvesterSec2 from "./components/InvesterSec2";
 import InvesterCase from "./components/InvesterCase";
 import InvesRelaSpot from "./components/InvesRelaSpot";
 import InvFlip from "./components/InvFlip";
+import InvflipF from "./components/InvflipF";
 
 export const metadata = {
   title:
@@ -16,7 +17,7 @@ const page = () => {
       <InvesRelaSpot />
       <InvesterSec2 />
       {/* <InvesterCase /> */}
-      <InvFlip />
+      <InvflipF />
     </>
   );
 };

@@ -28,7 +28,7 @@ const ParkOverview = () => {
   //       }}
   //     >
   //       <div className="ml-[max(5%,calc((100vw-1250px)/2))] md:mr-0 mr-[max(5%,calc((100vw-1250px)/2))]  flex flex-col w-auto lg:w-[75%] xl:w-[40%] py-[70px]">
-  //         <LineHead heading="About Hosur (Near Bengaluru)" />
+  //         <LineHead heading="About Hosur, Bengaluru" />
   //         <motion.h3
   //           initial={{ opacity: 0 }}
   //           whileInView={{ opacity: 1 }}

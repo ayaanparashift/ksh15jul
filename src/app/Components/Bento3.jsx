@@ -5,8 +5,8 @@ import Link from "next/link";
 const pressReleases = [
   {
     id: 1,
-    title: "KSH Infra to Invest Rs 5.5 Billion in Tamil Nadu Park.",
-    content: "KSH Infra to Invest Rs 5.5 Billion in Tamil Nadu Park.",
+    title: "KSH INFRA to Invest ₹550 Cr. in Tamil Nadu Park.",
+    content: "KSH INFRA to Invest ₹550 Cr. in Tamil Nadu Park.",
     image: "/press/press6.webp",
     href: "https://www.constructionworld.in/urban-infrastructure/warehouse-and-logistics/ksh-infra-to-invest-rs-5.5-billion-in-tamil-nadu-park/76359",
     newTab: true,
@@ -15,9 +15,9 @@ const pressReleases = [
   {
     id: 2,
     title:
-      "KSH Infra to invest ₹550 crore in second industrial park in Tamil Nadu.",
+      "KSH INFRA to invest ₹550 Cr. in second industrial park in Tamil Nadu.",
     content:
-      "KSH Infra to invest ₹550 crore in second industrial park in Tamil Nadu.",
+      "KSH INFRA to invest ₹550 Cr. in second industrial park in Tamil Nadu.",
     image: "/press/press4.png",
     href: "https://manufacturing.economictimes.indiatimes.com/news/industry/ksh-infra-to-invest-550-crore-in-second-industrial-park-in-tamil-nadu/122437140",
     newTab: true,

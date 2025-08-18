@@ -44,9 +44,9 @@ export default function PFetch() {
       {
         id: 8,
         title:
-          "IndoSpace inks Rs 1,000 Cr. JV with KSH INFRA to develop Logistics Parks across India",
+          "IndoSpace inks ₹1,000 Cr. JV with KSH INFRA to develop Logistics Parks across India",
         content:
-          "IndoSpace inks Rs 1,000 Cr. JV with KSH INFRA to develop Logistics Parks across India",
+          "IndoSpace inks ₹1,000 Cr. JV with KSH INFRA to develop Logistics Parks across India",
         image: "/caseInside/jabilspot.png",
         href: "http://localhost:3000/case-studies/jabil",
       },

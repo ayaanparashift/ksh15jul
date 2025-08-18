@@ -27,7 +27,7 @@ export default function PropertyCard({
             <span>{pLocal}</span>
           </div>
           <div className="flex justify-between fsans-400 text-[16px] leading-[26px]">
-            <span>Potential</span>
+            <span>POTENTIAL</span>
             <span>{pArea}</span>
           </div>
           <div className="flex justify-between fsans-400 text-[16px] leading-[26px]">

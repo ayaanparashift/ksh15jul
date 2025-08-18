@@ -12,7 +12,7 @@ const LastSw = () => {
   const CardData = [
     {
       parkTitle: "KSH Chakan IV",
-      pLocal: "Pune | Maharashtra",
+      pLocal: "Chakan | Pune",
       totalLand: "0.36 MN SQ.FT.",
       pImg: "/ParkPage/chakan-4/ch4lw.png",
       buildings: "02 Buildings",
@@ -20,23 +20,23 @@ const LastSw = () => {
     },
     {
       parkTitle: "KSH Chakan III",
-      pLocal: "Pune | Maharashtra",
-      totalLand: "1.5 MN SQ.FT.",
+      pLocal: "Chakan | Pune",
+      totalLand: "1.50 MN SQ.FT.",
       pImg: "/ParkPage/chakan-3/ch3lw.png",
       buildings: "08 Buildings",
       pLink: "/ksh-chakan-iii",
     },
     {
       parkTitle: "KSH Chakan II",
-      pLocal: "Pune | Maharashtra",
-      totalLand: "1.2 MN SQ.FT.",
+      pLocal: "Chakan | Pune",
+      totalLand: "1.20 MN SQ.FT.",
       pImg: "/ParkPage/chakan-2/ch2lw.png",
       buildings: "05 Buildings",
       pLink: "/ksh-chakan-ii",
     },
     {
       parkTitle: "KSH Talegaon I",
-      pLocal: "Pune | Maharashtra",
+      pLocal: "Chakan | Pune",
       totalLand: "0.14 MN SQ.FT.",
       pImg: "/ParkPage/talegaon-i/tal1lw.png",
       buildings: "02 Buildings",
@@ -44,8 +44,8 @@ const LastSw = () => {
     },
     {
       parkTitle: "KSH Hosur I",
-      pLocal: "Tamil Nadu | Hosur",
-      totalLand: "1.2 MN SQ.FT.",
+      pLocal: "Hosur | Bengaluru",
+      totalLand: "1.20 MN SQ.FT.",
       buildings: "04 Buildings",
       pImg: "/ParkPage/hosur-1/hosurlw.png",
       pLink: "/ksh-hosur-i",

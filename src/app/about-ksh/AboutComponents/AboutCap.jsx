@@ -23,7 +23,7 @@ const tabs = [
     title: "KSH INTEGRATED LOGISTICS",
     heading: "SETTING UP MULTI-CLIENT WAREHOUSING SOLUTIONS PAN-INDIA",
     content:
-      "Setting up multi-client warehousing solutions pan-India. The company has over 1.5 million square feet of warehousing across key Indian markets. The facilities are plug-and- play, effectively and efficiently adaptive to all our clients' needs.",
+      "Setting up multi-client warehousing solutions pan-India. The company has over 1.50 million square feet of warehousing across key Indian markets. The facilities are plug-and- play, effectively and efficiently adaptive to all our clients' needs.",
     images: {
       top: ["/AboutPage/aboutSlide/il2.png"],
     },
@@ -90,7 +90,7 @@ const tabs = [
 //           className="text-[#202020] mt-[-45px] flex sm:w-full  items-start text-[16px] fsans-600 leading-[26px]"
 //         >
 //           The KSH Group has a storied past, leading to over 450 employees today
-//           and a turnover exceeding INR 1,200 crore. Throughout its journey, the
+//           and a turnover exceeding INR 1,200 Cr.. Throughout its journey, the
 //           KSH Group has strong ties to the logistics and manufacturing sectors.
 //           The company’s foundation derives its strength from its core values and
 //           a steadfast commitment to excellence. KSH INFRA adheres firmly to this
@@ -265,11 +265,11 @@ const AboutCap = () => {
           className="text-[#202020] mt-[-45px] flex sm:w-full items-start text-[16px] fsans-600 leading-[26px]"
         >
           The KSH Group boasts a rich legacy, growing to employ over 550
-          professionals with a turnover surpassing INR 2,000 crore. Rooted in
-          the logistics and manufacturing sectors, the Group has built its
-          success on a foundation of strong core values and an unwavering
-          commitment to excellence. This philosophy continues to guide KSH INFRA
-          in the development of world-class industrial and logistics parks.
+          professionals with a turnover surpassing INR 2,000 Cr.. Rooted in the
+          logistics and manufacturing sectors, the Group has built its success
+          on a foundation of strong core values and an unwavering commitment to
+          excellence. This philosophy continues to guide KSH INFRA in the
+          development of world-class industrial and logistics parks.
         </p>
       </div>
       <div className="bg-[#092241] md:h-[665px] flex items-end justify-end">

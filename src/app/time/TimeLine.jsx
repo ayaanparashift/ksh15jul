@@ -93,7 +93,7 @@ const timelineData = [
     id: 14,
     year: 2021,
     content:
-      "KSH INFRA partnered with Indospace Capital to invest INR 1000 crores in a joint venture (JV) and commenced construction on its first project under the JV of 1.6 Million sq. ft. with an aim to develop 10 Million sq. ft. across key markets in India.",
+      "KSH INFRA partnered with Indospace Capital to invest INR 1000 Cr. in a joint venture (JV) and commenced construction on its first project under the JV of 1.6 Million sq. ft. with an aim to develop 10 Million sq. ft. across key markets in India.",
     image: "/time/t14.jpg",
   },
   {

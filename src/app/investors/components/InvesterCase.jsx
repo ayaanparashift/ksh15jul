@@ -47,7 +47,7 @@
 //                   zones in India.
 //                 </p>
 //                 <p className="text-base fsans-400 leading-[26px] text-[#eee]">
-//                   IndoSpace is investing INR 1,000 crore (~ USD 120 million) in
+//                   IndoSpace is investing INR 1,000 Cr. (~ USD 120 million) in
 //                   a JV with KSH INFRA to develop a 10-million square feet
 //                   portfolio of world-class warehousing and industrial parks
 //                   across the country over the next five years.
@@ -301,7 +301,7 @@ const InvesterCase = () => {
                   vast experience in the industrial real estate market.
                 </p>
                 {/* <p className="text-base fsans-400 leading-[26px] text-[#eee]">
-                  IndoSpace is investing INR 1,000 crore (~ USD 120 million) in
+                  IndoSpace is investing INR 1,000 Cr. (~ USD 120 million) in
                   a JV with KSH INFRA to develop a 10-million square feet
                   portfolio of world-class warehousing and industrial parks
                   across the country over the next five years.

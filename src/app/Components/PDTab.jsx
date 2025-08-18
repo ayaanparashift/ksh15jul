@@ -264,7 +264,7 @@
 //           {/* Static description text */}
 //           <div className="w-full lg:w-[50%] text-[#838383] text-[18px] flato-400 leading-relaxed pt-5 lg:pt-20">
 //             The industrial park boasts IGBC pre-certified Platinum status,
-//             highlighting KSH Infra’s dedication to green industrial development.
+//             highlighting KSH INFRA’s dedication to green industrial development.
 //             With exceptional planning and top-notch amenities, this fully
 //             customisable, move-in ready industrial facility guarantees
 //             uncompromised productivity, efficiency, and safety for your

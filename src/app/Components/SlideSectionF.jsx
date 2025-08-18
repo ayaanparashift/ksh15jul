@@ -257,8 +257,8 @@ const tabsData = [
     title: "Growth",
     description:
       "At KSH INFRA, we invest in your career growth. Our structured career paths, mentorship programs, and skill-building opportunities, ensure that every team member has the tools to succeed and grow.",
-    image: "/Slideimgs/ssf1.png",
-    middleImage: "/Slideimgs/Growth-middle.png",
+    image: "/Slideimgs/gr18.png",
+    middleImage: "/Slideimgs/ssf1.png",
   },
   {
     title: "Culture",

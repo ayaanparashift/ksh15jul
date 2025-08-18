@@ -141,7 +141,7 @@ const StatsSection = () => {
       <div className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#E30613] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300">
         <p className="xl:text-[18px] lg:text-[16px] text-[14px] fsans-600 text-[#092241] group-hover:text-white">
           <span className="fsans-600 2xl:text-[40px] xl:text-[32px] lg:text-[28px] text-[20px] leading-[111%]">
-            4 MN
+            04 MN
           </span>{" "}
           SQ.FT.
         </p>
@@ -153,7 +153,7 @@ const StatsSection = () => {
       <div className="flex countersec flex-col items-left text-left px-[20px] xl:px-[42px] group hover:bg-[#E30613] hover:text-white gap-[12px] 2xl:py-[75px] xl:py-[66px] lg:py-[56px] py-[20px] border-t border-r border-gray-300">
         <p className="xl:text-[18px] lg:text-[16px] text-[14px] fsans-600 text-[#092241] group-hover:text-white">
           <span className="fsans-600 2xl:text-[40px] xl:text-[32px] lg:text-[28px] text-[20px] leading-[111%]">
-            3 MN
+            03 MN
           </span>{" "}
           SQ.FT.
         </p>
