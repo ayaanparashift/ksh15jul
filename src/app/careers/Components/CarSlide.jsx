@@ -675,7 +675,7 @@ export const CarSlide = () => {
                   </div>
 
                   <div className="flex flex-col flex-1">
-                    <div className="flex flex-col gap-[10px] lg:gap-[30px]">
+                    <div className="flex flex-col gap-[10px] lg:gap-[20px]">
                       <h3 className="fsans-600 text-[26px] md:text-[36px] text-[#fff]">
                         {slide.title}
                       </h3>

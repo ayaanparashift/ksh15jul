@@ -11,7 +11,7 @@ const TabLineHead = ({ heading, acbtn, setAcBtn }) => {
   ];
 
   return (
-    <div className="relative max-w-[1280px] border-b border-[#ffffff80] pb-[20px] lg:mb-[66px] mb-[36px] overflow-hidden whitespace-nowrap tablinehead">
+    <div className="relative max-w-[1280px] border-b border-[#ffffff80] pb-[20px] lg:mb-[66px] mb-5 overflow-hidden whitespace-nowrap tablinehead">
       <div
         // initial={{ opacity: 0 }}
         // whileInView={{ opacity: 1 }}

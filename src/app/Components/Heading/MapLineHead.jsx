@@ -77,7 +77,7 @@ const MapLineHead = ({ heading, hideopen, ach }) => {
     { title: "Chennai", hid: 3, poE: "none" },
   ];
   return (
-    <div className="absolute z-[1000] fix12 top-5 lg:top-[100px] left-[max(5%,calc((100vw-1250px)/2))] lg:mb-[0px] mb-[36px] tablinehead overflow-hidden whitespace-nowrap">
+    <div className="absolute z-[1000] fix12 top-5 lg:top-[100px] left-[max(5%,calc((100vw-1250px)/2))] lg:mb-[0px] mb-5 tablinehead overflow-hidden whitespace-nowrap">
       <div
         className="relative flex pb-2 gap-[10px] sm:gap-[0px] lg:pb-[20px] overflow-hidden whitespace-nowrap items-center justify-between w-full"
         // initial={{ opacity: 0 }}

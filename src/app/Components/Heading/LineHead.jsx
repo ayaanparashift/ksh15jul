@@ -13,7 +13,7 @@ const LineHead = ({ heading, clr, bclr, bopacity, fontSize, lineHeigth }) => {
         className="overflow-x-hidden h-fit md:whitespace-nowrap"
       >
         <h2
-          className={`leading-[26px] w-full spotlightheaddd text-[20px] pb-[20px] border-b xl:mb-[66px] mb-[36px] border-[${bclr}] border-opacity-[${bopacity}] fsans-600 text-[#092241] ${clr} linehead-text`}
+          className={`leading-[26px] w-full spotlightheaddd text-[20px] pb-[20px] border-b lg:mb-[66px] mb-5 border-[${bclr}] border-opacity-[${bopacity}] fsans-600 text-[#092241] ${clr} linehead-text`}
           style={{ fontSize: `${fontSize}px`, lineHeight: `${lineHeigth}px` }}
         >
           {heading}
