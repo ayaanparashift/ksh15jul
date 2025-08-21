@@ -208,7 +208,7 @@ const Landing3 = () => {
               </div>
               <div className="min-1600:hidden md:inline-block hidden">
                 <img
-                  src="/homepage/chomespot.png"
+                  src="/homepage/chmapspot.png"
                   alt="some"
                   width={704}
                   height={500}
@@ -220,7 +220,7 @@ const Landing3 = () => {
             {/* Mobile Image */}
             <div className="w-full max-w-[1250px] mx-auto px-5 md:hidden">
               <img
-                src="/homepage/chspotph.png"
+                src="/homepage/chmmob.png"
                 alt="some"
                 width={800}
                 height={600}
