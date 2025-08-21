@@ -14,7 +14,7 @@ const testimonials = [
   },
   {
     id: 2,
-    image: "/homepage/tes/ct2f.png",
+    image: "/homepage/tes/ctcgf.png",
     logo: "/testimonial/cttf.png",
     company: "CTC Global",
     content:
