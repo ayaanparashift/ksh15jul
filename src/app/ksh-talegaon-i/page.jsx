@@ -10,7 +10,7 @@ import ParkInfra from "../ksh-chakan-i/componentsf/ParkInfra";
 import PDTab from "../Components/PDTab";
 export const metadata = {
   title:
-    "KSH Talegaon Premium Industrial and Logistics Park in Pune with Build-to-Suit Infrastructure",
+    "KSH Talegaon Premium Industrial and Logistics Park in Pune with Built-to-Suit Infrastructure",
   description:
     "KSH Talegaon is a premium industrial and logistics park in Pune, Maharashtra, offering scalable infrastructure, advanced connectivity, and customized Warehouse solutions",
 };

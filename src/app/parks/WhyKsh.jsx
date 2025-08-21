@@ -12,10 +12,10 @@
 // const WhyKsh = () => {
 //   const tabs = [
 //     {
-//       title: "Build-to-Suit Solutions",
-//       heading: "Build-to-Suit Solutions",
+//       title: "Built-to-Suit Solutions",
+//       heading: "Built-to-Suit Solutions",
 //       content:
-//         "We design our build-to-suit facilities from scratch to match exactly what you need. You get to guide both design and construction, ensuring your final space works perfectly with your operations.\nEverything—from materials to layout to specialized infrastructure—is carefully built to boost your efficiency and productivity. Your inputs shape a facility that feels custom-made because it truly is.\nWhen you need a space that works precisely for your unique business requirements, our build-to-suit approach delivers results that standard facilities simply can't rival.",
+//         "We design our built-to-suit facilities from scratch to match exactly what you need. You get to guide both design and construction, ensuring your final space works perfectly with your operations.\nEverything—from materials to layout to specialized infrastructure—is carefully built to boost your efficiency and productivity. Your inputs shape a facility that feels custom-made because it truly is.\nWhen you need a space that works precisely for your unique business requirements, our built-to-suit approach delivers results that standard facilities simply can't rival.",
 //       images: {
 //         // top: ["./parkOverview/bulitToStart.png"],
 //         top: ["./parkOverview/builtToSuit.png"],
@@ -267,10 +267,10 @@ import LineHead from "../Components/Heading/LineHead";
 const WhyKsh = () => {
   const tabs = [
     {
-      title: "Build-to-Suit Solutions",
-      heading: "Build-to-Suit Solutions",
+      title: "Built-to-Suit Solutions",
+      heading: "Built-to-Suit Solutions",
       content:
-        "We design our build-to-suit facilities from scratch to match exactly what you need. You get to guide both design and construction, ensuring your final space works perfectly with your operations.\nEverything—from materials to layout to specialized infrastructure—is carefully built to boost your efficiency and productivity. Your inputs shape a facility that feels custom-made because it truly is.\nWhen you need a space that works precisely for your unique business requirements, our build-to-suit approach delivers results that standard facilities simply can't rival.",
+        "We design our built-to-suit facilities from scratch to match exactly what you need. You get to guide both design and construction, ensuring your final space works perfectly with your operations.\nEverything—from materials to layout to specialized infrastructure—is carefully built to boost your efficiency and productivity. Your inputs shape a facility that feels custom-made because it truly is.\nWhen you need a space that works precisely for your unique business requirements, our built-to-suit approach delivers results that standard facilities simply can't rival.",
       images: {
         // top: ["./parkOverview/bulitToStart.png"],
         top: ["./parkOverview/whyk1.webp"],

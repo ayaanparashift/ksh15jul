@@ -58,7 +58,7 @@
 //       {!isSubmitted && (
 //         <form
 //           onSubmit={handleSubmit}
-//           className="flex flex-col gap-[24px] sm:gap-[50px]"
+//           className="flex flex-col gap-[24px] sm:gap-[40px]"
 //         >
 //           <div className="flex sm:flex-row flex-col gap-[24px]">
 //             <input
@@ -273,7 +273,7 @@
 //       {!isSubmitted && (
 //         <form
 //           onSubmit={handleSubmit}
-//           className="flex flex-col gap-[24px] sm:gap-[50px]"
+//           className="flex flex-col gap-[24px] sm:gap-[40px]"
 //         >
 //           <div className="flex sm:flex-row flex-col gap-[24px]">
 //             <div className="w-full sm:w-[295px]">
@@ -585,10 +585,10 @@ const ContactForm = () => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="flex flex-col gap-[24px] sm:gap-[50px]"
+          className="flex flex-col gap-[24px] sm:gap-[40px]"
         >
           {/* Name & Company */}
-          <div className="flex flex-col sm:flex-row gap-[24px]">
+          <div className="flex flex-col sm:flex-row gap-[24px] sm:gap-[40px]">
             {["user_name", "user_company"].map((field) => (
               <div key={field} className="w-full sm:w-[295px]">
                 <input
@@ -609,7 +609,7 @@ const ContactForm = () => {
           </div>
 
           {/* Phone & Email */}
-          <div className="flex flex-col sm:flex-row gap-[24px]">
+          <div className="flex flex-col sm:flex-row gap-[24px] sm:gap-[40px]">
             <div className="w-full sm:w-[295px]">
               <input
                 name="user_phone"

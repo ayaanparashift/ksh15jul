@@ -9,6 +9,21 @@ import "swiper/css/navigation";
 import "swiper/css/free-mode";
 
 const PhVdslider = () => {
+  const [offsetAfter, setOffsetAfter] = useState(0);
+  useEffect(() => {
+    const handleResize = () => {
+      const vw = window.innerWidth;
+      // replicate max(5%, calc((100vw - 1250px)/2))
+      const fivePercent = vw * 0;
+      const halfExtra = (vw - 1250) / 2;
+      const calcVal = Math.max(fivePercent, halfExtra);
+      setOffsetAfter(calcVal > 0 ? calcVal : 0);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   // Determine the first available tab based on visibility props
 
   // Visibility props for tabs
@@ -39,12 +54,7 @@ const PhVdslider = () => {
     "hosur-1/hs3.jpg",
     "hosur-1/hs4.jpg",
   ];
-  // const photoImages = [
-  //   "hosur-1/hs1.jpg",
-  //   "hosur-1/hs2.jpg",
-  //   "hosur-1/hs3.jpg",
-  //   "hosur-1/hs4.jpg",
-  // ];
+
   const videoUrls = [
     {
       labl: "Route Video- Silk Board to KSH Hosur Park I",
@@ -103,66 +113,6 @@ const PhVdslider = () => {
       {/* Sliders Wrapper */}
       <div className="ml-[max(5%,calc((100vw-1250px)/2))] sm:mr-0 mr-[5%] min-h-fit h-fit sm:min-h-[420px]">
         <AnimatePresence mode="wait">
-          {/* {acbtn === "Photos" && (
-            <motion.div
-              key="photos-slider"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
-            >
-              <Swiper
-                onSwiper={(swiper) => (swiperRef1.current = swiper)}
-                modules={[Navigation, FreeMode]}
-                spaceBetween={20}
-                speed={300}
-                freeMode={true}
-                preventInteractionOnTransition={true}
-                navigation={{
-                  prevEl: ".swiper-button-prev-slider1",
-                  nextEl: ".swiper-button-next-slider1",
-                }}
-                breakpoints={{
-                  320: { slidesPerView: 1 },
-                  1024: { slidesPerView: 1.3 },
-                  1280: { slidesPerView: 1.6 },
-                  1440: { slidesPerView: 2.1 },
-                }}
-              >
-                {photoImages.map((img, index) => (
-                  <SwiperSlide key={index}>
-                    <img
-                      className="w-[690px] select-none h-[200px] sm:h-[380px] max-w-[100%]"
-                      src={`/ParkPage/${img}`}
-                      alt=""
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-
-              {hasMultiplePhotos && (
-                <div className="flex items-start pt-[20px] w-full">
-                  <div className="flex gap-[12px] md:gap-[14px] items-center w-full justify-start">
-                    <button className="swiper-button-prev-slider1 h-[41px] w-[41px]">
-                      <img
-                        className="h-[41px] w-[41px]"
-                        src="/ParkPage/parrowp.svg"
-                        alt="ArrowLeft"
-                      />
-                    </button>
-                    <button className="swiper-button-next-slider1 h-[41px] w-[41px]">
-                      <img
-                        className="h-[41px] w-[41px]"
-                        src="/ParkPage/parrown.svg"
-                        alt="ArrowRight"
-                      />
-                    </button>
-                  </div>
-                </div>
-              )}
-            </motion.div>
-          )} */}
-
           {acbtn === "Renders" && (
             <motion.div
               key="renders-slider"
@@ -175,6 +125,7 @@ const PhVdslider = () => {
                 onSwiper={(swiper) => (swiperRef3.current = swiper)}
                 modules={[Navigation, FreeMode]}
                 spaceBetween={20}
+                slidesOffsetAfter={offsetAfter} // dynamic now
                 speed={300}
                 freeMode={true}
                 preventInteractionOnTransition={true}
@@ -236,6 +187,7 @@ const PhVdslider = () => {
                 modules={[Navigation, FreeMode]}
                 spaceBetween={20}
                 speed={300}
+                slidesOffsetAfter={offsetAfter} // dynamic now
                 freeMode={true}
                 preventInteractionOnTransition={true}
                 navigation={{

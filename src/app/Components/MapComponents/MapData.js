@@ -2,7 +2,7 @@ export const mapslided = [
   {
     parkimg: "/homepage/pcard/ch4be.png",
     title: "KSH Chakan IV",
-    city: "Pune, Maharashtra",
+    city: "Chakan, Pune",
     tarea: "0.36 MN. SQ. FT.",
     parkLink: "/ksh-chakan-iv",
     tbuild: "02 BUILDINGS",
@@ -10,7 +10,7 @@ export const mapslided = [
   {
     parkimg: "/homepage/pcard/ch3be.png",
     title: "KSH Chakan III",
-    city: "Pune, Maharashtra",
+    city: "Chakan, Pune",
     tarea: "1.50 MN. SQ. FT.",
     parkLink: "/ksh-chakan-iii",
     tbuild: "08 BUILDINGS",
@@ -18,7 +18,7 @@ export const mapslided = [
   {
     parkimg: "/homepage/pcard/ch2be.png",
     title: "KSH Chakan II",
-    city: "Pune, Maharashtra",
+    city: "Chakan, Pune",
     tarea: "1.20 MN. SQ. FT.",
     parkLink: "/ksh-chakan-ii",
     tbuild: "05 BUILDINGS",
@@ -26,7 +26,7 @@ export const mapslided = [
   {
     parkimg: "/homepage/pcard/ch1be.png",
     title: "KSH Chakan I",
-    city: "Pune, Maharashtra",
+    city: "Chakan, Pune",
     tarea: "0.85 MN. SQ. FT.",
     parkLink: "/ksh-chakan-i",
     tbuild: "04 BUILDINGS",
@@ -34,7 +34,7 @@ export const mapslided = [
   {
     parkimg: "/homepage/pcard/tal1be.png",
     title: "KSH Talegaon I",
-    city: "Pune, Maharashtra",
+    city: "Chakan, Pune",
     tarea: "0.14 MN. SQ. FT.",
     parkLink: "/ksh-talegaon-i",
     tbuild: "02 BUILDINGS",

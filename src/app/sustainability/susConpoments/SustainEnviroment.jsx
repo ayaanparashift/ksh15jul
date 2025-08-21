@@ -151,7 +151,7 @@ const SustainEnviroment = () => {
     {
       title: "Customizable Facilities for Every Need",
       icon: "/uspicons/icon2.svg",
-      content: "Offers ‘Build-to-Suit’ and ‘Ready-to-Move’ options.",
+      content: "Offers ‘Built-to-Suit’ and ‘Ready-to-Move’ options.",
     },
     {
       title: "Ready-to-Move Facilities Available",

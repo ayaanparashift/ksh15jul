@@ -56,7 +56,7 @@
 //             <p className="text-lg leading-[28px] fsans-400 text-[#CECECE]">
 //               At KSH INFRA, we understand that your business is unique, and so
 //               are your facility requirements. That is why our we offer both
-//               ‘Build-to-Suit’ and ‘Ready-to-Move’ solutions to match the diverse
+//               ‘Built-to-Suit’ and ‘Ready-to-Move’ solutions to match the diverse
 //               needs of our clients.
 //             </p>
 //           </motion.div>
@@ -125,7 +125,7 @@ import { AnimatePresence, motion } from "framer-motion";
 const CapDev = () => {
   const tabs = [
     {
-      title: "Build-to-Suit Solutions",
+      title: "Built-to-Suit Solutions",
       content:
         "This is the content for Built to Suit. You can add more details here!",
       image: "/Cap/capdev2.png",
@@ -200,7 +200,7 @@ const CapDev = () => {
             <p className="text-lg leading-[28px] fsans-400 text-[#CECECE]">
               At KSH INFRA, we understand that your business is unique, and so
               are your facility requirements. That is why our we offer both
-              ‘Build-to-Suit’ and ‘Ready-to-Move’ solutions to match the diverse
+              ‘Built-to-Suit’ and ‘Ready-to-Move’ solutions to match the diverse
               needs of our clients.
             </p>
           </div>
