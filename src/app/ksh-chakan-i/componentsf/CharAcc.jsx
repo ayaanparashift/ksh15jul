@@ -41,7 +41,7 @@ const CharAcc = () => {
       title: "Automotive Hub",
       // charnum: "01",
       content:
-        " Chakan houses major automotive brands like Volkswagen, Bajaj Auto, Mercedes Benz, and Hyundai Construction, positioning it as a central hub for automotive manufacturing and engineering excellence.",
+        "Chakan houses major automotive brands like Volkswagen, Mahindra & Mahindra, Mercedes Benz, and Bridgestone, positioning it as a central hub for automotive manufacturing and engineering excellence.",
     },
     {
       title: "Talent Magnet",

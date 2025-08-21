@@ -9,19 +9,19 @@
 //       title: "Ethics & Compliance",
 //       content:
 //         "The KSH INFRA Code of Conduct Handbook, which we follow meticulously, sets a high standard for compliance. This encompasses every aspect of how our team interacts with internal and external stakeholders to how our projects are commissioned and managed.",
-//       image: "Sustainability/Ethics&Compliance.png",
+//       image: "/Sustainability/Ethics&Compliance.png",
 //     },
 //     {
 //       title: "Safety",
 //       content:
 //         "KSH INFRA parks offer top-notch amenities, prioritise safety protocols and facilities.  Safety is integral to our operations, allowing us to deliver reliable, compliant and sustainable infrastructure.",
-//       image: "Sustainability/SustainabilitySafety.png",
+//       image: "/Sustainability/SustainabilitySafety.png",
 //     },
 //     {
 //       title: "Value Creation",
 //       content:
 //         "We create value for society and our stakeholders in many ways, including job opportunities, tax payment support, participation in the supply chain, and investment in local communities.",
-//       image: "Sustainability/govb.png",
+//       image: "/Sustainability/govb.png",
 //     },
 //   ];
 
@@ -89,8 +89,8 @@
 //                   <img
 //                     src={
 //                       openIndex === index
-//                         ? "Sustainability/faq_minus.svg"
-//                         : "Sustainability/faq_plus.svg"
+//                         ? "/Sustainability/faq_minus.svg"
+//                         : "/Sustainability/faq_plus.svg"
 //                     }
 //                     alt=""
 //                   />
@@ -154,19 +154,19 @@ const SustainGovernence = () => {
       title: "Ethics & Compliance",
       content:
         "The KSH INFRA Code of Conduct Handbook, which we follow meticulously, sets a high standard for compliance. This encompasses every aspect of how our team interacts with internal and external stakeholders to how our projects are commissioned and managed.",
-      image: "Sustainability/Ethics&Compliance.png",
+      image: "/Sustainability/enc.png",
     },
     {
       title: "Safety",
       content:
         "KSH INFRA parks offer top-notch amenities, prioritise safety protocols and facilities.  Safety is integral to our operations, allowing us to deliver reliable, compliant and sustainable infrastructure.",
-      image: "Sustainability/SustainabilitySafety.png",
+      image: "/Sustainability/SustainabilitySafety.png",
     },
     {
       title: "Value Creation",
       content:
         "We create value for society and our stakeholders in many ways, including job opportunities, tax payment support, participation in the supply chain, and investment in local communities.",
-      image: "Sustainability/govb.png",
+      image: "/Sustainability/govb.png",
     },
   ];
 
@@ -234,8 +234,8 @@ const SustainGovernence = () => {
                   <img
                     src={
                       openIndex === index
-                        ? "Sustainability/faq_minus.svg"
-                        : "Sustainability/faq_plus.svg"
+                        ? "/Sustainability/faq_minus.svg"
+                        : "/Sustainability/faq_plus.svg"
                     }
                     alt=""
                   />

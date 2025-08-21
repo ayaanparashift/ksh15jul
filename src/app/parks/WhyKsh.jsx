@@ -17,8 +17,8 @@
 //       content:
 //         "We design our built-to-suit facilities from scratch to match exactly what you need. You get to guide both design and construction, ensuring your final space works perfectly with your operations.\nEverything—from materials to layout to specialized infrastructure—is carefully built to boost your efficiency and productivity. Your inputs shape a facility that feels custom-made because it truly is.\nWhen you need a space that works precisely for your unique business requirements, our built-to-suit approach delivers results that standard facilities simply can't rival.",
 //       images: {
-//         // top: ["./parkOverview/bulitToStart.png"],
-//         top: ["./parkOverview/builtToSuit.png"],
+//         // top: ["/parkOverview/bulitToStart.png"],
+//         top: ["/parkOverview/builtToSuit.png"],
 //       },
 //     },
 //     {
@@ -28,7 +28,7 @@
 //         "Our ready-to-move facilities offer modern, pre-built spaces that meet the highest industrial standards. They're perfect when you need to set up quickly without waiting for construction.\nThese spaces come equipped with essential amenities and are designed with the flexibility to serve various industries. You get immediate access to a high-quality operational space that's ready when you are.\nFor businesses that need to move fast without compromising on quality, our ready-to-move options provide the perfect balance of speed and functionality.",
 //       images: {
 //         // top: ["./AboutPage/aboutSlide/ab1.jpg"],
-//         top: ["./parkOverview/builtToSuit.png"],
+//         top: ["/parkOverview/builtToSuit.png"],
 //       },
 //     },
 //     {
@@ -38,7 +38,7 @@
 //         "We uphold the highest standards in Industrial & Logistics real estate. Our excellence shows in how we design, build, and manage facilities.\nWe match and exceed the expectations of customers and regulators by using high-quality materials, following sustainable practices, and adopting cutting-edge technology. Our strict safety compliance and dedicated support for tenants have made KSH INFRA a leader in quality and efficiency. With us, you get more than just space: you get a facility built and managed to exceptional standards that help your business perform better.",
 //       images: {
 //         // top: ["./AboutPage/aboutSlide/ab1.jpg"],
-//         top: ["./parkOverview/builtToSuit.png"],
+//         top: ["/parkOverview/builtToSuit.png"],
 //       },
 //     },
 //   ];
@@ -272,8 +272,9 @@ const WhyKsh = () => {
       content:
         "We design our built-to-suit facilities from scratch to match exactly what you need. You get to guide both design and construction, ensuring your final space works perfectly with your operations.\nEverything—from materials to layout to specialized infrastructure—is carefully built to boost your efficiency and productivity. Your inputs shape a facility that feels custom-made because it truly is.\nWhen you need a space that works precisely for your unique business requirements, our built-to-suit approach delivers results that standard facilities simply can't rival.",
       images: {
-        // top: ["./parkOverview/bulitToStart.png"],
-        top: ["./parkOverview/whyk1.webp"],
+        // top: ["/parkOverview/bulitToStart.png"],
+        top: ["/parkOverview/whybts.png"],
+        // top: ["/parkOverview/whyk1.webp"],
       },
     },
     {
@@ -283,7 +284,7 @@ const WhyKsh = () => {
         "Our ready-to-move facilities offer modern, pre-built spaces that meet the highest industrial standards. They're perfect when you need to set up quickly without waiting for construction.\nThese spaces come equipped with essential amenities and are designed with the flexibility to serve various industries. You get immediate access to a high-quality operational space that's ready when you are.\nFor businesses that need to move fast without compromising on quality, our ready-to-move options provide the perfect balance of speed and functionality.",
       images: {
         // top: ["./AboutPage/aboutSlide/ab1.jpg"],
-        top: ["./parkOverview/whyk2.webp"],
+        top: ["/parkOverview/whyk2.webp"],
       },
     },
     {
@@ -293,7 +294,7 @@ const WhyKsh = () => {
         "We uphold the highest standards in Industrial & Logistics real estate. Our excellence shows in how we design, build, and manage facilities.\nWe match and exceed the expectations of customers and regulators by using high-quality materials, following sustainable practices, and adopting cutting-edge technology. Our strict safety compliance and dedicated support for tenants have made KSH INFRA a leader in quality and efficiency. With us, you get more than just space: you get a facility built and managed to exceptional standards that help your business perform better.",
       images: {
         // top: ["./AboutPage/aboutSlide/ab1.jpg"],
-        top: ["./parkOverview/whyk3.webp"],
+        top: ["/parkOverview/whyk3.webp"],
       },
     },
   ];

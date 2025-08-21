@@ -57,12 +57,12 @@ const PhVdslider = () => {
 
   const videoUrls = [
     {
-      labl: "Route Video- Silk Board to KSH Hosur Park I",
+      labl: "Route Video- Silk Board to KSH Hosur I",
       vid: "https://player.vimeo.com/video/1089053663",
     },
 
     {
-      labl: "Route Video- Bengaluru International Airport to KSH Hosur Park I",
+      labl: "Route Video- Bengaluru International Airport to KSH Hosur I",
       vid: "https://player.vimeo.com/video/1081769476",
     },
   ];

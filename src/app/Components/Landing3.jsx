@@ -199,7 +199,7 @@ const Landing3 = () => {
             <div>
               <div className="min-1600:inline-block hidden">
                 <img
-                  src="/homepage/chomespot.png"
+                  src="/homepage/chmapspot.png"
                   alt="some"
                   width={704}
                   height={500}
