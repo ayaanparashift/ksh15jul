@@ -193,7 +193,7 @@ const AboutVision = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col lg:flex-row md:gap-0 gap-5 ">
+              <div className="flex flex-col lg:flex-row md:gap-0 ">
                 <div
                   // initial={{ opacity: 0 }}
                   // whileInView={{ opacity: 1 }}
