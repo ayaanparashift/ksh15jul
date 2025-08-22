@@ -6,7 +6,7 @@
 //         id: 1,
 //         title: "Creating opportunities for Kawasaki",
 //         content:
-//           "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first Indian integrated Unit.",
+//           "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first Indian integrated Unit",
 //         image: "/caseInside/caseInsideSpot.png",
 //         href: "/case-studies/kawasaki",
 //         newTab: false,
@@ -62,7 +62,7 @@
 
 //       {
 //         id: 7,
-//         title: "KSH INFRA to invest ₹450 Cr.",
+//         title: "KSH INFRA to invest ₹450 Cr",
 //         content:
 //           "KSH INFRA to invest ₹450 Cr. to develop industrial & logistics park in Hosur (14 Aug 2024)",
 //         image: "/press/press3.png",
@@ -114,9 +114,9 @@ export default function PFetch() {
       {
         id: 3,
         title:
-          "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first Indian integrated Unit.",
+          "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first Indian integrated Unit",
         content:
-          "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first Indian integrated Unit.",
+          "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first Indian integrated Unit",
         image: "/caseInside/kwspot.jpg",
         href: "/case-studies/kawasaki",
         newTab: false,
@@ -136,7 +136,7 @@ export default function PFetch() {
       {
         id: 3,
         title: "Mapletree Investments Acquires KSH INFRA’s logistics asset",
-        content: "Mapletree Investments Acquires KSH INFRA’s logistics asset.",
+        content: "Mapletree Investments Acquires KSH INFRA’s logistics asset",
         image: "/blog/news/news1.jpg",
         href: "/blogs/mapletree-investments-acquires-ksh-infras-logistics-asset",
         newTab: false,
@@ -145,9 +145,9 @@ export default function PFetch() {
       {
         id: 4,
         title:
-          "The COVID-19 pandemic has disrupted every single industry over the course of just a few months.",
+          "The COVID-19 pandemic has disrupted every single industry over the course of just a few months",
         content:
-          "The COVID-19 pandemic has disrupted every single industry over the course of just a few months.",
+          "The COVID-19 pandemic has disrupted every single industry over the course of just a few months",
         image: "/blog/news/news2.jpg",
         href: "/blogs/post-covid-19-opportunities-in-india",
         newTab: false,
@@ -155,10 +155,9 @@ export default function PFetch() {
       },
       {
         id: 5,
-        title:
-          "Prioritising Ergonomics in Industrial and Warehouse Operations.",
+        title: "Prioritising Ergonomics in Industrial and Warehouse Operations",
         content:
-          "Prioritising Ergonomics in Industrial and Warehouse Operations.",
+          "Prioritising Ergonomics in Industrial and Warehouse Operations",
         image: "/blog/news/news3.jpg",
         href: "/blogs/benefits-of-moving-into-a-sustainable-industrial-park",
         newTab: false,
@@ -168,8 +167,8 @@ export default function PFetch() {
     "Press Release": [
       {
         id: 6,
-        title: "KSH INFRA to Invest ₹550 Cr. in Tamil Nadu Park.",
-        content: "KSH INFRA to Invest ₹550 Cr. in Tamil Nadu Park.",
+        title: "KSH INFRA to Invest ₹550 Cr. in Tamil Nadu Park",
+        content: "KSH INFRA to Invest ₹550 Cr. in Tamil Nadu Park",
         image: "/press/press6.webp",
         href: "https://www.constructionworld.in/urban-infrastructure/warehouse-and-logistics/ksh-infra-to-invest-rs-5.5-billion-in-tamil-nadu-park/76359",
         newTab: true,
@@ -178,9 +177,9 @@ export default function PFetch() {
       {
         id: 7,
         title:
-          "KSH INFRA to invest ₹550 Cr. in second industrial park in Tamil Nadu.",
+          "KSH INFRA to invest ₹550 Cr. in second industrial park in Tamil Nadu",
         content:
-          "KSH INFRA to invest ₹550 Cr. in second industrial park in Tamil Nadu.",
+          "KSH INFRA to invest ₹550 Cr. in second industrial park in Tamil Nadu",
         image: "/press/press4.png",
         href: "https://manufacturing.economictimes.indiatimes.com/news/industry/ksh-infra-to-invest-550-crore-in-second-industrial-park-in-tamil-nadu/122437140",
         newTab: true,
@@ -189,9 +188,9 @@ export default function PFetch() {
       {
         id: 8,
         title:
-          "KSH INFRA to invest ₹550 cr in second industrial & logistics park in Sriperumbudur.",
+          "KSH INFRA to invest ₹550 Cr. in second industrial & logistics park in Sriperumbudur",
         content:
-          "KSH INFRA to invest ₹550 cr in second industrial & logistics park in Sriperumbudur.",
+          "KSH INFRA to invest ₹550 Cr. in second industrial & logistics park in Sriperumbudur",
         image: "/press/press5.webp",
         href: "https://www.thehindubusinessline.com/companies/ksh-infra-to-invest-550-cr-in-second-industrial-logistics-park-in-sriperumbudur/article69807276.ece",
         newTab: true,

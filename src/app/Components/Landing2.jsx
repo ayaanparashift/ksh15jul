@@ -156,7 +156,7 @@ const Landing2 = () => {
           <h1 className="fpt-500 max-w-fit xl:text-[52px] lg:text-[40px] min-1366:text-[70px] text-[28px] text-white border-b-[5px] md:border-b-[10px] border-[#F7E327] leading-[105%] min-1600:text-[70px]">
             Launching - <br />
             KSH INFRA Park <br />
-            in Bangalore
+            in Bengaluru
           </h1>
           <p
             className="fsans-500 text-[14px] lg:text-[18px] xl:text-[20px] leading-[26px]"
