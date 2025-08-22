@@ -665,7 +665,7 @@ const Navlist = ({ onClose }) => {
           href: "/blogs?tab=press#tabsection",
           tab: "press", // <-- add tab
         },
-        { title: "Testimonials", href: "#testimonials" },
+        { title: "Testimonials", href: "/#testimonials" },
       ],
     },
     { title: "Investors", href: "/investors" },
