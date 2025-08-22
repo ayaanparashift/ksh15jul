@@ -1992,9 +1992,9 @@ const PRESS_RELEASES = [
   {
     id: 4,
     title:
-      "KSH INFRA ₹1000 Cr Expansion in Tamil Nadu Industrial & Logistics Space",
+      "KSH INFRA ₹1000 Cr. Expansion in Tamil Nadu Industrial & Logistics Space",
     content:
-      "KSH INFRA ₹1000 Cr Expansion in Tamil Nadu Industrial & Logistics Space",
+      "KSH INFRA ₹1000 Cr. Expansion in Tamil Nadu Industrial & Logistics Space",
     image: "/press/press7.webp",
     href: "https://economictimes.indiatimes.com/industry/services/property-/-cstruction/ksh-infra-to-invest-over-rs-550-crore-in-60-acre-logistics-park-in-tamil-nadu/articleshow/122392746.cms?from=mdr",
     newTab: true,

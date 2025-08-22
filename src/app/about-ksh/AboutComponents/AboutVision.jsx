@@ -234,7 +234,9 @@ const AboutVision = () => {
                       "linear-gradient(to top right, rgba(221, 221, 221, 0), rgba(185, 140, 140, 0.70)) 30",
                   }}
                 >
-                  <h1 className="text-3xl fpt-600 lg:pt-5 text-white ">Care</h1>
+                  <h1 className="text-3xl fpt-600 pb-[6px] text-white pt-5 ">
+                    Care
+                  </h1>
                   <p className="text-[#C1C1C1] text-sm ">
                     Care for people, communities, and the planet. With care we
                     foster a supportive, inclusive, and respectful workplace
