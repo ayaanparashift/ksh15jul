@@ -390,14 +390,14 @@ const SingleCertCard = ({ image, title, heading, content }) => {
       </motion.div>
 
       {/* Mobile Static Card */}
-      <div className="sm:hidden w-full h-[650px] overflow-hidden flex flex-col bg-white p-4">
+      <div className="sm:hidden w-full  h-[470px] overflow-hidden flex flex-col bg-white p-4">
         {/* Image + Title stacked vertically */}
-        <div className="w-full h-full flex flex-col gap-0 bg-white">
-          <div className="h-full w-full flex items-center justify-center overflow-hidden">
+        <div className="w-full h-fit flex flex-col gap-0 bg-white">
+          <div className="md:h-full h-fit w-full flex items-center justify-center overflow-hidden">
             <img
               src={image}
               alt={title}
-              className="max-w-full max-h-full object-contain"
+              className="max-w-full max-h-full md:aspect-auto aspect-video md:h-auto h-[236px] object-contain"
             />
           </div>
           <div className="py-2">
@@ -408,7 +408,7 @@ const SingleCertCard = ({ image, title, heading, content }) => {
         </div>
 
         {/* Description */}
-        <div className="bg-white text-[#474747] flex flex-col gap-2">
+        <div className="bg-white h-full justify-end text-[#474747] flex flex-col gap-2">
           <div className="text-[18px] text-black fpt-600">{heading}</div>
           <div className="text-[14px] fsans-400 h-[70px] styled-scroll">
             {content}
