@@ -19,7 +19,7 @@ const InvesRelaSpot = () => {
           >
             Home
           </Link>{" "}
-          &gt; Investor
+          &gt; Investors
         </p>
         <h1
           // initial={{ width: 0 }}

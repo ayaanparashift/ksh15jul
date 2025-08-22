@@ -37,7 +37,7 @@ const FooterF = () => {
           <div>
             <p className="pb-5 text-lg fsans-600">Others</p>
             <div className="flex flex-col gap-4 text-[#cfe6fc90] fsans-600 text-[16px]">
-              <Link href="/investors">Investor</Link>
+              <Link href="/investors">Investors</Link>
               <Link href="/capabilities">Capabilities</Link>
               <Link href="/sustainability">Sustainability</Link>
               <Link href="/case-studies">Case Studies</Link>
