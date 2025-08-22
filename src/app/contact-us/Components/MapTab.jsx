@@ -45,7 +45,7 @@ const MapTab = () => {
             </button>
           ))}
         </div> */}
-        <div className="md:flex items-center justify-between pt-8 md:pt-[70px] border-b-[1px] md:pb-3 border-[#D7D7D7] border-opacity-50 mb-8">
+        <div className="md:flex items-center justify-between pt-0 md:pt-[70px] border-b-[1px] md:pb-3 border-[#D7D7D7] border-opacity-50 mb-8">
           <p className="text-xl pb-4 md:pb-0 text-white font-semibold">
             Reach Us
           </p>
