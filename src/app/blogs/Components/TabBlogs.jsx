@@ -483,7 +483,7 @@
 //   },
 //   {
 //     id: 7,
-//     title: "KSH INFRA to invest ₹450 Cr.",
+//     title: "KSH INFRA to invest ₹450 Cr",
 //     content:
 //       "KSH INFRA to invest ₹450 Cr. to develop industrial & logistics park in Hosur",
 //     image: "/press/press3.png",
@@ -689,7 +689,7 @@
 //   },
 //   {
 //     id: 7,
-//     title: "KSH INFRA to invest ₹450 Cr.",
+//     title: "KSH INFRA to invest ₹450 Cr",
 //     content:
 //       "KSH INFRA to invest ₹450 Cr. to develop industrial & logistics park in Hosur",
 //     image: "/press/press3.png",
@@ -926,7 +926,7 @@
 //   },
 //   {
 //     id: 7,
-//     title: "KSH INFRA to invest ₹450 Cr.",
+//     title: "KSH INFRA to invest ₹450 Cr",
 //     content:
 //       "KSH INFRA to invest ₹450 Cr. to develop industrial & logistics park in Hosur",
 //     image: "/press/press3.png",
@@ -1196,7 +1196,7 @@
 //   },
 //   {
 //     id: 7,
-//     title: "KSH INFRA to invest ₹450 Cr.",
+//     title: "KSH INFRA to invest ₹450 Cr",
 //     content:
 //       "KSH INFRA to invest ₹450 Cr. to develop industrial & logistics park in Hosur",
 //     image: "/press/press3.png",
@@ -1277,7 +1277,7 @@
 //         setLoadingNews(false);
 //         clearInterval(intervalId);
 //       } catch (err) {
-//         console.warn("News fetch failed, will retry...");
+//         console.warn("News fetch failed, will retry..");
 //         setLoadingNews(false);
 //       }
 //     };
@@ -1460,7 +1460,7 @@
 //   },
 //   {
 //     id: 7,
-//     title: "KSH INFRA to invest ₹450 Cr.",
+//     title: "KSH INFRA to invest ₹450 Cr",
 //     content:
 //       "KSH INFRA to invest ₹450 Cr. to develop industrial & logistics park in Hosur",
 //     image: "/press/press3.png",
@@ -1543,7 +1543,7 @@
 //         setLoadingNews(false);
 //         clearInterval(intervalId);
 //       } catch (err) {
-//         console.warn("News fetch failed, will retry...");
+//         console.warn("News fetch failed, will retry..");
 //         setLoadingNews(false);
 //       }
 //     };
@@ -1633,7 +1633,7 @@
 //         >
 //           {showLoading ? (
 //             <p className="text-black fsans-600 md:text-[32px] text-[24px] col-span-2 text-center">
-//               {isNews ? "Loading News..." : "Loading..."}
+//               {isNews ? "Loading News.." : "Loading.."}
 //             </p>
 //           ) : currentItems.length > 0 ? (
 //             currentItems.map((item) =>
@@ -1707,7 +1707,7 @@
 //   },
 //   {
 //     id: 7,
-//     title: "KSH INFRA to invest ₹450 Cr.",
+//     title: "KSH INFRA to invest ₹450 Cr",
 //     content:
 //       "KSH INFRA to invest ₹450 Cr. to develop industrial & logistics park in Hosur",
 //     image: "/press/press3.png",
@@ -1789,7 +1789,7 @@
 //         setLoadingNews(false);
 //         clearInterval(intervalId);
 //       } catch (err) {
-//         console.warn("News fetch failed, will retry...");
+//         console.warn("News fetch failed, will retry..");
 //         setLoadingNews(false);
 //       }
 //     };
@@ -1887,7 +1887,7 @@
 //         >
 //           {showLoading ? (
 //             <p className="text-black fsans-600 md:text-[32px] text-[24px] col-span-2 text-center">
-//               {isNews ? "Loading News..." : "Loading..."}
+//               {isNews ? "Loading News.." : "Loading.."}
 //             </p>
 //           ) : currentItems.length > 0 ? (
 //             currentItems.map((item) =>
@@ -1960,8 +1960,8 @@ import { useTab } from "../../context/TabContext"; // <-- Add this line
 const PRESS_RELEASES = [
   {
     id: 1,
-    title: "KSH INFRA to Invest ₹550 Cr. in Tamil Nadu Park.",
-    content: "KSH INFRA to Invest ₹550 Cr. in Tamil Nadu Park.",
+    title: "KSH INFRA to Invest ₹550 Cr. in Tamil Nadu Park",
+    content: "KSH INFRA to Invest ₹550 Cr. in Tamil Nadu Park",
     image: "/press/press6.webp",
     href: "https://www.constructionworld.in/urban-infrastructure/warehouse-and-logistics/ksh-infra-to-invest-rs-5.5-billion-in-tamil-nadu-park/76359",
     newTab: true,
@@ -1970,9 +1970,9 @@ const PRESS_RELEASES = [
   {
     id: 2,
     title:
-      "KSH INFRA to invest ₹550 Cr. in second industrial park in Tamil Nadu.",
+      "KSH INFRA to invest ₹550 Cr. in second industrial park in Tamil Nadu",
     content:
-      "KSH INFRA to invest ₹550 Cr. in second industrial park in Tamil Nadu.",
+      "KSH INFRA to invest ₹550 Cr. in second industrial park in Tamil Nadu",
     image: "/press/press4.png",
     href: "https://manufacturing.economictimes.indiatimes.com/news/industry/ksh-infra-to-invest-550-crore-in-second-industrial-park-in-tamil-nadu/122437140",
     newTab: true,
@@ -1981,9 +1981,9 @@ const PRESS_RELEASES = [
   {
     id: 3,
     title:
-      "KSH INFRA to invest ₹550 cr in second industrial & logistics park in Sriperumbudur.",
+      "KSH INFRA to invest ₹550 Cr. in second industrial & logistics park in Sriperumbudur",
     content:
-      "KSH INFRA to invest ₹550 cr in second industrial & logistics park in Sriperumbudur.",
+      "KSH INFRA to invest ₹550 Cr. in second industrial & logistics park in Sriperumbudur",
     image: "/press/press5.webp",
     href: "https://www.thehindubusinessline.com/companies/ksh-infra-to-invest-550-cr-in-second-industrial-logistics-park-in-sriperumbudur/article69807276.ece",
     newTab: true,
@@ -1992,9 +1992,9 @@ const PRESS_RELEASES = [
   {
     id: 4,
     title:
-      "KSH INFRA ₹1000 Cr Expansion in Tamil Nadu Industrial & Logistics Space.",
+      "KSH INFRA ₹1000 Cr Expansion in Tamil Nadu Industrial & Logistics Space",
     content:
-      "KSH INFRA ₹1000 Cr Expansion in Tamil Nadu Industrial & Logistics Space.",
+      "KSH INFRA ₹1000 Cr Expansion in Tamil Nadu Industrial & Logistics Space",
     image: "/press/press7.webp",
     href: "https://economictimes.indiatimes.com/industry/services/property-/-cstruction/ksh-infra-to-invest-over-rs-550-crore-in-60-acre-logistics-park-in-tamil-nadu/articleshow/122392746.cms?from=mdr",
     newTab: true,
@@ -2002,7 +2002,7 @@ const PRESS_RELEASES = [
   },
   {
     id: 5,
-    title: "KSH INFRA to invest ₹450 Cr.",
+    title: "KSH INFRA to invest ₹450 Cr",
     image: "/press/press3.png",
     href: "https://realty.economictimes.indiatimes.com/news/allied-industries/ksh-infra-to-invest-rs-450-crore-to-develop-industrial-logistics-park-in-hosur/112523130",
     newTab: true,
@@ -2139,7 +2139,7 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
         setLoadingNews(false);
         clearInterval(intervalId);
       } catch (err) {
-        console.warn("News fetch failed, will retry...");
+        console.warn("News fetch failed, will retry..");
         setLoadingNews(false);
       }
     };
@@ -2237,7 +2237,7 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
         >
           {showLoading ? (
             <p className="text-black fsans-600 md:text-[32px] text-[24px] col-span-2 text-center">
-              {isNews ? "Loading News..." : "Loading..."}
+              {isNews ? "Loading News.." : "Loading.."}
             </p>
           ) : currentItems.length > 0 ? (
             currentItems.map((item) =>
@@ -2328,7 +2328,7 @@ export default TabBlogs;
 //   },
 //   {
 //     id: 7,
-//     title: "KSH INFRA to invest ₹450 Cr.",
+//     title: "KSH INFRA to invest ₹450 Cr",
 //     content:
 //       "KSH INFRA to invest ₹450 Cr. to develop industrial & logistics park in Hosur",
 //     image: "/press/press3.png",
@@ -2426,7 +2426,7 @@ export default TabBlogs;
 //         setLoadingNews(false);
 //         clearInterval(intervalId);
 //       } catch (err) {
-//         console.warn("News fetch failed, will retry...");
+//         console.warn("News fetch failed, will retry..");
 //         setLoadingNews(false);
 //       }
 //     };
@@ -2524,7 +2524,7 @@ export default TabBlogs;
 //         >
 //           {showLoading ? (
 //             <p className="text-black fsans-600 md:text-[32px] text-[24px] col-span-2 text-center">
-//               {isNews ? "Loading News..." : "Loading..."}
+//               {isNews ? "Loading News.." : "Loading.."}
 //             </p>
 //           ) : currentItems.length > 0 ? (
 //             currentItems.map((item) =>
