@@ -16,8 +16,8 @@ const MapTab = () => {
     {
       title: "Mumbai",
       iframe:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.205631003117!2d73.8374441!3d18.5196075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfe0b6d31993%3A0x879bf458e5fbe5b0!2sKSH%20INFRA!5e0!3m2!1sen!2sin!4v1744784616609!5m2!1sen!2sin",
-      href: "https://www.google.com/maps?ll=18.519608,73.837444&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=9771672479163213232",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1886.144422946717!2d72.82404163148894!3d19.006989570675223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce946668ac61%3A0xb8cc45f5336c12ec!2sCOWRKS%20Worli%2C%20Birla%20Centurion!5e0!3m2!1sen!2sin!4v1755841159668!5m2!1sen!2sin",
+      href: "https://www.google.com/maps/place/COWRKS+Worli,+Birla+Centurion/@19.0069896,72.8240416,18z/data=!3m1!4b1!4m6!3m5!1s0x3be7ce946668ac61:0xb8cc45f5336c12ec!8m2!3d19.0069874!4d72.8251453!16s%2Fg%2F11hctkdjmq?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D",
     },
   ];
 
