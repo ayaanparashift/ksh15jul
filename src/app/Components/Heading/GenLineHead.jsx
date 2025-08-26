@@ -103,7 +103,20 @@
 // };
 
 // export default GenLineHead;
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 "use client";
 
 import { motion } from "framer-motion";
@@ -123,7 +136,7 @@ const GenLineHead = ({
   ].filter(Boolean); // Remove falsy values (false, undefined, null)
 
   return (
-    <div className="pb-[20px] relative border-b lg:mb-[60px] mb-5 border-[#D7D7D7] overflow-hidden whitespace-nowrap max-w-[1280px] tablinehead flex-nowrap">
+    <div className="pb-[20px] relative lg:border-b lg:mb-[60px] mb-5 border-[#D7D7D7] overflow-hidden whitespace-nowrap max-w-[1280px] tablinehead flex-nowrap">
       {/* White masking div that slides out */}
       {/* <div
         className="absolute top-0 left-0 w-full h-full bg-[#EEF0F3] z-50"
@@ -132,18 +145,18 @@ const GenLineHead = ({
         // transition={{ duration: 2, ease: [0.7, 0, 0.4, 1] }}
       /> */}
 
-      <div className="flex items-center justify-between w-full lg:gap-0 gap-[20px] relative z-20">
+      <div className="flex lg:flex-row flex-col lg:items-center justify-between w-full lg:gap-0 gap-[20px] relative z-20">
         <h2 className="leading-[26px] text-[20px] fsans-600 text-[#092241] tbhead">
           {heading}
         </h2>
         <div
-          className="flex gap-[5px] overflow-x-auto scrollbar"
+          className="flex lg:gap-[5px] overflow-x-auto scrollbar"
           style={{
             scrollbarWidth: "none", // Hides scrollbar in Firefox
             msOverflowStyle: "none",
           }}
         >
-          {spotlight_btn_content.map((btntitle, index) => (
+          {/* {spotlight_btn_content.map((btntitle, index) => (
             <button
               onClick={() => setAcBtn(btntitle.title)}
               key={btntitle.title + " " + String(index)}
@@ -152,6 +165,36 @@ const GenLineHead = ({
                   ? "bg-[#E30613] border-[#E30613] text-[#fff] text-opacity-100"
                   : "text-[#092241] text-opacity-50"
               }`}
+            >
+              {btntitle.title}
+            </button>
+          ))} */}
+          {/* {spotlight_btn_content.map((btntitle, index) => (
+            <button
+              onClick={() => setAcBtn(btntitle.title)}
+              key={btntitle.title + " " + String(index)}
+              className={`px-[12px] text-[16px] fsans-600 py-[10px] flex-1 flex items-center justify-center 
+      border-b-[4px] border-[#092241] border-opacity-30 lg:border lg:rounded-[10px] rounded-none
+      ${
+        acbtn === btntitle.title
+          ? "text-[#E30613] border-b-[#E30613] border-opacity-100 lg:bg-[#E30613] lg:text-[#fff] lg:border-[#E30613]"
+          : "text-[#092241] text-opacity-50"
+      }`}
+            >
+              {btntitle.title}
+            </button>
+          ))} */}
+          {spotlight_btn_content.map((btntitle, index) => (
+            <button
+              onClick={() => setAcBtn(btntitle.title)}
+              key={btntitle.title + " " + String(index)}
+              className={`px-[12px] text-[16px] fsans-600 py-[10px] flex-1 flex items-center justify-center 
+      border-b-[4px] lg:border lg:rounded-[10px] rounded-none
+      ${
+        acbtn === btntitle.title
+          ? "text-[#E30613] border-b-[#E30613] lg:bg-[#E30613] lg:text-[#fff] lg:border-[#E30613]"
+          : "text-[#092241] text-opacity-50 border-b-[#092241] border-opacity-30 lg:border-opacity-30"
+      }`}
             >
               {btntitle.title}
             </button>

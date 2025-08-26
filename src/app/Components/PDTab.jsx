@@ -657,12 +657,12 @@ const PDTab = ({ tdata, title, para, bwidth }) => {
               </div>
 
               {/* Mobile Tabs */}
-              <div className="flex gap-2 mt-3 md:mt-0 overflow-scroll md:hidden">
+              <div className="flex gap-0 mt-3 md:mt-0 overflow-scroll md:hidden">
                 {tdata.map((tab, index) => (
                   <button
                     key={tab.title}
                     onClick={() => setActiveIndex(index)}
-                    className={`px-[12px] transition-all duration-500 whitespace-nowrap text-[16px] fsans-600 py-[10px]
+                    className={`px-[12px] border-b-4 transition-all duration-500 whitespace-nowrap text-[16px] fsans-600 py-[10px]
                       ${
                         activeIndex === index
                           ? "text-[#E30613]"

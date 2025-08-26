@@ -41,6 +41,7 @@ const PhVdslider = () => {
   const swiperRef3 = useRef(null);
   const renderImages = [
     "chakan-3/chakan-3-1.jpg",
+    "chakan-3/chakan-3-2.jpg",
     "chakan-3/chakan-3-3.jpg",
     "chakan-3/chakan-3-4.jpg",
     "chakan-3/chakan-3-5.jpg",
@@ -53,7 +54,6 @@ const PhVdslider = () => {
 
   const photoImages = [
     "chakan-3/Chakan-3-11.jpg",
-    "chakan-3/Chakan-3-12.jpg",
     "chakan-3/Chakan-3-13.jpg",
     "chakan-3/Chakan-3-14.jpg",
     "chakan-3/Chakan-3-15.jpg",
