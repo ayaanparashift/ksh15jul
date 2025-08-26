@@ -29,8 +29,8 @@ const PhVdslider = () => {
   const showPhotos = true; // Example: Photos tab is hidden
   const showVids = true;
   const getInitialTab = () => {
-    if (showPhotos) return "Photos";
     if (showRenders) return "Renders";
+    if (showPhotos) return "Photos";
     if (showVids) return "Videos";
     return "Photos"; // Fallback, though at least one should be true
   };
@@ -119,7 +119,8 @@ const PhVdslider = () => {
                 spaceBetween={20}
                 speed={300}
                 slidesOffsetAfter={offsetAfter} // dynamic now
-                freeMode={true}
+                // freeMode={true}
+                allowTouchMove={false}
                 preventInteractionOnTransition={true}
                 navigation={
                   hasMultiplePhotos
@@ -184,7 +185,8 @@ const PhVdslider = () => {
                 spaceBetween={20}
                 speed={300}
                 slidesOffsetAfter={offsetAfter} // dynamic now
-                freeMode={true}
+                // freeMode={true}
+                allowTouchMove={false}
                 preventInteractionOnTransition={true}
                 navigation={
                   hasMultipleRenders
@@ -249,7 +251,8 @@ const PhVdslider = () => {
                 spaceBetween={20}
                 speed={300}
                 slidesOffsetAfter={offsetAfter} // dynamic now
-                freeMode={true}
+                // freeMode={true}
+                allowTouchMove={false}
                 preventInteractionOnTransition={true}
                 navigation={
                   hasMultipleVideos

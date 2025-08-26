@@ -118,7 +118,8 @@ const PhVdslider = () => {
                 spaceBetween={20}
                 speed={300}
                 slidesOffsetAfter={offsetAfter} // dynamic now
-                freeMode={true}
+                // freeMode={true}
+                allowTouchMove={false}
                 preventInteractionOnTransition={true}
                 navigation={{
                   prevEl: ".swiper-button-prev-slider1",
@@ -183,7 +184,8 @@ const PhVdslider = () => {
                 spaceBetween={20}
                 slidesOffsetAfter={offsetAfter} // dynamic now
                 speed={300}
-                freeMode={true}
+                // freeMode={true}
+                allowTouchMove={false}
                 preventInteractionOnTransition={true}
                 navigation={{
                   prevEl: ".swiper-button-prev-slider1",
@@ -248,7 +250,8 @@ const PhVdslider = () => {
                 spaceBetween={20}
                 speed={300}
                 slidesOffsetAfter={offsetAfter} // dynamic now
-                freeMode={true}
+                // freeMode={true}
+                allowTouchMove={false}
                 preventInteractionOnTransition={true}
                 navigation={{
                   prevEl: ".swiper-button-prev-slider2",

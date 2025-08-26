@@ -122,7 +122,8 @@ const PhVdslider = () => {
                 modules={[Navigation, FreeMode]}
                 spaceBetween={20}
                 speed={300}
-                freeMode={true}
+                // freeMode={true}
+                allowTouchMove={false}
                 slidesOffsetAfter={offsetAfter} // dynamic now
                 preventInteractionOnTransition={true}
                 navigation={{
@@ -187,7 +188,8 @@ const PhVdslider = () => {
                 spaceBetween={20}
                 speed={300}
                 slidesOffsetAfter={offsetAfter} // dynamic now
-                freeMode={true}
+                // freeMode={true}
+                allowTouchMove={false}
                 preventInteractionOnTransition={true}
                 navigation={{
                   prevEl: ".swiper-button-prev-slider2",

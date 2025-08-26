@@ -112,7 +112,8 @@ const PhVdslider = () => {
                 spaceBetween={20}
                 slidesOffsetAfter={offsetAfter}
                 speed={300}
-                freeMode
+                // freeMode={true}
+                allowTouchMove={false}
                 preventInteractionOnTransition
                 navigation={
                   hasMultipleRenders
@@ -177,7 +178,8 @@ const PhVdslider = () => {
                 spaceBetween={20}
                 slidesOffsetAfter={offsetAfter}
                 speed={300}
-                freeMode
+                // freeMode={true}
+                allowTouchMove={false}
                 preventInteractionOnTransition
                 navigation={
                   hasMultipleVideos
