@@ -34,7 +34,7 @@ export const mapslided = [
   {
     parkimg: "/homepage/pcard/tal1be.png",
     title: "KSH Talegaon I",
-    city: "Chakan, Pune",
+    city: "Talegaon, Pune",
     tarea: "0.14 MN. SQ. FT.",
     parkLink: "/ksh-talegaon-i",
     tbuild: "02 BUILDINGS",

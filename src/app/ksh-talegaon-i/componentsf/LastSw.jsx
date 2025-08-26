@@ -152,6 +152,14 @@ const LastSw = () => {
   const [offsetAfter, setOffsetAfter] = useState(0);
   const CardData = [
     {
+      parkTitle: "KSH Hosur I",
+      pLocal: "Hosur | Bengaluru",
+      totalLand: "1.20 MN SQ.FT.",
+      buildings: "04 Buildings",
+      pImg: "/ParkPage/hosur-1/hosurlw.png",
+      pLink: "/ksh-hosur-i",
+    },
+    {
       parkTitle: "KSH Chakan IV",
       pLocal: "Chakan | Pune",
       totalLand: "0.36 MN SQ.FT.",
@@ -182,14 +190,6 @@ const LastSw = () => {
       buildings: "04 Buildings",
       pImg: "/ParkPage/chakan-1/ch1lw.png",
       pLink: "/ksh-chakan-i",
-    },
-    {
-      parkTitle: "KSH Hosur I",
-      pLocal: "Hosur | Bengaluru",
-      totalLand: "1.20 MN SQ.FT.",
-      buildings: "04 Buildings",
-      pImg: "/ParkPage/hosur-1/hosurlw.png",
-      pLink: "/ksh-hosur-i",
     },
   ];
 

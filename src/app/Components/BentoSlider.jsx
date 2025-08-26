@@ -389,7 +389,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, FreeMode } from "swiper/modules";
+import { Navigation, FreeMode, EffectFade } from "swiper/modules";
 import BentoHeaderF from "./BentoHeaderF";
 import Bento from "./Bento";
 import Bento2 from "./Bento2";
@@ -459,7 +459,7 @@ const BentoSlider = () => {
           </div>
 
           {/* === DESKTOP SWIPER === */}
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <Swiper
               modules={[Navigation, FreeMode]}
               onBeforeInit={(swiper) => {
@@ -470,6 +470,35 @@ const BentoSlider = () => {
               loop={true}
               speed={300}
               freeMode
+              preventInteractionOnTransition
+              touchMoveStopPropagation
+              onSlideChangeTransitionStart={() => setSliding(true)}
+              onSlideChangeTransitionEnd={() => setSliding(false)}
+              slidesPerView={1}
+              className="max-w-full"
+            >
+              <SwiperSlide>
+                <Bento pointerEvents={!sliding} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Bento3 pointerEvents={!sliding} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Bento2 pointerEvents={!sliding} />
+              </SwiperSlide>
+            </Swiper>
+          </div> */}
+          <div className="hidden md:block">
+            <Swiper
+              modules={[Navigation, FreeMode, EffectFade]}
+              effect="fade"
+              fadeEffect={{ crossFade: true }}
+              onBeforeInit={(swiper) => {
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
+              }}
+              loop={true}
+              speed={600} // control fade speed
               preventInteractionOnTransition
               touchMoveStopPropagation
               onSlideChangeTransitionStart={() => setSliding(true)}

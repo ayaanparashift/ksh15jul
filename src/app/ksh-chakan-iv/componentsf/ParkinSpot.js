@@ -351,7 +351,7 @@ const ParkinSpot = ({}) => {
               standards for environmental responsibility. The industrial park
               has earned IGBC pre-certified Platinum status, showcasing our deep
               commitment to green industrial development. Its thoughtful design
-              and premium amenities create a workspace where your team can
+              and premium utilities create a workspace where your team can
               thrive. <br />
               <br />
               This fully customizable, move-in ready facility ensures excellent

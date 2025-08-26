@@ -14,7 +14,7 @@ export const tabs = [
     title: "Capital Deployment",
     heading: <>Capital Deployment</>,
     content:
-      "Our smart approach towards capital deployment and strong partnerships help us build State-of-the-art facilities suitable for a whole range of industries<br/><br/> We know how to use capital wisely to allocate resources across people, technology, and the environment to deliver infrastructure that exactly fits your business needs.",
+      "Our smart approach towards capital deployment and strong partnerships help us build state-of-the-art facilities suitable for a whole range of industries<br/><br/> We know how to use capital wisely to allocate resources across people, technology, and the environment to deliver infrastructure that exactly fits your business needs.",
     images: {
       top: ["/OurCapabilities/captf.png"],
       bottom1: ["/OurCapabilities/capBottom1_1.png"],

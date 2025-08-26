@@ -5,7 +5,7 @@ const ParkInfo = () => {
   const stats = [
     { value: "0.14 MN SQ. FT.", label: "Total <br/> Area" },
     { value: "02", label: "Total<br/>Buildings" },
-    { value: "Chakan,<br/>Pune", label: "Park<br/>Location" },
+    { value: "Talegaon,<br/>Pune", label: "Park<br/>Location" },
   ];
 
   return (

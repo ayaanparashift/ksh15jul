@@ -476,7 +476,7 @@ const sld = [
     simgs: "/Career/finalcareer/niti.jpg",
     image: "/Career/finalcareer/niti.jpg",
     title: "Nitin Bhatia",
-    subtitle: "Principal Investments",
+    subtitle: "Asset Management",
     description:
       "Just a month into KSH INFRA, I’ve felt truly welcomed and inspired by the team’s collaboration, passion, and the company’s clear focus on innovation, sustainability, and growth—I’m excited to grow with the organization.",
   },
@@ -788,7 +788,7 @@ export const CarSlide = () => {
               320: { slidesPerView: 2, spaceBetween: 10, slidesPerGroup: 2 },
               768: { slidesPerView: 2.5, slidesPerGroup: 2.5 },
               1024: { slidesPerView: 3, slidesPerGroup: 3 },
-              1366: { slidesPerView: 4, slidesPerGroup: 4 },
+              1280: { slidesPerView: 4, slidesPerGroup: 4 },
             }}
           >
             {sld.map((slide, index) => (

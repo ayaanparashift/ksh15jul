@@ -186,7 +186,7 @@ const LastSw = () => {
     },
     {
       parkTitle: "KSH Talegaon I",
-      pLocal: "Chakan | Pune",
+      pLocal: "Talegaon | Pune",
       totalLand: "0.14 MN SQ.FT.",
       buildings: "02 Buildings",
       pImg: "/ParkPage/talegaon-i/tal1lw.png",

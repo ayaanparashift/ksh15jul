@@ -23,11 +23,16 @@ const ParkOverviewContent = () => {
           className="pt-9 text-[#434343] text-base fsans-400"
         >
           <p>
-            We're establishing new benchmarks for sustainable industrial spaces
+            {/* We're establishing new benchmarks for sustainable industrial spaces
             and logistics solutions. With major ready-to-move industrial parks
             in Chakan, Talegaon in Pune, Hosur near Bengaluru and Sriperumbudur
             near Chennai, we're strengthening the strategic industrial corridor
-            as a manufacturing and logistics hub.
+            as a manufacturing and logistics hub. */}
+            We're establishing new benchmarks for sustainable industrial spaces
+            and logistics solutions. With major ready-to-move industrial parks
+            in Chakan & Talegaon (Pune), Hosur (Bengaluru), Sriperumbudur
+            (Chennai), we're strengthening the strategic industrial corridor as
+            a manufacturing and logistics hub.
           </p>{" "}
           <br />
           <p className="">

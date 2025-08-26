@@ -26,12 +26,12 @@ const FooterF = () => {
           <div>
             <p className="pb-5 text-lg fsans-600">Our Parks</p>
             <div className="flex flex-col gap-4 text-[#cfe6fc90] fsans-600 text-[16px]">
+              <Link href="/ksh-hosur-i">Hosur I</Link>
               <Link href="/ksh-chakan-iv">Chakan IV</Link>
               <Link href="/ksh-chakan-iii">Chakan III</Link>
               <Link href="/ksh-chakan-ii">Chakan II</Link>
               <Link href="/ksh-chakan-i">Chakan I</Link>
               <Link href="/ksh-talegaon-i">Talegaon I</Link>
-              <Link href="/ksh-hosur-i">Hosur I</Link>
             </div>
           </div>
           <div>
@@ -202,7 +202,7 @@ const FooterF = () => {
             <div className="">
               <div className="text-[#cfe6fc90] text-sm font-normal leading-6 max-w-full ">
                 <p className="whitespace-nowrap text-white pb-1 fsans-600">
-                  KSH INFRA, Head Office: Pune
+                  KSH INFRA, Pune (Head Office)
                 </p>
                 <p className="fsans-400 text-[15px]">
                   Gokhale Sanchit, Office No. 4, <br /> Survey No. 846, Servants

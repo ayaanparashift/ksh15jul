@@ -171,6 +171,14 @@ const LastSw = () => {
 
   const CardData = [
     {
+      parkTitle: "KSH Hosur I",
+      pLocal: "Hosur | Bengaluru",
+      totalLand: "1.20 MN SQ.FT.",
+      buildings: "04 Buildings",
+      pImg: "/ParkPage/hosur-1/hosurlw.png",
+      pLink: "/ksh-hosur-i",
+    },
+    {
       parkTitle: "KSH Chakan IV",
       pLocal: "Chakan | Pune",
       totalLand: "0.36 MN SQ.FT.",
@@ -196,19 +204,11 @@ const LastSw = () => {
     },
     {
       parkTitle: "KSH Talegaon I",
-      pLocal: "Chakan | Pune",
+      pLocal: "Talegaon | Pune",
       totalLand: "0.14 MN SQ.FT.",
       buildings: "02 Buildings",
       pImg: "/ParkPage/talegaon-i/tal1lw.png",
       pLink: "/ksh-talegaon-i",
-    },
-    {
-      parkTitle: "KSH Hosur I",
-      pLocal: "Hosur | Bengaluru",
-      totalLand: "1.20 MN SQ.FT.",
-      buildings: "04 Buildings",
-      pImg: "/ParkPage/hosur-1/hosurlw.png",
-      pLink: "/ksh-hosur-i",
     },
   ];
 

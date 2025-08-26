@@ -17,7 +17,7 @@ export const metadata = {
 };
 const tabsData = [
   {
-    title: "KSH Parks",
+    title: "KSH INFRA Parks",
     image: "/ParkPage/chakan-1/cps.webp",
     simage: "/ParkPage/kshpb.webp",
   },
