@@ -48,7 +48,6 @@ const PhVdslider = () => {
     "chakan-4/chakan-4-2.jpg",
     "chakan-4/chakan-4-3.jpg",
     "chakan-4/chakan-4-4.jpg",
-    "chakan-4/chakan-4-6.jpg",
     "chakan-4/chakan-4-7.png",
     "chakan-4/chakan-4-8.png",
   ];
