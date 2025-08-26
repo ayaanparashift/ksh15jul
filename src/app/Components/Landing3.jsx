@@ -196,19 +196,19 @@ const Landing3 = () => {
         <div className="md:min-h-full min-h-fit max-w-full md:w-auto w-full h-fit flex-1 flex flex-col justify-center items-end">
           <div className="flex items-end justify-center flex-col min-1600:h-[695px] pt-32 xl:pt-[75px] md:pt-[150px] min-1920:pt-[300px] min-1600:pt-[150px] xl:h-[595px] max-w-full md:w-auto w-full">
             {/* Desktop Image */}
-            <div className=" mr-[max(5%,calc((100vw-1250px)/2))]">
+            <div className=" ">
               <div className="min-1600:inline-block hidden">
                 <img
-                  src="/homepage/chennaidspot.png"
+                  src="/homepage/chenspot/chen.png"
                   alt="some"
-                  className="object-cover aspect-square w-[577px]"
+                  className="object-cover aspect-square w-[696px]"
                 />
               </div>
               <div className="min-1600:hidden md:inline-block hidden">
                 <img
-                  src="/homepage/chennaidspot.png"
+                  src="/homepage/chenspot/chen.png"
                   alt="some"
-                  className="object-cover aspect-square w-[577px]"
+                  className="object-cover aspect-square w-[696px]"
                 />
               </div>
             </div>
@@ -216,7 +216,7 @@ const Landing3 = () => {
             {/* Mobile Image */}
             <div className="w-full max-w-[1250px] mx-auto px-5 md:hidden">
               <img
-                src="/homepage/chmmob.png"
+                src="/homepage/chenspot/chen.png"
                 alt="some"
                 width={800}
                 height={600}
