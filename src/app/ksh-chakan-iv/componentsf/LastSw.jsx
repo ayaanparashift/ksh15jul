@@ -11,7 +11,7 @@
 // const LastSw = () => {
 //   const CardData = [
 //     {
-//       parkTitle: "KSH Chakan III",
+//       parkTitle: "KSH Chakan Park III",
 //       pLocal: "Chakan | Pune",
 //       totalLand: "1.50 MN SQ.FT.",
 //       buildings: "08 Buildings",
@@ -19,7 +19,7 @@
 //       pLink: "/ksh-chakan-iii",
 //     },
 //     {
-//       parkTitle: "KSH Chakan II",
+//       parkTitle: "KSH Chakan Park II",
 //       pLocal: "Chakan | Pune",
 //       totalLand: "1.20 MN SQ.FT.",
 //       buildings: "05 Buildings",
@@ -27,7 +27,7 @@
 //       pLink: "/ksh-chakan-ii",
 //     },
 //     {
-//       parkTitle: "KSH Chakan I",
+//       parkTitle: "KSH Chakan Park I",
 //       pLocal: "Chakan | Pune",
 //       totalLand: "0.85 MN SQ.FT.",
 //       buildings: "04 Buildings",
@@ -156,7 +156,7 @@ const LastSw = () => {
 
   const CardData = [
     {
-      parkTitle: "KSH Hosur I",
+      parkTitle: "KSH Hosur Park I",
       pLocal: "Hosur | Bengaluru",
       totalLand: "1.20 MN SQ.FT.",
       buildings: "04 Buildings",
@@ -164,7 +164,7 @@ const LastSw = () => {
       pLink: "/ksh-hosur-i",
     },
     {
-      parkTitle: "KSH Chakan III",
+      parkTitle: "KSH Chakan Park III",
       pLocal: "Chakan | Pune",
       totalLand: "1.50 MN SQ.FT.",
       buildings: "08 Buildings",
@@ -172,7 +172,7 @@ const LastSw = () => {
       pLink: "/ksh-chakan-iii",
     },
     {
-      parkTitle: "KSH Chakan II",
+      parkTitle: "KSH Chakan Park II",
       pLocal: "Chakan | Pune",
       totalLand: "1.20 MN SQ.FT.",
       buildings: "05 Buildings",
@@ -180,7 +180,7 @@ const LastSw = () => {
       pLink: "/ksh-chakan-ii",
     },
     {
-      parkTitle: "KSH Chakan I",
+      parkTitle: "KSH Chakan Park I",
       pLocal: "Chakan | Pune",
       totalLand: "0.85 MN SQ.FT.",
       buildings: "04 Buildings",
@@ -188,7 +188,7 @@ const LastSw = () => {
       pLink: "/ksh-chakan-i",
     },
     {
-      parkTitle: "KSH Talegaon I",
+      parkTitle: "KSH Talegaon Park I",
       pLocal: "Talegaon | Pune",
       totalLand: "0.14 MN SQ.FT.",
       buildings: "01 Building",

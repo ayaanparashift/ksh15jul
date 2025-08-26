@@ -340,13 +340,13 @@ const ParkinSpot = ({}) => {
           <div className="flex flex-col flex-1 max-w-full gap-5 min-1366:gap-10 justify-center relative">
             <div className="flex flex-col max-w-fit">
               <motion.h1 className="fpt-500 xl:text-[50px] lg:text-[40px] md:text-[32px] text-[20px] text-white leading-[150%] md:leading-[105%] 2xl:text-[64px]">
-                KSH Chakan IV
+                KSH Chakan Park IV
               </motion.h1>
               <motion.div className="bg-[#F7E327] h-[10px] w-full" />
             </div>
 
             <motion.p className="fsans-500 gradinetText text-[14px] lg:text-[14px] min-1366:text-[16px] leading-[26px]">
-              Chakan Park IV in Shinde, Pune exemplifies high-quality
+              KSH Chakan Park IV in Shinde, Pune exemplifies high-quality
               sustainable Industrial & Logistics infrastructure, setting new
               standards for environmental responsibility. The industrial park
               has earned IGBC pre-certified Platinum status, showcasing our deep

@@ -53,7 +53,7 @@ const CharAcc = () => {
       title: "Strategic Location",
       // charnum: "03",
       content:
-        "Situated between the KHED SEZ and the Talegaon I industrial belt, Chakan benefits from a strategically advantageous location that supports extensive industrial activity and development.",
+        "Situated between the KHED SEZ and the Talegaon industrial belt, Chakan benefits from a strategically advantageous location that supports extensive industrial activity and development.",
     },
     {
       title: "Robust Infrastructure",

@@ -11,7 +11,7 @@
 // const LastSw = () => {
 //   const CardData = [
 //     {
-//       parkTitle: "KSH Chakan IV",
+//       parkTitle: "KSH Chakan Park IV",
 //       pLocal: "Chakan | Pune",
 //       totalLand: "0.36 MN SQ.FT.",
 //       pImg: "/ParkPage/chakan-4/ch4lw.png",
@@ -19,7 +19,7 @@
 //       pLink: "/ksh-chakan-iv",
 //     },
 //     {
-//       parkTitle: "KSH Chakan III",
+//       parkTitle: "KSH Chakan Park III",
 //       pLocal: "Chakan | Pune",
 //       totalLand: "1.50 MN SQ.FT.",
 //       pImg: "/ParkPage/chakan-3/ch3lw.png",
@@ -27,7 +27,7 @@
 //       pLink: "/ksh-chakan-iii",
 //     },
 //     {
-//       parkTitle: "KSH Chakan II",
+//       parkTitle: "KSH Chakan Park II",
 //       pLocal: "Chakan | Pune",
 //       totalLand: "1.20 MN SQ.FT.",
 //       pImg: "/ParkPage/chakan-2/ch2lw.png",
@@ -153,7 +153,7 @@ const LastSw = () => {
 
   const CardData = [
     {
-      parkTitle: "KSH Hosur I",
+      parkTitle: "KSH Hosur Park I",
       pLocal: "Hosur | Bengaluru",
       totalLand: "1.20 MN SQ.FT.",
       buildings: "04 Buildings",
@@ -161,7 +161,7 @@ const LastSw = () => {
       pLink: "/ksh-hosur-i",
     },
     {
-      parkTitle: "KSH Chakan IV",
+      parkTitle: "KSH Chakan Park IV",
       pLocal: "Chakan | Pune",
       totalLand: "0.36 MN SQ.FT.",
       pImg: "/ParkPage/chakan-4/ch4lw.png",
@@ -169,7 +169,7 @@ const LastSw = () => {
       pLink: "/ksh-chakan-iv",
     },
     {
-      parkTitle: "KSH Chakan III",
+      parkTitle: "KSH Chakan Park III",
       pLocal: "Chakan | Pune",
       totalLand: "1.50 MN SQ.FT.",
       pImg: "/ParkPage/chakan-3/ch3lw.png",
@@ -177,7 +177,7 @@ const LastSw = () => {
       pLink: "/ksh-chakan-iii",
     },
     {
-      parkTitle: "KSH Chakan II",
+      parkTitle: "KSH Chakan Park II",
       pLocal: "Chakan | Pune",
       totalLand: "1.20 MN SQ.FT.",
       pImg: "/ParkPage/chakan-2/ch2lw.png",
@@ -185,7 +185,7 @@ const LastSw = () => {
       pLink: "/ksh-chakan-ii",
     },
     {
-      parkTitle: "KSH Talegaon I",
+      parkTitle: "KSH Talegaon Park I",
       pLocal: "Talegaon | Pune",
       totalLand: "0.14 MN SQ.FT.",
       pImg: "/ParkPage/talegaon-i/tal1lw.png",
