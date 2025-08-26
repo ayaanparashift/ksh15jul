@@ -137,7 +137,7 @@ const PhVdslider = () => {
                   320: { slidesPerView: 1 },
                   1024: { slidesPerView: 1.3 },
                   1280: { slidesPerView: 1.6 },
-                  1440: { slidesPerView: 2.1 },
+                  1366: { slidesPerView: 2.1 },
                 }}
               >
                 {renderImages.map((img, index) => (
@@ -198,7 +198,7 @@ const PhVdslider = () => {
                   320: { slidesPerView: 1 },
                   1024: { slidesPerView: 1.3 },
                   1280: { slidesPerView: 1.6 },
-                  1440: { slidesPerView: 2.1 },
+                  1366: { slidesPerView: 2.1 },
                 }}
               >
                 {videoUrls.map((videl, index) => (
