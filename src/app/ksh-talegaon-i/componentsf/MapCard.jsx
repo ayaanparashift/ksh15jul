@@ -151,14 +151,14 @@ const MapCard = ({ activeIndex, onSelectAirport }) => {
     {
       id: 2,
       title: "Mumbai International Airport",
-      km: 132,
+      km: 130,
       icon: "/ParkPage/mapicons/apl.svg",
     },
-    { id: 3, title: "Seaport", km: 131, icon: "/ParkPage/mapicons/ship.svg" },
+    { id: 3, title: "Seaport", km: 130, icon: "/ParkPage/mapicons/ship.svg" },
     {
       id: 4,
       title: "National Highways",
-      km: 94,
+      km: 95,
       icon: "/ParkPage/mapicons/road.svg",
     },
     {
