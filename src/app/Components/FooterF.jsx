@@ -26,12 +26,12 @@ const FooterF = () => {
           <div>
             <p className="pb-5 text-lg fsans-600">Our Parks</p>
             <div className="flex flex-col gap-4 text-[#cfe6fc90] fsans-600 text-[16px]">
-              <Link href="/ksh-hosur-i">Hosur I</Link>
-              <Link href="/ksh-chakan-iv">Chakan IV</Link>
-              <Link href="/ksh-chakan-iii">Chakan III</Link>
-              <Link href="/ksh-chakan-ii">Chakan II</Link>
-              <Link href="/ksh-chakan-i">Chakan I</Link>
-              <Link href="/ksh-talegaon-i">Talegaon I</Link>
+              <Link href="/ksh-hosur-i">KSH Hosur I</Link>
+              <Link href="/ksh-chakan-iv">KSH Chakan IV</Link>
+              <Link href="/ksh-chakan-iii">KSH Chakan III</Link>
+              <Link href="/ksh-chakan-ii">KSH Chakan II</Link>
+              <Link href="/ksh-chakan-i">KSH Chakan I</Link>
+              <Link href="/ksh-talegaon-i">KSH Talegaon I</Link>
             </div>
           </div>
           <div>

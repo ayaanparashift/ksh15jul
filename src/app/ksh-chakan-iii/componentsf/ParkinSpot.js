@@ -177,7 +177,7 @@ const ParkinSpot = () => {
             </div>
 
             <motion.p className="fsans-500 gradinetText text-[14px] min-1366:text-[16px] leading-[26px]">
-              Our largest Chakan development yet, Chakan Park III sets a new
+              Our largest Chakan development yet, KSH Chakan Park III sets a new
               standard for eco-conscious, sustainable industrial spaces. Its
               superior design and utilities create an industrial environment
               where nothing is compromised. <br />

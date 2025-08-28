@@ -161,9 +161,9 @@ const ParkinSpot = ({}) => {
               KSH Talegaon I was the first industrial park developed by KSH
               INFRA. The exceptional warehousing and manufacturing facilities at
               this park caught the eye of global infrastructure investors. KSH
-              Talegaon I created the foundation for our Chakan Parks I, II, and
-              III, which now represent the gold standard in green industrial
-              development—a legacy we take great pride in.
+              Talegaon I created the foundation for our future Parks, that now
+              represent the gold standard in green industrial development—a
+              legacy we take great pride in.
             </motion.p>
             <div>
               <motion.button

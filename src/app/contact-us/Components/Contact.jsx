@@ -18,7 +18,7 @@
 
 import ContInfo from "./ContInfo";
 import ContactForm from "./ContactForm";
-
+import ContFF from "./ContFF";
 const Contact = () => {
   return (
     <div>
@@ -26,14 +26,14 @@ const Contact = () => {
         <div className="xl:pt-[100px] pb-[50px] md:flex-1 py-0 md:px-0">
           <ContInfo />
         </div>
-        <ContactForm />
+        <ContFF />
       </div>
       <div className="md:hidden flex xl:pt-0 pt-[50px] md:flex-row flex-col justify-between ">
         <div className="xl:w-[1250px] mx-auto xl:px-0 px-[5%]">
           <ContInfo />
         </div>
         <div className="w-full mt-10">
-          <ContactForm />
+          <ContFF />
         </div>
       </div>
     </div>

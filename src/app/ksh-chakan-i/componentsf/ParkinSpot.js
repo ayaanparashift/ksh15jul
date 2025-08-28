@@ -155,11 +155,11 @@ const ParkinSpot = ({}) => {
               Our first major development, KSH Chakan Park I, established our
               reputation as a world-class green industrial developer in India.
               <br /> <br />
-              Chakan Park I now serves as a thriving manufacturing, logistics,
-              and warehousing hub for several major multinational companies. The
-              park showcases our ability to create industrial spaces that meet
-              global standards while maintaining strong environmental
-              credentials.
+              KSH Chakan Park I now serves as a thriving manufacturing,
+              logistics, and warehousing hub for several major multinational
+              companies. The park showcases our ability to create industrial
+              spaces that meet global standards while maintaining strong
+              environmental credentials.
             </motion.p>
 
             <div>

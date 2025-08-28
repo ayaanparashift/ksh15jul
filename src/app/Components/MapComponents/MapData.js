@@ -5,7 +5,7 @@ export const mapslided = [
     city: "Chakan, Pune",
     tarea: "0.36 MN. SQ. FT.",
     parkLink: "/ksh-chakan-iv",
-    tbuild: "02 BUILDINGS",
+    tbuild: "02 Buildings",
   },
   {
     parkimg: "/homepage/pcard/ch3be.png",
@@ -13,7 +13,7 @@ export const mapslided = [
     city: "Chakan, Pune",
     tarea: "1.50 MN. SQ. FT.",
     parkLink: "/ksh-chakan-iii",
-    tbuild: "08 BUILDINGS",
+    tbuild: "08 Buildings",
   },
   {
     parkimg: "/homepage/pcard/ch2be.png",
@@ -21,7 +21,7 @@ export const mapslided = [
     city: "Chakan, Pune",
     tarea: "1.20 MN. SQ. FT.",
     parkLink: "/ksh-chakan-ii",
-    tbuild: "05 BUILDINGS",
+    tbuild: "05 Buildings",
   },
   {
     parkimg: "/homepage/pcard/ch1be.png",
@@ -29,7 +29,7 @@ export const mapslided = [
     city: "Chakan, Pune",
     tarea: "0.85 MN. SQ. FT.",
     parkLink: "/ksh-chakan-i",
-    tbuild: "04 BUILDINGS",
+    tbuild: "04 Buildings",
   },
   {
     parkimg: "/homepage/pcard/tal1be.png",
@@ -37,7 +37,7 @@ export const mapslided = [
     city: "Talegaon, Pune",
     tarea: "0.14 MN. SQ. FT.",
     parkLink: "/ksh-talegaon-i",
-    tbuild: "02 BUILDINGS",
+    tbuild: "02 Buildings",
   },
 ];
 export const mapslided2 = [
@@ -47,7 +47,7 @@ export const mapslided2 = [
     city: "Hosur, Bengaluru",
     tarea: "1.20 MN. SQ.FT.",
     parkLink: "/ksh-hosur-i",
-    tbuild: "04 BUILDINGS",
+    tbuild: "04 Buildings",
   },
 ];
 export const mapslided3 = [
@@ -57,7 +57,7 @@ export const mapslided3 = [
     city: "Hosur, Bengaluru",
     tarea: "1 MN. SQ.FT.",
     parkLink: "/ksh-hosur-i",
-    tbuild: "04 BUILDINGS",
+    tbuild: "04 Buildings",
   },
 ];
 export const hotspotData = {

@@ -145,7 +145,7 @@ const ParkinSpot = ({}) => {
             </div>
 
             <motion.p className="fsans-500 gradinetText text-[14px]  min-1366:text-[16px] leading-[26px]">
-              Chakan Park II is KSH INFRA’s second landmark development in the
+              KSH Chakan Park II is our second landmark development in the
               Chakan region, thoughtfully designed to meet the evolving needs of
               modern industry. The park features state-of-the-art, sustainable,
               and ergonomic industrial spaces, and is home to a strong ecosystem
