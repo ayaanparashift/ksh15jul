@@ -112,14 +112,16 @@ const SustainSec2 = () => {
               className="text-[#434343] text-base flex flex-col justify-between pt-9 gap-3"
             >
               <p>
-                At KSH INFRA, we are passionate about creating a sustainable
-                future. We believe your business success and environmental
-                responsibility go hand-in-hand. Therefore, every initiative,
-                every project follows strict Green Building standards,
+                At KSH INFRA, Inspiring Green Development is more than a
+                promise—it’s the foundation of everything we build. We believe
+                that business success and environmental responsibility must go
+                hand in hand. That’s why every project we undertake adheres to
+                stringent Green Building standards, ensuring long-term value for
+                our partners and minimal impact on the environment.
               </p>
               <p>
                 {" "}
-                We are proud of our EDGE Certification and IGBC Platinum—it's
+                We are proud of our EDGE and IGBC Platinum Certifications — it's
                 how we bring you industrial parks that are high-quality,
                 efficient, and kind to our planet at the same time. When you
                 choose KSH INFRA, you join our commitment to making a
@@ -205,7 +207,7 @@ export default SustainSec2;
 //               <p>
 //                 {" "}
 //                 Having delivered over 4 million square feet of high-quality
-//                 industrial and logistical assets, KSH INFRA is on a steady
+//                 industrial and logistics assets, KSH INFRA is on a steady
 //                 trajectory of expansion across key Indian markets with a
 //                 targeted development of 10 million square feet over the next 5
 //                 years.

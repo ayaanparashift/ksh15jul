@@ -1,10 +1,9 @@
 // "use client";
 // import React, { useState } from "react";
-// import Image from "next/image";
 // import { motion, AnimatePresence } from "framer-motion";
-// import EnquireNow from "../../Components/EnquireNow"; // adjust path if needed
+// import EnquireNow from "../../Components/EnquireNow";
 
-// const ParkinSpot = ({}) => {
+// const ParkinSpot = () => {
 //   const [showEnquire, setShowEnquire] = useState(false);
 
 //   const handleEnquireClick = (e) => {
@@ -28,18 +27,18 @@
 //           <div className="flex flex-col flex-1 max-w-full gap-5 min-1366:gap-10 justify-center relative">
 //             <div className="flex flex-col max-w-fit">
 //               <motion.h1 className="fpt-500 xl:text-[50px] lg:text-[40px] md:text-[32px] text-[20px] text-white leading-[150%] md:leading-[105%] 2xl:text-[64px]">
-//                 KSH INFRA Chakan III Park
+//                 KSH Chakan Park III
 //               </motion.h1>
-//               <motion.div className="bg-[#F7E327] h-[8px] sm:h-[10px] w-full" />
+//               <motion.div className="bg-[#F7E327] h-[10px] w-full" />
 //             </div>
 
-//             <motion.p className="fsans-500 gradinetText text-[14px] lg:text-[14px] min-1366:text-[16px] leading-[26px]">
-//               Our largest Chakan development yet, Chakan Park III sets a new
+//             <motion.p className="fsans-500 gradinetText text-[14px] min-1366:text-[16px] leading-[26px]">
+//               Our largest Chakan development yet, KSH Chakan Park III sets a new
 //               standard for eco-conscious, sustainable industrial spaces. Its
-//               superior design and amenities create an industrial environment
+//               superior design and utilities create an industrial environment
 //               where nothing is compromised. <br />
 //               <br />
-//               This fully customizable, ready-to-occupy facility ensures your
+//               This customizable, ready-to-occupy facility ensures your
 //               operations run smoothly with maximum productivity and efficiency
 //               while keeping your team safe. We've created a space where your
 //               business can perform at its absolute best.
@@ -62,16 +61,15 @@
 
 //           {/* Right Side Image */}
 //           <div className="xl:flex-1 flex flex-col justify-center items-end">
-//             <div className="flex items-end justify-center flex-col lg:w-[688.5px] 2xl:w-[810px] lg:h-[476px] 2xl:h-[560px] max-w-full relative">
+//             <div className="flex items-end justify-center flex-col max-w-full relative">
 //               {/* Desktop Image */}
 //               <div className="relative">
-//                 <div className="relative h-fit overflow-hidden flex lg:justify-center justify-end w-full">
+//                 <div className="relative xl:flex hidden w-[755px] overflow-hidden lg:justify-center justify-end max-w-full">
 //                   <img
 //                     src="/ParkPage/chakan-3/ch3rspot.png"
 //                     className="object-cover w-full md:inline-block hidden"
-//                     alt="some"
+//                     alt="Chakan III Park"
 //                   />
-//                   {/* <motion.div className="absolute top-0 left-0 w-full h-full z-20 bg-[#092241]" /> */}
 //                 </div>
 //               </div>
 //               {/* Mobile Image */}
@@ -79,7 +77,7 @@
 //                 <img
 //                   src="/ParkPage/chakan-3/ch3rspot.png"
 //                   className="object-cover md:hidden inline-block"
-//                   alt="some"
+//                   alt="Chakan III Park"
 //                 />
 //               </div>
 //             </div>
@@ -92,29 +90,14 @@
 //         </div>
 //       </div>
 
-//       {/* <AnimatePresence>
-//         {showEnquire && (
-//           <motion.div
-//             className="fixed z-[10000000000] top-0 right-0 md:right-0 min-h-screen w-[510px] overflow-hidden"
-//             initial={{ x: "100%" }}
-//             animate={{ x: 0 }}
-//             exit={{ x: "100%" }}
-//             transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
-//           >
-//             <EnquireNow closeEnquire={handleCloseEnquire} />
-//           </motion.div>
-//         )}
-//       </AnimatePresence> */}
+//       {/* Enquire Now Modal */}
 //       <AnimatePresence>
 //         {showEnquire && (
 //           <>
-//             {/* Full-screen dark overlay */}
 //             <motion.div
 //               className="fixed inset-0 bg-black bg-opacity-70 z-[1000]"
 //               onClick={handleCloseEnquire}
 //             />
-
-//             {/* Full-screen slide-in panel */}
 //             <motion.div
 //               className="fixed inset-0 z-[1001001] flex justify-end"
 //               initial={{ x: "100%" }}
@@ -141,7 +124,6 @@
 // };
 
 // export default ParkinSpot;
-
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -165,24 +147,24 @@ const ParkinSpot = () => {
 
   return (
     <>
-      <div className="bg-[url(/fistfold.png)] bg-cover bg-center z-0 relative">
-        <div className="ml-[max(5%,calc((100vw-1250px)/2))] lg:mr-0 mr-[max(5%,calc((100vw-1250px)/2))] pt-[150px] flex items-center lg:justify-center justify-evenly lg:h-screen min-1366:gap-[80px] md:gap-[50px] gap-[20px] lg:flex-row flex-col-reverse">
+      <div className="bg-[#fff] bg-cover bg-center z-0 relative">
+        <div className="ml-[max(5%,calc((100vw-1250px)/2))] lg:mr-0 mr-[max(5%,calc((100vw-1250px)/2))] pt-[150px] pb-12 flex items-center lg:justify-center justify-evenly min-1366:gap-[80px] md:gap-[50px] gap-[20px] lg:flex-row flex-col-reverse">
           {/* Left Side Content */}
           <div className="flex flex-col flex-1 max-w-full gap-5 min-1366:gap-10 justify-center relative">
             <div className="flex flex-col max-w-fit">
-              <motion.h1 className="fpt-500 xl:text-[50px] lg:text-[40px] md:text-[32px] text-[20px] text-white leading-[150%] md:leading-[105%] 2xl:text-[64px]">
+              <motion.h1 className="fpt-500 xl:text-[50px] lg:text-[40px] md:text-[32px] text-[20px] text-black leading-[150%] md:leading-[105%] 2xl:text-[64px]">
                 KSH Chakan Park III
               </motion.h1>
               <motion.div className="bg-[#F7E327] h-[10px] w-full" />
             </div>
 
-            <motion.p className="fsans-500 gradinetText text-[14px] min-1366:text-[16px] leading-[26px]">
+            <motion.p className="fsans-500 gradinetTextw text-[14px] min-1366:text-[16px] leading-[26px]">
               Our largest Chakan development yet, KSH Chakan Park III sets a new
               standard for eco-conscious, sustainable industrial spaces. Its
               superior design and utilities create an industrial environment
               where nothing is compromised. <br />
               <br />
-              This fully customizable, ready-to-occupy facility ensures your
+              This customizable, ready-to-occupy facility ensures your
               operations run smoothly with maximum productivity and efficiency
               while keeping your team safe. We've created a space where your
               business can perform at its absolute best.

@@ -39,7 +39,7 @@ const AboutSec2 = () => {
               <p>
                 {" "}
                 With over four million square feet of top-quality industrial and
-                logistical spaces and counting, KSH INFRA is expanding across
+                logistics spaces and counting, KSH INFRA is expanding across
                 country's key markets with plans for 10 million square feet in
                 the next five years.
               </p>

@@ -161,10 +161,10 @@ const CaseStudy = () => {
         {/* Custom Navigation Buttons (just class based now) */}
         <div className="flex items-center justify-start gap-3 mt-8">
           <button className="landingl custom-prev w-fit">
-            <img className="w-10 h-10" src="/landingr.svg" alt="Prev" />
+            <img className="w-10 h-10" src="/ParkPage/parrowp.svg" alt="Prev" />
           </button>
           <button className="landingr custom-next w-10 h-10">
-            <img className="w-10 h-10" src="/landingl.svg" alt="Next" />
+            <img className="w-10 h-10" src="/ParkPage/parrown.svg" alt="Next" />
           </button>
         </div>
       </div>

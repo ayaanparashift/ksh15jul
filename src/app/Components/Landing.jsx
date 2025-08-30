@@ -169,9 +169,9 @@ const Landing = () => {
               color: "transparent",
             }}
           >
-            We deliver on our promises, with expertise in land acquisition, site
-            selection, and customised facility development to fit your needs and
-            schedule.
+            We deliver on our promises, with expertise in land acquisition,
+            customised facility development and property management to fit your
+            needs.
           </p>
 
           <Link

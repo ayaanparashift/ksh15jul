@@ -22,8 +22,8 @@ const CapAbout = () => {
         >
           We combine deep market knowledge with hands-on expertise to deliver
           complete success for your industrial real estate needs. From finding
-          the right land to managing every aspect of your property, we don't
-          just meet industry standards — we set them.
+          the right land to managing every aspect of the property, we don't just
+          meet industry standards — we set them.
         </p>
       </div>
     </div>

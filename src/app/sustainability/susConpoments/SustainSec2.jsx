@@ -117,7 +117,7 @@ export default SustainSec2;
 //               <p>
 //                 {" "}
 //                 Having delivered over 4 million square feet of high-quality
-//                 industrial and logistical assets, KSH INFRA is on a steady
+//                 industrial and logistics assets, KSH INFRA is on a steady
 //                 trajectory of expansion across key Indian markets with a
 //                 targeted development of 10 million square feet over the next 5
 //                 years.

@@ -170,8 +170,8 @@ const Landing3 = () => {
             }}
           >
             Spanning 60 acres in Chennai’s prime industrial hub, this upcoming
-            Grade A logistics park is designed for businesses aiming to expand
-            across Tamil Nadu and beyond.
+            Grade A Industrial & Logistics park is designed for businesses
+            aiming to expand across Tamil Nadu and beyond.
           </p>
           <div>
             <Link

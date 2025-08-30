@@ -246,6 +246,18 @@ body {
   background-clip: text;
   color: transparent;
 }
+.gradinetTextw {
+  background-image: linear-gradient(
+    to bottom,
+    #5f7b9e,
+    /* #ffffff,
+    #ffffff, */ #5f7b9e70
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
 #park-overview {
   * {
     text-decoration: none !important;
@@ -807,6 +819,7 @@ li {
   background: rgba(16, 16, 70, 0.26);
   background-blend-mode: multiply;
   backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 #bloginwy h2,

@@ -225,26 +225,28 @@ const exteriorVideos = [
     title: "Roads",
     video: "/ParkPage/parkinfra/parkexterior/Roadways.mp4",
   },
+  // {
+  //   id: 4,
+  //   title: "Building Structure",
+  //   video: "/ParkPage/parkinfra/parkexterior/Structure.mp4",
+  // },
   {
+    // id: 5,
     id: 4,
-    title: "Building Structure",
-    video: "/ParkPage/parkinfra/parkexterior/Structure.mp4",
-  },
-  {
-    id: 5,
     title: "Solar Roof",
     video: "/ParkPage/parkinfra/parkexterior/Building Roof.mp4",
   },
   {
-    id: 6,
+    // id: 6,
+    id: 5,
     title: "Truck Apron",
     video: "/ParkPage/parkinfra/parkexterior/Docking Apron.mp4",
   },
-  {
-    id: 7,
-    title: "Parking",
-    video: "/ParkPage/parkinfra/parkexterior/Parking.mp4",
-  },
+  // {
+  //   id: 7,
+  //   title: "Parking",
+  //   video: "/ParkPage/parkinfra/parkexterior/Parking.mp4",
+  // },
 ];
 const interiorVideos = [
   {

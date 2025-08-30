@@ -150,18 +150,18 @@ const investors = [
     type: "existing",
   },
   {
-    image: "/investorRel/inms.png",
-    title: "Morgan Stanley Real Estate Investing (MSREI)",
-    content: "", // removed
-    flip: false,
-    type: "past",
-  },
-  {
     image: "/investorRel/maplef.png",
     title: "Mapletree Investments",
     content:
       "Mapletree acquired both KSH Chakan Park I (2021) and KSH Chakan Park II (2022) from KSH INFRA in successful exit transactions.",
     flip: true, // only this one flips
+    type: "past",
+  },
+  {
+    image: "/investorRel/inms.png",
+    title: "Morgan Stanley Real Estate Investing (MSREI)",
+    content: "", // removed
+    flip: false,
     type: "past",
   },
   {

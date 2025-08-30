@@ -39,7 +39,7 @@ const CapLand = () => {
                 markets closely and predicting city growth patterns. We choose
                 locations with easy access, strong growth potential and
                 alignment with economic development plans. Every site we select
-                creates a solid foundation for your industrial success. We don't
+                creates a solid foundation for your business success. We don't
                 just acquire land - we secure your future advantage through
                 strategic positioning.
               </p>

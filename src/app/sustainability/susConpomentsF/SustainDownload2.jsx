@@ -222,7 +222,7 @@ const tabs = [
     heading: "KSH INFRA Parks are EDGE-Certified",
     title: "EDGE",
     content:
-      "Excellence in Design for Greater Efficiency (EDGE) is the global standard for green building certifications. Adopted in over 150 countries, EDGE ensures that industrial real estate is resource efficient and sustainable. KSH INFRA is proud to have this badge of honour with KSH INFRA Parks being EDGE certified, reinforcing our commitment to creating a green industrial future.",
+      "Excellence in Design for Greater Efficiency (EDGE) is the global standard for green building certifications. Adopted in over 150 countries, EDGE ensures that industrial real estate is resource efficient and sustainable. We are proud to have this badge of honour with KSH INFRA Park II being EDGE certified, reinforcing our commitment to creating a green industrial future.",
     image: "/Sustainability/sustainDowloadLSlides/edgec.png",
   },
   // {

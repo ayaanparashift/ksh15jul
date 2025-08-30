@@ -12,7 +12,7 @@ const exteriorVideos = [
   },
   {
     id: 2,
-    title: "Building Names",
+    title: "Building Details",
     video: "/ParkPage/chakan-3/videos/exterior/buildingnames.mp4",
   },
   {
@@ -27,7 +27,7 @@ const exteriorVideos = [
   },
   {
     id: 5,
-    title: "Truck Parking & Apron",
+    title: "Parking & Truck Apron",
     video: "/ParkPage/chakan-3/videos/exterior/tparkingapron.mp4",
   },
 ];

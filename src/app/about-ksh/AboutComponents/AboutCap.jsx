@@ -265,7 +265,7 @@ const AboutCap = () => {
           className="text-[#202020] mt-[-45px] flex sm:w-full items-start text-[16px] fsans-600 leading-[26px]"
         >
           The KSH Group boasts a rich legacy, growing to employ over 550
-          professionals with a turnover surpassing INR 2,000 Cr.. Rooted in the
+          professionals with a turnover surpassing INR 2,000 Cr. Rooted in the
           logistics and manufacturing sectors, the Group has built its success
           on a foundation of strong core values and an unwavering commitment to
           excellence. This philosophy continues to guide KSH INFRA in the

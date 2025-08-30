@@ -21,7 +21,7 @@
 //       image: "./Cap/captabimg.png",
 //       listItems: [
 //         "Immediate Availability: Our Ready-to-Move facilities are available for immediate occupation. so that your No construction delays, no waiting hassles.",
-//         "High Standards: Our spaces conform to best-in-class industrial and logistical standards, and are ready for starting operations on day one.",
+//         "High Standards: Our spaces conform to best-in-class industrial and logistics standards, and are ready for starting operations on day one.",
 //         "Flexible Use: Our spaces are designed to support various industry needs with essential amenities.",
 //       ],
 //     },
@@ -161,7 +161,7 @@ const CapDev = () => {
         {
           title: "High Standards",
           description:
-            "Our spaces conform to best-in-class industrial and logistical standards, and are ready for starting operations on day one.",
+            "Our spaces conform to best-in-class industrial and logistics standards.",
         },
         {
           title: "Flexible Use",
@@ -199,7 +199,7 @@ const CapDev = () => {
             </h1>
             <p className="text-lg leading-[28px] fsans-400 text-[#CECECE]">
               At KSH INFRA, we understand that your business is unique, and so
-              are your facility requirements. That is why our we offer both
+              are your facility requirements. That is why we offer both
               ‘Built-to-Suit’ and ‘Ready-to-Move’ solutions to match the diverse
               needs of our clients.
             </p>
