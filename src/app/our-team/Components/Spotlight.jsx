@@ -54,7 +54,7 @@ export default function Spotlight() {
         <p className="text-[#00000040] text-[13px] md:text-base fsans-400">
           <Link
             href="/"
-            className="hover:text-white transition-colors duration-300 text-[13px] sm:text-base"
+            className="hover:text-black transition-colors duration-300 text-[13px] sm:text-base"
           >
             Home
           </Link>{" "}

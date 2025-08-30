@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast";
 import { TabProvider } from "./context/TabContext";
 import { BlogProvider } from "./context/BlogContext";
 import FooterF from "./Components/FooterF";
+import NavF from "./Components/NavF";
 
 export const metadata = {
   title: "KSH INFRA",
@@ -20,7 +21,7 @@ export default function RootLayout({ children }) {
         <BlogProvider>
           <TabProvider>
             <GlobalEnquire>
-              <Navbar />
+              <NavF />
               {/* <div className="h-[100px] max-w-screen relative z-[100000000000000000000000]" /> */}
               <Toaster position="top-center" reverseOrder={false} />
               {children}
