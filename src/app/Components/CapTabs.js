@@ -33,8 +33,8 @@ export const tabs = [
     },
   },
   {
-    title: "Leasing",
-    heading: <>Leasing</>,
+    title: "Leasing Management",
+    heading: <>Leasing Management</>,
     content:
       "We offer flexible leasing options that work for you. Choose custom-built spaces, move-in ready spaces or whichever option fits your business for a smooth start.",
     images: {

@@ -198,14 +198,14 @@ export default function FormSec() {
               ref={formRef}
               onSubmit={handleSubmit}
               encType="multipart/form-data"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
-              viewport={{ amount: 0.1, once: true }}
+              // initial={{ opacity: 0 }}
+              // whileInView={{ opacity: 1 }}
+              // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
+              // viewport={{ amount: 0.1, once: true }}
               className="flex flex-col gap-[24px] sm:gap-[40px] relative z-0"
             >
               {/* First & Last Name */}
-              <div className="flex sm:flex-row flex-col gap-[24px]">
+              <div className="flex sm:flex-row flex-col sm:gap-10 gap-[24px]">
                 <div className="flex flex-col w-full sm:w-[295px]">
                   <input
                     name="first_name"
@@ -239,7 +239,7 @@ export default function FormSec() {
               </div>
 
               {/* Phone & Email */}
-              <div className="flex sm:flex-row flex-col gap-[24px]">
+              <div className="flex sm:flex-row flex-col sm:gap-10 gap-[24px]">
                 <div className="flex flex-col w-full sm:w-[295px]">
                   <input
                     name="user_phone"
@@ -285,7 +285,7 @@ export default function FormSec() {
               </div>
 
               {/* Education & Department */}
-              <div className="flex sm:flex-row flex-col gap-[24px]">
+              <div className="flex sm:flex-row flex-col sm:gap-10 gap-[24px]">
                 <div className="flex flex-col w-full sm:w-[295px]">
                   <input
                     name="user_education"
@@ -408,18 +408,11 @@ export default function FormSec() {
           )}
         </div>
 
-        <div className="2xl:h-[600px] flex-1 hidden md:block overflow-hidden relative">
+        <div className="2xl:h-[95vh] flex-1 hidden md:block overflow-hidden relative">
           <img
             className="object-cover min-h-full min-w-full"
             src="/Career/careerformimg.png"
             alt="career visual"
-          />
-          <motion.div
-            initial={{ x: 0 }}
-            whileInView={{ x: "100%" }}
-            transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="absolute top-0 left-0 bg-[url(/Career/formbg.png)] w-full h-[calc(100%+10px)] z-[0] bg-no-repeat bg-cover"
           />
         </div>
       </div>

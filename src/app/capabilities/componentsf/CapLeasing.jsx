@@ -23,7 +23,7 @@ const CapLeasing = () => {
             className="rigCon flex-1 flex flex-col lg:gap-10 gap-5"
           >
             <h1 className="text-3xl fpt-500 text-[#092241] leading-[33px] border-b-[#040404] border-b-[1px] pb-2">
-              Leasing
+              Leasing Management
             </h1>
 
             <div className="">

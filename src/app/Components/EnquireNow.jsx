@@ -461,10 +461,14 @@ const EnquireNow = ({ closeEnquire }) => {
             <button
               type="submit"
               disabled={isSending}
-              className="bg-[#E30613] w-fit gap-[10px] px-[21px] py-[14px] flex items-center text-base fsans-600 text-white justify-around rounded-3xl opacity-90 hover:opacity-100"
+              className="bg-[#E30613] group w-fit gap-[10px] px-[21px] py-[14px] flex items-center text-base fsans-600 text-white justify-around rounded-3xl opacity-90 hover:opacity-100"
             >
               <p>{isSending ? "Sending..." : "Submit"}</p>
-              <img src="/rightUpArrow.svg" alt="Arrow" />
+              <img
+                className="group-hover:rotate-0 rotate-45 duration-500 transition-transform"
+                src="/rightUpArrow.svg"
+                alt="Arrow"
+              />
             </button>
           </div>
         </form>

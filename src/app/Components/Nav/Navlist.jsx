@@ -705,7 +705,7 @@ const Navlist = ({ onClose }) => {
     >
       <motion.div
         layout
-        className="flex flex-col gap-[10px] min-1440:py-5 min-1366:py-3 min-1366:gap-[40px] leading-[300%] min-1366:leading-[200%] min-h-full items-end"
+        className="flex flex-col gap-[10px] min-1440:py-5 min-1366:py-3 min-1366:gap-[30px] min-1440:!gap-[40px] leading-[300%] min-1366:leading-[200%] min-h-full items-end"
       >
         {navItem.map((item, idx) =>
           item.isDropdown ? (

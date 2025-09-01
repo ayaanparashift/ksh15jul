@@ -5,6 +5,7 @@ import CareerSec3 from "./Components/CareerSec3";
 import CareerSpot from "./Components/CareerSpot";
 import { CarSlide } from "./Components/CarSlide";
 import FormSec from "./Components/FormSec";
+import FormSecF from "./Components/FormSecF";
 
 export const metadata = {
   title:
@@ -22,7 +23,7 @@ export default function page() {
       <CareerAcc />
       <CarSlide />
       <CareerBlbg />
-      <FormSec />
+      <FormSecF />
     </div>
   );
 }

@@ -170,8 +170,9 @@ const Landing = () => {
             }}
           >
             We deliver on our promises, with expertise in land acquisition,
-            customised facility development and property management to fit your
-            needs.
+            customised facility development, and
+            <br />
+            property management to fit your needs.
           </p>
 
           <Link

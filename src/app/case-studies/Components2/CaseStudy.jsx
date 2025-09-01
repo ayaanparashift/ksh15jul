@@ -143,7 +143,9 @@ const CaseStudy = () => {
             nextEl: ".custom-next",
           }}
           breakpoints={{
-            1024: { slidesPerView: 2, slidesPerGroup: 2 },
+            1024: { slidesPerView: 1.5, slidesPerGroup: 1 },
+            1280: { slidesPerView: 1.6, slidesPerGroup: 1 },
+            1366: { slidesPerView: 2, slidesPerGroup: 2 },
           }}
         >
           {CaseStudyContent.map((content, index) => (

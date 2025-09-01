@@ -185,7 +185,7 @@ const CapDev = () => {
             // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
             className="text-3xl fpt-500 text-[#ffffff] leading-[33px] border-b-[#828282] border-b-[1px] pb-2 overflow-hidden whitespace-nowrap"
           >
-            Development
+            Project Development
           </h1>
 
           <div

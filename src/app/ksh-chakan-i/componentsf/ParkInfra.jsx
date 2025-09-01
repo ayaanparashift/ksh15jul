@@ -220,11 +220,11 @@ const exteriorVideos = [
     title: "Statistics",
     video: "/ParkPage/parkinfra/parkexterior/Statistics.mp4",
   },
-  {
-    id: 3,
-    title: "Roads",
-    video: "/ParkPage/parkinfra/parkexterior/Roadways.mp4",
-  },
+  // {
+  //   id: 3,
+  //   title: "Roads",
+  //   video: "/ParkPage/parkinfra/parkexterior/Roadways.mp4",
+  // },
   // {
   //   id: 4,
   //   title: "Building Structure",
@@ -232,13 +232,13 @@ const exteriorVideos = [
   // },
   {
     // id: 5,
-    id: 4,
+    id: 3,
     title: "Solar Roof",
     video: "/ParkPage/parkinfra/parkexterior/Building Roof.mp4",
   },
   {
     // id: 6,
-    id: 5,
+    id: 4,
     title: "Truck Apron",
     video: "/ParkPage/parkinfra/parkexterior/Docking Apron.mp4",
   },
