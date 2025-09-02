@@ -1006,7 +1006,6 @@
 //   );
 // }
 "use client";
-
 import { motion } from "framer-motion";
 import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
@@ -1108,7 +1107,27 @@ export default function FormSecF() {
         },
         PUBLIC_KEY
       );
+      // ✅ 2. Push data to Google Sheets via our Next.js API
+      const sheetRes = await fetch("/api/career", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          date: new Date().toISOString(),
+          first_name: formData.first_name,
+          last_name: formData.last_name,
+          user_phone: formData.user_phone,
+          user_email: formData.user_email,
+          user_education: formData.user_education,
+          user_department: formData.user_department,
+          cv: file ? file.name : "",
+          cover_letter: file2 ? file2.name : "",
+        }),
+      });
 
+      const sheetData = await sheetRes.json();
+      console.log("📊 Sheet response:", sheetData);
       setFormData({
         first_name: "",
         last_name: "",

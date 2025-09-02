@@ -544,6 +544,228 @@
 // };
 
 // export default PopForm;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// "use client";
+// import React, { useState, useEffect } from "react";
+// import { motion } from "framer-motion";
+// import emailjs from "@emailjs/browser";
+
+// const NAME_REGEX = /^[A-Za-z ]{2,}$/;
+// const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// const PopForm = ({ onClose }) => {
+//   const [name, setName] = useState("");
+//   const [email, setEmail] = useState("");
+//   const [sending, setSending] = useState(false);
+//   const [submitted, setSubmitted] = useState(false);
+//   const [errorMessage, setErrorMessage] = useState("");
+//   const [fieldError, setFieldError] = useState({ field: "", text: "" });
+
+//   // ✅ Init EmailJS client-side only
+//   useEffect(() => {
+//     if (process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
+//       emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
+//       console.log(
+//         "✅ EmailJS initialized with key:",
+//         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+//       );
+//     } else {
+//       console.error("❌ Missing NEXT_PUBLIC_EMAILJS_PUBLIC_KEY");
+//     }
+//   }, []);
+
+//   const validateField = (field, value) => {
+//     if (!value) {
+//       return `${field.charAt(0).toUpperCase() + field.slice(1)} is required.`;
+//     }
+//     if (field === "name" && !NAME_REGEX.test(value)) {
+//       return "Name must be at least 2 letters and contain only letters/spaces.";
+//     }
+//     if (field === "email" && !EMAIL_REGEX.test(value)) {
+//       return "Please enter a valid email address.";
+//     }
+//     return "";
+//   };
+
+//   const handleFocus = (field) => {
+//     if (fieldError.field === field) {
+//       setFieldError({ field: "", text: "" });
+//     }
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+
+//     // Validate name
+//     let err = validateField("name", name);
+//     if (err) {
+//       setFieldError({ field: "name", text: err });
+//       return;
+//     }
+//     // Validate email
+//     err = validateField("email", email);
+//     if (err) {
+//       setFieldError({ field: "email", text: err });
+//       return;
+//     }
+
+//     console.log("📨 Submitting form with:", { name, email });
+//     setSending(true);
+//     setErrorMessage("");
+//     setFieldError({ field: "", text: "" });
+
+//     const notifyParams = { from_name: name, from_email: email };
+//     const autoParams = {
+//       to_email: email,
+//       report_link:
+//         "https://www.kshinfra.com/wp-content/uploads/2024/07/KSH_ESG_Report_v13.pdf",
+//     };
+
+//     try {
+//       // ✅ First email (notify)
+//       const res1 = await emailjs.send(
+//         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+//         process.env.NEXT_PUBLIC_EMAILJS_ESG_REPORT_NOTIFY,
+//         notifyParams
+//       );
+//       console.log("📧 Notify email sent:", res1);
+
+//       // ✅ Second email (auto response)
+//       const res2 = await emailjs.send(
+//         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+//         process.env.NEXT_PUBLIC_EMAILJS_ESG_REPORT_AUTORESPOND,
+//         autoParams
+//       );
+//       console.log("📧 Auto-respond email sent:", res2);
+
+//       setSubmitted(true);
+//     } catch (err) {
+//       console.error("❌ EmailJS error:", err?.text || err?.message || err);
+//       setErrorMessage("❌ Something went wrong. Please try again.");
+//     } finally {
+//       setSending(false);
+//     }
+//   };
+
+//   return (
+//     <motion.div
+//       initial={{ opacity: 0 }}
+//       animate={{ opacity: 1 }}
+//       exit={{ opacity: 0 }}
+//       transition={{ duration: 0.6 }}
+//       className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50"
+//     >
+//       <form
+//         onSubmit={handleSubmit}
+//         className="lg:w-[620px]  max-w-full min-h-[318px] w-full bg-[#092241] p-6 md:p-12 flex flex-col gap-0 sm:gap-8"
+//         noValidate
+//       >
+//         <header className="flex justify-between items-center">
+//           <h3 className="text-white text-[24px] md:text-[44px] font-bold">
+//             Download ESG Report
+//           </h3>
+//           <button type="button" onClick={onClose}>
+//             <img
+//               className="h-10 w-10"
+//               src="/Sustainability/icons/broclose.svg"
+//               alt="Close"
+//             />
+//           </button>
+//         </header>
+
+//         {!submitted ? (
+//           <>
+//             <div className="flex flex-col gap-6">
+//               {/* Name */}
+//               <div>
+//                 <input
+//                   type="text"
+//                   value={name}
+//                   onChange={(e) => setName(e.target.value)}
+//                   onFocus={() => handleFocus("name")}
+//                   placeholder="Name"
+//                   className={`w-full bg-[#263548] text-white border-b py-2 px-4 outline-none ${
+//                     fieldError.field === "name"
+//                       ? "border-red-400"
+//                       : "border-[#146BD7]"
+//                   }`}
+//                 />
+//                 {fieldError.field === "name" && (
+//                   <p className="mt-1 text-sm text-red-400">{fieldError.text}</p>
+//                 )}
+//               </div>
+
+//               {/* Email */}
+//               <div>
+//                 <input
+//                   type="email"
+//                   value={email}
+//                   onChange={(e) => setEmail(e.target.value)}
+//                   onFocus={() => handleFocus("email")}
+//                   placeholder="Email"
+//                   className={`w-full bg-[#263548] text-white border-b py-2 px-4 outline-none ${
+//                     fieldError.field === "email"
+//                       ? "border-red-400"
+//                       : "border-[#146BD7]"
+//                   }`}
+//                 />
+//                 {fieldError.field === "email" && (
+//                   <p className="mt-1 text-sm text-red-400">{fieldError.text}</p>
+//                 )}
+//               </div>
+//             </div>
+
+//             <button
+//               type="submit"
+//               disabled={sending}
+//               className="self-start bg-[#E30613] text-white mt-6 py-3 px-6 rounded-full flex items-center gap-2 disabled:opacity-50"
+//             >
+//               {sending ? (
+//                 "Sending..."
+//               ) : (
+//                 <>
+//                   <span>Proceed to Download</span>
+//                   <img
+//                     className="h-6 w-6"
+//                     src="/Sustainability/susdownarr.svg"
+//                     alt="down arrow"
+//                   />
+//                 </>
+//               )}
+//             </button>
+//           </>
+//         ) : (
+//           <div className="mt-4 sm:mt-4  text-white fsans-600 text-[20px] sm:text-[30px] py-3 rounded-lg">
+//             Thank You For Submitting This Form. Please Check your inbox for the
+//             report link!
+//           </div>
+//         )}
+
+//         {errorMessage && (
+//           <div className="mt-0 sm:mt-4 bg-white bg-opacity-20 text-red-300 text-[20px] sm:text-[30px] py-3 rounded-lg text-center">
+//             {errorMessage}
+//           </div>
+//         )}
+//       </form>
+//     </motion.div>
+//   );
+// };
+
+// export default PopForm;
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -564,10 +786,7 @@ const PopForm = ({ onClose }) => {
   useEffect(() => {
     if (process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
       emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
-      console.log(
-        "✅ EmailJS initialized with key:",
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-      );
+      console.log("✅ EmailJS initialized");
     } else {
       console.error("❌ Missing NEXT_PUBLIC_EMAILJS_PUBLIC_KEY");
     }
@@ -595,13 +814,13 @@ const PopForm = ({ onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate name
+    // ✅ Validate name
     let err = validateField("name", name);
     if (err) {
       setFieldError({ field: "name", text: err });
       return;
     }
-    // Validate email
+    // ✅ Validate email
     err = validateField("email", email);
     if (err) {
       setFieldError({ field: "email", text: err });
@@ -621,6 +840,24 @@ const PopForm = ({ onClose }) => {
     };
 
     try {
+      // ✅ Save entry in Google Sheet via API
+      const sheetRes = await fetch("/api/esgr", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          timestamp: new Date().toISOString(),
+        }),
+      });
+
+      const sheetData = await sheetRes.json();
+      console.log("📑 Sheet response:", sheetData);
+
+      if (!sheetData.success) {
+        console.warn("⚠️ Failed to save entry in sheet", sheetData.error);
+      }
+
       // ✅ First email (notify)
       const res1 = await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -639,7 +876,7 @@ const PopForm = ({ onClose }) => {
 
       setSubmitted(true);
     } catch (err) {
-      console.error("❌ EmailJS error:", err?.text || err?.message || err);
+      console.error("❌ Error:", err?.text || err?.message || err);
       setErrorMessage("❌ Something went wrong. Please try again.");
     } finally {
       setSending(false);
@@ -656,7 +893,7 @@ const PopForm = ({ onClose }) => {
     >
       <form
         onSubmit={handleSubmit}
-        className="lg:w-[620px]  max-w-full min-h-[318px] w-full bg-[#092241] p-6 md:p-12 flex flex-col gap-0 sm:gap-8"
+        className="lg:w-[620px] max-w-full min-h-[318px] w-full bg-[#092241] p-6 md:p-12 flex flex-col gap-0 sm:gap-8"
         noValidate
       >
         <header className="flex justify-between items-center">
@@ -734,7 +971,7 @@ const PopForm = ({ onClose }) => {
             </button>
           </>
         ) : (
-          <div className="mt-4 sm:mt-4  text-white fsans-600 text-[20px] sm:text-[30px] py-3 rounded-lg">
+          <div className="mt-4 sm:mt-4 text-white fsans-600 text-[20px] sm:text-[30px] py-3 rounded-lg">
             Thank You For Submitting This Form. Please Check your inbox for the
             report link!
           </div>
