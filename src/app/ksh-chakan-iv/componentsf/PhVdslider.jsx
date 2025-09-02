@@ -63,6 +63,10 @@ const PhVdslider = () => {
   // Video array
   const videoUrls = [
     { labl: "3D Walkthrough", vid: "https://player.vimeo.com/video/908122558" },
+    {
+      labl: "KSH Chakan Park IV Construction Update July 2025",
+      vid: "https://player.vimeo.com/video/1115054878",
+    },
   ];
   // Flags to determine if navigation should render
   const hasMultipleRenders = renderImages.length > 1;

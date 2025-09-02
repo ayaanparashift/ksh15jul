@@ -8,6 +8,7 @@ import { TabProvider } from "./context/TabContext";
 import { BlogProvider } from "./context/BlogContext";
 import FooterF from "./Components/FooterF";
 import NavF from "./Components/NavF";
+import { ReactLenis } from "lenis/react";
 
 export const metadata = {
   title: "KSH INFRA",
@@ -18,18 +19,28 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={` antialiased bodylayout`}>
-        <BlogProvider>
-          <TabProvider>
-            <GlobalEnquire>
-              <NavF />
-              {/* <div className="h-[100px] max-w-screen relative z-[100000000000000000000000]" /> */}
-              <Toaster position="top-center" reverseOrder={false} />
-              {children}
+        <ReactLenis
+          root
+          options={{
+            lerp: 0.07,
+            wheelMultiplier: 1.2,
+            smoothWheel: true,
+            smoothTouch: false,
+          }}
+        >
+          <BlogProvider>
+            <TabProvider>
+              <GlobalEnquire>
+                <NavF />
+                {/* <div className="h-[100px] max-w-screen relative z-[100000000000000000000000]" /> */}
+                <Toaster position="top-center" reverseOrder={false} />
+                {children}
 
-              <FooterF />
-            </GlobalEnquire>
-          </TabProvider>
-        </BlogProvider>
+                <FooterF />
+              </GlobalEnquire>
+            </TabProvider>
+          </BlogProvider>
+        </ReactLenis>
       </body>
     </html>
   );
