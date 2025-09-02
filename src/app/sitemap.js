@@ -2,30 +2,44 @@
 import { MetadataRoute } from "next";
 
 export default async function sitemap() {
-  // Base domain
-  const baseUrl = "https://yourdomain.com";
+  const baseUrl = "https://kshweb.vercel.app";
 
-  // Example: fetch dynamic blog slugs from your API
-  let posts = [];
+  // --- 1. Dynamic blogs ---
+  let blogs = [];
   try {
-    const res = await fetch(`${baseUrl}/api/blogs`);
+    const res = await fetch(`${baseUrl}/api/blogs`, {
+      next: { revalidate: 60 },
+    });
     if (res.ok) {
-      posts = await res.json();
+      blogs = await res.json();
     }
   } catch (err) {
-    console.error("Failed to fetch blogs for sitemap", err);
+    console.error("❌ Failed to fetch blogs for sitemap:", err);
   }
 
-  // Static routes
-  const staticRoutes = ["", "/about", "/contact", "/services"].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
+  // blogs → /blogs/[slug]
+  const blogRoutes = blogs.map((post) => ({
+    url: `${baseUrl}/blogs/${post.slug}`,
+    lastModified: post.updatedAt ? new Date(post.updatedAt) : new Date(),
   }));
 
-  // Dynamic routes from posts
-  const blogRoutes = posts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: post.updatedAt ? new Date(post.updatedAt) : new Date(),
+  // --- 2. Static pages (keep only truly static ones) ---
+  const staticRoutes = [
+    "/", // homepage
+    "/about-ksh",
+    "/contact-us",
+    "/capabilities",
+    "/our-team",
+    "/sustainability",
+    "/blogs", // blog index page
+    "/case-studies",
+    "/investors",
+    "/careers",
+    "/parks",
+    "/privacy-policy",
+  ].map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
   }));
 
   return [...staticRoutes, ...blogRoutes];
