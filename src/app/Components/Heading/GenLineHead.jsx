@@ -229,14 +229,14 @@ const GenLineHead = ({
   heading,
   acbtn,
   setAcBtn,
-  showRenders = false,
   showPhotos = false,
+  showRenders = false,
   showVids = false,
 }) => {
   // Always enforce order: Renders → Photos → Videos
   const spotlight_btn_content = [
-    showRenders && { title: "Renders" },
     showPhotos && { title: "Photos" },
+    showRenders && { title: "Renders" },
     showVids && { title: "Videos" },
   ].filter(Boolean);
 
@@ -275,7 +275,7 @@ const GenLineHead = ({
             <button
               onClick={() => setAcBtn(btntitle.title)}
               key={btntitle.title + " " + String(index)}
-              className={`px-[12px] text-[16px] fsans-600 py-[10px] flex-1 flex items-center justify-center rounded-[10px] border-[#092241] border-opacity-30 border ${
+              className={`px-[12px] text-[16px] transition-colors duration-500 fsans-600 py-[10px] flex-1 flex items-center justify-center rounded-[10px] border-[#092241] border-opacity-30 border ${
                 acbtn === btntitle.title
                   ? "bg-[#E30613] border-[#E30613] text-[#fff] text-opacity-100"
                   : "text-[#092241] text-opacity-50"

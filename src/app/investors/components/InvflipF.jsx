@@ -143,12 +143,20 @@ import LineHead from "../../Components/Heading/LineHead";
 // All 4 investor data from the blue sections
 const investors = [
   {
+    image: "/investorRel/wsb.jpg",
+    title: "WSB",
+    content: "", // removed
+    flip: false,
+    type: "existing",
+  },
+  {
     image: "/investorRel/inin.png",
     title: "IndoSpace",
     content: "", // removed
     flip: false,
     type: "existing",
   },
+
   {
     image: "/investorRel/maplef.png",
     title: "Mapletree Investments",

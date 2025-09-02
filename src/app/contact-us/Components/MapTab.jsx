@@ -50,7 +50,7 @@ const MapTab = () => {
             Reach Us
           </p>
 
-          <div className="tabs md:justify-center justify-between flex gap-4">
+          <div className="tabs md:justify-center justify-between flex gap-2">
             {tabsData.map((tab, index) => (
               <button
                 key={tab.title}

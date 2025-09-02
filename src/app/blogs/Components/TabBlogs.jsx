@@ -2237,7 +2237,7 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
         >
           {showLoading ? (
             <p className="text-black fsans-600 md:text-[32px] text-[24px] col-span-2 text-center">
-              {isNews ? "Loading News.." : "Loading.."}
+              {isNews ? "Loading News..." : "Loading..."}
             </p>
           ) : currentItems.length > 0 ? (
             currentItems.map((item) =>

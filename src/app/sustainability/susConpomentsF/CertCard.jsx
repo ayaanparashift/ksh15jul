@@ -260,6 +260,14 @@ import "swiper/css/navigation";
 
 const certs = [
   {
+    id: 2,
+    heading: "Emerging Developer of the Year",
+    title: "Emerging Developer of the Year",
+    content:
+      "Industrial & Warehousing at the Realty+ Conclave Excellence Awards 2025 (West)",
+    image: "/Sustainability/sustslidesf/flip5f.jpg",
+  },
+  {
     id: 3,
     heading: "Excellence in Industrial Real Estate",
     title: "Real Estate",
