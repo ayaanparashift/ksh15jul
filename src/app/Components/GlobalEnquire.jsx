@@ -100,6 +100,7 @@ const GlobalEnquire = ({ children }) => {
       <AnimatePresence>
         {showEnquire && (
           <motion.div
+            key="enqoverlay"
             className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-60 z-[1000000]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -113,6 +114,7 @@ const GlobalEnquire = ({ children }) => {
       <AnimatePresence>
         {showEnquire && (
           <motion.div
+            key="enquire-now"
             className="fixed z-[1000001] top-0 right-0 min-h-screen w-[510px] overflow-hidden"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}

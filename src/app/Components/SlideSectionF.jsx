@@ -270,7 +270,7 @@ const tabsData = [
   {
     title: "Opportunities",
     description:
-      "KSH INFRA has exciting career opportunities for everyone whether you’re just starting out or already have experience.  Join us and find a role that matches your ambitions and skills. Let’s help you build a rewarding career together !les that align with your ambitions and skills, helping you build a rewarding career.",
+      "KSH INFRA has exciting career opportunities for everyone whether you’re just starting out or have experience.  Join us and find a role that matches your ambitions and skills. Let’s help you build a rewarding career together that align with your ambitions and skills, helping you build a rewarding career.",
     image: "/Slideimgs/Opportunities.png",
     middleImage: "/Slideimgs/dart.png",
   },

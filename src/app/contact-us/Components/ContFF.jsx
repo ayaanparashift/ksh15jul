@@ -664,7 +664,7 @@ const ContFF = () => {
       });
 
       // ✅ Save to Google Sheets
-      await fetch("/api/sheets/", {
+      await fetch("/api/contact/", {
         method: "POST",
         body: JSON.stringify(formData),
         headers: { "Content-Type": "application/json" },
