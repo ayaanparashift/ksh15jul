@@ -114,3 +114,76 @@ const LandingSwiper = () => {
 };
 
 export default LandingSwiper;
+// "use client";
+// import React, { useState } from "react";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { FreeMode, Navigation, Autoplay, EffectFade } from "swiper/modules";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/effect-fade";
+
+// import Landing from "./Landing";
+// import VidLand from "./VidLand";
+// import Landing2 from "./Landing2";
+// import Landing3 from "./Landing3";
+
+// const LandingSwiper = () => {
+//   const [activeIndex, setActiveIndex] = useState(0);
+
+//   return (
+//     <div className="h-auto relative">
+//       <div className="relative overflow-hidden max-w-screen">
+//         <Swiper
+//           slidesPerView={1}
+//           slidesPerGroup={1}
+//           className="max-w-full"
+//           speed={1000}
+//           effect="fade" // 👈 fade effect
+//           fadeEffect={{ crossFade: true }} // 👈 smooth fading
+//           spaceBetween={0}
+//           modules={[FreeMode, Navigation, Autoplay, EffectFade]}
+//           navigation={{ nextEl: ".landingr", prevEl: ".landingl" }}
+//           autoplay={{
+//             delay: 48000,
+//             disableOnInteraction: false,
+//           }}
+//           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+//         >
+//           <SwiperSlide>
+//             <VidLand />
+//           </SwiperSlide>
+
+//           <SwiperSlide>
+//             <Landing2 isActive={activeIndex === 1} />
+//           </SwiperSlide>
+
+//           <SwiperSlide>
+//             <Landing3 isActive={activeIndex === 2} />
+//           </SwiperSlide>
+
+//           <SwiperSlide>
+//             <Landing isActive={activeIndex === 3} />
+//           </SwiperSlide>
+//         </Swiper>
+
+//         {/* Navigation Buttons */}
+//         <div className="flex gap-10 items-center lg:justify-start justify-between absolute firstswbtns bottom-[20px] lg:bottom-[30px] z-10">
+//           <p className="text-white opacity-60 fsans-400 text-[16px]">
+//             Explore the Advantage <br />
+//             with KSH INFRA
+//           </p>
+//           <div className="flex items-center justify-center gap-3">
+//             <button className="landingl w-fit">
+//               <img className="w-10 h-10" src="/landingr.svg" alt="Prev" />
+//             </button>
+//             <button className="landingr w-10 h-10">
+//               <img className="w-10 h-10" src="/landingl.svg" alt="Next" />
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default LandingSwiper;

@@ -50,7 +50,7 @@ import Link from "next/link";
 const AboutStop = () => {
   return (
     <div className="relative bg-[#fff] h-[400px] md:h-[100vh] xl-1366:h-[100vh] xl-1024:h-[110vh] min-1600:h-[100vh] z-0 overflow-hidden">
-      <div className="fix12 xl:pt-[140px] pt-[120px]">
+      <div className="fix12 xl:pt-[140px] pt-[120px] relative z-[1000]">
         <p className="text-[#00000040] text-base fsans-400">
           {" "}
           <Link
@@ -67,7 +67,7 @@ const AboutStop = () => {
       </div>
       <img
         src="/AboutPage/abspotfinal.webp"
-        className="absolute bottom-0 w-full h-auto z-10"
+        className="absolute bottom-0 w-full h-auto z-0"
         alt=""
       />
     </div>
