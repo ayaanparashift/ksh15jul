@@ -140,8 +140,8 @@ export default function BlogsLoader({ currentPage, initialBlogs = [] }) {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
-      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8, ease: [0.7, 0, 0.4, 1] }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       <SlideBlog blogs={blogs.slice(0, 4)} />
       <TabBlogsF blogs={blogs} />
