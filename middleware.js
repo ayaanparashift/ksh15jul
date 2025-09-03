@@ -2,22 +2,19 @@
 import { NextResponse } from "next/server";
 
 export function middleware(request) {
-  const { hostname, pathname, search } = request.nextUrl;
+  const host = request.headers.get("host") || "";
+  const { pathname, search } = request.nextUrl;
 
-  // Normalize hostname: remove ports and convert to lowercase
-  const normalizedHostname = hostname.toLowerCase().split(":")[0];
+  const normalizedHost = host.toLowerCase().split(":")[0]; // strip port if present
 
-  // Log for debugging
-  console.log("Middleware hostname:", normalizedHostname);
+  // Debug logs
+  console.log("Middleware host:", normalizedHost);
 
-  // Check for kshinfra.com (non-www) or variations
-  if (
-    normalizedHostname === "kshinfra.com" ||
-    normalizedHostname === "kshinfra-com"
-  ) {
+  // Redirect non-www → www
+  if (normalizedHost === "kshinfra.com") {
     const redirectUrl = `https://www.kshinfra.com${pathname}${search}`;
     console.log("Redirecting to:", redirectUrl);
-    return NextResponse.redirect(redirectUrl, 301);
+    return NextResponse.redirect(redirectUrl, { status: 301 });
   }
 
   return NextResponse.next();
