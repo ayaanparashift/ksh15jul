@@ -55,7 +55,7 @@ const TabMenu = () => {
     { title: "Location & Connectivity", link: "#location-connectivity" },
     {
       title: "Download Brochure",
-      link: "https://www.kshinfra.com/wp-content/uploads/2022/12/KSH-Infra-Chakan-Park-2-Brochure.pdf",
+      link: "/brochure/KSH-Infra-Chakan-Park-2-Brochure.pdf",
     },
   ];
 

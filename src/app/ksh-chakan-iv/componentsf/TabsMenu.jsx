@@ -10,7 +10,7 @@ const TabMenu = () => {
     { title: "Park Infrastructure", link: "#park-infrastructure" },
     {
       title: "Download Brochure",
-      link: "https://www.kshinfra.com/wp-content/uploads/2024/06/KSH-Chakan-IV-Brochure.pdf",
+      link: "/brochure/KSH-Chakan-IV-Brochure.pdf",
     },
   ];
 

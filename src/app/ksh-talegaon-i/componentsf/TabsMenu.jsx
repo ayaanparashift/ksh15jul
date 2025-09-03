@@ -10,7 +10,7 @@ const TabMenu = () => {
     { title: "Park Infrastructure", link: "#park-infrastructure" },
     {
       title: "Download Brochure",
-      link: "https://www.kshinfra.com/wp-content/uploads/2025/06/Talegaon_Park_1_Brochure.pdf",
+      link: "/brochure/Talegaon_Park_1_Brochure.pdf",
     },
   ];
 

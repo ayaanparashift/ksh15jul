@@ -835,8 +835,7 @@ const PopForm = ({ onClose }) => {
     const notifyParams = { from_name: name, from_email: email };
     const autoParams = {
       to_email: email,
-      report_link:
-        "https://www.kshinfra.com/wp-content/uploads/2024/07/KSH_ESG_Report_v13.pdf",
+      report_link: "/brochure/KSH_ESG_Report_v13.pdf",
     };
 
     try {
