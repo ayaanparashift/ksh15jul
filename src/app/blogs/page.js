@@ -215,7 +215,9 @@ import BlogsServer from "./Components/BlogsServer"; // server fetch component
 import { Suspense } from "react";
 
 export const metadata = {
-  /* ... */
+  title: "Insights on Warehousing and Industrial Infrastructure | KSH Blog",
+  description:
+    "Explore our blog for the latest news, articles, and insights on warehousing and industrial infrastructure. Stay informed and gain valuable knowledge about industry trends and best practices.",
 };
 
 export default function BlogPage({ searchParams }) {
