@@ -435,7 +435,7 @@ export default async function BlogContent({ slug }) {
   return (
     <div id="bloginside">
       <div className="bg-[#fff]">
-        <div className="fix12 pb-20 pt-32">
+        <div className="fix12 pb-10 md:pb-20 pt-32">
           <div className="mb-[28px]">
             <p className="text-[#00000040] text-base fsans-400 pb-7">
               <Link
