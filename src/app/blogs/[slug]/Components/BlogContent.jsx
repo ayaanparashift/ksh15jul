@@ -43,8 +43,8 @@
 //   if (!blog) return notFound();
 
 //   const categoryLabels = {
-//     17: "Blogs",
-//     18: "News",
+//     6: "Blogs",
+//     7: "News",
 //   };
 //   const categoryToShow =
 //     blog.categories.map((cat) => categoryLabels[cat]).find(Boolean) ||
@@ -86,7 +86,7 @@
 //             </div>
 //           </div>
 
-//           <div className="flex pb-16 items-center gap-4 text-[18px] text-white fsans-400">
+//           <div className="flex pb-16 items-center gap-4 text-[7px] text-white fsans-400">
 //             <p className="flex gap-2 items-center">
 //               <CalendarDays />
 //               {formattedDate}
@@ -158,7 +158,7 @@
 //           {/* Blog Content */}
 //           <div id="bloginwy" className="colContnt">
 //             <div
-//               className="fsans-400 text-base leading-7 space-y-[18px] text-[#434343]"
+//               className="fsans-400 text-base leading-7 space-y-[7px] text-[#434343]"
 //               dangerouslySetInnerHTML={{ __html: blog.content.rendered }}
 //             />
 //           </div>
@@ -223,18 +223,18 @@
 //   if (!blog) return notFound();
 
 //   const categoryLabels = {
-//     17: "Blogs",
-//     18: "News",
+//     6: "Blogs",
+//     7: "News",
 //   };
 
 //   // Robust category prioritization
 //   let categoryToShow = "Uncategorized";
 //   const categories = blog.categories;
 
-//   if (categories.includes(18)) {
-//     categoryToShow = categoryLabels[18]; // Prioritize News
-//   } else if (categories.length === 1 && categories[0] === 17) {
-//     categoryToShow = categoryLabels[17]; // Show Blogs only if it's the only category
+//   if (categories.includes(7)) {
+//     categoryToShow = categoryLabels[7]; // Prioritize News
+//   } else if (categories.length === 1 && categories[0] === 6) {
+//     categoryToShow = categoryLabels[6]; // Show Blogs only if it's the only category
 //   }
 
 //   const formattedDate = new Date(blog.date).toLocaleDateString("en-IN", {
@@ -273,7 +273,7 @@
 //             </div>
 //           </div>
 
-//           <div className="flex pb-16 items-center gap-4 text-[18px] text-white fsans-400">
+//           <div className="flex pb-16 items-center gap-4 text-[7px] text-white fsans-400">
 //             <p className="flex gap-2 items-center">
 //               <CalendarDays />
 //               {formattedDate}
@@ -345,7 +345,7 @@
 //           {/* Blog Content */}
 //           <div id="bloginwy" className="colContnt">
 //             <div
-//               className="fsans-400 text-base leading-7 space-y-[18px] text-[#434343]"
+//               className="fsans-400 text-base leading-7 space-y-[7px] text-[#434343]"
 //               dangerouslySetInnerHTML={{ __html: blog.content.rendered }}
 //             />
 //           </div>
@@ -374,7 +374,7 @@ import { CalendarDays } from "lucide-react";
 
 async function fetchBlogData(slug) {
   const res = await fetch(
-    `https://www.kshinfra.com/wp-json/wp/v2/posts?slug=${slug}&_embed`,
+    `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?slug=${slug}&_embed`,
     { next: { revalidate: 60 } }
   );
   if (!res.ok) return null;
@@ -389,7 +389,7 @@ async function fetchBlogData(slug) {
   if (!featuredImage && blog.featured_media) {
     try {
       const mediaRes = await fetch(
-        `https://www.kshinfra.com/wp-json/wp/v2/media/${blog.featured_media}`,
+        `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/media/${blog.featured_media}`,
         { next: { revalidate: 60 } }
       );
       if (mediaRes.ok) {
@@ -409,18 +409,18 @@ export default async function BlogContent({ slug }) {
   if (!blog) return notFound();
 
   const categoryLabels = {
-    17: "Blogs",
-    18: "News",
+    6: "Blogs",
+    7: "News",
   };
 
   // Robust category prioritization
   let categoryToShow = "Uncategorized";
   const categories = blog.categories;
 
-  if (categories.includes(18)) {
-    categoryToShow = categoryLabels[18]; // Prioritize News
-  } else if (categories.length === 1 && categories[0] === 17) {
-    categoryToShow = categoryLabels[17]; // Show Blogs only if it's the only category
+  if (categories.includes(7)) {
+    categoryToShow = categoryLabels[7]; // Prioritize News
+  } else if (categories.length === 1 && categories[0] === 6) {
+    categoryToShow = categoryLabels[6]; // Show Blogs only if it's the only category
   }
 
   const formattedDate = new Date(blog.date).toLocaleDateString("en-IN", {
@@ -459,7 +459,7 @@ export default async function BlogContent({ slug }) {
             </div>
           </div>
 
-          <div className="flex pb-16 items-center gap-4 text-[18px] text-black fsans-400">
+          <div className="flex pb-16 items-center gap-4 text-[7px] text-black fsans-400">
             <p className="flex gap-2 items-center">
               <CalendarDays />
               {formattedDate}
@@ -531,7 +531,7 @@ export default async function BlogContent({ slug }) {
           {/* Blog Content */}
           <div id="bloginwy" className="colContnt">
             <div
-              className="fsans-400 text-base leading-7 space-y-[18px] text-[#434343]"
+              className="fsans-400 text-base leading-7 space-y-[7px] text-[#434343]"
               dangerouslySetInnerHTML={{ __html: blog.content.rendered }}
             />
           </div>

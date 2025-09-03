@@ -904,7 +904,7 @@ import BlogContent from "./Components/BlogContent";
 // Reusable fetcher (same logic you already use in BlogContent)
 async function fetchBlogData(slug) {
   const res = await fetch(
-    `https://www.kshinfra.com/wp-json/wp/v2/posts?slug=${slug}&_embed`,
+    `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?slug=${slug}&_embed`,
     { next: { revalidate: 60 } }
   );
 
@@ -919,7 +919,7 @@ async function fetchBlogData(slug) {
   if (!featuredImage && blog.featured_media) {
     try {
       const mediaRes = await fetch(
-        `https://www.kshinfra.com/wp-json/wp/v2/media/${blog.featured_media}`,
+        `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/media/${blog.featured_media}`,
         { next: { revalidate: 60 } }
       );
       if (mediaRes.ok) {

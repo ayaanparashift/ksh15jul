@@ -386,6 +386,196 @@
 ////
 ////
 ////
+// "use client";
+// import { useState, useEffect, useRef } from "react";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, FreeMode, EffectFade } from "swiper/modules";
+// import BentoHeaderF from "./BentoHeaderF";
+// import Bento from "./Bento";
+// import Bento2 from "./Bento2";
+// import BlogCard from "./BlogCard";
+// import Bento3 from "./Bento3";
+
+// const fetchBlogByPage = async () => {
+//   const resp = await fetch(
+//     `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?per_page=6&page=1&_embed`,
+//     { next: { revalidate: 60 } }
+//   );
+
+//   if (!resp.ok) {
+//     throw new Error("Failed to fetch blog data");
+//   }
+
+//   const data = await resp.json();
+//   return data;
+// };
+
+// const BentoSlider = () => {
+//   const [blogs, setBlogs] = useState([]);
+//   const [sliding, setSliding] = useState(false);
+
+//   // Desktop navigation refs
+//   const prevRef = useRef(null);
+//   const nextRef = useRef(null);
+//   const [navReady, setNavReady] = useState(false);
+
+//   // Mobile slider instance ref
+//   const mobilePrev = useRef(null);
+//   const mobileNext = useRef(null);
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       try {
+//         const blogData = await fetchBlogByPage();
+//         setBlogs(blogData);
+//       } catch (error) {
+//         console.error("Error fetching blogs:", error);
+//       }
+//     };
+
+//     fetchData();
+//   }, []);
+
+//   useEffect(() => {
+//     setNavReady(true);
+//   }, []);
+
+//   return (
+//     <div className="bg-[#092241] lg:py-0 py-14">
+//       <div className="h-fit fix12">
+//         <div className="flex flex-col gap-[0px] sm:gap-[98px] md:pb-[85px] relative">
+//           <BentoHeaderF />
+
+//           {/* === DESKTOP NAV (md+) === */}
+//           <div className="hidden md:flex absolute top-[16.1%] sm:top-[40%] lg:top-[44%] right-0 z-10">
+//             <div className="flex items-center gap-[14px]">
+//               <button ref={prevRef} className="swiper-button-prev-landing">
+//                 <img className="w-10 h-10" src="/landingr.svg" alt="Previous" />
+//               </button>
+//               <button ref={nextRef} className="swiper-button-next-landing">
+//                 <img className="w-10 h-10" src="/landingl.svg" alt="Next" />
+//               </button>
+//             </div>
+//           </div>
+
+//           {/* === DESKTOP SWIPER === */}
+//           {/* <div className="hidden md:block">
+//             <Swiper
+//               modules={[Navigation, FreeMode]}
+//               onBeforeInit={(swiper) => {
+//                 swiper.params.navigation.prevEl = prevRef.current;
+//                 swiper.params.navigation.nextEl = nextRef.current;
+//               }}
+//               spaceBetween={20}
+//               loop={true}
+//               speed={300}
+//               freeMode
+//               preventInteractionOnTransition
+//               touchMoveStopPropagation
+//               onSlideChangeTransitionStart={() => setSliding(true)}
+//               onSlideChangeTransitionEnd={() => setSliding(false)}
+//               slidesPerView={1}
+//               className="max-w-full"
+//             >
+//               <SwiperSlide>
+//                 <Bento pointerEvents={!sliding} />
+//               </SwiperSlide>
+//               <SwiperSlide>
+//                 <Bento3 pointerEvents={!sliding} />
+//               </SwiperSlide>
+//               <SwiperSlide>
+//                 <Bento2 pointerEvents={!sliding} />
+//               </SwiperSlide>
+//             </Swiper>
+//           </div> */}
+//           <div className="hidden md:block">
+//             <Swiper
+//               modules={[Navigation, FreeMode, EffectFade]}
+//               effect="fade"
+//               fadeEffect={{ crossFade: true }}
+//               onBeforeInit={(swiper) => {
+//                 swiper.params.navigation.prevEl = prevRef.current;
+//                 swiper.params.navigation.nextEl = nextRef.current;
+//               }}
+//               loop={true}
+//               speed={600} // control fade speed
+//               preventInteractionOnTransition
+//               touchMoveStopPropagation
+//               onSlideChangeTransitionStart={() => setSliding(true)}
+//               onSlideChangeTransitionEnd={() => setSliding(false)}
+//               slidesPerView={1}
+//               className="max-w-full"
+//             >
+//               <SwiperSlide>
+//                 <Bento pointerEvents={!sliding} />
+//               </SwiperSlide>
+//               <SwiperSlide>
+//                 <Bento3 pointerEvents={!sliding} />
+//               </SwiperSlide>
+//               <SwiperSlide>
+//                 <Bento2 pointerEvents={!sliding} />
+//               </SwiperSlide>
+//             </Swiper>
+//           </div>
+
+//           {/* Mobile Nav */}
+//           <div className="md:hidden py-8">
+//             <div className="flex justify-end mt-[-25%] gap-4 mb-5">
+//               <button ref={mobilePrev} className="w-10 h-10">
+//                 <img src="/landingr.svg" className="w-full h-full" alt="Prev" />
+//               </button>
+//               <button ref={mobileNext} className="w-10 h-10">
+//                 <img src="/landingl.svg" className="w-full h-full" alt="Next" />
+//               </button>
+//             </div>
+
+//             {/* Mobile swiper */}
+//             <Swiper
+//               modules={[Navigation, FreeMode]}
+//               onBeforeInit={(swiper) => {
+//                 swiper.params.navigation.prevEl = mobilePrev.current;
+//                 swiper.params.navigation.nextEl = mobileNext.current;
+//               }}
+//               spaceBetween={20}
+//               speed={300}
+//               freeMode
+//               preventInteractionOnTransition
+//               touchMoveStopPropagation
+//               onSlideChangeTransitionStart={() => setSliding(true)}
+//               onSlideChangeTransitionEnd={() => setSliding(false)}
+//               slidesPerView={1}
+//               className="max-w-full"
+//             >
+//               {blogs.map((blog, i) => (
+//                 <SwiperSlide key={blog.id}>
+//                   <BlogCard
+//                     href={blog.link.replace("https://www.kshinfra.com", "")}
+//                     bg={
+//                       blog.yoast_head_json?.schema?.["@graph"]?.[0]
+//                         ?.thumbnailUrl
+//                     }
+//                     title={blog.title.rendered}
+//                     subtitle={`${new Date(blog.date).toLocaleDateString(
+//                       "en-GB",
+//                       {
+//                         day: "2-digit",
+//                         month: "short",
+//                         year: "2-digit",
+//                       }
+//                     )}`}
+//                     height={"h-[585px]"}
+//                   />
+//                 </SwiperSlide>
+//               ))}
+//             </Swiper>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default BentoSlider;
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -398,7 +588,7 @@ import Bento3 from "./Bento3";
 
 const fetchBlogByPage = async () => {
   const resp = await fetch(
-    `https://www.kshinfra.com/wp-json/wp/v2/posts?per_page=6&page=1`,
+    `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?per_page=6&page=1&_embed`,
     { next: { revalidate: 60 } }
   );
 
@@ -459,35 +649,7 @@ const BentoSlider = () => {
           </div>
 
           {/* === DESKTOP SWIPER === */}
-          {/* <div className="hidden md:block">
-            <Swiper
-              modules={[Navigation, FreeMode]}
-              onBeforeInit={(swiper) => {
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
-              }}
-              spaceBetween={20}
-              loop={true}
-              speed={300}
-              freeMode
-              preventInteractionOnTransition
-              touchMoveStopPropagation
-              onSlideChangeTransitionStart={() => setSliding(true)}
-              onSlideChangeTransitionEnd={() => setSliding(false)}
-              slidesPerView={1}
-              className="max-w-full"
-            >
-              <SwiperSlide>
-                <Bento pointerEvents={!sliding} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Bento3 pointerEvents={!sliding} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Bento2 pointerEvents={!sliding} />
-              </SwiperSlide>
-            </Swiper>
-          </div> */}
+
           <div className="hidden md:block">
             <Swiper
               modules={[Navigation, FreeMode, EffectFade]}

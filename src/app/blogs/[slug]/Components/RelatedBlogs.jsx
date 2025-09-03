@@ -82,7 +82,7 @@ import BCSlider from "./BCslider";
 async function fetchAllBlogs() {
   try {
     const res = await fetch(
-      `https://www.kshinfra.com/wp-json/wp/v2/posts?_embed&per_page=100`,
+      `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?_embed&per_page=100`,
       { next: { revalidate: 60 } }
     );
     if (!res.ok) return [];

@@ -127,6 +127,7 @@ import SlideBlog from "./SlideBlog";
 import TabBlogs from "./TabBlogs";
 import { motion } from "framer-motion";
 import { useBlogContext } from "../../context/BlogContext";
+import TabBlogsF from "./TabBlogsF";
 
 export default function BlogsLoader({ currentPage, initialBlogs = [] }) {
   const { blogs, setBlogs } = useBlogContext();
@@ -143,7 +144,7 @@ export default function BlogsLoader({ currentPage, initialBlogs = [] }) {
       viewport={{ once: true, amount: 0.3 }}
     >
       <SlideBlog blogs={blogs.slice(0, 4)} />
-      <TabBlogs blogs={blogs} />
+      <TabBlogsF blogs={blogs} />
     </motion.div>
   );
 }

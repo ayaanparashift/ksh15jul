@@ -19,7 +19,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "www.kshinfra.com",
+        hostname: "wordpress-819107-5295407.cloudwaysapps.com",
         pathname: "/wp-content/uploads/**",
       },
     ],

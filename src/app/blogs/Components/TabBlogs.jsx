@@ -2131,7 +2131,7 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
     const fetchNews = async () => {
       try {
         const res = await fetch(
-          `https://www.kshinfra.com/wp-json/wp/v2/posts?categories=18&per_page=100&_embed`
+          `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?categories=18&per_page=100&_embed`
         );
         if (!res.ok) throw new Error("Failed to fetch");
         const data = await res.json();

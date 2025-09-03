@@ -275,26 +275,120 @@
 // };
 
 // export default BlogCard;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// import Link from "next/link";
 
+// const BlogCard = ({ blog, activeTabId }) => {
+//   let categoryToShow = "Uncategorized";
+
+//   if (activeTabId === null) {
+//     // All tab — prioritize News > Blogs
+//     if (blog.categories.includes(7)) {
+//       categoryToShow = "News";
+//     } else if (blog.categories.includes(6)) {
+//       categoryToShow = "Blogs";
+//     }
+//   } else if (activeTabId === 7 && blog.categories.includes(7)) {
+//     categoryToShow = "News";
+//   } else if (activeTabId === 6 && blog.categories.includes(6)) {
+//     categoryToShow = "Blogs";
+//   }
+
+//   // Format date like "5 Aug 2025"
+//   const formattedDate = blog.date
+//     ? new Date(blog.date).toLocaleDateString("en-GB", {
+//         day: "numeric",
+//         month: "short",
+//         year: "numeric",
+//       })
+//     : "";
+
+//   return (
+//     <Link
+//       href={`/blogs/${blog.slug}`}
+//       className="flex group flex-col md:flex-row"
+//     >
+//       {/* Blog Thumbnail */}
+//       <div className="lg:w-[292px] w-full h-[300px] max-w-full overflow-hidden">
+//         <img
+//           className="object-cover h-full w-full group-hover:scale-110 transition-transform duration-500"
+//           src={
+//             blog.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl ||
+//             "/default-image.jpg"
+//           }
+//           alt={blog.title?.rendered || "Blog Thumbnail"}
+//         />
+//       </div>
+
+//       {/* Blog Content */}
+//       <div className="flex flex-col min-h-[250px] justify-between border-[#DDDDDD] border-t lg:border-l-0 border-l border-b border-r w-full lg:w-[310px] max-w-full pl-[30px] pr-[20px] py-[30px]">
+//         <div className="flex flex-col gap-[16px]">
+//           {/* Category Tag */}
+//           <p className="max-w-fit fsans-600 text-[16px] leading-[111%] bg-[#F7E327] py-[8px] px-[12px]">
+//             {categoryToShow}
+//           </p>
+
+//           {/* Blog Title */}
+//           <h3
+//             className="spotlightheaddd line-clamp-3 fsans-600 text-[20px] text-[#565656]"
+//             dangerouslySetInnerHTML={{ __html: blog.title?.rendered }}
+//           ></h3>
+
+//           {/* Blog Date */}
+//           {formattedDate && (
+//             <p className="fsans-600 text-[16px] text-[#565656]">
+//               {formattedDate}
+//             </p>
+//           )}
+//         </div>
+
+//         {/* Learn More Link */}
+//         <Link
+//           href={`/blogs/${blog.slug}`}
+//           className="flex items-center gap-2 lg:pt-0 pt-5"
+//         >
+//           <div className="w-[30px] group-hover:-rotate-45 transition-transform duration-500 h-[30px] bg-[#EEF0F3] rounded-full flex items-center justify-center">
+//             <img src="/AboutPage/AboutGrowth/learnMore.svg" alt="Learn More" />
+//           </div>
+//           <p>Learn More</p>
+//         </Link>
+//       </div>
+//     </Link>
+//   );
+// };
+
+// export default BlogCard;
 import Link from "next/link";
 
 const BlogCard = ({ blog, activeTabId }) => {
+  // console.log(blog);
+
   let categoryToShow = "Uncategorized";
 
   if (activeTabId === null) {
-    // All tab — prioritize News > Blogs
-    if (blog.categories.includes(18)) {
+    if (blog.categories.includes(7)) {
       categoryToShow = "News";
-    } else if (blog.categories.includes(17)) {
+    } else if (blog.categories.includes(6)) {
       categoryToShow = "Blogs";
     }
-  } else if (activeTabId === 18 && blog.categories.includes(18)) {
+  } else if (activeTabId === 7 && blog.categories.includes(7)) {
     categoryToShow = "News";
-  } else if (activeTabId === 17 && blog.categories.includes(17)) {
+  } else if (activeTabId === 6 && blog.categories.includes(6)) {
     categoryToShow = "Blogs";
   }
-
-  // Format date like "5 Aug 2025"
   const formattedDate = blog.date
     ? new Date(blog.date).toLocaleDateString("en-GB", {
         day: "numeric",
@@ -302,6 +396,15 @@ const BlogCard = ({ blog, activeTabId }) => {
         year: "numeric",
       })
     : "";
+
+  // ✅ Safe access to featured image
+  const featuredImage =
+    blog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+    "/default-image.jpg";
+
+  // Debug log
+  console.log("Blog:", blog.title?.rendered);
+  console.log("Featured Image URL:", featuredImage);
 
   return (
     <Link
@@ -312,10 +415,7 @@ const BlogCard = ({ blog, activeTabId }) => {
       <div className="lg:w-[292px] w-full h-[300px] max-w-full overflow-hidden">
         <img
           className="object-cover h-full w-full group-hover:scale-110 transition-transform duration-500"
-          src={
-            blog.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl ||
-            "/default-image.jpg"
-          }
+          src={featuredImage}
           alt={blog.title?.rendered || "Blog Thumbnail"}
         />
       </div>
@@ -323,18 +423,15 @@ const BlogCard = ({ blog, activeTabId }) => {
       {/* Blog Content */}
       <div className="flex flex-col min-h-[250px] justify-between border-[#DDDDDD] border-t lg:border-l-0 border-l border-b border-r w-full lg:w-[310px] max-w-full pl-[30px] pr-[20px] py-[30px]">
         <div className="flex flex-col gap-[16px]">
-          {/* Category Tag */}
           <p className="max-w-fit fsans-600 text-[16px] leading-[111%] bg-[#F7E327] py-[8px] px-[12px]">
             {categoryToShow}
           </p>
 
-          {/* Blog Title */}
           <h3
             className="spotlightheaddd line-clamp-3 fsans-600 text-[20px] text-[#565656]"
             dangerouslySetInnerHTML={{ __html: blog.title?.rendered }}
           ></h3>
 
-          {/* Blog Date */}
           {formattedDate && (
             <p className="fsans-600 text-[16px] text-[#565656]">
               {formattedDate}
@@ -342,7 +439,6 @@ const BlogCard = ({ blog, activeTabId }) => {
           )}
         </div>
 
-        {/* Learn More Link */}
         <Link
           href={`/blogs/${blog.slug}`}
           className="flex items-center gap-2 lg:pt-0 pt-5"

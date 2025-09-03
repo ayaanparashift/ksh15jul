@@ -718,7 +718,7 @@ const tabsData = [
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-const SlideBlog = () => {
+const SlideBlog = ({ blogs }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleNext = () => {
