@@ -101,23 +101,23 @@ export default async function RelatedBlogs({ currentBlogId }) {
   if (!currentBlog) return null;
 
   const currentCats = currentBlog.categories;
-  const isNews = currentCats.includes(18);
-  const isBlog = currentCats.includes(17);
+  const isNews = currentCats.includes(7);
+  const isBlog = currentCats.includes(6);
 
   let related = [];
 
   if (isNews) {
     // Only other News posts
     related = allBlogs.filter(
-      (b) => b.id !== currentBlogId && b.categories.includes(18)
+      (b) => b.id !== currentBlogId && b.categories.includes(7)
     );
   } else if (isBlog) {
     // Blogs only (must not be News)
     related = allBlogs.filter(
       (b) =>
         b.id !== currentBlogId &&
-        b.categories.includes(17) &&
-        !b.categories.includes(18)
+        b.categories.includes(6) &&
+        !b.categories.includes(7)
     );
   } else {
     // If neither News nor Blogs — fallback to any posts (excluding current)

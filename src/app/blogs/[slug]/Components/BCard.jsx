@@ -4,7 +4,7 @@
 // const BCard = ({ blog, activeTabId, image }) => {
 //   // Category Labels
 //   const categoryLabels = {
-//     17: "Blogs",
+//     6: "Blogs",
 //     18: "News",
 //   };
 
@@ -14,7 +14,7 @@
 //     // "All" tab: Prioritize "News" over "Blogs" if both exist
 //     if (blog.categories.includes(18)) {
 //       categoryToShow = "News";
-//     } else if (blog.categories.includes(17)) {
+//     } else if (blog.categories.includes(6)) {
 //       categoryToShow = "Blogs";
 //     }
 //   } else {
@@ -107,7 +107,7 @@
 
 // const BCard = ({ blog, activeTabId, image }) => {
 //   const categoryLabels = {
-//     17: "Blogs",
+//     6: "Blogs",
 //     18: "News",
 //   };
 
@@ -116,7 +116,7 @@
 //   if (activeTabId === null) {
 //     if (blog.categories.includes(18)) {
 //       categoryToShow = "News";
-//     } else if (blog.categories.includes(17)) {
+//     } else if (blog.categories.includes(6)) {
 //       categoryToShow = "Blogs";
 //     }
 //   } else {
@@ -182,7 +182,7 @@
 
 // const BCard = ({ blog, activeTabId, image }) => {
 //   const categoryLabels = {
-//     17: "Blogs",
+//     6: "Blogs",
 //     18: "News",
 //   };
 
@@ -197,7 +197,7 @@
 //   if (activeTabId === null) {
 //     if (categoryIds.includes(18)) {
 //       categoryToShow = "News";
-//     } else if (categoryIds.includes(17)) {
+//     } else if (categoryIds.includes(6)) {
 //       categoryToShow = "Blogs";
 //     }
 //   } else {
@@ -268,8 +268,8 @@ import Link from "next/link";
 
 const BCard = ({ blog, activeTabId, image }) => {
   const categoryLabels = {
-    17: "Blogs",
-    18: "News",
+    6: "Blogs",
+    7: "News",
   };
 
   // Safely extract category IDs and ensure they're numbers
@@ -281,9 +281,9 @@ const BCard = ({ blog, activeTabId, image }) => {
   let categoryToShow = "Uncategorized";
 
   if (activeTabId === null) {
-    if (categoryIds.includes(18)) {
+    if (categoryIds.includes(7)) {
       categoryToShow = "News";
-    } else if (categoryIds.includes(17)) {
+    } else if (categoryIds.includes(6)) {
       categoryToShow = "Blogs";
     }
   } else {
