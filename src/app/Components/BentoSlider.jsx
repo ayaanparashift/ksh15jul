@@ -712,10 +712,11 @@ const BentoSlider = () => {
                 <SwiperSlide key={blog.id}>
                   <BlogCard
                     href={blog.link.replace("https://www.kshinfra.com", "")}
-                    bg={
-                      blog.yoast_head_json?.schema?.["@graph"]?.[0]
-                        ?.thumbnailUrl
-                    }
+                    // bg={
+                    //   blog.yoast_head_json?.schema?.["@graph"]?.[0]
+                    //     ?.thumbnailUrl
+                    // }
+                    bg={blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url}
                     title={blog.title.rendered}
                     subtitle={`${new Date(blog.date).toLocaleDateString(
                       "en-GB",
