@@ -55,20 +55,16 @@
 //     </>
 //   );
 // }
-
-import AboutF from "./Components/AboutF";
-import CapabilitiesF from "./Components/CapabilityF";
-import NewUSP from "./Components/USPF/NewUSP";
-import PFetch from "./Components/CNPOF/PFetch";
-import TrustedPartners from "./Components/TrustedPartners";
-import EsgF from "./Components/EsgF";
-import SlideSectionF from "./Components/SlideSectionF";
-import BentoSlider from "./Components/BentoSlider";
-import LandingSwiper from "./Components/LandingSwiper";
-import Testimonial from "./Components/testislider/Testimonial";
-import TestimonialsSlider from "./test/Final/TestimonialsSlider";
-import Bento from "./Components/Bento";
-import TestimonialF from "./test/Final/TestimonialF";
+import AboutF from "../Components/AboutF";
+import BentoSlider from "../Components/BentoSlider";
+import CapabilitiesF from "../Components/CapabilityF";
+import PFetch from "../Components/CNPOF/PFetch";
+import EsgF from "../Components/EsgF";
+import LandingSwiper from "../Components/LandingSwiper";
+import SlideSectionF from "../Components/SlideSectionF";
+import TrustedPartners from "../Components/TrustedPartners";
+import NewUSP from "../Components/USPF/NewUSP";
+import TestimonialF from "../test/Final/TestimonialF";
 
 export const metadata = {
   title: "KSH INFRA Leading Industrial Park and Warehouse Developers in India",
