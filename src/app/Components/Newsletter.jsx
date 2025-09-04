@@ -454,9 +454,181 @@
 // };
 
 // export default Newsletter;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// "use client";
+
+// import { useRef, useState } from "react";
+// import emailjs from "@emailjs/browser";
+
+// const Newsletter = () => {
+//   const formRef = useRef(null);
+//   const [status, setStatus] = useState(false);
+//   const [loading, setLoading] = useState(false);
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     if (!formRef.current) return;
+
+//     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+//     const newsletterTemplateId =
+//       process.env.NEXT_PUBLIC_EMAILJS_NEWSLETTER_TEMPLATE_ID;
+//     const thankYouTemplateId =
+//       process.env.NEXT_PUBLIC_EMAILJS_THANKYOU_TEMPLATE_ID;
+//     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+//     try {
+//       setLoading(true);
+
+//       // Extract email before reset
+//       const formData = new FormData(formRef.current);
+//       const subscriberEmail = formData.get("subscriber_email");
+
+//       // 1. Send notification to your inbox
+//       await emailjs.sendForm(
+//         serviceId,
+//         newsletterTemplateId,
+//         formRef.current,
+//         publicKey
+//       );
+
+//       // 2. Send thank you email to subscriber
+//       await emailjs.send(
+//         serviceId,
+//         thankYouTemplateId,
+//         { subscriber_email: subscriberEmail },
+//         publicKey
+//       );
+
+//       // 3. Send subscriber email to Google Sheets via API
+//       const res = await fetch("/api/newsletter", {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({ subscriber_email: subscriberEmail }),
+//       });
+
+//       const sheetResult = await res.json();
+//       if (!sheetResult.success) {
+//         console.error("Google Sheets error:", sheetResult.error);
+//       }
+
+//       // Success state
+//       setStatus(true);
+//       formRef.current.reset();
+//       console.log("✅ Emails sent & subscriber stored in Google Sheets.");
+//     } catch (error) {
+//       console.error("Newsletter error:", error);
+//       setStatus(false);
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   return (
+//     <div className="newLetterSection xl:w-[80%] xl:mx-auto lg:flex justify-between items-end py-[40px] md:py-[60px] border-b border-[rgba(215,215,215,0.34)]">
+//       <div className="leftCon">
+//         <h2 className="text-3xl w-fit pb-1 font-semibold text-white border-b-4 border-[#F7E327]">
+//           Get the latest <br /> updates & insights
+//         </h2>
+//       </div>
+//       <div className="rightCon pt-9 lg:pt-0">
+//         {!status && (
+//           <>
+//             <p className="text-base text-[#6c8dab80] pb-[10px]">
+//               Subscribe to our newsletter
+//             </p>
+//             <form
+//               ref={formRef}
+//               onSubmit={handleSubmit}
+//               className="md:w-[512px] border-2 border-white bg-white h-[60px] md:h-[70px] rounded-full flex justify-between pl-2 md:pl-6 md:pr-4 pr-2 items-center"
+//             >
+//               <div className="flex items-center w-full gap-4">
+//                 <img src="/emailIcon.svg" alt="Email icon" />
+//                 <input
+//                   type="email"
+//                   name="subscriber_email"
+//                   placeholder="Enter your email"
+//                   required
+//                   className="border-none outline-none w-full pr-1 text-sm md:text-base"
+//                 />
+//               </div>
+//               <button
+//                 type="submit"
+//                 disabled={loading}
+//                 className="flex md:gap-1 text-sm font-semibold items-center justify-between px-2 py-1 md:px-4 w-[150px] rounded-full md:w-[150px] h-[40px] md:h-[50px] bg-[#E30613] text-white group disabled:opacity-80"
+//               >
+//                 {loading ? "Subscribing…" : "Subscribe"}
+//                 <svg
+//                   className="rotate-45 group-hover:rotate-0 duration-500 transition-transform"
+//                   width="24"
+//                   height="24"
+//                   viewBox="0 0 24 24"
+//                   fill="none"
+//                   xmlns="http://www.w3.org/2000/svg"
+//                 >
+//                   <g clipPath="url(#clip0_1_1911)">
+//                     <path
+//                       d="M4.58673 19.1612L18.2412 6.3877"
+//                       stroke="white"
+//                       strokeWidth="2"
+//                       strokeLinecap="round"
+//                       strokeLinejoin="round"
+//                     />
+//                     <path
+//                       d="M19.2413 17.2075L19.2413 6.35429C19.2413 5.82071 18.779 5.38816 18.2086 5.38816L6.5 5.38816"
+//                       stroke="white"
+//                       strokeWidth="2"
+//                       strokeLinecap="round"
+//                       strokeLinejoin="round"
+//                     />
+//                   </g>
+//                   <defs>
+//                     <clipPath id="clip0_1_1911">
+//                       <rect
+//                         width="24"
+//                         height="24"
+//                         fill="white"
+//                         transform="translate(24 24) rotate(-180)"
+//                       />
+//                     </clipPath>
+//                   </defs>
+//                 </svg>
+//               </button>
+//             </form>
+//           </>
+//         )}
+//         {status && (
+//           <p className="md:text-[30px] text-[24px] text-white ">
+//             Thank you for subscribing! Check your inbox.
+//           </p>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Newsletter;
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
 const Newsletter = () => {
@@ -464,6 +636,14 @@ const Newsletter = () => {
   const [status, setStatus] = useState(false);
   const [loading, setLoading] = useState(false);
   const [honeypot, setHoneypot] = useState("");
+  const [sourceUrl, setSourceUrl] = useState("");
+
+  // ✅ Capture current page URL when component mounts
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setSourceUrl(window.location.href);
+    }
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -480,33 +660,42 @@ const Newsletter = () => {
     try {
       setLoading(true);
 
-      // Extract email before reset
+      // Extract form values
       const formData = new FormData(formRef.current);
       const subscriberEmail = formData.get("subscriber_email");
+      const pageSourceUrl = sourceUrl;
 
-      // 1. Send notification to your inbox
-      await emailjs.sendForm(
+      // 1. Send notification email (explicit data instead of sendForm)
+      await emailjs.send(
         serviceId,
         newsletterTemplateId,
-        formRef.current,
+        {
+          subscriber_email: subscriberEmail,
+          source_url: pageSourceUrl,
+        },
         publicKey
       );
 
-      // 2. Send thank you email to subscriber
+      // 2. Send thank you email
       await emailjs.send(
         serviceId,
         thankYouTemplateId,
-        { subscriber_email: subscriberEmail },
+        {
+          subscriber_email: subscriberEmail,
+        },
         publicKey
       );
 
-      // 3. Send subscriber email to Google Sheets via API
+      // 3. Send subscriber email + URL to Google Sheets
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ subscriber_email: subscriberEmail }),
+        body: JSON.stringify({
+          subscriber_email: subscriberEmail,
+          source_url: pageSourceUrl,
+        }),
       });
 
       const sheetResult = await res.json();
@@ -514,10 +703,10 @@ const Newsletter = () => {
         console.error("Google Sheets error:", sheetResult.error);
       }
 
-      // Success state
+      // Success
       setStatus(true);
       formRef.current.reset();
-      console.log("✅ Emails sent & subscriber stored in Google Sheets.");
+      console.log("✅ Emails + Google Sheets updated.");
     } catch (error) {
       console.error("Newsletter error:", error);
       setStatus(false);
@@ -544,15 +733,19 @@ const Newsletter = () => {
               onSubmit={handleSubmit}
               className="md:w-[512px] relative overflow-hidden border-2 border-white bg-white h-[60px] md:h-[70px] rounded-full flex justify-between pl-2 md:pl-6 md:pr-4 pr-2 items-center"
             >
+              {/* Honeypot */}
               <input
                 type="text"
                 name="honeypot"
                 value={honeypot}
                 onChange={(e) => setHoneypot(e.target.value)}
                 autoComplete="off"
-                // style={{ display: "none" }}
                 className="absolute left-[-9000px]"
               />
+
+              {/* Hidden field for Source URL */}
+              <input type="hidden" name="source_url" value={sourceUrl} />
+
               <div className="flex items-center w-full gap-4">
                 <img src="/emailIcon.svg" alt="Email icon" />
                 <input
@@ -577,32 +770,20 @@ const Newsletter = () => {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g clipPath="url(#clip0_1_1911)">
-                    <path
-                      d="M4.58673 19.1612L18.2412 6.3877"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M19.2413 17.2075L19.2413 6.35429C19.2413 5.82071 18.779 5.38816 18.2086 5.38816L6.5 5.38816"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_1_1911">
-                      <rect
-                        width="24"
-                        height="24"
-                        fill="white"
-                        transform="translate(24 24) rotate(-180)"
-                      />
-                    </clipPath>
-                  </defs>
+                  <path
+                    d="M4.58673 19.1612L18.2412 6.3877"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M19.2413 17.2075L19.2413 6.35429C19.2413 5.82071 18.779 5.38816 18.2086 5.38816L6.5 5.38816"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </button>
             </form>

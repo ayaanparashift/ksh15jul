@@ -33,7 +33,6 @@
 // }
 
 import AboutF from "./Components/AboutF";
-import CapabilitiesF from "./Components/CapabilityF";
 import NewUSP from "./Components/USPF/NewUSP";
 import PFetch from "./Components/CNPOF/PFetch";
 import TrustedPartners from "./Components/TrustedPartners";
@@ -45,7 +44,8 @@ import Testimonial from "./Components/testislider/Testimonial";
 import TestimonialsSlider from "./test/Final/TestimonialsSlider";
 import Bento from "./Components/Bento";
 import TestimonialF from "./test/Final/TestimonialF";
-
+import "./Components/CapabilityFP";
+import CapabilityFP from "./Components/CapabilityFP";
 export const metadata = {
   title: "KSH INFRA Leading Industrial Park and Warehouse Developers in India",
   description:
@@ -78,7 +78,7 @@ export default async function Home() {
       /> */}
       <LandingSwiper />
       <AboutF />
-      <CapabilitiesF />
+      <CapabilityFP />
       <NewUSP />
       <PFetch />
       <TrustedPartners />
