@@ -284,6 +284,11 @@ export default function NavF() {
   const [showNavbar, setShowNavbar] = useState(true);
   const [atTop, setAtTop] = useState(true);
   const pathname = usePathname();
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
 
   // properly-typed ref for the timeout id
   const closeTimeoutRef = useRef(null);
@@ -311,13 +316,6 @@ export default function NavF() {
     return () => window.removeEventListener("scroll", updateScroll);
   }, []);
 
-  // track if at top
-  // useEffect(() => {
-  //   const handleScroll = () => setAtTop(window.scrollY < 10);
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-  // track if at top
   useEffect(() => {
     const handleScroll = () => setAtTop(window.scrollY < 10);
 
@@ -390,10 +388,11 @@ export default function NavF() {
   };
 
   // decide assets & text color (homepage top shows white + kshlogo + hbrg)
-  const logoSrc = isHome && atTop ? "/nav/kshlogo.svg" : "/nav/bkl.svg";
-  const menuIcon = isHome && atTop ? "/hbrg.svg" : "/hbrgBlack.svg";
-  const menuTextColor = isHome && atTop ? "text-white" : "text-black";
-
+  const logoSrc =
+    hydrated && isHome && atTop ? "/nav/kshlogo.svg" : "/nav/bkl.svg";
+  const menuIcon = hydrated && isHome && atTop ? "/hbrg.svg" : "/hbrgBlack.svg";
+  const menuTextColor =
+    hydrated && isHome && atTop ? "text-white" : "text-black";
   return (
     <div className="max-w-screen overflow-hidden">
       <motion.div
