@@ -642,7 +642,7 @@ const EnquireNow = ({ closeEnquire }) => {
         <form
           onSubmit={handleSubmit}
           noValidate
-          className="flex flex-col gap-[20px] sm:gap-[30px] min-1440::gap-[50px]"
+          className="flex flex-col gap-[20px] sm:gap-[30px] min-1440::gap-[50px] relative overflow-hidden"
         >
           <input
             type="text"
@@ -650,7 +650,8 @@ const EnquireNow = ({ closeEnquire }) => {
             value={honeypot}
             onChange={(e) => setHoneypot(e.target.value)}
             autoComplete="off"
-            style={{ display: "none" }}
+            // style={{ display: "none" }}
+            className="absolute left-[-9000px]"
           />
 
           <div className="flex sm:flex-row flex-col gap-[24px]">

@@ -574,6 +574,7 @@ const ContFF = () => {
   const [errors, setErrors] = useState({});
   const [isSending, setIsSending] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
 
   // ✅ Initialize EmailJS only once
   // Map subjects to recipient arrays
@@ -643,6 +644,7 @@ const ContFF = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
+    if (honeypot) return;
 
     setIsSending(true);
 
@@ -696,8 +698,17 @@ const ContFF = () => {
       {!isSubmitted ? (
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-[24px] sm:gap-[40px]"
+          className="flex flex-col gap-[24px] sm:gap-[40px] relative overflow-hidden"
         >
+          <input
+            type="text"
+            name="honeypot"
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+            autoComplete="off"
+            // style={{ display: "none" }}
+            className="absolute left-[-9000px]"
+          />
           {/* Name & Company */}
           <div className="flex flex-col sm:flex-row gap-[24px] sm:gap-[40px]">
             {["user_name", "user_company"].map((field) => (

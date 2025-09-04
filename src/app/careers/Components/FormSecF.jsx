@@ -1026,6 +1026,7 @@ export default function FormSecF() {
   const [file2, setFile2] = useState(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [loading, setLoading] = useState(false); // ✅ loading state
+  const [honeypot, setHoneypot] = useState("");
 
   const [formData, setFormData] = useState({
     first_name: "",
@@ -1088,6 +1089,7 @@ export default function FormSecF() {
     e.preventDefault();
     if (!validateForm()) return;
     if (!formRef.current) return;
+    if (honeypot) return;
 
     setLoading(true); // ✅ start loading
     try {
@@ -1173,8 +1175,17 @@ export default function FormSecF() {
             <motion.form
               ref={formRef}
               onSubmit={handleSubmit}
-              className="flex flex-col gap-[24px] sm:gap-[40px] relative z-0"
+              className="flex flex-col gap-[24px] sm:gap-[40px] relative z-0 overflow-hidden"
             >
+              <input
+                type="text"
+                name="honeypot"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                autoComplete="off"
+                // style={{ display: "none" }}
+                className="absolute left-[-9000px]"
+              />
               <div className="flex sm:flex-row flex-col sm:gap-10 gap-[24px]">
                 <div className="flex flex-col w-full sm:w-[295px]">
                   <input

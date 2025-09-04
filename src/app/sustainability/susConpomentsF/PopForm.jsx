@@ -781,6 +781,7 @@ const PopForm = ({ onClose }) => {
   const [submitted, setSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [fieldError, setFieldError] = useState({ field: "", text: "" });
+  const [honeypot, setHoneypot] = useState("");
 
   // ✅ Init EmailJS client-side only
   useEffect(() => {
@@ -893,9 +894,18 @@ const PopForm = ({ onClose }) => {
     >
       <form
         onSubmit={handleSubmit}
-        className="lg:w-[620px] max-w-full min-h-[318px] w-full bg-[#092241] p-6 md:p-12 flex flex-col gap-0 sm:gap-8"
+        className="lg:w-[620px] max-w-full min-h-[318px] w-full bg-[#092241] p-6 md:p-12 flex flex-col gap-0 sm:gap-8 relative overflow-hidden"
         noValidate
       >
+        <input
+          type="text"
+          name="honeypot"
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
+          autoComplete="off"
+          // style={{ display: "none" }}
+          className="absolute left-[-9000px]"
+        />
         <header className="flex justify-between items-center">
           <h3 className="text-white text-[24px] md:text-[44px] font-bold">
             Download ESG Report

@@ -463,10 +463,12 @@ const Newsletter = () => {
   const formRef = useRef(null);
   const [status, setStatus] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formRef.current) return;
+    if (honeypot) return;
 
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const newsletterTemplateId =
@@ -540,8 +542,17 @@ const Newsletter = () => {
             <form
               ref={formRef}
               onSubmit={handleSubmit}
-              className="md:w-[512px] border-2 border-white bg-white h-[60px] md:h-[70px] rounded-full flex justify-between pl-2 md:pl-6 md:pr-4 pr-2 items-center"
+              className="md:w-[512px] relative overflow-hidden border-2 border-white bg-white h-[60px] md:h-[70px] rounded-full flex justify-between pl-2 md:pl-6 md:pr-4 pr-2 items-center"
             >
+              <input
+                type="text"
+                name="honeypot"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                autoComplete="off"
+                // style={{ display: "none" }}
+                className="absolute left-[-9000px]"
+              />
               <div className="flex items-center w-full gap-4">
                 <img src="/emailIcon.svg" alt="Email icon" />
                 <input
