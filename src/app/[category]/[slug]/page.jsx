@@ -896,12 +896,119 @@
 //     </Suspense>
 //   );
 // }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// import { Suspense } from "react";
+// import BlogSkeleton from "./Components/BlogSkeleton";
+// import BlogContent from "./Components/BlogContent";
 
+// // Reusable fetcher (same logic you already use in BlogContent)
+// async function fetchBlogData(slug) {
+//   const res = await fetch(
+//     `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?slug=${slug}&_embed`,
+//     { next: { revalidate: 60 } }
+//   );
+
+//   if (!res.ok) return null;
+//   const data = await res.json();
+//   if (data.length === 0) return null;
+
+//   const blog = data[0];
+//   let featuredImage =
+//     blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null;
+
+//   if (!featuredImage && blog.featured_media) {
+//     try {
+//       const mediaRes = await fetch(
+//         `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/media/${blog.featured_media}`,
+//         { next: { revalidate: 60 } }
+//       );
+//       if (mediaRes.ok) {
+//         const mediaData = await mediaRes.json();
+//         featuredImage = mediaData.source_url || null;
+//       }
+//     } catch (error) {
+//       console.error("Media fetch error:", error);
+//     }
+//   }
+
+//   return { ...blog, featuredImage: featuredImage || "/default-image.jpg" };
+// }
+
+// // ✅ Dynamic Metadata
+// export async function generateMetadata({ params }) {
+//   const blog = await fetchBlogData(params.slug);
+//   if (!blog) {
+//     return {
+//       title: "Blog Not Found - KSH Infra",
+//       description: "The requested blog could not be found.",
+//     };
+//   }
+
+//   const title = blog.yoast_head_json?.title || blog.title.rendered;
+//   const description =
+//     blog.yoast_head_json?.description ||
+//     blog.excerpt?.rendered.replace(/<[^>]+>/g, "") ||
+//     "Read the latest insights from KSH Infra.";
+
+//   const image = blog.featuredImage;
+
+//   const url = `https://kshweb.vercel.app/blogs/${params.slug}`;
+
+//   return {
+//     title,
+//     description,
+//     openGraph: {
+//       title,
+//       description,
+//       url,
+//       type: "article",
+//       images: [
+//         {
+//           url: image,
+//           width: 1200,
+//           height: 630,
+//           alt: blog.title.rendered,
+//         },
+//       ],
+//     },
+//     twitter: {
+//       card: "summary_large_image",
+//       title,
+//       description,
+//       images: [image],
+//     },
+//   };
+// }
+
+// // ✅ Page wrapper with streaming Suspense
+// export default function BlogPage({ params }) {
+//   return (
+//     <Suspense fallback={<BlogSkeleton />}>
+//       <BlogContent slug={params.slug} />
+//     </Suspense>
+//   );
+// }
+// app/[category]/[slug]/page.jsx
+// app/[category]/[slug]/page.jsx
 import { Suspense } from "react";
+import { notFound } from "next/navigation";
 import BlogSkeleton from "./Components/BlogSkeleton";
 import BlogContent from "./Components/BlogContent";
 
-// Reusable fetcher (same logic you already use in BlogContent)
+// Reusable fetcher
 async function fetchBlogData(slug) {
   const res = await fetch(
     `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?slug=${slug}&_embed`,
@@ -951,8 +1058,7 @@ export async function generateMetadata({ params }) {
     "Read the latest insights from KSH Infra.";
 
   const image = blog.featuredImage;
-
-  const url = `https://kshweb.vercel.app/blogs/${params.slug}`;
+  const url = `https://kshweb.vercel.app/${params.category}/${params.slug}`;
 
   return {
     title,
@@ -980,11 +1086,25 @@ export async function generateMetadata({ params }) {
   };
 }
 
-// ✅ Page wrapper with streaming Suspense
-export default function BlogPage({ params }) {
+// ✅ Page wrapper with category validation + Suspense
+export default async function BlogPage({ params }) {
+  const { slug, category } = params;
+  const blog = await fetchBlogData(slug);
+
+  if (!blog) return notFound();
+
+  // category validation
+  const isNews = blog.categories.includes(7);
+  const isBlog = blog.categories.includes(6);
+  const expectedCategory = isNews ? "news" : "blogs";
+
+  if (category !== expectedCategory) {
+    return notFound();
+  }
+
   return (
     <Suspense fallback={<BlogSkeleton />}>
-      <BlogContent slug={params.slug} />
+      <BlogContent slug={slug} />
     </Suspense>
   );
 }

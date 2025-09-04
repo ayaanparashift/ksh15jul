@@ -134,7 +134,12 @@ export async function POST(req) {
         { status: 500 }
       );
     }
-    console.log(source_url);
+    // console.log(source_url);
+    console.log(
+      "➡️ Sending to sheet:",
+      JSON.stringify({ source_url, subscriber_email })
+    );
+
     const response = await fetch(SHEET_URL3, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

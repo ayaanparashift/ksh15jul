@@ -76,7 +76,78 @@
 
 //   return <BCSlider relatedBlogs={relatedBlogs} />;
 // }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// import BCSlider from "./BCslider";
 
+// async function fetchAllBlogs() {
+//   try {
+//     const res = await fetch(
+//       `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?_embed&per_page=100`,
+//       { next: { revalidate: 60 } }
+//     );
+//     if (!res.ok) return [];
+//     return await res.json();
+//   } catch (err) {
+//     console.error("Blog fetch failed", err);
+//     return [];
+//   }
+// }
+
+// export default async function RelatedBlogs({ currentBlogId }) {
+//   const allBlogs = await fetchAllBlogs();
+//   if (!allBlogs.length) return null;
+
+//   const currentBlog = allBlogs.find((b) => b.id === currentBlogId);
+//   if (!currentBlog) return null;
+
+//   const currentCats = currentBlog.categories;
+//   const isNews = currentCats.includes(7);
+//   const isBlog = currentCats.includes(6);
+
+//   let related = [];
+
+//   if (isNews) {
+//     // Only other News posts
+//     related = allBlogs.filter(
+//       (b) => b.id !== currentBlogId && b.categories.includes(7)
+//     );
+//   } else if (isBlog) {
+//     // Blogs only (must not be News)
+//     related = allBlogs.filter(
+//       (b) =>
+//         b.id !== currentBlogId &&
+//         b.categories.includes(6) &&
+//         !b.categories.includes(7)
+//     );
+//   } else {
+//     // If neither News nor Blogs — fallback to any posts (excluding current)
+//     related = allBlogs.filter((b) => b.id !== currentBlogId);
+//   }
+
+//   const relatedBlogs = related.slice(0, 8).map((b) => ({
+//     ...b,
+//     featuredImage:
+//       b._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+//       "/default-image.jpg",
+//   }));
+
+//   if (!relatedBlogs.length) return null;
+
+//   return <BCSlider relatedBlogs={relatedBlogs} />;
+// }
 import BCSlider from "./BCslider";
 
 async function fetchAllBlogs() {
@@ -112,7 +183,7 @@ export default async function RelatedBlogs({ currentBlogId }) {
       (b) => b.id !== currentBlogId && b.categories.includes(7)
     );
   } else if (isBlog) {
-    // Blogs only (must not be News)
+    // Only other Blog posts (must not also be News)
     related = allBlogs.filter(
       (b) =>
         b.id !== currentBlogId &&
@@ -120,7 +191,7 @@ export default async function RelatedBlogs({ currentBlogId }) {
         !b.categories.includes(7)
     );
   } else {
-    // If neither News nor Blogs — fallback to any posts (excluding current)
+    // Fallback: any other posts
     related = allBlogs.filter((b) => b.id !== currentBlogId);
   }
 
@@ -129,6 +200,7 @@ export default async function RelatedBlogs({ currentBlogId }) {
     featuredImage:
       b._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
       "/default-image.jpg",
+    categoryPath: b.categories.includes(7) ? "news" : "blogs", // 🔑 add correct path
   }));
 
   if (!relatedBlogs.length) return null;
