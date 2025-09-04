@@ -61,7 +61,7 @@ const ContInfo = () => {
         <div className="flex flex-col gap-[10px] justify-center w-fit">
           <div className="flex w-fit justify-center items-center gap-[28px]">
             <h3 className="spotlightheaddd fsans-600 text-[24px] leading-[130%]">
-              Mumbai
+              KSH INFRA, Mumbai
             </h3>
             {/* <p className="fsans-600 text-[18px] leading-[130%] text-[#787878]">
               (Head Office)
@@ -70,9 +70,9 @@ const ContInfo = () => {
           <p className="fsans-400 text-[18px] leading-[28px] text-[#5E5E5E]">
             {/* Birla Centurion 3rd Floor, Pandurang Budhkar Marg,
             <br /> Worli, Mumbai, Maharashtra 400030 Birla Centurion, Wing - B, */}
-            Birla Centurion, Wing - B, PS/03/052, <br />
-            3rd Floor, COWRKS, Pandurang Budhkar Marg, Century Mills, <br />{" "}
-            Worli, Mumbai, Maharashtra - 400030 (India)
+            Cowrks @ Birla Centurion, <br />
+            3rd Floor, Unit # 52, <br /> Pandurang Budhkar Marg, <br /> Worli,
+            Mumbai 400 030
           </p>
         </div>
       </div>

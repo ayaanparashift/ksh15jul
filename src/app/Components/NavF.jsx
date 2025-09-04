@@ -312,8 +312,18 @@ export default function NavF() {
   }, []);
 
   // track if at top
+  // useEffect(() => {
+  //   const handleScroll = () => setAtTop(window.scrollY < 10);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+  // track if at top
   useEffect(() => {
     const handleScroll = () => setAtTop(window.scrollY < 10);
+
+    // run once immediately on mount
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

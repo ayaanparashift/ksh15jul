@@ -219,10 +219,10 @@ const FooterF = () => {
                   KSH INFRA, Mumbai
                 </p>
                 <p className="fsans-400 text-[15px]">
-                  Birla Centurion, Wing - B, PS/03/052,
-                  <br /> 3rd Floor, COWRKS, Pandurang Budhkar Marg, <br />{" "}
-                  Century Mills, Worli, Mumbai, <br />
-                  Maharashtra - 400030 (India)
+                  Cowrks @ Birla Centurion,
+                  <br /> 3rd Floor, Unit # 52, <br /> Pandurang Budhkar Marg,
+                  <br />
+                  Worli, Mumbai 400 030 <br />
                 </p>
               </div>
             </div>
