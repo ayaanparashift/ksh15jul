@@ -863,114 +863,6 @@ const MobNav = ({ onClose }) => {
 
         {/* NAVIGATION */}
         <ul className="space-y-4 fsans-600 text-gray-700">
-          {[
-            { href: "/about-ksh", label: "About" },
-            { href: "/our-team", label: "Our Team" },
-            { href: "/capabilities", label: "Capabilities" },
-            { href: "/sustainability", label: "Sustainability" },
-            { href: "/careers", label: "Career" },
-            { href: "/contact-us", label: "Contact" },
-          ].map(({ href, label }) => (
-            <li key={href}>
-              <Link
-                href={href}
-                onClick={onClose}
-                className="flex items-center space-x-2 text-lg cursor-pointer"
-              >
-                <span>{label}</span>
-              </Link>
-            </li>
-          ))}
-
-          {/* INSIGHTS DROPDOWN */}
-          <li>
-            <button
-              onClick={() => toggle("insights")}
-              className="flex items-center space-x-2 text-lg font-semibold text-gray-700"
-            >
-              <span>Insights</span>
-              {openSections.insights ? (
-                <FiChevronUp className="w-5 h-5" />
-              ) : (
-                <FiChevronDown className="w-5 h-5" />
-              )}
-            </button>
-            <AnimatePresence>
-              {openSections.insights && (
-                <motion.ul
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="mt-2 pl-4 space-y-2 fsans-500 text-base text-gray-700 overflow-hidden"
-                >
-                  <li>
-                    <Link
-                      href="/blogs"
-                      onClick={onClose}
-                      className="block cursor-pointer"
-                    >
-                      Blogs
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/case-studies"
-                      onClick={onClose}
-                      className="block cursor-pointer"
-                    >
-                      Case Studies
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/blogs?tab=news#tabsection"
-                      onClick={() => {
-                        setTab("news");
-                        onClose();
-                      }}
-                      className="block cursor-pointer"
-                    >
-                      News
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/blogs?tab=press#tabsection"
-                      onClick={() => {
-                        setTab("press");
-                        onClose();
-                      }}
-                      className="block cursor-pointer"
-                    >
-                      Press Release
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/#testimonials"
-                      onClick={onClose}
-                      className="block cursor-pointer"
-                    >
-                      Testimonials
-                    </Link>
-                  </li>
-                </motion.ul>
-              )}
-            </AnimatePresence>
-          </li>
-
-          {/* INVESTORS */}
-          <li>
-            <Link
-              href="/investors"
-              onClick={onClose}
-              className="flex items-center space-x-2 text-lg cursor-pointer"
-            >
-              <span>Investors</span>
-            </Link>
-          </li>
-
           {/* PARKS DROPDOWN */}
           <li>
             <button
@@ -1091,6 +983,130 @@ const MobNav = ({ onClose }) => {
                 </motion.ul>
               )}
             </AnimatePresence>
+          </li>
+          {[
+            { href: "/about-ksh", label: "About Us" },
+            { href: "/our-team", label: "Our Team" },
+            { href: "/capabilities", label: "Capabilities" },
+            { href: "/sustainability", label: "Sustainability" },
+          ].map(({ href, label }) => (
+            <li key={href}>
+              <Link
+                href={href}
+                onClick={onClose}
+                className="flex items-center space-x-2 text-lg cursor-pointer"
+              >
+                <span>{label}</span>
+              </Link>
+            </li>
+          ))}
+          {/* INSIGHTS DROPDOWN */}
+          <li>
+            <button
+              onClick={() => toggle("insights")}
+              className="flex items-center space-x-2 text-lg font-semibold text-gray-700"
+            >
+              <span>Insights</span>
+              {openSections.insights ? (
+                <FiChevronUp className="w-5 h-5" />
+              ) : (
+                <FiChevronDown className="w-5 h-5" />
+              )}
+            </button>
+            <AnimatePresence>
+              {openSections.insights && (
+                <motion.ul
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="mt-2 pl-4 space-y-2 fsans-500 text-base text-gray-700 overflow-hidden"
+                >
+                  <li>
+                    <Link
+                      href="/blogs"
+                      onClick={onClose}
+                      className="block cursor-pointer"
+                    >
+                      Blogs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/case-studies"
+                      onClick={onClose}
+                      className="block cursor-pointer"
+                    >
+                      Case Studies
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/blogs?tab=news#tabsection"
+                      onClick={() => {
+                        setTab("news");
+                        onClose();
+                      }}
+                      className="block cursor-pointer"
+                    >
+                      News
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/blogs?tab=press#tabsection"
+                      onClick={() => {
+                        setTab("press");
+                        onClose();
+                      }}
+                      className="block cursor-pointer"
+                    >
+                      Press Release
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/#testimonials"
+                      onClick={onClose}
+                      className="block cursor-pointer"
+                    >
+                      Testimonials
+                    </Link>
+                  </li>
+                </motion.ul>
+              )}
+            </AnimatePresence>
+          </li>
+
+          {/* INVESTORS */}
+          <li>
+            <Link
+              href="/investors"
+              onClick={onClose}
+              className="flex items-center space-x-2 text-lg cursor-pointer"
+            >
+              <span>Investors</span>
+            </Link>
+          </li>
+          {/* Careers */}
+          <li>
+            <Link
+              href="/careers"
+              onClick={onClose}
+              className="flex items-center space-x-2 text-lg cursor-pointer"
+            >
+              <span>Careers</span>
+            </Link>
+          </li>
+          {/* Contact */}
+          <li>
+            <Link
+              href="/contact-us"
+              onClick={onClose}
+              className="flex items-center space-x-2 text-lg cursor-pointer"
+            >
+              <span>Contact Us</span>
+            </Link>
           </li>
         </ul>
       </motion.div>
