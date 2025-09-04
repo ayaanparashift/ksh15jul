@@ -656,6 +656,181 @@
 // };
 
 // export default Bento;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// "use client";
+
+// import React, { useEffect, useState } from "react";
+// import Link from "next/link";
+
+// const formatDate = (dateString) => {
+//   const date = new Date(dateString);
+//   return date.toLocaleDateString("en-GB", {
+//     day: "numeric",
+//     month: "short",
+//     year: "numeric",
+//   });
+// };
+
+// const fetchBlogByPage = async () => {
+//   try {
+//     const resp = await fetch(
+//       `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?per_page=3&page=1&_embed`,
+//       { next: { revalidate: 60 } }
+//     );
+//     if (!resp.ok) return null;
+//     const data = await resp.json();
+//     return data;
+//   } catch {
+//     return null;
+//   }
+// };
+
+// const SkeletonCard = ({ className = "" }) => (
+//   <div className={`relative bg-gray-200 animate-pulse ${className}`}>
+//     <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
+//     <div className="relative z-50 px-4 xl:px-[25px] pb-[20px] flex flex-col gap-[10px] justify-end h-full">
+//       <div className="h-[72px] w-full bg-gray-300 rounded" />
+//       <div className="h-[20px] w-1/2 bg-gray-300 rounded" />
+//       <div className="h-10 w-10 bg-gray-400 rounded-full mt-2" />
+//     </div>
+//   </div>
+// );
+
+// const Bento = () => {
+//   const [blogs, setBlogs] = useState(null);
+
+//   useEffect(() => {
+//     let interval;
+//     const fetchData = async () => {
+//       const data = await fetchBlogByPage();
+//       if (data?.length === 3) {
+//         setBlogs(data);
+//         clearInterval(interval);
+//       }
+//     };
+
+//     fetchData();
+//     interval = setInterval(fetchData, 10000);
+
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   return (
+//     <div className="flex pt-0 md:pt-[20px] sm:flex-row flex-col gap-[20px] items-center justify-between h-fit">
+//       {/* Card 1 */}
+//       {blogs ? (
+//         <Link
+//           href={`/blogs/${blogs[0].slug}`}
+//           className="relative h-[585px] md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out w-full sm:w-[33%] cursor-pointer xl:w-[385px] flex flex-col justify-end px-4 xl:px-[25px] pb-[20px] gap-[10px]"
+//           style={{
+//             background: `url(${blogs[0]._embedded?.["wp:featuredmedia"]?.[0]?.source_url})`,
+//             backgroundPosition: "center center",
+//             backgroundRepeat: "no-repeat",
+//             backgroundSize: "cover",
+//           }}
+//         >
+//           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
+//           <p
+//             dangerouslySetInnerHTML={{ __html: blogs[0].title?.rendered }}
+//             className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
+//           />
+//           <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
+//             {formatDate(blogs[0].date)}
+//           </p>
+//           <button className="relative z-50">
+//             <img
+//               className="h-10 w-10"
+//               src="/buttonarrows/bentor1.svg"
+//               alt="r1"
+//             />
+//           </button>
+//         </Link>
+//       ) : (
+//         <SkeletonCard className="h-[585px] w-full sm:w-[33%] xl:w-[385px]" />
+//       )}
+
+//       {/* Card 2 */}
+//       {blogs ? (
+//         <Link
+//           href={`/blogs/${blogs[1].slug}`}
+//           className="relative h-[585px] md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out w-full sm:w-[33%] cursor-pointer xl:w-[315px] flex flex-col justify-end px-4 xl:px-[31px] pb-[20px] sm:pt-[50px] gap-[10px]"
+//           style={{
+//             background: `url(${blogs[1]._embedded?.["wp:featuredmedia"]?.[0]?.source_url})`,
+//             backgroundPosition: "center center",
+//             backgroundRepeat: "no-repeat",
+//             backgroundSize: "cover",
+//           }}
+//         >
+//           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
+//           <p
+//             dangerouslySetInnerHTML={{ __html: blogs[1].title?.rendered }}
+//             className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
+//           />
+//           <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
+//             {formatDate(blogs[1].date)}
+//           </p>
+//           <button className="relative z-50">
+//             <img
+//               className="h-10 w-10"
+//               src="/buttonarrows/bentor1.svg"
+//               alt="r1"
+//             />
+//           </button>
+//         </Link>
+//       ) : (
+//         <SkeletonCard className="h-[585px] w-full sm:w-[33%] xl:w-[315px]" />
+//       )}
+
+//       {/* Card 3 */}
+//       <div className="relative h-[578px] transition-[transform] duration-300 w-full sm:w-[33%] xl:w-[515px] flex justify-end flex-col-reverse sm:flex-col gap-[30px]">
+//         {blogs ? (
+//           <Link
+//             href={`/blogs/${blogs[2].slug}`}
+//             className="relative md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out h-[479px] flex flex-col items-start justify-end px-4 xl:px-[50px] pb-[20px] gap-[10px] cursor-pointer"
+//             style={{
+//               background: `url(${blogs[2]._embedded?.["wp:featuredmedia"]?.[0]?.source_url})`,
+//               backgroundPosition: "center center",
+//               backgroundRepeat: "no-repeat",
+//               backgroundSize: "cover",
+//             }}
+//           >
+//             <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
+//             <p
+//               dangerouslySetInnerHTML={{ __html: blogs[2].title?.rendered }}
+//               className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
+//             />
+//             <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
+//               {formatDate(blogs[2].date)}
+//             </p>
+//             <button className="relative z-50">
+//               <img
+//                 className="h-10 w-10"
+//                 src="/buttonarrows/bentor1.svg"
+//                 alt="r1"
+//               />
+//             </button>
+//           </Link>
+//         ) : (
+//           <SkeletonCard className="h-[479px] w-full" />
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Bento;
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -703,6 +878,25 @@ const Bento = () => {
     const fetchData = async () => {
       const data = await fetchBlogByPage();
       if (data?.length === 3) {
+        // Determine dynamic paths for logging
+        data.forEach((blog) => {
+          const categoryIds = Array.isArray(blog.categories)
+            ? blog.categories.map((id) => Number(id))
+            : [];
+          let currentPath = "blogs"; // default
+          if (categoryIds.includes(7)) currentPath = "news";
+          else if (categoryIds.includes(6)) currentPath = "blogs";
+
+          console.log(
+            "Blog slug:",
+            blog.slug,
+            "| Category IDs:",
+            categoryIds,
+            "| Dynamic path:",
+            currentPath
+          );
+        });
+
         setBlogs(data);
         clearInterval(interval);
       }
@@ -719,7 +913,7 @@ const Bento = () => {
       {/* Card 1 */}
       {blogs ? (
         <Link
-          href={`/blogs/${blogs[0].slug}`}
+          href={`/blogs/${blogs[0].slug}`} // still hardcoded, dynamic will be applied later
           className="relative h-[585px] md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out w-full sm:w-[33%] cursor-pointer xl:w-[385px] flex flex-col justify-end px-4 xl:px-[25px] pb-[20px] gap-[10px]"
           style={{
             background: `url(${blogs[0]._embedded?.["wp:featuredmedia"]?.[0]?.source_url})`,

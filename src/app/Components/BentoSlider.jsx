@@ -708,10 +708,13 @@ const BentoSlider = () => {
               slidesPerView={1}
               className="max-w-full"
             >
-              {blogs.map((blog, i) => (
+              {/* {blogs.map((blog, i) => (
                 <SwiperSlide key={blog.id}>
                   <BlogCard
-                    href={blog.link.replace("https://www.kshinfra.com", "")}
+                    href={blog.link.replace(
+                      "https://wordpress-819107-5295407.cloudwaysapps.com",
+                      "/blogs/"
+                    )}
                     // bg={
                     //   blog.yoast_head_json?.schema?.["@graph"]?.[0]
                     //     ?.thumbnailUrl
@@ -729,7 +732,46 @@ const BentoSlider = () => {
                     height={"h-[585px]"}
                   />
                 </SwiperSlide>
-              ))}
+              ))} */}
+              {blogs.map((blog) => {
+                // Ensure categories are numbers
+                const categoryIds = Array.isArray(blog.categories)
+                  ? blog.categories.map((id) => Number(id))
+                  : [];
+
+                // Determine dynamic path
+                let currentPath = "blogs"; // default
+                if (categoryIds.includes(7)) currentPath = "news";
+                else if (categoryIds.includes(6)) currentPath = "blogs";
+
+                // Build dynamic href
+                const href = `/${currentPath}/${blog.slug}`;
+
+                // ✅ Log everything
+                console.log("Blog:", blog.title.rendered);
+                console.log("Categories:", categoryIds);
+                console.log("Dynamic path:", currentPath);
+                console.log("Generated href:", href);
+
+                return (
+                  <SwiperSlide key={blog.id}>
+                    <BlogCard
+                      href={href}
+                      bg={blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url}
+                      title={blog.title.rendered}
+                      subtitle={`${new Date(blog.date).toLocaleDateString(
+                        "en-GB",
+                        {
+                          day: "2-digit",
+                          month: "short",
+                          year: "2-digit",
+                        }
+                      )}`}
+                      height={"h-[585px]"}
+                    />
+                  </SwiperSlide>
+                );
+              })}
             </Swiper>
           </div>
         </div>
