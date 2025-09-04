@@ -10,8 +10,10 @@ import TextT from "./Components/TextT";
 // import CaseSideBtm from "./Components/CaseSideBtm";
 
 export const metadata = {
-  title: "Case studies",
-  description: "Case Studies",
+  title:
+    "KSH INFRA Case Studies | Real-World Success in Industrial Infrastructure",
+  description:
+    "Explore KSH INFRA's case studies showcasing successful partnerships with global brands like Jabil, Kawasaki, and Hindalco in industrial infrastructure projects.",
 };
 
 const page = () => {

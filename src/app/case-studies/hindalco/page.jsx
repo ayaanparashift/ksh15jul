@@ -11,10 +11,9 @@ import Res from "../Components/Res";
 import TextT from "../Components/TextT";
 // import BlogInsideSpot from "../bloginside/Components/BlogInsideSpot";
 export const metadata = {
-  title:
-    "KSH INFRA Builds Jabil’s Ready-to-use Custom Manufacturing Facility in Pune with Modern Industrial Facility",
+  title: "KSH INFRA & Hindalco | Industrial & Logistics Facility Solutions",
   description:
-    "Jabil’s ready-to-use custom manufacturing facility in Pune by KSH INFRA offers modern infrastructure, seamless logistics, and scalable warehousing.",
+    "Explore how KSH INFRA delivered a 200,000 sq. ft. turnkey industrial and logistics facility for Hindalco, ensuring efficiency, compliance, and scalability.",
 };
 const page = () => {
   return (

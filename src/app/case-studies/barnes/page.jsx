@@ -11,10 +11,9 @@ import Res from "../Components/Res";
 import TextT from "../Components/TextT";
 // import BlogInsideSpot from "../bloginside/Components/BlogInsideSpot";
 export const metadata = {
-  title:
-    "KSH INFRA Builds Jabil’s Ready-to-use Custom Manufacturing Facility in Pune with Modern Industrial Facility",
+  title: "KSH INFRA & Barnes | Crane-Ready Industrial Manufacturing Facility",
   description:
-    "Jabil’s ready-to-use custom manufacturing facility in Pune by KSH INFRA offers modern infrastructure, seamless logistics, and scalable warehousing.",
+    "KSH INFRA delivered a 180,000 sq. ft. crane-ready manufacturing facility for Barnes, featuring high-capacity power and precision infrastructure.",
 };
 const page = () => {
   return (
