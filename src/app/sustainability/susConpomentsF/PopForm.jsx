@@ -813,6 +813,7 @@ const PopForm = ({ onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (honeypot) return;
 
     // ✅ Validate name
     let err = validateField("name", name);

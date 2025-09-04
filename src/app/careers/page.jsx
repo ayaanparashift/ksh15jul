@@ -21,7 +21,7 @@ export default function page() {
       <CareerSec2 />
       <CareerSec3 />
       <CareerAcc />
-      <CarSlide />
+      {/* <CarSlide /> */}
       <CareerBlbg />
       <FormSecF />
     </div>
