@@ -722,7 +722,7 @@ const Navlist = ({ onClose }) => {
                   dropdownOpen !== null ? "text-[#E30613]" : "text-[#092F5F]"
                 } fpt-500 transition-colors hover:text-[#E30613] duration-[500ms]`}
               >
-                <h2 className="2xl:text-[36px] xl:text-[30px] text-[24px]">
+                <h2 className="2xl:text-[36px] xl:text-[30px] text-[24px] fpt-600">
                   {item.title}
                 </h2>
                 <svg
