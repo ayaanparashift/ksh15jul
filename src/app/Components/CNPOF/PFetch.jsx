@@ -27,7 +27,7 @@
 //         content:
 //           "Mapletree Investments Acquires KSH INFRA’s logistics asset. (Dec 23, 2022)",
 //         image: "/blog/news/news1.jpg",
-//         href: "/blogs/mapletree-investments-acquires-ksh-infras-logistics-asset",
+//         href: "/news/mapletree-investments-acquires-ksh-infras-logistics-asset",
 //         newTab: false,
 //       },
 //       {
@@ -36,7 +36,7 @@
 //         content:
 //           "The COVID-19 pandemic has disrupted every single industry over the course of just a few months. (Sept 28, 2022)",
 //         image: "/blog/news/news2.jpg",
-//         href: "/blogs/post-covid-19-opportunities-in-india",
+//         href: "/news/post-covid-19-opportunities-in-india",
 //         newTab: false,
 //       },
 //       {
@@ -45,7 +45,7 @@
 //         content:
 //           "Prioritising Ergonomics in Industrial and Warehouse Operations. (Sept 28, 2022)",
 //         image: "/blog/news/news3.jpg",
-//         href: "/blogs/benefits-of-moving-into-a-sustainable-industrial-park",
+//         href: "/news/benefits-of-moving-into-a-sustainable-industrial-park",
 //         newTab: false,
 //       },
 //     ],
@@ -83,10 +83,176 @@
 
 //   return <Parent staticData={staticData} />;
 // }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// import Parent from "./Parent";
 
+// export default function PFetch() {
+//   const staticData = {
+//     "Case Studies": [
+//       {
+//         id: 1,
+//         title:
+//           "Large-Scale, Built-to-Spec Facility — Delivered to Hindalco in Eight Months",
+//         content:
+//           "Large-Scale, Built-to-Spec Facility — Delivered to Hindalco in Eight Months",
+//         image: "/caseInside/hindspot.png",
+//         href: "/case-studies/hindalco",
+//         newTab: false,
+//         date: "Hindalco",
+//       },
+//       {
+//         id: 2,
+//         title:
+//           "Crane-Ready, High-Capacity Manufacturing Facility — Delivered to Barnes",
+//         content:
+//           "Crane-Ready, High-Capacity Manufacturing Facility — Delivered to Barnes",
+//         image: "/caseInside/barnes.png",
+//         href: "/case-studies/barnes",
+//         newTab: false,
+//         date: "Barnes",
+//       },
+//       {
+//         id: 3,
+//         title:
+//           "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first Indian integrated Unit",
+//         content:
+//           "Manufacturing, Assembly, and R&D — Delivered Kawasaki's first Indian integrated Unit",
+//         image: "/caseInside/kwspot.jpg",
+//         href: "/case-studies/kawasaki",
+//         newTab: false,
+//         date: "Kawasaki",
+//       },
+//       // {
+//       //   id: 4,
+//       //   title: "Done and Delivered. On Time — Jabil",
+//       //   content: "Done and Delivered. On Time — Jabil",
+//       //   image: "/caseInside/jabspot.jpg",
+//       //   href: "/case-studies/jabil",
+//       //   newTab: false,
+//       //   date: "Jabil",
+//       // },
+//     ],
+//     News: [
+//       {
+//         id: 3,
+//         title: "Mapletree Investments Acquires KSH INFRA’s logistics asset",
+//         content: "Mapletree Investments Acquires KSH INFRA’s logistics asset",
+//         image: "/blog/news/news1.jpg",
+//         href: "/news/mapletree-investments-acquires-ksh-infras-logistics-asset",
+//         newTab: false,
+//         date: "Dec 23, 2022",
+//       },
+//       {
+//         id: 4,
+//         title:
+//           "The COVID-19 pandemic has disrupted every single industry over the course of just a few months",
+//         content:
+//           "The COVID-19 pandemic has disrupted every single industry over the course of just a few months",
+//         image: "/blog/news/news2.jpg",
+//         href: "/news/post-covid-19-opportunities-in-india",
+//         newTab: false,
+//         date: "Sept 28, 2022",
+//       },
+//       {
+//         id: 5,
+//         title: "Prioritising Ergonomics in Industrial and Warehouse Operations",
+//         content:
+//           "Prioritising Ergonomics in Industrial and Warehouse Operations",
+//         image: "/blog/news/news3.jpg",
+//         href: "/news/benefits-of-moving-into-a-sustainable-industrial-park",
+//         newTab: false,
+//         date: "Sept 28, 2022",
+//       },
+//     ],
+//     "Press Release": [
+//       {
+//         id: 6,
+//         title: "KSH INFRA to Invest ₹550 Cr. in Tamil Nadu Park",
+//         content: "KSH INFRA to Invest ₹550 Cr. in Tamil Nadu Park",
+//         image: "/press/press6.webp",
+//         href: "https://www.constructionworld.in/urban-infrastructure/warehouse-and-logistics/ksh-infra-to-invest-rs-5.5-billion-in-tamil-nadu-park/76359",
+//         newTab: true,
+//         date: "17 Jul 2025",
+//       },
+//       {
+//         id: 7,
+//         title:
+//           "KSH INFRA to invest ₹550 Cr. in second industrial park in Tamil Nadu",
+//         content:
+//           "KSH INFRA to invest ₹550 Cr. in second industrial park in Tamil Nadu",
+//         image: "/press/press4.png",
+//         href: "https://manufacturing.economictimes.indiatimes.com/news/industry/ksh-infra-to-invest-550-crore-in-second-industrial-park-in-tamil-nadu/122437140",
+//         newTab: true,
+//         date: "14 Jul 2025",
+//       },
+//       {
+//         id: 8,
+//         title:
+//           "KSH INFRA to invest ₹550 Cr. in second industrial & logistics park in Sriperumbudur",
+//         content:
+//           "KSH INFRA to invest ₹550 Cr. in second industrial & logistics park in Sriperumbudur",
+//         image: "/press/press5.webp",
+//         href: "https://www.thehindubusinessline.com/companies/ksh-infra-to-invest-550-cr-in-second-industrial-logistics-park-in-sriperumbudur/article69807276.ece",
+//         newTab: true,
+//         date: "13 Jul 2025",
+//       },
+//     ],
+//   };
+
+//   return <Parent staticData={staticData} />;
+// }
 import Parent from "./Parent";
 
-export default function PFetch() {
+export default async function PFetch() {
+  async function getNews() {
+    try {
+      const res = await fetch(
+        "https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?categories=7&per_page=3&_embed",
+        { next: { revalidate: 60 } } // ✅ ISR: revalidates every 60s
+      );
+
+      if (!res.ok) throw new Error("Failed to fetch news");
+      const data = await res.json();
+
+      return data.map((item) => ({
+        id: item.id,
+        title: item.title.rendered,
+        content: item.excerpt.rendered.replace(/<[^>]+>/g, ""), // strip HTML
+        image:
+          item._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+          "/blog/default.jpg",
+        href: `/news/${item.slug}`,
+        newTab: false,
+        date: new Date(item.date).toLocaleDateString("en-US", {
+          day: "numeric",
+          month: "short",
+          year: "numeric",
+        }),
+      }));
+    } catch (err) {
+      console.warn("News fetch failed:", err);
+      return []; // ✅ fallback to empty array
+    }
+  }
+
+  const newsData = await getNews();
+
   const staticData = {
     "Case Studies": [
       {
@@ -122,48 +288,8 @@ export default function PFetch() {
         newTab: false,
         date: "Kawasaki",
       },
-      // {
-      //   id: 4,
-      //   title: "Done and Delivered. On Time — Jabil",
-      //   content: "Done and Delivered. On Time — Jabil",
-      //   image: "/caseInside/jabspot.jpg",
-      //   href: "/case-studies/jabil",
-      //   newTab: false,
-      //   date: "Jabil",
-      // },
     ],
-    News: [
-      {
-        id: 3,
-        title: "Mapletree Investments Acquires KSH INFRA’s logistics asset",
-        content: "Mapletree Investments Acquires KSH INFRA’s logistics asset",
-        image: "/blog/news/news1.jpg",
-        href: "/blogs/mapletree-investments-acquires-ksh-infras-logistics-asset",
-        newTab: false,
-        date: "Dec 23, 2022",
-      },
-      {
-        id: 4,
-        title:
-          "The COVID-19 pandemic has disrupted every single industry over the course of just a few months",
-        content:
-          "The COVID-19 pandemic has disrupted every single industry over the course of just a few months",
-        image: "/blog/news/news2.jpg",
-        href: "/blogs/post-covid-19-opportunities-in-india",
-        newTab: false,
-        date: "Sept 28, 2022",
-      },
-      {
-        id: 5,
-        title: "Prioritising Ergonomics in Industrial and Warehouse Operations",
-        content:
-          "Prioritising Ergonomics in Industrial and Warehouse Operations",
-        image: "/blog/news/news3.jpg",
-        href: "/blogs/benefits-of-moving-into-a-sustainable-industrial-park",
-        newTab: false,
-        date: "Sept 28, 2022",
-      },
-    ],
+    News: newsData, // ✅ dynamic from server
     "Press Release": [
       {
         id: 6,

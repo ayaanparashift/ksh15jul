@@ -451,7 +451,7 @@ const CapabilitiesF = () => {
                           <img
                             loading="eager"
                             src={img}
-                            alt=""
+                            alt={tab.alts.topalt}
                             className="min-h-full min-w-full object-cover brightness-110"
                           />
                         </SwiperSlide>
@@ -492,7 +492,7 @@ const CapabilitiesF = () => {
                             <img
                               loading="eager"
                               src={img}
-                              alt=""
+                              alt={tab.alts.b1alt}
                               className="w-full h-full object-cover brightness-110"
                             />
                           </SwiperSlide>
@@ -531,7 +531,7 @@ const CapabilitiesF = () => {
                             <img
                               loading="eager"
                               src={img}
-                              alt=""
+                              alt={tab.alts.b2alt}
                               className="w-full h-full object-cover brightness-110"
                             />
                           </SwiperSlide>

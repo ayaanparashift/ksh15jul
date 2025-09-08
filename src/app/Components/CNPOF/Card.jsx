@@ -178,7 +178,7 @@ const Card = ({ todos, activeSidebar, acbtn }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
-            className="fsans-600 min-1440:text-[28px] md:text-[24px] text-[18px] leading-[150%] text-white spotlightheaddd pt-[10px]"
+            className="fsans-600 line-clamp-3 min-1440:text-[28px] md:text-[24px] text-[18px] leading-[150%] text-white spotlightheaddd pt-[10px]"
           >
             {activeItem.content || "No Data Available"}
           </motion.h3>
