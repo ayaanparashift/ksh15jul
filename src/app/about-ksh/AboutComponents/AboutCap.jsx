@@ -309,9 +309,9 @@ const AboutCap = () => {
                   className="w-[90%] xl:w-[516px] xl-1024:w-[400px] contentArea"
                 >
                   <div className="flex flex-col md:h-[100px]">
-                    <h1 className="text-[20px] xl-1024:text-[25px] pt-7 md:pt-[57px] pb-4 text-white fpt-600">
+                    <h2 className="text-[20px] xl-1024:text-[25px] pt-7 md:pt-[57px] pb-4 text-white fpt-600">
                       {tabs[activeTab].heading}
-                    </h1>
+                    </h2>
                     <p className="tabContent text-lg text-[#C1C1C1]">
                       {tabs[activeTab].content}
                     </p>
@@ -358,9 +358,9 @@ const AboutCap = () => {
             </div> */}
             <div className="flex flex-col gap-7 pt-12 lg:pt-20 justify-between">
               <div className="flex md:flex-row flex-col items-start md:items-center gap-2">
-                <h1 className="text-[14px] fpt-700 text-[#fff]">
+                <h2 className="text-[14px] fpt-700 text-[#fff]">
                   FIND OUT MORE :
-                </h1>
+                </h2>
                 <span className="text-[#F7E327] text-base">
                   <a
                     href={tabs[activeTab].links}

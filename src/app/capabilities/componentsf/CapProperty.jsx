@@ -96,7 +96,7 @@ const CapProperty = () => {
           /> */}
         </div>
         <div className="conCap flex-1 flex flex-col justify-between">
-          <h1
+          <h2
             // initial={{ width: 0 }}
             // whileInView={{ width: "100%" }}
             // viewport={{ once: true, amount: 0.1 }}
@@ -104,7 +104,7 @@ const CapProperty = () => {
             className="md:text-[30px] text-[24px] overflow-hidden fpt-600 whitespace-nowrap leading-[33px] text-white border-b-[#D7D7D7] border-b-[1px] pb-2"
           >
             Property Management
-          </h1>
+          </h2>
           <div className="flex flex-col justify-between">
             <div
               // initial={{ opacity: 0 }}
@@ -113,9 +113,9 @@ const CapProperty = () => {
               // transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
               className="flex flex-col lg:gap-[34px] lg:py-10 py-5 gap-5"
             >
-              <h1 className="text-xl leading-[26px] fsans-600 text-[#E6E6E6]">
+              <h2 className="text-xl leading-[26px] fsans-600 text-[#E6E6E6]">
                 Customer Delight. First.
-              </h1>
+              </h2>
               <p className="text-lg fsans-400 leading-7 text-[#CECECE]">
                 At KSH INFRA, we manage our properties to keep everything
                 functioning seamlessly. Our Property Management team prioritizes
@@ -140,9 +140,9 @@ const CapProperty = () => {
                     className="flex items-center justify-between cursor-pointer"
                     onClick={() => toggleAccordion(index)}
                   >
-                    <h1 className="text-[#E30613] leading-[30px] fsans-600 text-base uppercase py-[20px]">
+                    <h2 className="text-[#E30613] leading-[30px] fsans-600 text-base uppercase py-[20px]">
                       {item.title}
-                    </h1>
+                    </h2>
                     <img
                       className="w-6 h-6"
                       src={

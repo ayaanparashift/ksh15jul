@@ -260,7 +260,7 @@ const AboutGrowth = () => {
     <div className="Main fix12 py-16 lg:py-[100px]">
       <div className="xl:flex items-center justify-between xl-1280:gap-[5%] xl-1024:gap-[30px]">
         <div className="xl-1024:flex-1 xl:w-[521px] xl-1280:w-[50%] flex xl:pb-0 pb-5">
-          <h1
+          <h2
             // initial={{ width: 0 }}
             // whileInView={{ width: "fit-content" }}
             // transition={{ duration: 1.7, ease: [0.7, 0, 0.4, 1] }}
@@ -269,7 +269,7 @@ const AboutGrowth = () => {
           >
             Trust. Growth.
             <br /> Opportunity. &nbsp;&nbsp;&nbsp;&nbsp;
-          </h1>
+          </h2>
         </div>
 
         {/* First box only (Sustainability) */}
@@ -293,9 +293,9 @@ const AboutGrowth = () => {
             </div>
             <div className="max-w-fit py-[30px] px-[20px] flex flex-col justify-between gap-7">
               <div>
-                <h1 className="text-2xl fpt-700 pb-4">
+                <h2 className="text-2xl fpt-700 pb-4">
                   {aboutGrowthData[0].title}
-                </h1>
+                </h2>
                 <p className="text-[#565656] fsans-600 text-[18px] md:pb-0 pb-6">
                   {aboutGrowthData[0].description}
                 </p>
@@ -344,7 +344,7 @@ const AboutGrowth = () => {
               </div>
               <div className="max-w-fit py-[30px] px-[20px] flex flex-col justify-between">
                 <div>
-                  <h1 className="text-2xl fpt-700 pb-4">{item.title}</h1>
+                  <h2 className="text-2xl fpt-700 pb-4">{item.title}</h2>
                   <p className="text-[#565656] fsans-600 text-[18px]">
                     {item.description}
                   </p>

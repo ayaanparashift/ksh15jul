@@ -8,7 +8,7 @@ const AboutVision = () => {
             <div className="hidden xl:block xl:w-[531px]" />
 
             <div className="xl:w-[531px] w-full h-full flex flex-col justify-end">
-              <h1
+              <h2
                 // initial={{ y: 100 }}
                 // whileInView={{ y: -20 }}
                 // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
@@ -17,7 +17,7 @@ const AboutVision = () => {
                 style={{ WebkitTextStroke: "1px #6C8DAB" }}
               >
                 Purpose
-              </h1>
+              </h2>
 
               <div className="relative z-20 overflow-hidden mt-[20px]">
                 <div>
@@ -48,7 +48,7 @@ const AboutVision = () => {
           {/* vision mission */}
           <div className="flex flex-col min-768:flex-row gap-11 xl-1024:gap-11 xl:flex-row justify-between xl:h-[856px] mt-[50px] xl:mt-[-120px]">
             <div className="xl-768:flex-1 xl-1024:flex-1 xl:flex-none xl:w-[531px]">
-              <h1
+              <h2
                 // initial={{ y: 100 }}
                 // whileInView={{ y: 0 }}
                 // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
@@ -57,7 +57,7 @@ const AboutVision = () => {
                 style={{ WebkitTextStroke: "1px #6C8DAB" }}
               >
                 Vision
-              </h1>
+              </h2>
               <div className="relative z-20 overflow-hidden">
                 <div className="">
                   <img
@@ -126,7 +126,7 @@ const AboutVision = () => {
           {/* Bottom */}
           <div className=" xl-1024:pt-20 xl:pt-28  lg:gap-11 gap-6 flex flex-col lg:flex-row justify-between items-center xl-1024:items-end xl-768:items-start pt-11 lg:pt-0">
             <div className="flex-1 xl:flex-none xl:mt-[-100px] xl:w-[531px]">
-              <h1
+              <h2
                 // initial={{ y: 100 }}
                 // whileInView={{ y: 0 }}
                 // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
@@ -135,7 +135,7 @@ const AboutVision = () => {
                 style={{ WebkitTextStroke: "1px #6C8DAB" }}
               >
                 Values
-              </h1>
+              </h2>
               <div className="relative overflow-hidden z-20">
                 <div className="">
                   <img src="./AboutPage/values.png" alt="" />
@@ -163,9 +163,9 @@ const AboutVision = () => {
                       "linear-gradient(to top right, rgba(221, 221, 221, 0.89), rgba(221, 221, 221, 0)) 10",
                   }}
                 >
-                  <h1 className="text-3xl fpt-600 pb-[6px] text-white">
+                  <h2 className="text-3xl fpt-600 pb-[6px] text-white">
                     Leadership
-                  </h1>
+                  </h2>
                   <p className="text-[#C1C1C1] text-sm">
                     We lead with vision, innovation, and excellence, setting new
                     industry standards while empowering our people to drive
@@ -183,9 +183,9 @@ const AboutVision = () => {
                   // viewport={{ amount: 0.1, once: true }}
                   className="flex-1 lg:h-[150px] xl-1024:h-auto  lg:pl-[35px] "
                 >
-                  <h1 className="text-3xl fpt-600 pb-[6px] text-white">
+                  <h2 className="text-3xl fpt-600 pb-[6px] text-white">
                     Teamwork
-                  </h1>
+                  </h2>
                   <p className="text-[#C1C1C1] text-sm ">
                     Collaboration is at the heart of everything we do. We
                     believe in working together, leveraging diverse strengths,
@@ -209,9 +209,9 @@ const AboutVision = () => {
                       "linear-gradient(to top right, rgba(221, 221, 221, 0), rgba(185, 140, 140, 0.70)) 30",
                   }}
                 >
-                  <h1 className="text-3xl fpt-600 pb-[6px] text-white pt-5">
+                  <h2 className="text-3xl fpt-600 pb-[6px] text-white pt-5">
                     Responsible
-                  </h1>
+                  </h2>
                   <p className="text-[#C1C1C1] text-sm ">
                     We are committed to ethical business practices,
                     sustainability, and accountability, ensuring that our
@@ -234,9 +234,9 @@ const AboutVision = () => {
                       "linear-gradient(to top right, rgba(221, 221, 221, 0), rgba(185, 140, 140, 0.70)) 30",
                   }}
                 >
-                  <h1 className="text-3xl fpt-600 pb-[6px] text-white pt-5 ">
+                  <h2 className="text-3xl fpt-600 pb-[6px] text-white pt-5 ">
                     Care
-                  </h1>
+                  </h2>
                   <p className="text-[#C1C1C1] text-sm ">
                     Care for people, communities, and the planet. With care we
                     foster a supportive, inclusive, and respectful workplace

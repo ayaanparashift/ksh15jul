@@ -593,9 +593,9 @@ const WhyKsh = () => {
                   className="xl:w-[80%] w-full contentArea xl:h-auto h-[324px]"
                 >
                   <div className="flex flex-col">
-                    <h1 className="text-3xl xl-1024:text-xl pt-[20px] xl-1024:pt-7 pb-4 text-white fpt-600">
+                    <h2 className="text-3xl xl-1024:text-xl pt-[20px] xl-1024:pt-7 pb-4 text-white fpt-600">
                       {tabs[activeTab].heading}
-                    </h1>
+                    </h2>
                     <p className="tabContent text-base 2xl:text-lg text-[#C1C1C1]">
                       {tabs[activeTab].content
                         .split("\n")

@@ -1164,9 +1164,9 @@ export default function FormSecF() {
         <div className="bg-[#141D28] lg:py-0 py-[5%] flex flex-col items-stretch justify-center flex-1 pl-[max(5%,calc((100vw-1250px)/2))] pr-[5%] md:pr-[60px] overflow-hidden">
           {!isSubmitted && (
             <div className="lg:pb-[50px] pb-[20px] max-w-fit">
-              <h1 className="fpt-600 xl:text-[60px] lg:text-[40px] md:text-[32px] text-[28px] text-white leading-[150%] md:leading-[105%] 2xl:text-[70px]">
+              <h2 className="fpt-600 xl:text-[60px] lg:text-[40px] md:text-[32px] text-[28px] text-white leading-[150%] md:leading-[105%] 2xl:text-[70px]">
                 Join Us
-              </h1>
+              </h2>
               <div className="bg-[#F7E327] h-[8px] md:h-[10px] w-full" />
             </div>
           )}

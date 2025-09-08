@@ -45,9 +45,9 @@ const SustainGovernence = () => {
           </motion.h1> */}
 
           <div className="origin-left w-full">
-            <h1 className="fpt-500 md:text-[44px] sm:text-[32px] text-[24px] whitespace-nowrap overflow-hidden text-white border-[#D7D7D7] border-b-[1px] w-[90%] mx-auto lg:w-full">
+            <h2 className="fpt-500 md:text-[44px] sm:text-[32px] text-[24px] whitespace-nowrap overflow-hidden text-white border-[#D7D7D7] border-b-[1px] w-[90%] mx-auto lg:w-full">
               Governance
-            </h1>
+            </h2>
           </div>
           <motion.div
             initial={{ x: 0 }}

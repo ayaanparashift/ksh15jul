@@ -18,9 +18,9 @@ const AboutOurLeadership = () => {
         >
           {/* Content container */}
           <div className="flex items-end justify-between">
-            <h1 className="sm:text-3xl text-[24px] max-w-fit lg:text-[44px] fpt-600 whitespace-nowrap">
+            <h2 className="sm:text-3xl text-[24px] max-w-fit lg:text-[44px] fpt-600 whitespace-nowrap">
               Our Leadership
-            </h1>
+            </h2>
 
             <Link
               href="/our-team"

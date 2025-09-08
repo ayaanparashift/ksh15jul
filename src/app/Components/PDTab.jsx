@@ -624,9 +624,9 @@ const PDTab = ({ tdata, title, para, bwidth }) => {
           {/* LEFT COLUMN: Title + Content */}
           <div className="w-full lg:w-[50%]">
             <div className="flex items-end min-w-full h-[64px]">
-              <h1 className="text-[#092241] border-b border-[#D7D7D7] spotlightheaddd fsans-600 text-[20px] w-full">
+              <h2 className="text-[#092241] border-b border-[#D7D7D7] spotlightheaddd fsans-600 text-[20px] w-full">
                 {title}
-              </h1>
+              </h2>
             </div>
             <div
               className="text-[#838383] text-[18px] flato-400 leading-relaxed pt-4"

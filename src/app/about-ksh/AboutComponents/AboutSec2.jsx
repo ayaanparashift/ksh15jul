@@ -10,7 +10,7 @@ const AboutSec2 = () => {
         <div className="fix12 flex flex-col lg:flex-row justify-between gap-[20px] lg:gap-[5%] py-[49px] sm:py-[98px]">
           <div className="flex-1  xl:w-[538px] xl:min-h-[540px] ">
             <div className="w-fit">
-              <h1
+              <h2
                 // initial={{ opacity: 0, translateX: "-50px" }}
                 // whileInView={{ opacity: 1, translateX: 0 }}
                 // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
@@ -19,7 +19,7 @@ const AboutSec2 = () => {
               >
                 Inspiring Green
                 <br className="md:flex hidden" /> Development
-              </h1>
+              </h2>
               <div
                 // initial={{ opacity: 0, translateX: "-100px" }}
                 // whileInView={{ opacity: 1, translateX: 0 }}

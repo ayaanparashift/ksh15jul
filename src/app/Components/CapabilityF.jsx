@@ -353,9 +353,9 @@ const CapabilitiesF = () => {
                   className="w-full  contentArea overflow-hidden"
                 >
                   <div className="flex pt-5 flex-col gap-4 xl-768:gap-10 md:h-[290px] h-[400px] xl:h-[300px] 2xl:h-[350px] md:mr-10 mr-0 overflow-hidden">
-                    <h1 className="tabHeading text-2xl max-w-fit min-1920:text-[40px] min-1920:leading-[180%] md:text-[40px] md:leading-[40px] lg:text-[30px] fpt-600 text-white font-medium border-b-[8px] border-[#F7E327]">
+                    <h2 className="tabHeading text-2xl max-w-fit min-1920:text-[40px] min-1920:leading-[180%] md:text-[40px] md:leading-[40px] lg:text-[30px] fpt-600 text-white font-medium border-b-[8px] border-[#F7E327]">
                       {tabs[activeTab].heading}
-                    </h1>
+                    </h2>
                     <p
                       className="tabContent fsans-400 text-[16px] min-1920:text-[20px] min-1366:text-[18px] gradinetText leading-[26px]"
                       dangerouslySetInnerHTML={{

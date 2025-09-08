@@ -5,7 +5,7 @@ const ParkOverviewContent = () => {
   return (
     <div className="bg-[#FFF]">
       <div className="fix12 py-[72px]">
-        <motion.h1
+        <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
@@ -13,7 +13,7 @@ const ParkOverviewContent = () => {
           className="text-[#040404] md:text-[44px] sm:text-[32px] text-[24px] ftp-400 border-b border-[#D7D7D7] pb-4 overflow-hidden"
         >
           KSH INFRA Parks: New Benchmarks of Logistics Efficiency
-        </motion.h1>
+        </motion.h2>
 
         <motion.div
           initial={{ opacity: 0 }}

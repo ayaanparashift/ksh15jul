@@ -3,9 +3,9 @@ import Link from "next/link";
 const CareerBlbg = () => {
   return (
     <div className="flex flex-col items-center px-[max(5%,calc((100vw-1250px)/2))] justify-center gap-6 capEnqBg lg:h-[292px] py-14 lg:py-0 ">
-      <h1 className="fpt-600 text-2xl text-center  md:text-3xl lg:text-[44px] lg:leading-[50px] text-white">
+      <h2 className="fpt-600 text-2xl text-center  md:text-3xl lg:text-[44px] lg:leading-[50px] text-white">
         Let's build something great together.
-      </h1>
+      </h2>
       <Link
         id="joinusbtn"
         href="#join-us"

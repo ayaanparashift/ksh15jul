@@ -22,17 +22,17 @@ const CapLand = () => {
             // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
             className="rigCon flex-1 flex flex-col lg:gap-10 gap-5"
           >
-            <h1
+            <h2
               className="text-3xl fpt-500 text-white leading-[33px] border-b-[#D7D7D7] border-b-[1px] pb-2"
               id="landaquisition"
             >
               Land Acquisition
-            </h1>
+            </h2>
 
             <div className="">
-              <h1 className="text-xl fsans-600 leading-[26px] text-[#E6E6E6] lg:pb-[34px] pb-5">
+              <h2 className="text-xl fsans-600 leading-[26px] text-[#E6E6E6] lg:pb-[34px] pb-5">
                 Strategic Locations for Business Advantage
-              </h1>
+              </h2>
               <p className="text-lg leading-[28px] fsans-400 text-[#CECECE]">
                 Our experts see opportunities others miss and turn them into
                 successful developments. We find the best land by studying
@@ -69,14 +69,14 @@ const CapLand = () => {
             // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
             className="rigCon flex-1 flex flex-col lg:gap-10 gap-5"
           >
-            <h1 className="text-3xl fpt-500 text-[#092241] leading-[33px] border-b-[#040404] border-b-[1px] pb-2">
+            <h2 className="text-3xl fpt-500 text-[#092241] leading-[33px] border-b-[#040404] border-b-[1px] pb-2">
               Capital Deployment
-            </h1>
+            </h2>
 
             <div className="">
-              <h1 className="text-xl fsans-600 leading-[26px] text-[#1C1C1C] lg:pb-[34px] pb-5">
+              <h2 className="text-xl fsans-600 leading-[26px] text-[#1C1C1C] lg:pb-[34px] pb-5">
                 Creating Value for Businesses
-              </h1>
+              </h2>
               <p className="text-lg leading-[28px] fsans-400 text-[#434343]">
                 We invest with precision, focusing on assets that can deliver
                 strong returns. We invest in infrastructure improvements and

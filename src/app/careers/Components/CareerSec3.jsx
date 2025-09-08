@@ -5,7 +5,7 @@ const CareerSec3 = () => {
   return (
     <div className="bg-[#eef0f3] w-full py-[45px]">
       <div className="fix12">
-        <h1
+        <h2
           // initial={{ opacity: 0, translateX: "-50px" }}
           // whileInView={{ opacity: 1, translateX: 0 }}
           // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
@@ -13,7 +13,7 @@ const CareerSec3 = () => {
           className="text-[#141414] md:text-[44px] sm:text-[32px] text-[24px] fpt-600 md:leading-[48.84px] leading-[110%] pb-3 fpt-600"
         >
           Commitment to Employee Well-Being & Growth
-        </h1>
+        </h2>
         <p
           // initial={{ opacity: 0 }}
           // whileInView={{ opacity: 1 }}

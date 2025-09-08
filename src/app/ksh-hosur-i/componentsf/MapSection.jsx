@@ -146,9 +146,9 @@ const MapSection = () => {
       </div> */}
 
       <div className=" hidden sm:flex z-30 pb-10 fix12">
-        <h1 className="leading-[26px] fsans-600 w-full spotlightheaddd text-[30px] pb-[20px] border-b  border-b-[#092241]  fsans-600 text-[#092241] linehead-text">
+        <h2 className="leading-[26px] fsans-600 w-full spotlightheaddd text-[30px] pb-[20px] border-b  border-b-[#092241]  fsans-600 text-[#092241] linehead-text">
           Location & Connectivity
-        </h1>
+        </h2>
       </div>
       <div className="hidden xyzsfd relative sm:flex min-h-full w-full">
         {/* Render iframe if a location is selected */}

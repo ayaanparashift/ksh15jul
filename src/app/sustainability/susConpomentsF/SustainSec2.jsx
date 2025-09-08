@@ -87,7 +87,7 @@ const SustainSec2 = () => {
         <div className="fix12 flex flex-col lg:flex-row justify-between gap-[20px] lg:gap-[6%] md:py-[90px] py-14">
           <div className="flex-1 flex flex-col justify-start ">
             <div className="w-fit">
-              <h1
+              <h2
                 // initial={{ opacity: 0, translateX: "-50px" }}
                 // whileInView={{ opacity: 1, translateX: 0 }}
                 // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
@@ -95,7 +95,7 @@ const SustainSec2 = () => {
                 className="text-[#092241] md:text-[44px] fpt-600 sm:text-[32px] text-[24px] fpt-600 md:leading-[48.84px] leading-[110%]"
               >
                 Where Profit Meets Planet.
-              </h1>
+              </h2>
               <div
                 // initial={{ opacity: 0, translateX: "-100px" }}
                 // whileInView={{ opacity: 1, translateX: 0 }}

@@ -8,7 +8,7 @@ const CareerSec2 = () => {
         <div className="fix12 flex flex-col lg:flex-row justify-between gap-[20px] lg:gap-[6%] md:py-[90px] py-14">
           <div className="flex-1  lg:w-[50%]">
             <div className="w-fit">
-              <h1
+              <h2
                 // initial={{ opacity: 0, translateX: "-50px" }}
                 // whileInView={{ opacity: 1, translateX: 0 }}
                 // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
@@ -19,7 +19,7 @@ const CareerSec2 = () => {
                 We Make Leaders
                 {/* <br /> GROW WITH US.
                 <br /> TRANSFORM THE WORLD! */}
-              </h1>
+              </h2>
               <div
                 // initial={{ opacity: 0, translateX: "-100px" }}
                 // whileInView={{ opacity: 1, translateX: 0 }}

@@ -91,9 +91,9 @@ const InvesterSec2 = () => {
         <div className="w-full lg:w-1/2 flex flex-col gap-6">
           {/* Title inside left */}
           <div>
-            <h1 className="fpt-600 text-[#092241] md:text-[44px] sm:text-[32px] text-[24px] md:leading-[48.84px] leading-[110%]">
+            <h2 className="fpt-600 text-[#092241] md:text-[44px] sm:text-[32px] text-[24px] md:leading-[48.84px] leading-[110%]">
               Value. Vision. Wealth.
-            </h1>
+            </h2>
             <div className="bg-[#F7E327] h-[8px] w-full mt-2"></div>
           </div>
 

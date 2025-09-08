@@ -173,7 +173,7 @@ export default function FormSec() {
           {!isSubmitted && (
             <>
               <div className="lg:pb-[50px] pb-[20px] max-w-fit">
-                <h1
+                <h2
                   // initial={{ x: "-100%", opacity: 0 }}
                   // whileInView={{ x: 0, opacity: 1 }}
                   // transition={{ duration: 1.2, ease: [0.7, 0, 0.4, 1] }}
@@ -181,7 +181,7 @@ export default function FormSec() {
                   className="fpt-600 xl:text-[60px] lg:text-[40px] md:text-[32px] text-[28px] text-white leading-[150%] md:leading-[105%] 2xl:text-[70px]"
                 >
                   Join Us
-                </h1>
+                </h2>
                 <div
                   // initial={{ x: "-100%", opacity: 0 }}
                   // whileInView={{ x: 0, opacity: 1 }}

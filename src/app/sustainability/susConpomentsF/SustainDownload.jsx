@@ -233,9 +233,9 @@ const SustainDownload = () => {
             // viewport={{ amount: 0.3, once: true }}
             className="text-white flex flex-col gap-8 md:items-start items-center justify-center "
           >
-            <h1 className="fsans-600 text-center text-xl">
+            <h2 className="fsans-600 text-center text-xl">
               View how we prioritize sustainability. Download our ESG Report
-            </h1>
+            </h2>
             <button
               className="items-center fsans-600 text-[16px] leading-7 flex py-3 px-8 border gap-[10px] border-[#D7D7D7] rounded-[10px] hover:bg-white group transition-colors duration-[500ms] hover:text-black"
               onClick={handleOpenPopup}

@@ -4,7 +4,7 @@ const CapAbout = () => {
   return (
     <div>
       <div className="fix12 lg:pt-[72px] lg:pb-[84px] py-10">
-        <h1
+        <h2
           // initial={{ width: 0 }}
           // whileInView={{ width: "100%" }}
           // viewport={{ once: true, amount: 0.3 }}
@@ -12,7 +12,7 @@ const CapAbout = () => {
           className="fpt-600 whitespace-nowrap overflow-hidden text-[24px] md:text-[40px] text-[#040404] leading-[110%] md:leading-[48px] border-b-[1px] border-b-[#D7D7D7] pb-4"
         >
           Sustainable Growth
-        </h1>
+        </h2>
         <p
           // initial={{ opacity: 0 }}
           // whileInView={{ opacity: 1 }}

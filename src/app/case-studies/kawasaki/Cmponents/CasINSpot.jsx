@@ -87,9 +87,9 @@ const CasINSpot = () => {
             &gt; Kawasaki
           </p>
           <div className="space-y-7">
-            <h1 className="md:text-[60px] text-[30px]  md:w-[400px] w-fit fpt-500 text-black border-b-[8px] border-[#F7E327] whitespace-nowrap overflow-hidden max-w-fit">
+            <h2 className="md:text-[60px] text-[30px]  md:w-[400px] w-fit fpt-500 text-black border-b-[8px] border-[#F7E327] whitespace-nowrap overflow-hidden max-w-fit">
               Kawasaki
-            </h1>
+            </h2>
           </div>
         </div>
         <div className="imgCon">

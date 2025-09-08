@@ -178,7 +178,7 @@ const CapDev = () => {
     <div className="bg-[#092241] min-h-[1110px] md:min-h-[930px] lg:py-[100px] py-10">
       <div className="fix12">
         <div className="rigCon flex-1 flex flex-col lg:gap-10 gap-5 pb-12">
-          <h1
+          <h2
             // initial={{ width: 0 }}
             // whileInView={{ width: "100%" }}
             // viewport={{ once: true, amount: 0.3 }}
@@ -186,7 +186,7 @@ const CapDev = () => {
             className="text-3xl fpt-500 text-[#ffffff] leading-[33px] border-b-[#828282] border-b-[1px] pb-2 overflow-hidden whitespace-nowrap"
           >
             Project Development
-          </h1>
+          </h2>
 
           <div
           // initial={{ opacity: 0 }}
@@ -194,9 +194,9 @@ const CapDev = () => {
           // viewport={{ once: true, amount: 0.3 }}
           // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
           >
-            <h1 className="text-xl fsans-600 cursor-pointer leading-[20px] md:leading-[26px] text-[#E6E6E6] pb-[34px]">
+            <h2 className="text-xl fsans-600 cursor-pointer leading-[20px] md:leading-[26px] text-[#E6E6E6] pb-[34px]">
               Building Success from the Ground Up
-            </h1>
+            </h2>
             <p className="text-lg leading-[28px] fsans-400 text-[#CECECE]">
               At KSH INFRA, we understand that your business is unique, and so
               are your facility requirements. That is why we offer both
@@ -217,7 +217,7 @@ const CapDev = () => {
           {/* Tab Buttons */}
           <div className="flex w-full">
             {tabs.map((tab, index) => (
-              <h1
+              <h2
                 key={index}
                 onClick={() => setActiveIndex(index)}
                 className={`flex-1 fsans-600 cursor-pointer text-center md:text-[20px] transition-all duration-300 pb-2 ${
@@ -227,7 +227,7 @@ const CapDev = () => {
                 }`}
               >
                 {tab.title}
-              </h1>
+              </h2>
             ))}
           </div>
 

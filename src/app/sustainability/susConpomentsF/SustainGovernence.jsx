@@ -190,9 +190,9 @@ const SustainGovernence = () => {
           </motion.h1> */}
 
           <div className="origin-left w-full  mr-[max(5%,calc((100vw-1250px)/2))] lg:ml-0 ml-[max(5%,calc((100vw-1250px)/2))]">
-            <h1 className="fpt-500 md:text-[44px] sm:text-[32px] text-[24px] whitespace-nowrap overflow-hidden text-white border-[#D7D7D7] border-b-[1px]">
+            <h2 className="fpt-500 md:text-[44px] sm:text-[32px] text-[24px] whitespace-nowrap overflow-hidden text-white border-[#D7D7D7] border-b-[1px]">
               Governance
-            </h1>
+            </h2>
             <p className="gradinetText pt-10 text-[20px] leading-[26px]">
               At KSH INFRA, governance starts from our rigorous procurement
               processes that extends to every aspect of our supply chain.

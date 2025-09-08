@@ -12,7 +12,7 @@ const SustainSocial = () => {
     <div className="bg-[#EEF0F3] overflow-hidden">
       {/* <div className="md:ml-[calc((100vw-1250px)/2)] py-16 xl-1280:ml-[50px] xl-1024:ml-[45px] xl-768:ml-[40px] w-[90%] mx-auto"> */}
       <div className="fix12 md:pt-8 lg:pt-16 pt-14 flex flex-col gap-[40px]">
-        <h1
+        <h2
           // initial={{ width: 0 }}
           // whileInView={{ width: "100%" }}
           // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
@@ -20,7 +20,7 @@ const SustainSocial = () => {
           className="text-[#092241] fpt-600 md:text-[44px] sm:text-[32px] text-[24px] border-b-[#D7D7D7] border-b-[1px] md:pb-3 overflow-hidden whitespace-nowrap"
         >
           Social Commitment
-        </h1>
+        </h2>
         <p className="fsans-600 text-[16px] text-[#434343] leading-[26px]">
           We are consciously aware of the effects that large projects can have
           on the community. Our goal is to ensure that these effects are
@@ -84,9 +84,9 @@ const SustainSocial = () => {
                   />
                 </div>
                 <div className=" contentCon bg-white xl-768:w-[400px] md:w-[576px] xl-1024:py-10 xl-768:pt-9 md:py-24 py-12 px-9 md:px-11 flex flex-col justify-center gap-5">
-                  <h1 className="text-[#092241] lg:text-[22px] text-xl fsans-700">
+                  <h2 className="text-[#092241] lg:text-[22px] text-xl fsans-700">
                     POSITIVE COMMUNITY ENGAGEMENT
-                  </h1>
+                  </h2>
                   <div className="text-[#717171] text-[14px] fsans-600 lg:text-base ">
                     <ul className="flex flex-col gap-[18px]">
                       <li className="relative pl-4 before:absolute before:left-[-20px] before:top-1/2 before:w-[5px] before:h-[5px] before:bg-[#E30613] before:rounded-full before:-translate-y-1/2">
@@ -119,9 +119,9 @@ const SustainSocial = () => {
                   />
                 </div>
                 <div className=" contentCon bg-white xl-768:w-[400px] md:w-[576px] xl-1024:py-10 xl-768:pt-9 md:py-24 py-12 px-9 md:px-11">
-                  <h1 className="text-[#092241] lg:text-[22px] text-xl fsans-700">
+                  <h2 className="text-[#092241] lg:text-[22px] text-xl fsans-700">
                     EMPLOYEE WELL-BEING
-                  </h1>
+                  </h2>
                   <div className="md:pt-[38px]  pt-6 xl-768:pt-5 text-[#717171] text-[14px]  fsans-600  ">
                     <ul className="flex flex-col gap-[18px]">
                       <li className="relative pl-4 before:absolute before:left-[-20px] before:top-1/2 before:w-[5px] before:h-[5px] before:bg-[#E30613] before:rounded-full before:-translate-y-1/2">
@@ -148,9 +148,9 @@ const SustainSocial = () => {
                   />
                 </div>
                 <div className=" contentCon bg-white xl-768:w-[400px] md:w-[576px] xl-1024:py-10 xl-768:pt-9 md:py-24 py-12 px-9 md:px-11">
-                  <h1 className="text-[#092241] lg:text-[22px] text-xl fsans-700">
+                  <h2 className="text-[#092241] lg:text-[22px] text-xl fsans-700">
                     TOWARD A CARBON NEUTRAL FUTURE
-                  </h1>
+                  </h2>
                   <div className="md:pt-[38px]  pt-6 xl-768:pt-5 text-[#717171] text-[14px]  fsans-600 ">
                     <ul className="flex flex-col gap-[18px]">
                       <li className="relative pl-4 before:absolute before:left-[-20px] before:top-1/2 before:w-[5px] before:h-[5px] before:bg-[#E30613] before:rounded-full before:-translate-y-1/2">

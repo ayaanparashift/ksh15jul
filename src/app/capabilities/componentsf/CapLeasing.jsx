@@ -22,14 +22,14 @@ const CapLeasing = () => {
             // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
             className="rigCon flex-1 flex flex-col lg:gap-10 gap-5"
           >
-            <h1 className="text-3xl fpt-500 text-[#092241] leading-[33px] border-b-[#040404] border-b-[1px] pb-2">
+            <h2 className="text-3xl fpt-500 text-[#092241] leading-[33px] border-b-[#040404] border-b-[1px] pb-2">
               Leasing Management
-            </h1>
+            </h2>
 
             <div className="">
-              <h1 className="text-xl fsans-600 leading-[26px] text-[#1C1C1C] lg:pb-[34px] pb-5">
+              <h2 className="text-xl fsans-600 leading-[26px] text-[#1C1C1C] lg:pb-[34px] pb-5">
                 Matching Diverse Business Needs
-              </h1>
+              </h2>
               <p className="text-lg leading-[28px] fsans-400 text-[#434343]">
                 Our leasing team listens carefully to what you need. We create
                 flexible space solutions that fit your exact operations, from
