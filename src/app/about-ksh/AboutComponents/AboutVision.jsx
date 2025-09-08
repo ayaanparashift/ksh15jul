@@ -84,7 +84,7 @@ const AboutVision = () => {
             </div>
 
             <div className="xl-768:flex-1 xl-1024:flex-1 xl:flex-none xl:w-[531px] h-full flex flex-col justify-end  ">
-              <h1
+              <h2
                 // initial={{ y: 100 }}
                 // whileInView={{ y: 0 }}
                 // transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
@@ -93,7 +93,7 @@ const AboutVision = () => {
                 style={{ WebkitTextStroke: "1px #6C8DAB" }}
               >
                 Mission
-              </h1>
+              </h2>
 
               <div className="relative z-20 overflow-hidden">
                 <div>

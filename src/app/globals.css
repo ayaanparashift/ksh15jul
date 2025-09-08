@@ -374,7 +374,7 @@ h4:not(.spotlightheaddd),
 h5:not(.spotlightheaddd),
 h6:not(.spotlightheaddd) {
   font-family: futura-pt, sans-serif !important;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 /* /////////////// skibidi */
@@ -828,7 +828,7 @@ li {
 #bloginwy h5,
 #bloginwy h6 {
   font-family: "Open Sans", sans-serif !important;
-  font-weight: 600 !important;
+  font-weight: 600;
   font-size: 28px;
   line-height: 130%;
   color: #101021 !important;

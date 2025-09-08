@@ -228,9 +228,9 @@ const SustainGovernence = () => {
                   className="flex items-center justify-between cursor-pointer"
                   onClick={() => toggleAccordion(index)}
                 >
-                  <h1 className="text-white fsans-700 md:text-[22px] text-[16px] uppercase py-5">
+                  <p className="text-white fsans-700 md:text-[22px] text-[16px] uppercase py-5">
                     {item.title}
-                  </h1>
+                  </p>
                   <img
                     src={
                       openIndex === index
