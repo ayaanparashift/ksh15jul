@@ -85,6 +85,11 @@ export const tabs = [
     heading: <>Property Management</>,
     content:
       "Our dedicated Property Management team ensures your experience is hassle-free from day one. We take full responsibility for the day-to-day upkeep and maintenance of the park, so your operations remain uninterrupted.<br/><br/> From infrastructure to facility management, we handle it all — allowing you to concentrate on growing your core business with complete peace of mind.",
+    alts: {
+      topalt: ["Deal | Leasing Management"],
+      b1alt: ["Leasing management | Warehouse | Infrastructure"],
+      b2alt: ["Leasing Management | Deal | Document | Paper work"],
+    },
     images: {
       top: ["/OurCapabilities/proptop.png"],
       bottom1: ["/OurCapabilities/prob1.png"],
