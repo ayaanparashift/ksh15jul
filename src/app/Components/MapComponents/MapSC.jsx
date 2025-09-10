@@ -99,7 +99,7 @@ const MapSC = ({
             transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1], delay: 1 }}
             className="flex flex-col gap-10 flex-1 w-full"
           >
-            <h2 className="pb-[15px] text-5xl border-b-[10px] border-[#F7E327] text-[#092241] font-bold overflow-hidden text-ellipsis max-w-fit">
+            <h2 className="pb-[15px] fpt-500 text-5xl border-b-[10px] border-[#F7E327] text-[#092241] font-bold overflow-hidden text-ellipsis max-w-fit">
               {title}
             </h2>
             <div className="flex flex-col gap-[5px] w-full">

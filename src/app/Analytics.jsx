@@ -113,38 +113,111 @@
 //     </>
 //   );
 // }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// "use client";
+// import Script from "next/script";
+// import { usePathname } from "next/navigation";
+// import { useEffect, useRef } from "react";
+
+// export default function Analytics() {
+//   const pathname = usePathname();
+//   const initialized = useRef(false);
+
+//   useEffect(() => {
+//     if (!initialized.current) {
+//       window.dataLayer = window.dataLayer || [];
+//       window.dataLayer.push({ event: "pageview", page: pathname });
+//       initialized.current = true;
+//     } else {
+//       // SPA route change
+//       window.dataLayer = window.dataLayer || [];
+//       window.dataLayer.push({ event: "pageview", page: pathname });
+//     }
+//   }, [pathname]);
+
+//   return (
+//     <>
+//       <Script
+//         src="https://www.googletagmanager.com/gtag/js?id=G-EJMNK3JR62"
+//         strategy="afterInteractive"
+//       />
+//       <Script id="ga-script" strategy="afterInteractive">
+//         {`
+//           window.dataLayer = window.dataLayer || [];
+//           function gtag(){dataLayer.push(arguments);}
+//           gtag('js', new Date());
+//           gtag('config', 'G-EJMNK3JR62', { send_page_view: false });
+//         `}
+//       </Script>
+//     </>
+//   );
+// }
 "use client";
 import Script from "next/script";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 export default function Analytics() {
   const pathname = usePathname();
-  const initialized = useRef(false);
 
   useEffect(() => {
-    if (!initialized.current) {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: "pageview", page: pathname });
-      initialized.current = true;
+    // Fire pageview when route changes
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("config", "G-EJMNK3JR62", {
+        page_path: pathname,
+      });
     } else {
-      // SPA route change
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: "pageview", page: pathname });
+      // In case gtag isn't ready yet, retry a few times
+      let attempts = 0;
+      const interval = setInterval(() => {
+        if (window.gtag) {
+          window.gtag("config", "G-EJMNK3JR62", {
+            page_path: pathname,
+          });
+          clearInterval(interval);
+        }
+        if (++attempts > 10) clearInterval(interval); // stop after 10 tries
+      }, 500);
     }
   }, [pathname]);
 
   return (
     <>
+      {/* Load GA4 */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-EJMNK3JR62"
         strategy="afterInteractive"
       />
-      <Script id="ga-script" strategy="afterInteractive">
+      <Script id="ga-init" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
+
+          // Disable auto page_view so we can control SPA tracking
           gtag('config', 'G-EJMNK3JR62', { send_page_view: false });
         `}
       </Script>
