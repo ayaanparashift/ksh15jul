@@ -44,34 +44,93 @@
 //     </>
 //   );
 // }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// "use client";
+// import Script from "next/script";
+// import { usePathname } from "next/navigation";
+// import { useEffect } from "react";
 
+// export default function Analytics() {
+//   const pathname = usePathname();
+
+//   useEffect(() => {
+//     const sendPageview = () => {
+//       if (window.gtag) {
+//         window.gtag("config", "G-8DSDBMLK6H", { page_path: pathname });
+//       }
+//       if (window.dataLayer) {
+//         window.dataLayer.push({ event: "pageview", page: pathname });
+//       }
+//     };
+
+//     if (window.gtag) {
+//       sendPageview();
+//     } else {
+//       const interval = setInterval(() => {
+//         if (window.gtag) {
+//           sendPageview();
+//           clearInterval(interval);
+//         }
+//       }, 100);
+//     }
+//   }, [pathname]);
+
+//   return (
+//     <>
+//       <Script
+//         src="https://www.googletagmanager.com/gtag/js?id=G-EJMNK3JR62"
+//         strategy="afterInteractive"
+//       />
+//       <Script id="ga-script" strategy="afterInteractive">
+//         {`
+//           window.dataLayer = window.dataLayer || [];
+//           function gtag(){dataLayer.push(arguments);}
+//           gtag('js', new Date());
+//           gtag('config', 'G-EJMNK3JR62');
+//         `}
+//       </Script>
+//       ;
+//     </>
+//   );
+// }
 "use client";
 import Script from "next/script";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Analytics() {
   const pathname = usePathname();
+  const initialized = useRef(false);
 
   useEffect(() => {
-    const sendPageview = () => {
-      if (window.gtag) {
-        window.gtag("config", "G-8DSDBMLK6H", { page_path: pathname });
-      }
-      if (window.dataLayer) {
-        window.dataLayer.push({ event: "pageview", page: pathname });
-      }
-    };
-
-    if (window.gtag) {
-      sendPageview();
+    if (!initialized.current) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: "pageview", page: pathname });
+      initialized.current = true;
     } else {
-      const interval = setInterval(() => {
-        if (window.gtag) {
-          sendPageview();
-          clearInterval(interval);
-        }
-      }, 100);
+      // SPA route change
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: "pageview", page: pathname });
     }
   }, [pathname]);
 
@@ -86,10 +145,9 @@ export default function Analytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-EJMNK3JR62');
+          gtag('config', 'G-EJMNK3JR62', { send_page_view: false });
         `}
       </Script>
-      ;
     </>
   );
 }
