@@ -17,7 +17,7 @@ export default function Analytics() {
 
   return (
     <>
-      <Script
+      {/* <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-EJMNK3JR62"
         strategy="afterInteractive"
       />
@@ -27,6 +27,18 @@ export default function Analytics() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-EJMNK3JR62');
+        `}
+      </Script> */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-8DSDBMLK6H"
+        strategy="afterInteractive"
+      />
+      <Script id="ga-script" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-8DSDBMLK6H');
         `}
       </Script>
     </>
