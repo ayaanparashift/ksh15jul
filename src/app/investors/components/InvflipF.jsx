@@ -160,8 +160,9 @@ const investors = [
   {
     image: "/investorRel/maplef.png",
     title: "Mapletree Investments",
-    content:
-      "Mapletree acquired both KSH Chakan Park I (2021) and KSH Chakan Park II (2022) from KSH INFRA in successful exit transactions.",
+    // content:
+    //   "Mapletree acquired both KSH Chakan Park I (2021) and KSH Chakan Park II (2022) from KSH INFRA in successful exit transactions.",
+    content: "",
     flip: false, // only this one flips
     type: "past",
   },

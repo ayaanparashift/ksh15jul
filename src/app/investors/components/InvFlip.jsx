@@ -106,29 +106,29 @@ const investors = [
   {
     image: "/investorRel/inin.png",
     title: "IndoSpace",
-    content:
-      "IndoSpace, a leading investor, developer, and manager of Industrial & Logistics real estate in India, was founded in 2007. The company has a strong team of industry experts with vast experience in the industrial real estate market.",
+    // content:
+    //   "IndoSpace, a leading investor, developer, and manager of Industrial & Logistics real estate in India, was founded in 2007. The company has a strong team of industry experts with vast experience in the industrial real estate market.",
     flip: false,
   },
   {
     image: "/investorRel/inms.png",
     title: "Morgan Stanley Real Estate Investing (MSREI)",
-    content:
-      "MSREI is the global real estate investment arm of Morgan Stanley. With 30+ years of experience and presence in 12 countries, it combines local knowledge and global legacy to manage investments effectively.",
+    // content:
+    //   "MSREI is the global real estate investment arm of Morgan Stanley. With 30+ years of experience and presence in 12 countries, it combines local knowledge and global legacy to manage investments effectively.",
     flip: false,
   },
   {
     image: "/investorRel/maplef.png",
     title: "Mapletree Investments",
-    content:
-      "Mapletree acquired both KSH Chakan Park I (2021) and KSH Chakan Park II (2022) from KSH INFRA in successful exit transactions.",
+    // content:
+    //   "Mapletree acquired both KSH Chakan Park I (2021) and KSH Chakan Park II (2022) from KSH INFRA in successful exit transactions.",
     flip: true, // only this one flips
   },
   {
     image: "/investorRel/pcgflip.png",
     title: "Pacific Century Group",
-    content:
-      "Pacific Century Group (PCG), founded in 1993, is an Asia-based investment group focusing on TMT, financial services, and property. It has a strong network and investment track record across the region.",
+    // content:
+    //   "Pacific Century Group (PCG), founded in 1993, is an Asia-based investment group focusing on TMT, financial services, and property. It has a strong network and investment track record across the region.",
     flip: false,
   },
 ];
