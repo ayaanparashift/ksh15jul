@@ -169,8 +169,8 @@ const Landing2 = () => {
             }}
           >
             KSH INFRA's newest park in the thriving Bengaluru–Hosur corridor
-            offers 1.2 million sq. ft. of ready Grade A industrial and logistics
-            infrastructure—built for speed, safety, and growth.
+            offers 1.26 million sq. ft. of ready Grade A industrial and
+            logistics infrastructure—built for speed, safety, and growth.
           </p>
           <div>
             <Link

@@ -45,7 +45,7 @@ export const mapslided2 = [
     parkimg: "/homepage/pcard/hosurmapbe.png",
     title: "KSH Hosur I",
     city: "Hosur, Bengaluru",
-    tarea: "1.20 MN. SQ.FT.",
+    tarea: "1.26 MN. SQ.FT.",
     parkLink: "/ksh-hosur-i",
     tbuild: "04 Buildings",
   },

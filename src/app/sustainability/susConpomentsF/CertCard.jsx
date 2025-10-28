@@ -260,6 +260,13 @@ import "swiper/css/navigation";
 
 const certs = [
   {
+    id: 1,
+    heading: "GRI Awards Real Estate India 2025",
+    title: "GRI Awards Real Estate India 2025",
+    content: "3rd Industrial & Logistics Project of the Year",
+    image: "/Sustainability/sustslidesf/flip6f.png",
+  },
+  {
     id: 2,
     heading: "Emerging Developer of the Year",
     title: "Emerging Developer of the Year",

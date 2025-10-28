@@ -391,13 +391,13 @@ const SustainDownload2 = () => {
               ))}
             </Swiper>
           </div>
-          <motion.div
+          {/* <motion.div
             initial={{ x: 0 }}
             whileInView={{ x: "100%" }}
             transition={{ duration: 1.4, ease: [0.7, 0, 0.4, 1] }}
             viewport={{ amount: 0.3, once: true }}
             className="absolute left-0 top-0 w-full h-full bgSusDown z-20"
-          />
+          /> */}
         </div>
       </div>
     </div>

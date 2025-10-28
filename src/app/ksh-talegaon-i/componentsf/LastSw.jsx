@@ -154,7 +154,7 @@ const LastSw = () => {
     {
       parkTitle: "KSH Hosur Park I",
       pLocal: "Hosur | Bengaluru",
-      totalLand: "1.20 MN SQ.FT.",
+      totalLand: "1.26 MN SQ.FT.",
       buildings: "04 Buildings",
       pImg: "/ParkPage/hosur-1/hosurlw.png",
       pLink: "/ksh-hosur-i",
