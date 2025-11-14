@@ -416,6 +416,7 @@ import GlobalEnquire from "./Components/GlobalEnquire";
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Toaster } from "react-hot-toast";
+import GATracker from "./GATracker";
 
 export const metadata = {
   title: "KSH INFRA",
@@ -443,6 +444,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {/* ✅ GTM noscript */}
+        <GATracker />
         {/* ✅ GTM noscript */}
         <noscript>
           <iframe
