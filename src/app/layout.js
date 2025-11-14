@@ -443,15 +443,14 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {/* ✅ GTM noscript */}
+        {/* ✅ GTM noscript */}
         <noscript>
-          <noscript>
-            <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-NBGQVCX"
-              height="0"
-              width="0"
-              style="display:none;visibility:hidden"
-            ></iframe>
-          </noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NBGQVCX"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
         </noscript>
 
         <BlogProvider>
