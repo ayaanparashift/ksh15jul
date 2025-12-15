@@ -15,7 +15,7 @@
     "@splinetool/runtime": "^1.9.82",
     "lucide-react": "^0.536.0",
     "motion": "^12.0.11",
-    "next": "15.1.6",
+    "next": "^15.1.11",
     "particles.js": "^2.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
