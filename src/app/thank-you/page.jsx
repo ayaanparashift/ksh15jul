@@ -152,11 +152,11 @@ export default function ThankYou() {
         {/* IMPORTANT: intercept navigation */}
         <button
           onClick={goHome}
-          className="bg-[#E30613] group w-fit px-[21px] py-[14px] text-white rounded-3xl"
+          className="bg-[#E30613] w-fit flex items-center gap-2 whitespace-nowrap px-[21px] py-[14px] text-white rounded-3xl group"
         >
-          <p>Submit</p>
+          <span>Return Home</span>
           <img
-            className="group-hover:rotate-0 rotate-45 transition-all duration-300"
+            className="rotate-45 group-hover:rotate-0 transition-all duration-300"
             src="/rightUpArrow.svg"
             alt="Arrow"
           />
