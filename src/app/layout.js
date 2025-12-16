@@ -72,6 +72,7 @@ import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Toaster } from "react-hot-toast";
 import GATracker from "./GATracker";
+import { FormSubmitProvider } from "./context/FormSubmitContext";
 
 export const metadata = {
   title: "KSH INFRA",
@@ -123,17 +124,18 @@ export default function RootLayout({ children }) {
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-
-        <BlogProvider>
-          <TabProvider>
-            <GlobalEnquire>
-              <NavF />
-              <Toaster position="top-center" reverseOrder={false} />
-              {children}
-              <FooterF />
-            </GlobalEnquire>
-          </TabProvider>
-        </BlogProvider>
+        <FormSubmitProvider>
+          <BlogProvider>
+            <TabProvider>
+              <GlobalEnquire>
+                <NavF />
+                <Toaster position="top-center" reverseOrder={false} />
+                {children}
+                <FooterF />
+              </GlobalEnquire>
+            </TabProvider>
+          </BlogProvider>
+        </FormSubmitProvider>
       </body>
     </html>
   );
