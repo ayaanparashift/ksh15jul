@@ -404,13 +404,16 @@ export default function NavF() {
         ${atTop ? "" : "bg-[#EEF0F3]"}`}
       >
         <div className="fix12 flex justify-between w-full max-w-7xl">
-          <Link href="/">
-            <img
-              src={logoSrc}
-              className="w-[186.56px] h-[65.12px]"
-              alt="Logo"
-            />
-          </Link>
+          <div className="flex items-center gap-2">
+            <Link href="/">
+              <img
+                src={logoSrc}
+                className="w-[186.56px] h-[65.12px]"
+                alt="Logo"
+              />
+            </Link>
+            <img src="/GPTW.webp" className="h-[100px] w-auto" alt="GPTW" />
+          </div>
 
           <div
             className="flex items-center gap-2 cursor-pointer p-2"

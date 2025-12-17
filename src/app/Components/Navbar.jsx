@@ -310,14 +310,21 @@ export default function Navbar() {
         }`}
       >
         <div className="fix12 flex justify-between w-full max-w-7xl">
-          <Link href="/">
+          <div className="flex items-center gap-5">
+            <Link href="/">
+              <img
+                // src={atTop ? "/nav/kshlogo.svg" : "/nav/bkl.svg"}
+                src={atTop ? "/nav/bkl.svg" : "/nav/bkl.svg"}
+                className="w-[186.56px] h-[65.12px]"
+                alt="Logo"
+              />
+            </Link>
             <img
-              // src={atTop ? "/nav/kshlogo.svg" : "/nav/bkl.svg"}
-              src={atTop ? "/nav/bkl.svg" : "/nav/bkl.svg"}
-              className="w-[186.56px] h-[65.12px]"
-              alt="Logo"
+              src="/GPTW.webp"
+              className="h-[50px] w-auto"
+              alt="GPTW"
             />
-          </Link>
+          </div>
           <div
             className="flex items-center gap-2 cursor-pointer p-2"
             onClick={() => setMenuOpen(true)}
