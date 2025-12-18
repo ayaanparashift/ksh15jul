@@ -45,17 +45,16 @@ export default function NavMain({ onClose }) {
         <div className="w-full h-full flex flex-col">
           {/* Top Bar */}
           <div className="flex justify-between min-w-full bg-white ">
-            <Link
-              onClick={onClose}
-              href="/"
-              className="w-[60%] flex items-center pl-[max(5%,calc((100vw-1250px)/2))] py-[20px] border-r border-[#0E3464]"
-            >
-              <img
-                src="/nav/bkl.svg"
-                alt="Black KSH logo"
-                className="h-[65.12px] w-[186.56px]"
-              />
-            </Link>
+            <div className="w-[60%] flex lg:gap-5 gap-1 items-center pl-[max(5%,calc((100vw-1250px)/2))] py-[20px] border-r border-[#0E3464]">
+              <Link onClick={onClose} href="/" className="">
+                <img
+                  src="/nav/bkl.svg"
+                  alt="Black KSH logo"
+                  className="h-[65.12px] w-[186.56px]"
+                />
+              </Link>
+              <img src="/GPTW.webp" className="h-[70px] w-auto" alt="GPTW" />
+            </div>
             <div className="flex gap-[30px] min-1440:gap-[55px] items-center py-[20px] flex-[0.4]  w-[40%] pr-[max(5%,calc((100vw-1250px)/2))]">
               <div className="flex items-center gap-[10px]">
                 {["/user.svg", "/search.svg"].map((icon, i) => (

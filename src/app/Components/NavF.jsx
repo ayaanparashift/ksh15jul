@@ -404,7 +404,7 @@ export default function NavF() {
         ${atTop ? "" : "bg-[#EEF0F3]"}`}
       >
         <div className="fix12 flex justify-between w-full max-w-7xl">
-          <div className="flex items-center lg:gap-2">
+          <div className="flex items-center lg:gap-5 gap-1">
             <Link href="/">
               <img
                 src={logoSrc}
