@@ -61,6 +61,8 @@
 //     </html>
 //   );
 // }
+
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { BlogProvider } from "./context/BlogContext";
@@ -111,6 +113,24 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+
+
+        <Script
+          id="ads-conversion-submit-lead-form-1"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (window.gtag) {
+                gtag('event', 'ads_conversion_SUBMIT_LEAD_FORM_1', {});
+              }
+            `,
+          }}
+        />
+
+
+        
+
+</script>
       </head>
 
       <body>
