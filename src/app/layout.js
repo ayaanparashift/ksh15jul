@@ -101,7 +101,7 @@ export default function RootLayout({ children }) {
         />
 
         {/* Ads conversion */}
-        <Script
+        {/* <Script
           id="ads-conversion-contact"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -111,7 +111,7 @@ export default function RootLayout({ children }) {
               }
             `,
           }}
-        />
+        /> */}
 
         <Script
           id="ads-conversion-submit-lead-form-1"
