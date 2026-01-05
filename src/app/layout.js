@@ -62,7 +62,6 @@
 //   );
 // }
 
-
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { BlogProvider } from "./context/BlogContext";
@@ -114,7 +113,6 @@ export default function RootLayout({ children }) {
           }}
         />
 
-
         <Script
           id="ads-conversion-submit-lead-form-1"
           strategy="afterInteractive"
@@ -126,11 +124,6 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-
-
-        
-
-</script>
       </head>
 
       <body>
