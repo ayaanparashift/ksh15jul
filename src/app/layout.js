@@ -112,18 +112,6 @@ export default function RootLayout({ children }) {
             `,
           }}
         /> */}
-
-        <Script
-          id="ads-conversion-submit-lead-form-1"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              if (window.gtag) {
-                gtag('event', 'ads_conversion_SUBMIT_LEAD_FORM_1', {});
-              }
-            `,
-          }}
-        />
       </head>
 
       <body>
