@@ -120,6 +120,7 @@ import Script from "next/script";
 export default function ThankYou() {
   const router = useRouter();
   const { syncAccess, revokeAccess } = useFormSubmit();
+
   useEffect(() => {
     const allowed = syncAccess();
     if (!allowed) {
@@ -135,49 +136,35 @@ export default function ThankYou() {
   }, [router, syncAccess, revokeAccess]);
 
   const goHome = () => {
-    revokeAccess(); // manually revoke
+    revokeAccess();
     router.push("/");
   };
 
   return (
-    <>
-      <head>
-        <Script
-          id="ads-conversion-submit-lead-form-1"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              if (window.gtag) {
-                gtag('event', 'ads_conversion_SUBMIT_LEAD_FORM_1', {});
-              }
-            `,
-          }}
-        />
-      </head>
-      <div className="w-full xl:py-24 py-12">
-        <div className="fix12 flex flex-col gap-5 justify-center items-center xl:h-[calc(100vh-100px)] h-[calc(100vh-65px)] xl:pt-0 pt-[65px]">
-          <CircleCheck color="#092241" size={124} />
-          <h1 className="fpt-500 text-center max-w-fit min-1366:text-[65px] xl:text-[52px] lg:text-[40px] text-[28px] leading-[105%] min-1600:text-[70px]">
-            Thank you for your submission!
-          </h1>
-          <p className="text-center max-w-2xl text-lg text-gray-700">
-            Our team will review it and get back to you shortly.
-          </p>
+    <div className="w-full xl:py-24 py-12">
+      <div className="fix12 flex flex-col gap-5 justify-center items-center xl:h-[calc(100vh-100px)] h-[calc(100vh-65px)] xl:pt-0 pt-[65px]">
+        <CircleCheck color="#092241" size={124} />
 
-          {/* IMPORTANT: intercept navigation */}
-          <button
-            onClick={goHome}
-            className="bg-[#E30613] w-fit flex items-center gap-2 whitespace-nowrap px-[21px] py-[14px] text-white rounded-3xl group"
-          >
-            <span>Return Home</span>
-            <img
-              className="rotate-45 group-hover:rotate-0 transition-all duration-300"
-              src="/rightUpArrow.svg"
-              alt="Arrow"
-            />
-          </button>
-        </div>
+        <h1 className="fpt-500 text-center max-w-fit min-1366:text-[65px] xl:text-[52px] lg:text-[40px] text-[28px] leading-[105%] min-1600:text-[70px]">
+          Thank you for your submission!
+        </h1>
+
+        <p className="text-center max-w-2xl text-lg text-gray-700">
+          Our team will review it and get back to you shortly.
+        </p>
+
+        <button
+          onClick={goHome}
+          className="bg-[#E30613] w-fit flex items-center gap-2 whitespace-nowrap px-[21px] py-[14px] text-white rounded-3xl group"
+        >
+          <span>Return Home</span>
+          <img
+            className="rotate-45 group-hover:rotate-0 transition-all duration-300"
+            src="/rightUpArrow.svg"
+            alt="Arrow"
+          />
+        </button>
       </div>
-    </>
+    </div>
   );
 }
