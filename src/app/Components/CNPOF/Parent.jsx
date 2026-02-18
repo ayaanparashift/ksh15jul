@@ -19,7 +19,7 @@ const Parent = ({ staticData }) => {
   const [acbtn, setAcBtn] = useState("Case Studies");
   const todos = staticData[acbtn] || [];
   const [activeSidebar, setActiveSidebar] = useState(
-    todos[0] ? todos[0].id : null
+    todos[0] ? todos[0].id : null,
   );
 
   useEffect(() => {
@@ -104,7 +104,7 @@ const Parent = ({ staticData }) => {
   return (
     <div
       id="spotlight"
-      className="relative lg:h-[110vh] h-[120vh] min-1920:h-[75vh] bg-[url(/spotlightbg.webp)] bg-cover bg-no-repeat bg-center"
+      className="relative lg:h-[110vh] h-[100vh] min-1920:h-[75vh] bg-[url(/spotlightbg.webp)] bg-cover bg-no-repeat bg-center"
     >
       {/* Blur Overlay */}
       <div className="absolute inset-0 backdrop-blur-[0.2px] bg-black/40 z-0"></div>

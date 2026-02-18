@@ -468,6 +468,7 @@
 // };
 
 // export default BlogCard;
+import Image from "next/image";
 import Link from "next/link";
 
 const BlogCard = ({ blog, activeTabId }) => {
@@ -517,10 +518,15 @@ const BlogCard = ({ blog, activeTabId }) => {
     "/default-image.jpg";
 
   return (
-    <Link href={blogHref} className="flex group flex-col md:flex-row">
+    // <Link href={blogHref} className="flex group flex-col md:flex-row">
+    <Link
+      href={blogHref}
+      className="flex group flex-col w-full lg:w-[calc(50%-32.5px)] md:flex-row"
+    >
       {/* Blog Thumbnail */}
-      <div className="lg:w-[292px] w-full h-[300px] max-w-full overflow-hidden">
-        <img
+      <div className="2xl:w-[292px] w-[50%] h-[208.4px] max-w-full overflow-hidden relative">
+        <Image
+          fill={true}
           className="object-cover h-full w-full group-hover:scale-110 transition-transform duration-500"
           src={featuredImage}
           alt={blog.title?.rendered || "Blog Thumbnail"}
@@ -528,14 +534,14 @@ const BlogCard = ({ blog, activeTabId }) => {
       </div>
 
       {/* Blog Content */}
-      <div className="flex flex-col min-h-[250px] justify-between border-[#DDDDDD] border-t lg:border-l-0 border-l border-b border-r w-full lg:w-[310px] max-w-full pl-[30px] pr-[20px] py-[30px]">
-        <div className="flex flex-col gap-[16px]">
-          <p className="max-w-fit fsans-600 text-[16px] leading-[111%] bg-[#F7E327] py-[8px] px-[12px]">
+      <div className="flex flex-col min-h-[208.4px] 2xl:gap-0 gap-2 2xl:min-h-[250px] justify-between border-[#DDDDDD] border-t lg:border-l-0 border-l border-b border-r w-[50%] 2xl:w-[310px] max-w-full 2xl:pl-[30px] pl-[20px] pr-[20px] py-3 2xl:py-[30px]">
+        <div className="flex flex-col gap-2 2xl:gap-[16px]">
+          <p className="max-w-fit fsans-600 text-[14px] 2xl:text-[16px] leading-[111%] bg-[#F7E327] py-1 2xl:py-[8px] px-2 2xl:px-[12px]">
             {categoryToShow}
           </p>
 
           <h3
-            className="spotlightheaddd line-clamp-3 fsans-600 text-[20px] text-[#565656]"
+            className="spotlightheaddd line-clamp-3 fsans-600 text-[18px] 2xl:text-[20px] text-[#565656]"
             dangerouslySetInnerHTML={{ __html: blog.title?.rendered }}
           />
 

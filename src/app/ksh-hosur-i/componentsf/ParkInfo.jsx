@@ -14,7 +14,7 @@ const ParkInfo = () => {
       id="park-highlight"
     >
       {/* Left Image */}
-      <div className="flex md:flex-row flex-col fix12 justify-between items-center xl:gap-[160px] lg:gap-[80px] gap-10">
+      <div className="flex md:flex-row flex-col fix12 justify-between items-center 2xl:gap-[160px] lg:gap-[80px] gap-10">
         <div className="md:w-1/2 w-full relative">
           <img
             src="/ParkPage/hosur-1/hsiteplan.jpg"

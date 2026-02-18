@@ -14,7 +14,7 @@ const PhVdslider = () => {
     const handleResize = () => {
       const vw = window.innerWidth;
       // replicate max(5%, calc((100vw - 1250px)/2))
-      const fivePercent = vw * 0;
+      const fivePercent = vw * 0.05;
       const halfExtra = (vw - 1250) / 2;
       const calcVal = Math.max(fivePercent, halfExtra);
       setOffsetAfter(calcVal > 0 ? calcVal : 0);

@@ -9,7 +9,7 @@
 //       title: "Ethics & Compliance",
 //       content:
 //         "The KSH INFRA Code of Conduct Handbook, which we follow meticulously, sets a high standard for compliance. This encompasses every aspect of how our team interacts with internal and external stakeholders to how our projects are commissioned and managed.",
-//       image: "/Sustainability/Ethics&Compliance.png",
+//       image: "/Sustainability/enc.png",
 //     },
 //     {
 //       title: "Safety",
@@ -34,7 +34,7 @@
 //   return (
 //     <div className="bg-[#092241]">
 //       <div className="min-1366:ml-[calc((100vw-1250px)/2)] xl-1280:ml-[60px] xl-1024:ml-[50px] pb-12 sm:pb-0">
-//         <div className="relative pt-14 pb-4 md:pt-16 md:pb-14 max-w-[1250px] overflow-hidden flex justify-start">
+//         <div className="relative pt-14 pb-4 md:pt-16 md:pb-14 overflow-hidden flex justify-start">
 //           {/* <motion.h1
 //             initial={{ width: 0 }}
 //             whileInView={{ width: "100%" }}
@@ -44,11 +44,11 @@
 //             Governance
 //           </motion.h1> */}
 
-//           <div className="origin-left w-full">
-//             <h1 className="fpt-500 md:text-[44px] sm:text-[32px] text-[24px] whitespace-nowrap overflow-hidden text-white border-[#D7D7D7] border-b-[1px] w-[90%] mx-auto lg:w-full">
+//           <div className="origin-left w-full  mr-[max(5%,calc((100vw-1250px)/2))] lg:ml-0 ml-[max(5%,calc((100vw-1250px)/2))]">
+//             <h2 className="fpt-500 md:text-[44px] sm:text-[32px] text-[24px] whitespace-nowrap overflow-hidden text-white border-[#D7D7D7] border-b-[1px]">
 //               Governance
-//             </h1>
-//             <p className="gradinetText fix12 pt-10 text-[20px] leading-[26px]">
+//             </h2>
+//             <p className="gradinetText pt-10 text-[20px] leading-[26px]">
 //               At KSH INFRA, governance starts from our rigorous procurement
 //               processes that extends to every aspect of our supply chain.
 //               Complete transparency, efficiency, and clear accountability are
@@ -83,9 +83,9 @@
 //                   className="flex items-center justify-between cursor-pointer"
 //                   onClick={() => toggleAccordion(index)}
 //                 >
-//                   <h1 className="text-white fsans-700 md:text-[22px] text-[16px] uppercase py-5">
+//                   <p className="text-white fsans-700 md:text-[22px] text-[16px] uppercase py-5">
 //                     {item.title}
-//                   </h1>
+//                   </p>
 //                   <img
 //                     src={
 //                       openIndex === index
@@ -98,8 +98,8 @@
 //                 <div
 //                   className={`overflow-hidden transition-all duration-700 ease-in-out ${
 //                     openIndex === index
-//                       ? "max-h-[300px] opacity-100 transform translate-y-0 scale-100"
-//                       : "max-h-0 opacity-0 transform -translate-y-2 scale-95"
+//                       ? "h-fit opacity-100 transform translate-y-0 scale-100"
+//                       : "h-0 opacity-0 transform -translate-y-2 scale-95"
 //                   }`}
 //                 >
 //                   <p className="text-[#6C8DAB] fsans-400 text-base pt-0 pb-10">
@@ -117,10 +117,10 @@
 //                 key={accordionData[openIndex]?.image}
 //                 initial={{ opacity: 0 }}
 //                 animate={{ opacity: 1 }}
-//                 transition={{ duration: 0.3, ease: [0.7, 0, 0.4, 1] }}
+//                 transition={{ duration: 0.7, ease: [0.7, 0, 0.4, 1] }}
 //                 exit={{
 //                   opacity: 0,
-//                   transition: { duration: 0.3, ease: [0.7, 0, 0.4, 1] },
+//                   transition: { duration: 0.7, ease: [0.7, 0, 0.4, 1] },
 //                 }}
 //                 viewport={{ once: false }}
 //                 src={accordionData[openIndex]?.image}
@@ -143,6 +143,7 @@
 // };
 
 // export default SustainGovernence;
+
 "use client";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -240,17 +241,21 @@ const SustainGovernence = () => {
                     alt=""
                   />
                 </div>
-                <div
-                  className={`overflow-hidden transition-all duration-700 ease-in-out ${
-                    openIndex === index
-                      ? "max-h-[300px] opacity-100 transform translate-y-0 scale-100"
-                      : "max-h-0 opacity-0 transform -translate-y-2 scale-95"
-                  }`}
-                >
-                  <p className="text-[#6C8DAB] fsans-400 text-base pt-0 pb-10">
-                    {item.content}
-                  </p>
-                </div>
+                <AnimatePresence initial={false}>
+                  {openIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0, y: -8, scale: 0.95 }}
+                      animate={{ height: "auto", opacity: 1, y: 0, scale: 1 }}
+                      exit={{ height: 0, opacity: 0, y: -8, scale: 0.95 }}
+                      transition={{ duration: 0.4, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <p className="text-[#6C8DAB] fsans-400 text-base pt-0 pb-10">
+                        {item.content}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
           </div>
@@ -262,10 +267,10 @@ const SustainGovernence = () => {
                 key={accordionData[openIndex]?.image}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.3, ease: [0.7, 0, 0.4, 1] }}
+                transition={{ duration: 0.35, ease: [0.7, 0, 0.4, 1] }}
                 exit={{
                   opacity: 0,
-                  transition: { duration: 0.3, ease: [0.7, 0, 0.4, 1] },
+                  transition: { duration: 0.35, ease: [0.7, 0, 0.4, 1] },
                 }}
                 viewport={{ once: false }}
                 src={accordionData[openIndex]?.image}
