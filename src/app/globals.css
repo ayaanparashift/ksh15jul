@@ -1278,8 +1278,8 @@ canvas {
 
   h4 {
     font-family: "Open Sans", sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 20px !important;
+    font-weight: 600 !important;
+    font-size: 22px !important;
     line-height: 130%;
     color: #101021 !important;
     margin-top: 24px !important;
@@ -1350,11 +1350,11 @@ canvas {
     }
 
     h3 {
-      font-size: 16px !important;
+      font-size: 18px !important;
     }
 
     h4 {
-      font-size: 16px !important;
+      font-size: 18px !important;
     }
 
     h5 {
