@@ -65,7 +65,7 @@ const ContentCard = ({ item, activeTabId = null, type = "post" }) => {
       </div>
 
       <div className="flex flex-col min-h-[208.4px] 2xl:gap-0 gap-2 justify-between border-[#DDDDDD] border-t lg:border-l-0 border-l border-b border-r lg:w-[50%] 2xl:w-[310px] max-w-full 2xl:pl-[30px] pl-[20px] pr-[20px] py-3">
-        <div className="flex flex-col gap-2 2xl:gap-[16px]">
+        <div className="flex flex-col gap-2 2xl:gap-2 mb-1">
           <p className="max-w-fit fsans-600 text-[14px] 2xl:text-[16px] leading-[111%] bg-[#F7E327] py-1 2xl:py-[8px] px-2 2xl:px-[12px]">
             {categoryToShow}
           </p>
@@ -76,7 +76,7 @@ const ContentCard = ({ item, activeTabId = null, type = "post" }) => {
             </h3>
           ) : (
             <h3
-              className="spotlightheaddd line-clamp-3 fsans-600 text-[18px] 2xl:text-[20px] text-[#565656]"
+              className="spotlightheaddd line-clamp-2 fsans-600 text-[18px] 2xl:text-[20px] text-[#565656]"
               dangerouslySetInnerHTML={{ __html: titleText }}
             />
           )}
