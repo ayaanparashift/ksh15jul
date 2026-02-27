@@ -167,7 +167,7 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
             showLoading
           }
           // className="fix12 py-[70px] grid grid-cols-1 lg:grid-cols-2 md:gap-y-[65px] gap-y-10"
-          className="fix12 py-[35px] lg:py-[70px] flex flex-col lg:flex-row flex-wrap 2xl:gap-[65px] gap-5"
+          className="fix12 py-[35px] lg:py-[70px] flex flex-col lg:flex-row flex-wrap 2xl:gap-[45px] gap-5"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
