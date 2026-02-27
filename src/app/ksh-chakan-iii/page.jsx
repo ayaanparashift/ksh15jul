@@ -79,7 +79,7 @@ export const metadata = {
   description:
     "KSH Chakan III provides industrial park and warehouse in Pune with custom solutions, modern infrastructure, and strategic connectivity to industrial area in Chakan.",
 };
-
+//
 const tabsData = [
   {
     title: "KSH INFRA Parks",
