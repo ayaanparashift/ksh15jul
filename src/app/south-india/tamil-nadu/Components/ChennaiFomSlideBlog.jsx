@@ -8,14 +8,14 @@ const tabsData = [
   {
     title: "KSH Infra to Develop Second Industrial Park in Tamil Nadu",
     description: "",
-    image: "/blog/blogin/sld/imp.webp",
+    image: "/south/chpin.webp",
     url: "https://www.constructionworld.in/urban-infrastructure/warehouse-and-logistics/ksh-infra-to-develop-second-industrial-park-in-tamil-nadu-/76234",
   },
   {
     title:
       "KSH Infra to invest over Rs 550 crore in 60-acre logistics park in Tamil Nadu",
     description: "",
-    image: "/blog/blogin/sld/evo.webp",
+    image: "/south/news2.webp",
     url: "https://economictimes.indiatimes.com/industry/services/property-/-cstruction/ksh-infra-to-invest-over-rs-550-crore-in-60-acre-logistics-park-in-tamil-nadu/articleshow/122392746.cms?from=mdr",
   },
 ];
@@ -44,13 +44,13 @@ const ChennaiFomSlideBlog = () => {
     >
       <div className="relative h-fit lg:h-[500px] flex lg:flex-row flex-col overflow-hidden w-[100%] xl-1920:mr-[17.4%] xl-1600:mr-[172px] xl-1536:mr-[140px] xl-1440:mr-[94px] xl-1366:mr-[66px] xl-1280:mr-[62px] xl-1024:mr-[50px]">
         <div className="leftCon bg-[#141D28] w-full lg:w-[60%] xl-1920:pl-[21%] xl-1600:pl-[174px] xl-1536:pl-[140px] xl-1440:pl-[90px] xl-1366:pl-[70px] xl-1280:pl-[64px] xl-1024:pl-[50px] xl-768:pl-[40px]">
-          <div className="px-[5%] md:px-0 xl-768:pr-[40px] pt-[70px] border-b-[1px] pb-3 border-[#D7D7D7] border-opacity-50 w-full">
+          <div className="px-[5%] md:px-0 xl-768:pr-[40px] pt-10 lg:pt-[70px] border-b-[1px] pb-3 border-[#D7D7D7] border-opacity-50 w-full">
             <h2 className="text-xl pb-4 md:pb-0 text-white font-semibold">
               News
             </h2>
           </div>
 
-          <div className="relative w-full h-[250px] lg:h-[150px] overflow-hidden px-[5%] md:px-0">
+          <div className="relative w-full h-[150px] lg:h-[250px] lg:pt-10 overflow-hidden px-[5%] md:px-0">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeIndex}
@@ -67,7 +67,7 @@ const ChennaiFomSlideBlog = () => {
             </AnimatePresence>
           </div>
 
-          <div className="flex items-center pt-[0] px-[5%] md:px-0 md:w-[60%] justify-between pb-[70px]">
+          <div className="flex items-center pt-[0] px-[5%] md:px-0 md:w-[60%] justify-between pb-10 lg:pb-[70px]">
             <motion.div
               className="flex cursor-pointer group items-center justify-between font-semibold text-[#ffffff] text-[16px] h-[50px] w-fit"
               initial={{ x: 100, opacity: 0 }}

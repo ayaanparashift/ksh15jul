@@ -12,7 +12,7 @@ const ChennaiFomTabs = () => {
       content:
         "Fully developed, plug-and-play facilities that enable faster commissioning and immediate operational readiness - reducing downtime and accelerating market entry.",
       images: {
-        top: ["/parkOverview/whybts.png"],
+        top: ["/south/tab1.webp"],
       },
     },
     {
@@ -21,7 +21,7 @@ const ChennaiFomTabs = () => {
       content:
         "Customized infrastructure solutions designed around your technical, operational, and expansion requirements - ensuring optimal layout efficiency and long-term functionality.",
       images: {
-        top: ["/parkOverview/whyk2.webp"],
+        top: ["/south/tab2.webp"],
       },
     },
     {
@@ -30,7 +30,7 @@ const ChennaiFomTabs = () => {
       content:
         "Approvals, statutory clearances, and regulatory compliances meticulously managed - ensuring seamless occupancy and complete peace of mind.",
       images: {
-        top: ["/parkOverview/whyk3.webp"],
+        top: ["/south/tab3.webp"],
       },
     },
     {
@@ -39,7 +39,7 @@ const ChennaiFomTabs = () => {
       content:
         "Strategically located parks built with sustainable design, smart infrastructure, and integrated amenities - creating efficient, green, and growth-oriented industrial environments.",
       images: {
-        top: ["/parkOverview/whyk3.webp"],
+        top: ["/south/tab4.webp"],
       },
     },
   ];
@@ -47,9 +47,9 @@ const ChennaiFomTabs = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="bg-[#092241] md:pb-0 pb-10 lg:h-[600px] 2xl:h-[706px]">
+    <div className="bg-[#092241] md:pb-0 pb-10 lg:h-[500px] 2xl:h-[500px]">
       <div className="bg-[#092241] h-full flex items-end justify-end">
-        <div className="border-white w-full maxTab ml-[max(5%,calc((100vw-1250px)/2))] lg:pb-0 pb-[100px] lg:gap-0 gap-[50px] flex lg:flex-row flex-col overflow-hidden h-full">
+        <div className="border-white w-full maxTab ml-[max(5%,calc((100vw-1250px)/2))] lg:pb-0 pb-[70px] lg:gap-0 gap-[50px] flex lg:flex-row flex-col overflow-hidden h-full">
           <div className="leftCon flex-1 h-full">
             <div className="2xl:pt-[66px] pt-10 xl-1024:pt-10">
               <LineHead
@@ -106,7 +106,7 @@ const ChennaiFomTabs = () => {
           </div>
 
           {/* <div className="rightCon xl:block hidden flex-1 lg:max-w-[638px] h-[706px] relative"> */}
-          <div className="rightCon flex-1 w-full lg:max-w-[638px] !h-[706px] relative">
+          <div className="rightCon flex-1 w-full lg:max-w-[638px] !h-[500px] relative">
             <AnimatePresence>
               {tabs.slice(0, activeTab + 1).map((tab, idx) => (
                 <motion.div

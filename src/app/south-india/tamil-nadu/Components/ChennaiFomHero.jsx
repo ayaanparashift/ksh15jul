@@ -23,7 +23,7 @@ const ChennaiFomHero = () => {
   return (
     <>
       <div className="bg-[#fff] bg-cover bg-center z-0 relative">
-        <div className="ml-[max(5%,calc((100vw-1250px)/2))] lg:mr-0 mr-[max(5%,calc((100vw-1250px)/2))] pt-[150px] pb-12 flex items-center lg:justify-center justify-evenly min-1366:gap-[80px] md:gap-[50px] gap-[20px] lg:flex-row flex-col-reverse">
+        <div className="ml-[max(5%,calc((100vw-1250px)/2))] lg:mr-0 mr-[max(5%,calc((100vw-1250px)/2))] pt-[120px] lg:pt-[150px] pb-12 flex items-center lg:justify-center justify-evenly min-1366:gap-[80px] md:gap-[50px] gap-[20px] lg:flex-row flex-col-reverse">
           <div className="flex flex-col flex-1 max-w-full gap-5 min-1366:gap-10 justify-center relative">
             <div className="flex flex-col lg:max-w-fit">
               <motion.h1 className="fpt-500 xl:text-[50px] lg:text-[40px] md:text-[32px] text-[20px] text-black leading-[150%] md:leading-[105%] 2xl:text-[64px]">
@@ -59,7 +59,7 @@ const ChennaiFomHero = () => {
               <div className="relative">
                 <div className="relative h-fit overflow-hidden flex lg:justify-center justify-end w-full">
                   <img
-                    src="/ParkPage/hosur-1/hosur1spot.jpg"
+                    src="/south/southmap.webp"
                     className="object-cover w-full md:inline-block hidden"
                     alt="some"
                   />
@@ -68,7 +68,7 @@ const ChennaiFomHero = () => {
 
               <div>
                 <img
-                  src="/ParkPage/hosur-1/hosur1spot.jpg"
+                  src="/south/southmapmob.webp"
                   className="object-cover md:hidden inline-block"
                   alt="some"
                 />
