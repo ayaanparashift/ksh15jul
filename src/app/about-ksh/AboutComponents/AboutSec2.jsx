@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import Countersec from "../../Components/Counter/Countersec";
-import AboutCounter from "./AboutCounter";
+// import Countersec from "../../Components/Counter/Countersec";
+// import AboutCounter from "./AboutCounter";
 import AboutVision from "./AboutVision";
+import AboutCounter from "./ACF";
 
 const AboutSec2 = () => {
   return (
