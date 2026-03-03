@@ -8,6 +8,7 @@ import CharSlide from "./componentsf/CharSlide";
 import ParkInfra from "./componentsf/ParkInfra";
 import CharAcc from "./componentsf/CharAcc";
 import PDTab from "../Components/PDTab";
+import Link from "next/link";
 
 export const metadata = {
   title: "KSH INFRA: Industrial & Warehouse Park in Chennai",
@@ -49,7 +50,7 @@ const page = () => {
       />
 
       <div className="bg-[#EEF0F3]">
-        <ParkinSpot />
+        {/* <ParkinSpot />
         <TabMenu />
 
         <PDTab
@@ -64,7 +65,23 @@ const page = () => {
         <CharAcc />
         <ParkInfra />
         <PhVdslider />
-        <LastSw />
+        <LastSw /> */}
+        <div className="fix12 h-[60vh] lg:pt-0 pt-[100px] lg:h-screen flex flex-col justify-center items-center gap-5">
+          <h1 className="text-[#092241] text-[32px] lg:text-[48px] fpt-500 leading-[105%]">
+            Coming Soon
+          </h1>
+          <Link
+            href="/"
+            className="bg-[#E30613] w-fit flex items-center gap-2 whitespace-nowrap px-[21px] py-[14px] text-white rounded-3xl group"
+          >
+            <span>Return Home</span>
+            <img
+              className="rotate-45 group-hover:rotate-0 transition-all duration-300"
+              src="/rightUpArrow.svg"
+              alt="Arrow"
+            />
+          </Link>
+        </div>
       </div>
     </>
   );
