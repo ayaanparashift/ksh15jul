@@ -64,7 +64,7 @@ const AllCounter = () => {
   );
 };
 
-// export default AllCounter;
+export default AllCounter;
 // const AllCounter = () => {
 //   return (
 //     <div className="flex flex-wrap lg:justify-start justify-center relative z-0 pb-0">
