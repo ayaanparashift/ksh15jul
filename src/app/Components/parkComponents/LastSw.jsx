@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -9,8 +10,14 @@ import "swiper/css/navigation";
 import "swiper/css/free-mode";
 import LastCard from "./LastCard";
 
+const normalizePath = (path = "") => {
+  if (!path) return "";
+  return path.endsWith("/") && path !== "/" ? path.slice(0, -1) : path;
+};
+
 const LastSw = ({ cardData }) => {
   const [offsetAfter, setOffsetAfter] = useState(0);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,6 +32,10 @@ const LastSw = ({ cardData }) => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const filteredCardData = cardData.filter(
+    (item) => normalizePath(item.pLink) !== normalizePath(pathname),
+  );
 
   return (
     <div className="bg-white lg:pt-[72px] lg:pb-[95px] py-10 flex lg:gap-[49px] gap-5 flex-col w-full overflow-hidden">
@@ -77,7 +88,7 @@ const LastSw = ({ cardData }) => {
             1440: { slidesPerView: 3.8, spaceBetween: 43 },
           }}
         >
-          {cardData.map((item) => (
+          {filteredCardData.map((item) => (
             <SwiperSlide key={item.buildings + item.parkTitle}>
               <Link href={item.pLink} className="w-[347px] max-w-full">
                 <LastCard

@@ -4,6 +4,22 @@ import ParkLastSw from "../../Components/parkComponents/LastSw";
 
 const cardData = [
   {
+    parkTitle: "KSH Hosur Park I",
+    pLocal: "Hosur | Bengaluru",
+    totalLand: "1.26 MN SQ.FT.",
+    buildings: "04 Buildings",
+    pImg: "/ParkPage/hosur-1/hosurlw.png",
+    pLink: "/ksh-hosur-i",
+  },
+  {
+    parkTitle: "KSH Chennai Park I",
+    pLocal: "Sriperumbudur | Chennai",
+    totalLand: "1.60 MN SQ.FT.",
+    buildings: "04 Buildings",
+    pImg: "/south/chpi.webp",
+    pLink: "/ksh-chennai-i",
+  },
+  {
     parkTitle: "KSH Chakan Park IV",
     pLocal: "Chakan | Pune",
     totalLand: "0.36 MN SQ.FT.",

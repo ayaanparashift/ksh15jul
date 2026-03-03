@@ -85,15 +85,18 @@ import Image from "next/image";
 import ParkOvBtn from "./ParkOvBtn";
 import Link from "next/link";
 
-// const col1 = [
-//   { href: "/ksh-chakan-iv", text: "KSH Chakan IV" },
-//   { href: "/ksh-chakan-iii", text: "KSH Chakan III" },
-//   { href: "/ksh-chakan-ii", text: "KSH Chakan II" },
-//   { href: "/ksh-chakan-i", text: "KSH Chakan I" },
-//   { href: "/ksh-talegaon-i", text: "KSH Talegaon I" },
-// ];
+const col1 = [
+  { href: "/ksh-chakan-iv", text: "KSH Chakan IV" },
+  { href: "/ksh-chakan-iii", text: "KSH Chakan III" },
+  { href: "/ksh-chakan-ii", text: "KSH Chakan II" },
+  { href: "/ksh-chakan-i", text: "KSH Chakan I" },
+  { href: "/ksh-talegaon-i", text: "KSH Talegaon I" },
+];
 
-// const col2 = [{ href: "/ksh-hosur-i", text: "KSH Hosur I" }];
+const col2 = [
+  { href: "/ksh-hosur-i", text: "KSH Hosur I" },
+  { href: "/ksh-chennai-i", text: "KSH Chennai I" },
+];
 
 // const TabSec = () => {
 //   return (
@@ -153,16 +156,6 @@ import Link from "next/link";
 // };
 
 // export default TabSec;
-
-const col1 = [
-  { href: "/ksh-chakan-iv", text: "KSH Chakan IV" },
-  { href: "/ksh-chakan-iii", text: "KSH Chakan III" },
-  { href: "/ksh-chakan-ii", text: "KSH Chakan II" },
-  { href: "/ksh-chakan-i", text: "KSH Chakan I" },
-  { href: "/ksh-talegaon-i", text: "KSH Talegaon I" },
-];
-
-const col2 = [{ href: "/ksh-hosur-i", text: "KSH Hosur I" }];
 
 const TabSec = ({ onClose }) => {
   return (

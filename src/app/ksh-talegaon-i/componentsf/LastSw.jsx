@@ -12,6 +12,14 @@ const cardData = [
     pLink: "/ksh-hosur-i",
   },
   {
+    parkTitle: "KSH Chennai Park I",
+    pLocal: "Sriperumbudur | Chennai",
+    totalLand: "1.60 MN SQ.FT.",
+    buildings: "04 Buildings",
+    pImg: "/south/chpi.webp",
+    pLink: "/ksh-chennai-i",
+  },
+  {
     parkTitle: "KSH Chakan Park IV",
     pLocal: "Chakan | Pune",
     totalLand: "0.36 MN SQ.FT.",
@@ -42,6 +50,14 @@ const cardData = [
     buildings: "04 Buildings",
     pImg: "/ParkPage/chakan-1/ch1lw.png",
     pLink: "/ksh-chakan-i",
+  },
+  {
+    parkTitle: "KSH Talegaon Park I",
+    pLocal: "Talegaon | Pune",
+    totalLand: "0.14 MN SQ.FT.",
+    buildings: "02 Buildings",
+    pImg: "/ParkPage/talegaon-i/tal1lw.png",
+    pLink: "/ksh-talegaon-i",
   },
 ];
 

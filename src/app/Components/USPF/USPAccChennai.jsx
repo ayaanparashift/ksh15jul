@@ -24,7 +24,7 @@ const Accordion = ({ accordionData, acch, accw }) => {
   return (
     <div
       className={`w-full min-1920:max-w-[90%] pl-0 md:pl-[max(5%,calc((100vw-1250px)/2))] md:pr-[max(5%,calc((100vw-1250px)/2))] xl:pl-0 xl:ml-auto flex flex-col gap-[8px] ${
-        acch > 450 ? "xl:h-[550px]" : "xl:h-[450px]"
+        acch > 450 ? "xl:h-fit" : "xl:h-[450px]"
       } ${accw > 80 ? "w-full" : "xl:w-[90%]"}`}
     >
       {accordionData.map((item, index) => {

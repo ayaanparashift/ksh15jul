@@ -976,6 +976,15 @@ const MobNav = ({ onClose }) => {
                               KSH Hosur I
                             </Link>
                           </li>
+                          <li>
+                            <Link
+                              href="/ksh-chennai-i"
+                              onClick={onClose}
+                              className="block cursor-pointer"
+                            >
+                              KSH Chennai I
+                            </Link>
+                          </li>
                         </motion.ul>
                       )}
                     </AnimatePresence>
@@ -1137,3 +1146,5 @@ const MobNav = ({ onClose }) => {
 };
 
 export default MobNav;
+
+
