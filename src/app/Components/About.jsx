@@ -213,7 +213,7 @@
 
 "use client";
 import { motion } from "framer-motion";
-import Countersec from "./Counter/CSF";
+import Countersec from "./Counter/Countersec";
 import ButtomComp from "./ButtonComp";
 import LineHead from "./Heading/LineHead";
 import Map1 from "./MapComponents/Map1";

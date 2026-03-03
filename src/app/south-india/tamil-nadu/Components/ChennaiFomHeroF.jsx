@@ -12,7 +12,7 @@ const ChennaiFomHero = () => {
     {
       title: "Chennai",
       iframe:
-        "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d243.06395349046193!2d79.7997352!3d12.9062261!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDU0JzIyLjMiTiA3OcKwNDcnNTkuOCJF!5e0!3m2!1sen!2sin!4v1772517283499!5m2!1sen!2sin",
+        "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d4536.664621443366!2d79.79894433132155!3d12.905910574724702!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDU0JzIyLjMiTiA3OcKwNDcnNTkuOCJF!5e0!3m2!1sen!2sin!4v1772533207496!5m2!1sen!2sin",
     },
     {
       title: "Hosur",
@@ -37,7 +37,7 @@ const ChennaiFomHero = () => {
   return (
     <>
       <div className="bg-[#fff] bg-cover bg-center z-0 relative">
-        <div className="ml-[max(5%,calc((100vw-1250px)/2))] lg:mr-0 mr-[max(5%,calc((100vw-1250px)/2))] pt-[120px] lg:pt-[150px] pb-12 flex items-center lg:justify-center justify-evenly min-1366:gap-[80px] md:gap-[50px] gap-[20px] lg:flex-row flex-col-reverse">
+        <div className="ml-[max(5%,calc((100vw-1250px)/2))] mr-[max(5%,calc((100vw-1250px)/2))] pt-[120px] lg:pt-[150px] pb-12 flex items-center lg:justify-center justify-evenly min-1366:gap-[80px] md:gap-[50px] gap-[20px] lg:flex-row flex-col-reverse">
           <div className="flex flex-col flex-1 max-w-full gap-5 min-1366:gap-10 justify-center relative">
             <div className="flex flex-col lg:max-w-fit">
               <motion.h1 className="fpt-500 xl:text-[50px] lg:text-[40px] md:text-[32px] text-[20px] text-black leading-[150%] md:leading-[105%] 2xl:text-[64px]">
@@ -68,7 +68,7 @@ const ChennaiFomHero = () => {
             </div>
           </div>
 
-          <div className="xl:flex-1 flex flex-col justify-center items-end w-full">
+          <div className="xl:w-1/2 flex flex-col justify-center items-end w-full">
             <div className="w-full lg:w-[688.5px] 2xl:w-[810px] max-w-full">
               <div className="tabs md:justify-start justify-start flex lg:gap-2 mb-4">
                 {mapTabs.map((tab, index) => (
@@ -97,7 +97,7 @@ const ChennaiFomHero = () => {
                 >
                   <iframe
                     src={mapTabs[activeMapTab].iframe}
-                    className="w-full h-[300px] lg:h-[476px] 2xl:h-[560px]"
+                    className="w-full h-[300px] lg:h-[400px] 2xl:h-[500px]"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
