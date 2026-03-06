@@ -214,14 +214,10 @@ import BCSlider from "./BCslider";
 
 async function fetchAllBlogs() {
   try {
-    // Add cache busting and better headers for production
     const res = await fetch(
-      `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?_embed&per_page=100&t=${Date.now()}`,
+      `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?_embed&per_page=20`,
       { 
-        next: { revalidate: 0 }, // Disable caching for related blogs
-        headers: {
-          'Cache-Control': 'no-cache',
-        }
+        next: { revalidate: 86400 }, // caching for 1 day
       }
     );
     

@@ -54,14 +54,28 @@ const EnquireNow = ({ closeEnquire }) => {
     setIsSending(true);
 
     try {
-      const response = await sendEmails({
-        user_name: userName,
-        user_company: userCompany,
-        user_phone: userPhone,
-        user_email: userEmail,
-        user_subject: userSubject,
-        user_message: userMessage,
-      });
+      const [response] = await Promise.all([
+        sendEmails({
+          user_name: userName,
+          user_company: userCompany,
+          user_phone: userPhone,
+          user_email: userEmail,
+          user_subject: userSubject,
+          user_message: userMessage,
+        }),
+        fetch("/api/enquire", {
+          method: "POST",
+          body: JSON.stringify({
+            user_name: userName,
+            user_company: userCompany,
+            user_phone: userPhone,
+            user_email: userEmail,
+            user_subject: userSubject,
+            user_message: userMessage,
+          }),
+          headers: { "Content-Type": "application/json" },
+        })
+      ]);
 
       if (response.successCompany && response.successAutoReply) {
         toast.success("✅ Your enquiry has been sent!");
@@ -70,19 +84,6 @@ const EnquireNow = ({ closeEnquire }) => {
       } else if (response.successAutoReply) {
         toast.success("📨 Auto-reply sent, but company email failed.");
       }
-
-      await fetch("/api/enquire", {
-        method: "POST",
-        body: JSON.stringify({
-          user_name: userName,
-          user_company: userCompany,
-          user_phone: userPhone,
-          user_email: userEmail,
-          user_subject: userSubject,
-          user_message: userMessage,
-        }),
-        headers: { "Content-Type": "application/json" },
-      });
 
       // ✅ ONLY CHANGE THAT MATTERS
 

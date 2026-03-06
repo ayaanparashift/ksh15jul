@@ -1093,43 +1093,44 @@ export default function FormSecF() {
 
     setLoading(true); // ✅ start loading
     try {
-      await emailjs.sendForm(
-        SERVICE_ID,
-        CAREER_COMPANY_ID,
-        formRef.current,
-        PUBLIC_KEY
-      );
-
-      await emailjs.send(
-        SERVICE_ID,
-        CAREER_AUTOREPLY_ID,
-        {
-          to_name: `${formData.first_name} ${formData.last_name}`,
-          to_email: formData.user_email,
-        },
-        PUBLIC_KEY
-      );
-      // ✅ 2. Push data to Google Sheets via our Next.js API
-      const sheetRes = await fetch("/api/career", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          date: new Date().toISOString(),
-          first_name: formData.first_name,
-          last_name: formData.last_name,
-          user_phone: formData.user_phone,
-          user_email: formData.user_email,
-          user_education: formData.user_education,
-          user_department: formData.user_department,
-          cv: file ? file.name : "",
-          cover_letter: file2 ? file2.name : "",
-        }),
-      });
+      const [ , , sheetRes] = await Promise.all([
+        emailjs.sendForm(
+          SERVICE_ID,
+          CAREER_COMPANY_ID,
+          formRef.current,
+          PUBLIC_KEY
+        ),
+        emailjs.send(
+          SERVICE_ID,
+          CAREER_AUTOREPLY_ID,
+          {
+            to_name: `${formData.first_name} ${formData.last_name}`,
+            to_email: formData.user_email,
+          },
+          PUBLIC_KEY
+        ),
+        fetch("/api/career", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            date: new Date().toISOString(),
+            first_name: formData.first_name,
+            last_name: formData.last_name,
+            user_phone: formData.user_phone,
+            user_email: formData.user_email,
+            user_education: formData.user_education,
+            user_department: formData.user_department,
+            cv: file ? file.name : "",
+            cover_letter: file2 ? file2.name : "",
+          }),
+        })
+      ]);
 
       const sheetData = await sheetRes.json();
       console.log("📊 Sheet response:", sheetData);
+      
       setFormData({
         first_name: "",
         last_name: "",

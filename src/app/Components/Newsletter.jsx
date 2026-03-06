@@ -665,38 +665,36 @@ const Newsletter = () => {
       const subscriberEmail = formData.get("subscriber_email");
       const pageSourceUrl = sourceUrl;
 
-      // 1. Send notification email (explicit data instead of sendForm)
-      await emailjs.send(
-        serviceId,
-        newsletterTemplateId,
-        {
-          subscriber_email: subscriberEmail,
-          source_url: pageSourceUrl,
-        },
-        publicKey
-      );
-
-      // 2. Send thank you email
-      await emailjs.send(
-        serviceId,
-        thankYouTemplateId,
-        {
-          subscriber_email: subscriberEmail,
-        },
-        publicKey
-      );
-
-      // 3. Send subscriber email + URL to Google Sheets
-      const res = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          subscriber_email: subscriberEmail,
-          source_url: pageSourceUrl,
-        }),
-      });
+      // Run all operations concurrently
+      const [ , , res] = await Promise.all([
+        emailjs.send(
+          serviceId,
+          newsletterTemplateId,
+          {
+            subscriber_email: subscriberEmail,
+            source_url: pageSourceUrl,
+          },
+          publicKey
+        ),
+        emailjs.send(
+          serviceId,
+          thankYouTemplateId,
+          {
+            subscriber_email: subscriberEmail,
+          },
+          publicKey
+        ),
+        fetch("/api/newsletter", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            subscriber_email: subscriberEmail,
+            source_url: pageSourceUrl,
+          }),
+        })
+      ]);
 
       const sheetResult = await res.json();
       if (!sheetResult.success) {
@@ -705,7 +703,7 @@ const Newsletter = () => {
 
       // Success
       setStatus(true);
-      formRef.current.reset();
+      if (formRef.current) formRef.current.reset();
       console.log("✅ Emails + Google Sheets updated.");
     } catch (error) {
       console.error("Newsletter error:", error);

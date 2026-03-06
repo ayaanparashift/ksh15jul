@@ -1,10 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const ParkTabsMenu = ({ tabs }) => {
-  const [activeIndex, setActiveIndex] = useState(false);
+  const pathname = usePathname();
+  const [activeIndex, setActiveIndex] = useState(0); // fallback to 0 instead of false
+
+  useEffect(() => {
+    const savedIndex = sessionStorage.getItem(`activeTab-${pathname}`);
+    if (savedIndex !== null) {
+      setActiveIndex(parseInt(savedIndex, 10));
+    }
+  }, [pathname]);
+
+  const handleTabClick = (index) => {
+    setActiveIndex(index);
+    sessionStorage.setItem(`activeTab-${pathname}`, index);
+  };
 
   return (
     <div className="w-full bg-[#092241] pt-[80px] pb-[48px]">
@@ -24,7 +38,7 @@ const ParkTabsMenu = ({ tabs }) => {
               target="_blank"
               rel="noopener noreferrer"
               className={commonClasses}
-              onClick={() => setActiveIndex(index)}
+              onClick={() => handleTabClick(index)}
             >
               {tab.title}
             </a>
@@ -33,7 +47,7 @@ const ParkTabsMenu = ({ tabs }) => {
               key={index}
               href={tab.link}
               className={commonClasses}
-              onClick={() => setActiveIndex(index)}
+              onClick={() => handleTabClick(index)}
             >
               {tab.title}
             </Link>

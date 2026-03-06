@@ -407,24 +407,22 @@ const ContFF = () => {
     const r_email = recipients[Math.floor(Math.random() * recipients.length)];
 
     try {
-      // Send to company
-      await emailjs.send(SERVICE_ID, CONTACT_COMPANY_ID, {
-        ...formData,
-        r_email,
-      });
-
-      // Send auto-reply
-      await emailjs.send(SERVICE_ID, CONTACT_AUTOREPLY_ID, {
-        to_name: formData.user_name,
-        to_email: formData.user_email,
-      });
-
-      // ✅ Save to Google Sheets
-      await fetch("/api/contact/", {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: { "Content-Type": "application/json" },
-      });
+      // Run all async requests concurrently so it takes less time
+      await Promise.all([
+        emailjs.send(SERVICE_ID, CONTACT_COMPANY_ID, {
+          ...formData,
+          r_email,
+        }),
+        emailjs.send(SERVICE_ID, CONTACT_AUTOREPLY_ID, {
+          to_name: formData.user_name,
+          to_email: formData.user_email,
+        }),
+        fetch("/api/contact/", {
+          method: "POST",
+          body: JSON.stringify(formData),
+          headers: { "Content-Type": "application/json" },
+        })
+      ]);
 
       toast.success("✅ Your enquiry has been sent!");
       setIsSubmitted(true);
