@@ -174,7 +174,7 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
           transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
         >
           {showLoading ? (
-            <p className="text-black fsans-600 md:text-[32px] text-[24px] col-span-2 text-center">
+            <p className="text-black fsans-600 md:text-[32px] text-[24px] col-span-2 text-center w-full">
               {isNews ? "Loading News..." : "Loading..."}
             </p>
           ) : currentItems.length > 0 ? (

@@ -258,7 +258,8 @@ const aboutGrowthData = [
 const AboutGrowth = () => {
   return (
     <div className="Main fix12 py-16 lg:py-[100px]">
-      <div className="xl:flex items-center justify-between xl-1280:gap-[5%] xl-1024:gap-[30px]">
+      {/* <div className="xl:flex items-center justify-between xl-1280:gap-[5%] xl-1024:gap-[30px]"> */}
+      <div className="flex lg:flex-row flex-col items-center justify-between gap-5 lg:gap-[30px]">
         <div className="xl-1024:flex-1 xl:w-[521px] xl-1280:w-[50%] flex xl:pb-0 pb-5">
           <h2
             // initial={{ width: 0 }}
@@ -273,7 +274,7 @@ const AboutGrowth = () => {
         </div>
 
         {/* First box only (Sustainability) */}
-        <Link href={aboutGrowthData[0].link}>
+        <Link className="xl:w-[calc(50%-20px)]" href={aboutGrowthData[0].link}>
           <div
             // initial={{ opacity: 0 }}
             // whileInView={{ opacity: 1 }}
@@ -282,7 +283,7 @@ const AboutGrowth = () => {
             //   ease: [0.7, 0, 0.4, 1],
             // }}
             // viewport={{ once: true, amount: 0.5 }}
-            className="xl-1024:flex-1 group xl:w-[612px] xl-1280:w-[50%] lg:h-[330px] md:flex border-2 lg:mt-0"
+            className="xl-1024:flex-1 group lg:h-[330px] md:flex border-2 lg:mt-0"
           >
             <div className="xl-1024:min-w-[190px] md:min-w-[292px] overflow-hidden">
               <img
@@ -321,7 +322,11 @@ const AboutGrowth = () => {
       {/* Remaining boxes (Investor Relations, Careers @KSH) */}
       <div className="flex lg:flex-row flex-col items-center justify-between xl:pt-[65px] pt-5 gap-5 lg:gap-[30px]">
         {aboutGrowthData.slice(1).map((item, index) => (
-          <Link className="group" href={item.link} key={index}>
+          <Link
+            className="group xl:w-[calc(50%-20px)]"
+            href={item.link}
+            key={index}
+          >
             <div
               // initial={{ opacity: 0 }}
               // whileInView={{ opacity: 1 }}
@@ -331,7 +336,7 @@ const AboutGrowth = () => {
               //   delay: item.delay,
               // }}
               // viewport={{ once: true, amount: 0.5 }}
-              className={`xl:w-[612px] group xl-1280:w-[50%] lg:h-[330px] md:flex border-2 ${
+              className={` group lg:h-[330px] md:flex border-2 ${
                 index !== 0 ? "" : "lg:mt-0"
               }`}
             >

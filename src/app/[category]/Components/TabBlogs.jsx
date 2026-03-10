@@ -2069,7 +2069,7 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
     const fetchNews = async () => {
       try {
         const res = await fetch(
-          `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?categories=18&per_page=100&_embed`
+          `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?categories=18&per_page=100&_embed`,
         );
         if (!res.ok) throw new Error("Failed to fetch");
         const data = await res.json();
@@ -2100,25 +2100,25 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
             return isNews
               ? { ...blog, _priority: 18 }
               : isBlog
-              ? { ...blog, _priority: 17 }
-              : null;
+                ? { ...blog, _priority: 17 }
+                : null;
           })
           .filter(Boolean)
       : activeTabId === 17
-      ? blogs.filter((b) => b.categories.includes(17))
-      : [];
+        ? blogs.filter((b) => b.categories.includes(17))
+        : [];
 
   const itemsToDisplay = isPress
     ? PRESS_RELEASES
     : isNews
-    ? newsBlogs
-    : filteredBlogs;
+      ? newsBlogs
+      : filteredBlogs;
 
   const totalPages = Math.ceil(itemsToDisplay.length / postsPerPage);
   const startIndex = (currentPage - 1) * postsPerPage;
   const currentItems = itemsToDisplay.slice(
     startIndex,
-    startIndex + postsPerPage
+    startIndex + postsPerPage,
   );
 
   const showLoading =
@@ -2174,7 +2174,7 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
           transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1] }}
         >
           {showLoading ? (
-            <p className="text-black fsans-600 md:text-[32px] text-[24px] col-span-2 text-center">
+            <p className="text-black fsans-600 md:text-[32px] text-[24px] col-span-2 text-center w-full">
               {isNews ? "Loading News..." : "Loading..."}
             </p>
           ) : currentItems.length > 0 ? (
@@ -2187,7 +2187,7 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
                   item={item}
                   activeTabId={activeTabId ?? item._priority}
                 />
-              )
+              ),
             )
           ) : (
             <p className="text-white text-center col-span-2">
