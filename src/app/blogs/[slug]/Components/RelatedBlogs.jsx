@@ -235,7 +235,7 @@ async function fetchAllBlogs() {
   }
 }
 
-export default async function RelatedBlogs({ currentBlogId }) {
+export default async function RelatedBlogs({ currentBlogId, forceCategory }) {
   console.log(`Finding related blogs for ID: ${currentBlogId}`);
   
   const allBlogs = await fetchAllBlogs();
@@ -247,28 +247,29 @@ export default async function RelatedBlogs({ currentBlogId }) {
   const currentBlog = allBlogs.find((b) => b.id === currentBlogId);
   if (!currentBlog) {
     console.log(`Current blog with ID ${currentBlogId} not found`);
-    return null;
   }
 
-  const currentCats = currentBlog.categories || [];
-  const isNews = currentCats.includes(7);
-  const isBlog = currentCats.includes(6);
+  const currentCats = currentBlog?.categories || [];
+  const isNews = currentCats.includes(7) || currentCats.includes(18);
+  const isBlog = currentCats.includes(6) || currentCats.includes(17);
+  const target = forceCategory || (isNews ? "news" : isBlog ? "blogs" : "any");
   
   console.log(`Current blog categories:`, currentCats, `isNews: ${isNews}, isBlog: ${isBlog}`);
 
   let related = [];
 
-  if (isNews) {
-    related = allBlogs.filter(
-      (b) => b.id !== currentBlogId && (b.categories || []).includes(7)
-    );
-  } else if (isBlog) {
-    related = allBlogs.filter(
-      (b) =>
-        b.id !== currentBlogId &&
-        (b.categories || []).includes(6) &&
-        !(b.categories || []).includes(7)
-    );
+  if (target === "news") {
+    related = allBlogs.filter((b) => {
+      const cats = b.categories || [];
+      return b.id !== currentBlogId && (cats.includes(7) || cats.includes(18));
+    });
+  } else if (target === "blogs") {
+    related = allBlogs.filter((b) => {
+      const cats = b.categories || [];
+      const isBlogPost = cats.includes(6) || cats.includes(17);
+      const isNewsPost = cats.includes(7) || cats.includes(18);
+      return b.id !== currentBlogId && isBlogPost && !isNewsPost;
+    });
   } else {
     // Fallback: get any other posts
     related = allBlogs.filter((b) => b.id !== currentBlogId);
@@ -285,7 +286,10 @@ export default async function RelatedBlogs({ currentBlogId }) {
     featuredImage:
       b._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
       "/default-image.jpg",
-    categoryPath: (b.categories || []).includes(7) ? "news" : "blogs",
+    categoryPath:
+      (b.categories || []).includes(7) || (b.categories || []).includes(18)
+        ? "news"
+        : "blogs",
   }));
 
   console.log(`Found ${relatedBlogs.length} related blogs`);

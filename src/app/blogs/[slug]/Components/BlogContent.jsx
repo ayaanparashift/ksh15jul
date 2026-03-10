@@ -462,21 +462,26 @@ async function fetchBlogData(slug) {
   };
 }
 
-export default async function BlogContent({ slug, category }) {
+export default async function BlogContent({ slug }) {
   const blog = await fetchBlogData(slug);
   if (!blog) return notFound();
 
   const categoryLabels = {
     6: "Blogs",
     7: "News",
+    17: "Blogs",
+    18: "News",
   };
 
   let categoryToShow = "Uncategorized";
   const categories = blog.categories;
 
-  if (categories.includes(7)) {
+  if (categories.includes(7) || categories.includes(18)) {
     categoryToShow = categoryLabels[7];
-  } else if (categories.length === 1 && categories[0] === 6) {
+  } else if (
+    categories.length === 1 &&
+    (categories[0] === 6 || categories[0] === 17)
+  ) {
     categoryToShow = categoryLabels[6];
   }
 
@@ -486,7 +491,7 @@ export default async function BlogContent({ slug, category }) {
     year: "numeric",
   });
 
-  const finalUrl = `https://kshweb.vercel.app/${category}/${slug}`;
+  const finalUrl = `https://kshweb.vercel.app/blogs/${slug}`;
   const whatsappMessage = `${blog.title.rendered} - ${finalUrl}`;
 
   return (

@@ -1058,7 +1058,7 @@ export async function generateMetadata({ params }) {
     "Read the latest insights from KSH Infra.";
 
   const image = blog.featuredImage;
-  const url = `https://kshweb.vercel.app/${params.category}/${params.slug}`;
+  const url = `https://kshweb.vercel.app/blogs/${params.slug}`;
 
   return {
     title,
@@ -1088,17 +1088,17 @@ export async function generateMetadata({ params }) {
 
 // ✅ Page wrapper with category validation + Suspense
 export default async function BlogPage({ params }) {
-  const { slug, category } = params;
+  const { slug } = params;
   const blog = await fetchBlogData(slug);
 
   if (!blog) return notFound();
 
   // category validation
-  const isNews = blog.categories.includes(7);
-  const isBlog = blog.categories.includes(6);
-  const expectedCategory = isNews ? "news" : "blogs";
+  const categories = blog.categories || [];
+  const isNews = categories.includes(7) || categories.includes(18);
+  const isBlog = categories.includes(6) || categories.includes(17);
 
-  if (category !== expectedCategory) {
+  if (isNews || !isBlog) {
     return notFound();
   }
 

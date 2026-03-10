@@ -372,6 +372,8 @@ const BCard = ({ blog, activeTabId, image, categoryPath }) => {
   const categoryLabels = {
     6: "Blogs",
     7: "News",
+    17: "Blogs",
+    18: "News",
   };
 
   // Safely extract category IDs and ensure they're numbers
@@ -383,9 +385,9 @@ const BCard = ({ blog, activeTabId, image, categoryPath }) => {
   let categoryToShow = "Uncategorized";
 
   if (activeTabId === null) {
-    if (categoryIds.includes(7)) {
+    if (categoryIds.includes(7) || categoryIds.includes(18)) {
       categoryToShow = "News";
-    } else if (categoryIds.includes(6)) {
+    } else if (categoryIds.includes(6) || categoryIds.includes(17)) {
       categoryToShow = "Blogs";
     }
   } else {

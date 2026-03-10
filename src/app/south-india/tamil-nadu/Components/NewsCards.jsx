@@ -1,4 +1,4 @@
-import ContentCard from "../../../[category]/Components/ContentCard";
+import ContentCard from "../../../blogs/Components/ContentCard";
 
 const newsItems = [
   {

@@ -118,6 +118,7 @@ export default async function sitemap() {
         ...allPosts,
         ...posts.map((post) => ({
           slug: post.slug,
+          categories: post.categories || [],
           updatedAt: post.modified
             ? new Date(post.modified).toISOString()
             : new Date().toISOString(),
@@ -132,13 +133,19 @@ export default async function sitemap() {
     // silent fail (Next.js does not allow console in route handlers)
   }
 
-  // Blog routes
-  const blogRoutes = blogs.map((post) => ({
-    url: `${baseUrl}/blogs/${post.slug}`,
-    lastModified: new Date(post.updatedAt),
-    changefreq: "weekly",
-    priority: 0.8,
-  }));
+  // Blog + News routes
+  const blogRoutes = blogs.map((post) => {
+    const categories = post.categories || [];
+    const isNews = categories.includes(7) || categories.includes(18);
+    const path = isNews ? "news" : "blogs";
+
+    return {
+      url: `${baseUrl}/${path}/${post.slug}`,
+      lastModified: new Date(post.updatedAt),
+      changefreq: "weekly",
+      priority: 0.8,
+    };
+  });
 
   // Static routes
   const staticRoutes = [
