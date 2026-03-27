@@ -774,7 +774,11 @@ import emailjs from "@emailjs/browser";
 const NAME_REGEX = /^[A-Za-z ]{2,}$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const PopForm = ({ onClose }) => {
+const PopForm = ({
+  onClose,
+  title = "Download ESG Report",
+  reportLink = "https://www.kshinfra.com/brochure/KSH_ESG_Report_v13.pdf",
+}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [sending, setSending] = useState(false);
@@ -837,7 +841,7 @@ const PopForm = ({ onClose }) => {
     const notifyParams = { from_name: name, from_email: email };
     const autoParams = {
       to_email: email,
-      report_link: "https://www.kshinfra.com/brochure/KSH_ESG_Report_v13.pdf",
+      report_link: reportLink,
     };
 
     try {
@@ -908,7 +912,7 @@ const PopForm = ({ onClose }) => {
         />
         <header className="flex justify-between items-center">
           <h3 className="text-white text-[24px] md:text-[44px] font-bold">
-            Download ESG Report
+            {title}
           </h3>
           <button type="button" onClick={onClose}>
             <img

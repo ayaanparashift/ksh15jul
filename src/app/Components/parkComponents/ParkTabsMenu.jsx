@@ -31,18 +31,38 @@ const ParkTabsMenu = ({ tabs }) => {
             whitespace-nowrap
           `;
 
-          return isDownload ? (
-            <a
-              key={index}
-              href={tab.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={commonClasses}
-              onClick={() => handleTabClick(index)}
-            >
-              {tab.title}
-            </a>
-          ) : (
+          if (isDownload) {
+            if (tab.onClick) {
+              return (
+                <button
+                  key={index}
+                  type="button"
+                  className={`${commonClasses} bg-transparent border-0`}
+                  onClick={() => {
+                    handleTabClick(index);
+                    tab.onClick();
+                  }}
+                >
+                  {tab.title}
+                </button>
+              );
+            }
+
+            return (
+              <a
+                key={index}
+                href={tab.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={commonClasses}
+                onClick={() => handleTabClick(index)}
+              >
+                {tab.title}
+              </a>
+            );
+          }
+
+          return (
             <Link
               key={index}
               href={tab.link}
