@@ -106,7 +106,7 @@ const ParkCertificateEnquireForm = ({ closeEnquire, source = "" }) => {
     <div
       className={`bg-[#092241] flex flex-col ${
         isSubmitted ? "gap-3" : "gap-[30px] min-1366:gap-[60px]"
-      } w-fit max-w-fit px-10 py-5 z-[10000000] relative mt-0 overflow-hidden`}
+      } lg:w-fit lg:max-w-fit lg:px-10 py-5 z-[10000000] relative mt-0 overflow-hidden`}
       id="park-certificate-form"
     >
       <div className="flex justify-between items-center">
@@ -142,7 +142,7 @@ const ParkCertificateEnquireForm = ({ closeEnquire, source = "" }) => {
       {isSubmitted ? (
         <div className="w-full flex flex-col items-center justify-center text-center gap-4 py-6">
           <CircleCheck color="#ffffff" size={64} />
-          <p className="text-white fsans-500 text-[36px] leading-[115%]">
+          <p className="text-white fsans-500 text-[22px] lg:text-[36px] leading-[115%]">
             Thanks for submitting the form! <br /> We&apos;ll get back to you
             soon.
           </p>

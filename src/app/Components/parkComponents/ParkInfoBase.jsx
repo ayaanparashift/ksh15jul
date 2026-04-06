@@ -65,12 +65,14 @@ const ParkInfoBase = ({
                 <p className="fsans-600 text-[#00000050] text-[16px]">{note}</p>
               </div>
             ) : null}
-            <div className="pt-10">
+            <div className="lg:pt-10">
               <motion.button
                 onClick={openEnquire}
-                className="bg-[#E30613] max-w-fit h-[50px] flex items-center text-base fsans-600 text-white px-[21px] py-[14px] gap-[10px] rounded-3xl group"
+                className="bg-[#E30613] max-w-fit h-fit flex items-center text-base fsans-600 text-white px-[21px] py-[14px] gap-[10px] rounded-3xl group"
               >
-                <p>Read Our Environmental Certificate</p>
+                <p className="text-left flex items-center">
+                  Read Our Environmental Certificate
+                </p>
                 <img
                   className="h-[24px] w-[24px] group-hover:-rotate-90 duration-300 transition-transform"
                   src="/downarrow.svg"
@@ -94,7 +96,7 @@ const ParkInfoBase = ({
               transition={{ duration: 0.3, ease: "easeOut" }}
             />
             <motion.div
-              className="fixed inset-0 z-[1001001] flex items-center justify-center p-4"
+              className="fixed inset-0 z-[1001001] flex items-center justify-center lg:p-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               onClick={closeEnquire}
@@ -103,7 +105,7 @@ const ParkInfoBase = ({
             >
               <motion.div
                 onClick={(event) => event.stopPropagation()}
-                className="w-fit max-h-[90vh] bg-[#092241] overflow-y-auto px-10 py-5 shadow-lg"
+                className="lg:w-fit w-[90%] mx-auto max-h-[90vh] bg-[#092241] overflow-y-auto px-10 py-5 shadow-lg"
                 initial={{ opacity: 0, y: 24, scale: 0.96 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.97 }}
