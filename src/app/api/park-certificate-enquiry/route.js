@@ -146,9 +146,10 @@ const PHONE_REGEX = /^(?:\+91\s?|0\s?)?(?:\d{10}|\d{5}\s\d{5})$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const RECIPIENTS = [
-  "rushid.domadia@kshinfra.com",
-  "jeyakrishnan.achuthan@kshinfra.com",
-  "karan.domadia@kshinfra.com",
+  // "rushid.domadia@kshinfra.com",
+  // "jeyakrishnan.achuthan@kshinfra.com",
+  // "karan.domadia@kshinfra.com",
+  "kshinframail@gmail.com",
 ];
 
 function formatDateDDMMYY(dateObj) {
