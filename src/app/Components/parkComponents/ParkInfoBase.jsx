@@ -65,7 +65,7 @@ const ParkInfoBase = ({
                 <p className="fsans-600 text-[#00000050] text-[16px]">{note}</p>
               </div>
             ) : null}
-            {/* <div className="lg:pt-10">
+            <div className="lg:pt-10">
               <motion.button
                 onClick={openEnquire}
                 className="bg-[#E30613] max-w-fit h-fit flex items-center text-base fsans-600 text-white px-[21px] py-[14px] gap-[10px] rounded-3xl group"
@@ -79,7 +79,7 @@ const ParkInfoBase = ({
                   alt="Arrow"
                 />
               </motion.button>
-            </div> */}
+            </div>
           </motion.div>
         </div>
       </div>
