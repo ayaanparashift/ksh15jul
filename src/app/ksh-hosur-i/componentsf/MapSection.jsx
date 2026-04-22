@@ -80,6 +80,7 @@ import LineHead from "../../Components/Heading/LineHead";
 
 const MapSection = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const mobileCoordinates = "12.59930742917555, 77.9513241885427";
 
   // const iframeUrls = [
 
@@ -179,6 +180,14 @@ const MapSection = () => {
       {/* Mobile view with slider */}
       <div className="sm:hidden h-fit relative mx-[5%]">
         <LineHead heading="Location & Connectivity Advantage" />
+        <div className="mt-[0px] pb-[16px]">
+          <span className="text-[16px] fpt-600 text-[#092241]">
+            View on Map:
+          </span>{" "}
+          <span className="text-sm font-medium text-[#E4222E]">
+            {mobileCoordinates}
+          </span>
+        </div>
         <MapSlider
           iframeUrls={iframeUrls}
           onSelect={(index) => setSelectedIndex(index)}

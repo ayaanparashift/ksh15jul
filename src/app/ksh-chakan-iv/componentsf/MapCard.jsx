@@ -1,11 +1,43 @@
 "use client";
 import ParkMapCard from "../../Components/parkComponents/ParkMapCard";
+
 const items = [
-  { id: 1, title: "Pune International Airport", km: 39, icon: "/ParkPage/mapicons/apl.svg" },
-  { id: 2, title: "Mumbai International Airport", km: 143, icon: "/ParkPage/mapicons/apl.svg" },
+  {
+    id: 1,
+    title: "Pune International Airport",
+    km: 39,
+    icon: "/ParkPage/mapicons/apl.svg",
+  },
+  {
+    id: 2,
+    title: "Mumbai International Airport",
+    km: 143,
+    icon: "/ParkPage/mapicons/apl.svg",
+  },
   { id: 3, title: "Seaport", km: 141, icon: "/ParkPage/mapicons/ship.svg" },
-  { id: 4, title: "National Highways", km: 103, icon: "/ParkPage/mapicons/road.svg" },
+  {
+    id: 4,
+    title: "National Highways",
+    km: 103,
+    icon: "/ParkPage/mapicons/road.svg",
+  },
   { id: 5, title: "City Center", km: 33, icon: "/ParkPage/mapicons/clock.svg" },
 ];
-const MapCard = ({ activeIndex, onSelectAirport }) => <ParkMapCard items={items} activeIndex={activeIndex} onSelectAirport={onSelectAirport} />;
+
+const staticItem = {
+  id: "coordinates",
+  title: "View on Map",
+  value: "18.772928, 73.749446",
+  icon: "/ParkPage/mapicons/road.svg",
+};
+
+const MapCard = ({ activeIndex, onSelectAirport }) => (
+  <ParkMapCard
+    items={items}
+    activeIndex={activeIndex}
+    onSelectAirport={onSelectAirport}
+    staticItem={staticItem}
+  />
+);
+
 export default MapCard;

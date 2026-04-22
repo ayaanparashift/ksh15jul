@@ -6,6 +6,7 @@ import LineHead from "../../Components/Heading/LineHead";
 
 const MapSection = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const mobileCoordinates = "18.772928, 73.749446";
 
   const iframeUrls = [
     "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d241908.8701447798!2d73.66354330837771!3d18.671798195730528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3bc2c134e6c4ff8f%3A0xa810745cf9310798!2sPune%20International%20Airport%2C%20New%20Airport%20Rd%2C%20Pune%20International%20Airport%20Area%2C%20Lohegaon%2C%20Pune%2C%20Maharashtra%20411032!3m2!1d18.579342999999998!2d73.9089168!4m5!1s0x3bc2b5003d5f6463%3A0xc09f39fd586cb233!2sQPFX%2B4V6%20Ksh%20infra%20park%206%20%2Cshinde%2Cchakan%2C%20Shinde%2C%20Maharashtra%20410507!3m2!1d18.7727985!2d73.7496338!5e0!3m2!1sen!2sin!4v1751187789710!5m2!1sen!2sin",
@@ -103,6 +104,14 @@ const MapSection = () => {
       {/* Mobile view with slider */}
       <div className="sm:hidden h-fit relative mx-[5%]">
         <LineHead heading="Location & Connectivity Advantage" />
+        <div className="mt-[0px] pb-[16px]">
+          <span className="text-[16px] fpt-600 text-[#092241]">
+            View on Map:
+          </span>{" "}
+          <span className="text-sm font-medium text-[#E4222E]">
+            {mobileCoordinates}
+          </span>
+        </div>
         <MapSlider
           iframeUrls={iframeUrls}
           onSelect={(index) => setSelectedIndex(index)}
