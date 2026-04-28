@@ -180,13 +180,22 @@ const MapSection = () => {
       {/* Mobile view with slider */}
       <div className="sm:hidden h-fit relative mx-[5%]">
         <LineHead heading="Location & Connectivity Advantage" />
-        <div className="mt-[0px] pb-[16px]">
+        <div className="mt-[0px] mb-[16px] flex flex-wrap items-center gap-2">
           <span className="text-[16px] fpt-600 text-[#092241]">
             View on Map:
-          </span>{" "}
-          <span className="text-sm font-medium text-[#E4222E]">
-            {mobileCoordinates}
           </span>
+          <a
+            target="_blank"
+            href="https://www.google.com/maps/place/KSH+Infra+Chakan+Industrial+Park+3/@18.7805491,73.7975716,15.15z/data=!4m6!3m5!1s0x3bc2b501e48b0589:0x4515b5fdacda6de4!8m2!3d18.7870954!4d73.7935248!16s%2Fg%2F11s4szhnh9?hl=en&entry=ttu&g_ep=EgoyMDI2MDQxOS4wIKXMDSoASAFQAw%3D%3D"
+            className="flex gap-2 items-center"
+          >
+            <span className="text-[14px] font-medium text-[#E4222E] underline underline-offset-2">
+              {mobileCoordinates}
+            </span>
+            <span>
+              <img src="/buttonarrows/redarico.svg" className="w-7 h-7" />
+            </span>
+          </a>
         </div>
         <MapSlider
           iframeUrls={iframeUrls}
