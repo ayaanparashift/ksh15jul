@@ -29,6 +29,8 @@ const staticItem = {
   title: "View on Map",
   value: "18.781965, 73.795441",
   icon: "/ParkPage/mapicons/road.svg",
+  mapUrl:
+    "https://www.google.com/maps/place/KSH+Infra+Chakan+Industrial+Park+3/@18.7805491,73.7975716,15.15z/data=!4m6!3m5!1s0x3bc2b501e48b0589:0x4515b5fdacda6de4!8m2!3d18.7870954!4d73.7935248!16s%2Fg%2F11s4szhnh9?hl=en&entry=ttu&g_ep=EgoyMDI2MDQxOS4wIKXMDSoASAFQAw%3D%3D",
 };
 
 const MapCard = ({ activeIndex, onSelectAirport }) => (
