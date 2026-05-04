@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import ParkCertificateEnquireForm from "./ParkCertificateEnquireForm";
+import CertDownloadModal from "./CertDownloadModal";
 
 const ParkInfoBase = ({
   stats,
@@ -13,26 +14,25 @@ const ParkInfoBase = ({
   valueColClassName = "border-r w-1/2 md:w-[60%] border-[#B0B0B0] h-[60px] xl:h-[100px] flex items-center",
 }) => {
   const [showEnquire, setShowEnquire] = useState(false);
+  const [showCertModal, setShowCertModal] = useState(false);
   const pathname = usePathname();
   const sourceUrl = `https://www.kshinfra.com${pathname || ""}`;
 
-  const openEnquire = () => {
-    setShowEnquire(true);
-  };
+  const openEnquire = () => setShowEnquire(true);
+  const closeEnquire = () => setShowEnquire(false);
 
-  const closeEnquire = () => {
-    setShowEnquire(false);
-  };
+  const openCertModal = () => setShowCertModal(true);
+  const closeCertModal = () => setShowCertModal(false);
 
   useEffect(() => {
-    document.body.style.overflow = showEnquire ? "hidden" : "auto";
+    const anyOpen = showEnquire || showCertModal;
+    document.body.style.overflow = anyOpen ? "hidden" : "auto";
     document.body.style.overflowX = "hidden";
-
     return () => {
       document.body.style.overflow = "auto";
       document.body.style.overflowX = "hidden";
     };
-  }, [showEnquire]);
+  }, [showEnquire, showCertModal]);
 
   return (
     <>
@@ -65,21 +65,23 @@ const ParkInfoBase = ({
                 <p className="fsans-600 text-[#00000050] text-[16px]">{note}</p>
               </div>
             ) : null}
-            {/* <div className="lg:pt-10">
-              <motion.button
-                onClick={openEnquire}
-                className="bg-[#E30613] max-w-fit h-fit flex items-center text-base fsans-600 text-white px-[21px] py-[14px] gap-[10px] rounded-3xl group"
-              >
-                <p className="text-left flex items-center">
-                  Read Our Environmental Certificate
-                </p>
-                <img
-                  className="h-[24px] w-[24px] group-hover:-rotate-90 duration-300 transition-transform"
-                  src="/downarrow.svg"
-                  alt="Arrow"
-                />
-              </motion.button>
-            </div> */}
+
+            {/* Certification Download CTA — shown only on ksh-hosur-i */}
+            {pathname.includes("ksh-hosur-i") ? (
+              <div className="pt-4">
+                <button
+                  onClick={openCertModal}
+                  className="bg-[#E30613] max-w-fit h-[50px] flex items-center text-base fsans-600 text-white px-[21px] py-[14px] gap-[10px] rounded-3xl group opacity-90 hover:opacity-100 transition-all duration-300"
+                >
+                  <p className="whitespace-nowrap">Download Certifications</p>
+                  <img
+                    src="/rightUpArrow.svg"
+                    alt=""
+                    className="h-5 w-5 rotate-45 group-hover:rotate-0 transition-transform duration-300"
+                  />
+                </button>
+              </div>
+            ) : null}
           </motion.div>
         </div>
       </div>
@@ -120,6 +122,9 @@ const ParkInfoBase = ({
           </>
         ) : null}
       </AnimatePresence>
+
+      {/* Certification Download Modal */}
+      <CertDownloadModal isOpen={showCertModal} onClose={closeCertModal} />
     </>
   );
 };
