@@ -2,7 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const OtpInput = ({ value, onChange, onSubmit, disabled = false, length = 6 }) => {
+const OtpInput = ({
+  value,
+  onChange,
+  onSubmit,
+  disabled = false,
+  length = 6,
+}) => {
   const [otp, setOtp] = useState(new Array(length).fill(""));
   const inputRefs = useRef([]);
 
@@ -35,12 +41,15 @@ const OtpInput = ({ value, onChange, onSubmit, disabled = false, length = 6 }) =
       onChange(newOtp.join(""));
 
       // Auto-submit if full
-      if (newOtp.every(d => d !== "")) {
+      if (newOtp.every((d) => d !== "")) {
         setTimeout(() => onSubmit?.(newOtp.join("")), 100);
       }
 
       // Focus last filled input
-      const lastFilledIndex = Math.min(index + pastedOtp.length - 1, length - 1);
+      const lastFilledIndex = Math.min(
+        index + pastedOtp.length - 1,
+        length - 1,
+      );
       inputRefs.current[lastFilledIndex]?.focus();
       return;
     }
@@ -51,7 +60,7 @@ const OtpInput = ({ value, onChange, onSubmit, disabled = false, length = 6 }) =
     onChange(newOtp.join(""));
 
     // Auto-submit if full
-    if (newOtp.every(d => d !== "")) {
+    if (newOtp.every((d) => d !== "")) {
       setTimeout(() => onSubmit?.(newOtp.join("")), 100);
     }
 
@@ -72,7 +81,7 @@ const OtpInput = ({ value, onChange, onSubmit, disabled = false, length = 6 }) =
   };
 
   return (
-    <div className="flex justify-center gap-2 sm:gap-3">
+    <div className="flex justify-between gap-2 sm:gap-3">
       {otp.map((digit, index) => (
         <input
           key={index}
@@ -86,7 +95,8 @@ const OtpInput = ({ value, onChange, onSubmit, disabled = false, length = 6 }) =
           onChange={(e) => handleChange(e, index)}
           onKeyDown={(e) => handleKeyDown(e, index)}
           disabled={disabled}
-          className="w-12 h-14 sm:w-14 sm:h-16 text-center text-xl sm:text-2xl font-bold border-2 border-[#146BD7] bg-[#263548] text-white rounded-lg focus:outline-none focus:border-[#F7E327] transition-colors disabled:opacity-50"
+          className=" text-center text-xl sm:text-2xl font-bold border-2 border-[#146BD7] bg-[#263548] text-white rounded-lg focus:outline-none focus:border-[#F7E327] transition-colors disabled:opacity-50"
+          style={{ width: "60px", height: "60px" }}
         />
       ))}
     </div>
@@ -94,3 +104,4 @@ const OtpInput = ({ value, onChange, onSubmit, disabled = false, length = 6 }) =
 };
 
 export default OtpInput;
+// w-12 h-14 sm:w-14 sm:h-16 text-center text-xl sm:text-2xl font-bold border-2 border-[#146BD7] bg-[#263548] text-white rounded-lg focus:outline-none focus:border-[#F7E327] transition-colors disabled:opacity-50

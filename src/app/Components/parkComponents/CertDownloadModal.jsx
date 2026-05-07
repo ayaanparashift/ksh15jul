@@ -1,13 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import CertDownloadFormStep1 from "./CertDownloadFormStep1";
 import CertDownloadFormStep2 from "./CertDownloadFormStep2";
 
 const CertDownloadModal = ({ isOpen, onClose }) => {
-  const [step, setStep] = useState("details"); // "details" | "otp"
+  const [step, setStep] = useState("details");
   const [userDetails, setUserDetails] = useState(null);
+  // Track if modal has ever been opened so we know when it's a fresh open vs reopen
+  const hasOpenedRef = useRef(false);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -18,16 +20,8 @@ const CertDownloadModal = ({ isOpen, onClose }) => {
     return () => window.removeEventListener("keydown", handleKey);
   }, [isOpen, onClose]);
 
-  // Only reset state after modal fully closes (triggered by X button via onClose)
-  useEffect(() => {
-    if (!isOpen) {
-      const t = setTimeout(() => {
-        setStep("details");
-        setUserDetails(null);
-      }, 350);
-      return () => clearTimeout(t);
-    }
-  }, [isOpen]);
+  // Never reset step/userDetails on close — state persists across open/close cycles.
+  // Only reset on page refresh (component unmount resets useState naturally).
 
   const handleOtpSent = (details) => {
     setUserDetails(details);
@@ -36,35 +30,37 @@ const CertDownloadModal = ({ isOpen, onClose }) => {
 
   const handleBack = () => {
     setStep("details");
-    // userDetails intentionally preserved so form fields repopulate
+  };
+
+  // Called by X button — closes modal but keeps step/userDetails intact
+  const handleClose = () => {
+    onClose();
   };
 
   return (
     <AnimatePresence>
       {isOpen ? (
         <>
-          {/* Backdrop */}
           <motion.div
             className="fixed inset-0 bg-black/70 z-[10000]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            onClick={onClose}
+            onClick={handleClose}
           />
 
-          {/* Modal container */}
           <motion.div
             className="fixed inset-0 z-[10001] flex items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            onClick={onClose}
+            onClick={handleClose}
           >
             <motion.div
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-[520px] max-h-[90vh] overflow-y-auto shadow-2xl"
+              className="w-full max-w-fit max-h-[90vh] overflow-y-auto shadow-2xl rounded-2xl"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.97 }}
@@ -80,7 +76,7 @@ const CertDownloadModal = ({ isOpen, onClose }) => {
                     transition={{ duration: 0.18 }}
                   >
                     <CertDownloadFormStep1
-                      onClose={onClose}
+                      onClose={handleClose}
                       onOtpSent={handleOtpSent}
                       savedDetails={userDetails}
                     />
@@ -95,7 +91,7 @@ const CertDownloadModal = ({ isOpen, onClose }) => {
                   >
                     <CertDownloadFormStep2
                       userDetails={userDetails}
-                      onClose={onClose}
+                      onClose={handleClose}
                       onBack={handleBack}
                     />
                   </motion.div>

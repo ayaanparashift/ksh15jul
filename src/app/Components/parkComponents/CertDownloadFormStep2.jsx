@@ -139,7 +139,7 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
 
   if (step === "success") {
     return (
-      <div className="bg-[#092241] flex flex-col gap-6 w-full px-6 sm:px-8 py-8">
+      <div className="bg-[#092241] flex flex-col gap-4 w-full p-5">
         <div className="flex justify-end">
           <button
             onClick={onClose}
@@ -178,9 +178,9 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
   }
 
   return (
-    <div className="bg-[#092241] flex flex-col gap-2 w-full px-6 sm:px-8 py-7">
+    <div className="bg-[#092241] flex flex-col w-full p-10 gap-5">
       {/* Header */}
-      <div className="flex justify-between items-start mb-3">
+      <div className="flex justify-between items-start">
         <div>
           <h2 className="fpt-600 text-[26px] sm:text-[28px] text-white leading-[105%] pb-[6px]">
             Verify OTP
@@ -196,13 +196,13 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
         </button>
       </div>
 
-      <p className="fsans-400 text-[14px] text-white/60 leading-[160%] mb-5">
+      <p className="fsans-400 text-[14px] text-white/60 leading-[160%]">
         Code sent to{" "}
         <span className="text-white fsans-600">{maskPhone(phone)}</span>
       </p>
 
       <form onSubmit={handleVerify} noValidate className="flex flex-col gap-5">
-        <div className="flex flex-col items-center gap-3">
+        <div className="flex flex-col gap-2">
           <OtpInput
             value={otp}
             onChange={(val) => {
@@ -253,13 +253,13 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
           ) : null}
         </div>
 
-        <div className="flex items-center gap-3 flex-wrap pt-1">
+        <div className="flex items-center justify-between gap-3 flex-wrap">
           <button
             type="submit"
             disabled={isVerifying}
-            className="bg-[#E30613] h-12 flex items-center text-[15px] fsans-600 text-white px-6 gap-3 rounded-3xl opacity-90 hover:opacity-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+            className="bg-[#E30613] h-10 flex items-center text-[14px] fsans-600 text-white px-3 gap-2 rounded-3xl opacity-90 hover:opacity-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
           >
-            <span className="whitespace-nowrap">
+            <span className="whitespace-nowrap text-[14px]">
               {isVerifying ? "Verifying…" : "Verify"}
             </span>
             <AnimatePresence mode="wait">

@@ -145,7 +145,7 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
   };
 
   return (
-    <div className="bg-[#092241] flex flex-col gap-6 w-full px-6 sm:px-8 py-7">
+    <div className="bg-[#092241] flex flex-col gap-6 w-full p-10">
       {/* Header */}
       <div className="flex justify-between items-start">
         <div>
@@ -179,7 +179,7 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
         aria-hidden="true"
       />
 
-      <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-4">
+      <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-6">
         {/* Name + Email */}
         <div className="flex flex-col sm:flex-row gap-4">
           <FormField error={errors.name}>
