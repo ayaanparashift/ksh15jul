@@ -24,12 +24,15 @@ function triggerDownload(url) {
 }
 
 const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
-  const { name, email, phone, organization, txId } = userDetails ?? {};
+  const { name, email, phone, organization } = userDetails ?? {};
+  const [txId, setTxId] = useState(userDetails?.txId ?? "");
 
   const [otp, setOtp] = useState("");
   const [otpError, setOtpError] = useState("");
   const [isVerifying, setIsVerifying] = useState(false);
-  const [step, setStep] = useState("otp");
+  const [isResending, setIsResending] = useState(false);
+  const [resendMsg, setResendMsg] = useState("");
+  const [step, setStep] = useState("otp"); // "otp" | "success"
   const [cooldown, setCooldown] = useState(COOLDOWN_SECONDS);
   const timerRef = useRef(null);
 
@@ -52,18 +55,36 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
     }, 1000);
   }
 
-  const handleResend = () => {
-    if (cooldown > 0) return;
-    onBack();
-  };
+  const handleResend = async () => {
+    if (cooldown > 0 || isResending) return;
+    setIsResending(true);
+    setResendMsg("");
+    setOtpError("");
 
-  const handleOtpSubmit = async (enteredOtp) => {
-    if (!enteredOtp || enteredOtp.length !== 6) {
-      setOtpError("Please enter a 6-digit OTP");
-      return;
+    try {
+      const response = await fetch("/api/cert-otp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ phone, name, email }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        setResendMsg("Failed to resend OTP. Please try again.");
+        return;
+      }
+
+      setTxId(data.txId);
+      setOtp("");
+      setResendMsg("New code sent!");
+      startCooldown();
+      setTimeout(() => setResendMsg(""), 3000);
+    } catch {
+      setResendMsg("Failed to resend OTP. Please try again.");
+    } finally {
+      setIsResending(false);
     }
-
-    await verifyOtp(enteredOtp);
   };
 
   const verifyOtp = async (enteredOtp) => {
@@ -87,49 +108,63 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
       const data = await response.json();
 
       if (!response.ok || !data.success) {
-        setOtpError(data.error || "OTP verification failed. Please try again.");
+        const msg = data.error || "OTP verification failed.";
+        if (msg.toLowerCase().includes("expir")) {
+          setOtpError("Code expired. Please resend.");
+        } else if (msg.toLowerCase().includes("invalid") || msg.toLowerCase().includes("wrong")) {
+          setOtpError("Invalid code. Please try again.");
+        } else {
+          setOtpError(msg);
+        }
         return;
       }
 
       triggerDownload(CERT_DOWNLOAD_URL);
       setStep("success");
-    } catch (err) {
-      console.error("OTP verify error:", err);
+    } catch {
       setOtpError("Failed to verify OTP. Please try again.");
     } finally {
       setIsVerifying(false);
     }
   };
 
-  const handleVerify = async (e) => {
-    e.preventDefault();
-
-    if (!otp || otp.length !== 6) {
-      setOtpError("Please enter a 6-digit OTP");
+  const handleOtpSubmit = async (enteredOtp) => {
+    if (!enteredOtp || enteredOtp.length !== 4) {
+      setOtpError("Please enter the 4-digit code");
       return;
     }
+    await verifyOtp(enteredOtp);
+  };
 
+  const handleVerify = async (e) => {
+    e.preventDefault();
+    if (!otp || otp.length !== 4) {
+      setOtpError("Please enter the 4-digit code");
+      return;
+    }
     await verifyOtp(otp);
   };
 
   if (step === "success") {
     return (
-      <div className="bg-[#092241] flex flex-col gap-[24px] w-full sm:w-[480px] px-6 sm:px-10 py-8">
+      <div className="bg-[#092241] flex flex-col gap-6 w-full px-6 sm:px-8 py-8">
         <div className="flex justify-end">
-          <button onClick={onClose} aria-label="Close" className="text-white/80 hover:text-white transition-colors">
-            <X size={32} strokeWidth={2} />
+          <button onClick={onClose} aria-label="Close" className="text-white/50 hover:text-white transition-colors">
+            <X size={28} strokeWidth={2} />
           </button>
         </div>
 
-        <div className="flex flex-col items-center text-center gap-5 py-2">
-          <CircleCheck size={64} color="#F7E327" strokeWidth={1.5} />
+        <div className="flex flex-col items-center text-center gap-5 pb-2">
+          <CircleCheck size={60} color="#F7E327" strokeWidth={1.5} />
+
           <div>
-            <h2 className="fpt-600 text-[22px] sm:text-[28px] text-white leading-[120%]">
+            <h2 className="fpt-600 text-[26px] sm:text-[28px] text-white leading-[120%] pb-[6px]">
               Download Started!
             </h2>
-            <div className="bg-[#F7E327] h-[6px] w-full mt-1" />
+            <div className="bg-[#F7E327] h-[6px] w-full" />
           </div>
-          <p className="fsans-400 text-[15px] text-white/70 leading-[160%] max-w-[340px]">
+
+          <p className="fsans-400 text-[14px] text-white/60 leading-[170%] max-w-[320px]">
             Your download has started. A copy has also been sent to{" "}
             <span className="text-white fsans-600">{email}</span>.
           </p>
@@ -137,22 +172,22 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
           <a
             href={CERT_DOWNLOAD_URL}
             download
-            className="fsans-600 text-[14px] text-[#F7E327] underline underline-offset-2 hover:text-white transition-colors"
+            className="fsans-600 text-[13px] text-[#F7E327] underline underline-offset-2 hover:text-white transition-colors"
           >
             If download didn&apos;t start, click here
           </a>
 
-          <div className="flex gap-3 flex-wrap justify-center mt-2">
+          <div className="flex gap-3 flex-wrap justify-center mt-1">
             <button
               onClick={() => triggerDownload(CERT_DOWNLOAD_URL)}
-              className="bg-[#E30613] flex items-center gap-[10px] text-base fsans-600 text-white px-[21px] py-[12px] rounded-3xl group opacity-90 hover:opacity-100 transition-all duration-300"
+              className="bg-[#E30613] h-11 flex items-center gap-2 text-[14px] fsans-600 text-white px-5 rounded-3xl opacity-90 hover:opacity-100 transition-all duration-300"
             >
-              Re-download
-              <img src="/rightUpArrow.svg" alt="" className="h-5 w-5 rotate-45 group-hover:rotate-0 transition-transform duration-300" />
+              Download Again
+              <img src="/rightUpArrow.svg" alt="" className="h-4 w-4 rotate-45 group-hover:rotate-0 transition-transform duration-300" />
             </button>
             <button
               onClick={onClose}
-              className="border border-white/30 flex items-center gap-[10px] text-base fsans-600 text-white px-[21px] py-[12px] rounded-3xl hover:border-white/60 transition-all duration-300"
+              className="border border-white/20 h-11 flex items-center text-[14px] fsans-600 text-white px-5 rounded-3xl hover:border-white/50 transition-all duration-300"
             >
               Close
             </button>
@@ -163,26 +198,27 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
   }
 
   return (
-    <div className="bg-[#092241] flex flex-col gap-[24px] w-full sm:w-[480px] px-6 sm:px-10 py-6">
+    <div className="bg-[#092241] flex flex-col gap-6 w-full px-6 sm:px-8 py-7">
+      {/* Header */}
       <div className="flex justify-between items-start">
         <div>
-          <h2 className="fpt-600 text-[22px] sm:text-[28px] text-white leading-[105%] pb-1">
+          <h2 className="fpt-600 text-[26px] sm:text-[28px] text-white leading-[105%] pb-[6px]">
             Verify OTP
           </h2>
-          <div className="bg-[#F7E327] h-[8px] w-full" />
+          <div className="bg-[#F7E327] h-[6px] w-full" />
         </div>
-        <button onClick={onClose} aria-label="Close" className="text-white/80 hover:text-white transition-colors ml-4 mt-1 flex-shrink-0">
-          <X size={32} strokeWidth={2} />
+        <button onClick={onClose} aria-label="Close" className="text-white/50 hover:text-white transition-colors ml-4 mt-1 flex-shrink-0">
+          <X size={28} strokeWidth={2} />
         </button>
       </div>
 
-      <p className="fsans-400 text-[15px] text-white/70 leading-[150%]">
-        OTP is shared on{" "}
+      <p className="fsans-400 text-[14px] text-white/60 leading-[160%] -mt-2">
+        Code sent to{" "}
         <span className="text-white fsans-600">{maskPhone(phone)}</span>
       </p>
 
-      <form onSubmit={handleVerify} noValidate className="flex flex-col gap-[20px]">
-        <div className="flex flex-col items-center gap-[16px]">
+      <form onSubmit={handleVerify} noValidate className="flex flex-col gap-5">
+        <div className="flex flex-col items-center gap-3">
           <OtpInput
             value={otp}
             onChange={(val) => {
@@ -191,44 +227,61 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
             }}
             onSubmit={handleOtpSubmit}
             disabled={isVerifying}
-            length={6}
+            length={4}
           />
-          {otpError ? (
-            <span className="text-sm text-red-400">{otpError}</span>
-          ) : null}
+          <AnimatePresence mode="wait">
+            {otpError ? (
+              <motion.span
+                key="err"
+                initial={{ opacity: 0, y: -4 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                className="text-sm text-red-400 fsans-400"
+              >
+                {otpError}
+              </motion.span>
+            ) : null}
+          </AnimatePresence>
         </div>
 
-        <div className="flex items-center gap-2">
+        {/* Resend row */}
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className="fsans-400 text-[13px] text-white/40">
+            Didn&apos;t get it?
+          </span>
           <button
             type="button"
             onClick={handleResend}
-            disabled={cooldown > 0}
-            className="fsans-600 text-[14px] text-white/60 hover:text-white disabled:text-white/30 disabled:cursor-not-allowed transition-colors"
+            disabled={cooldown > 0 || isResending}
+            className="fsans-600 text-[13px] text-[#146BD7] hover:text-white disabled:text-white/25 disabled:cursor-not-allowed transition-colors"
           >
-            Resend OTP
+            {isResending ? "Resending…" : "Resend OTP"}
           </button>
           {cooldown > 0 ? (
-            <span className="fsans-400 text-[13px] text-white/40">in {cooldown}s</span>
+            <span className="fsans-400 text-[12px] text-white/30">in {cooldown}s</span>
+          ) : null}
+          {resendMsg ? (
+            <span className="fsans-400 text-[12px] text-green-400">{resendMsg}</span>
           ) : null}
         </div>
 
-        <div className="flex items-center gap-3 flex-wrap">
+        <div className="flex items-center gap-3 flex-wrap pt-1">
           <button
             type="submit"
             disabled={isVerifying}
-            className="bg-[#E30613] max-w-fit h-[50px] flex items-center text-base fsans-600 text-white px-[21px] py-[14px] gap-[10px] rounded-3xl group opacity-90 hover:opacity-100 disabled:opacity-50 transition-all duration-300"
+            className="bg-[#E30613] h-12 flex items-center text-[15px] fsans-600 text-white px-6 gap-3 rounded-3xl opacity-90 hover:opacity-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
           >
-            <p className="whitespace-nowrap">
-              {isVerifying ? "Verifying..." : "Verify OTP"}
-            </p>
+            <span className="whitespace-nowrap">
+              {isVerifying ? "Verifying…" : "Verify & Download"}
+            </span>
             <AnimatePresence mode="wait">
               {isVerifying ? (
                 <motion.div key="spin" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                 </motion.div>
               ) : (
                 <motion.div key="arrow" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                  <img src="/rightUpArrow.svg" alt="" className="h-5 w-5 rotate-45 group-hover:rotate-0 transition-transform duration-300" />
+                  <img src="/rightUpArrow.svg" alt="" className="h-4 w-4 rotate-45 group-hover:rotate-0 transition-transform duration-300" />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -237,7 +290,7 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
           <button
             type="button"
             onClick={onBack}
-            className="fsans-600 text-[14px] text-white/50 hover:text-white transition-colors"
+            className="fsans-600 text-[13px] text-white/40 hover:text-white transition-colors"
           >
             &larr; Edit details
           </button>

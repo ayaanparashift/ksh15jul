@@ -9,7 +9,6 @@ const CertDownloadModal = ({ isOpen, onClose }) => {
   const [step, setStep] = useState("details"); // "details" | "otp"
   const [userDetails, setUserDetails] = useState(null);
 
-  // ESC key to close
   useEffect(() => {
     if (!isOpen) return;
     const handleKey = (e) => {
@@ -19,10 +18,8 @@ const CertDownloadModal = ({ isOpen, onClose }) => {
     return () => window.removeEventListener("keydown", handleKey);
   }, [isOpen, onClose]);
 
-  // Reset step when modal closes
   useEffect(() => {
     if (!isOpen) {
-      // Small delay so exit animation plays before reset
       const t = setTimeout(() => {
         setStep("details");
         setUserDetails(null);
@@ -44,15 +41,15 @@ const CertDownloadModal = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen ? (
         <>
-          {/* Overlay */}
-          {/* <motion.div
-            className="fixed inset-0 bg-black/70 z-[1000]"
+          {/* Backdrop */}
+          <motion.div
+            className="fixed inset-0 bg-black/70 z-[10000]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
             onClick={onClose}
-          /> */}
+          />
 
           {/* Modal container */}
           <motion.div
@@ -65,7 +62,7 @@ const CertDownloadModal = ({ isOpen, onClose }) => {
           >
             <motion.div
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-[600px] max-h-[90vh] overflow-y-auto"
+              className="w-full max-w-[520px] max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl"
               initial={{ opacity: 0, y: 28, scale: 0.96 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.97 }}
