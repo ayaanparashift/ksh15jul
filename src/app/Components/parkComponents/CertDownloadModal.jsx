@@ -18,6 +18,7 @@ const CertDownloadModal = ({ isOpen, onClose }) => {
     return () => window.removeEventListener("keydown", handleKey);
   }, [isOpen, onClose]);
 
+  // Only reset state after modal fully closes (triggered by X button via onClose)
   useEffect(() => {
     if (!isOpen) {
       const t = setTimeout(() => {
@@ -35,6 +36,7 @@ const CertDownloadModal = ({ isOpen, onClose }) => {
 
   const handleBack = () => {
     setStep("details");
+    // userDetails intentionally preserved so form fields repopulate
   };
 
   return (
@@ -62,33 +64,34 @@ const CertDownloadModal = ({ isOpen, onClose }) => {
           >
             <motion.div
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-[520px] max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl"
-              initial={{ opacity: 0, y: 28, scale: 0.96 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 20, scale: 0.97 }}
-              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              className="w-full max-w-[520px] max-h-[90vh] overflow-y-auto shadow-2xl"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.97 }}
+              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             >
               <AnimatePresence mode="wait">
                 {step === "details" ? (
                   <motion.div
                     key="step1"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.2 }}
+                    initial={{ opacity: 0, scale: 0.98 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.98 }}
+                    transition={{ duration: 0.18 }}
                   >
                     <CertDownloadFormStep1
                       onClose={onClose}
                       onOtpSent={handleOtpSent}
+                      savedDetails={userDetails}
                     />
                   </motion.div>
                 ) : (
                   <motion.div
                     key="step2"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 20 }}
-                    transition={{ duration: 0.2 }}
+                    initial={{ opacity: 0, scale: 0.98 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.98 }}
+                    transition={{ duration: 0.18 }}
                   >
                     <CertDownloadFormStep2
                       userDetails={userDetails}

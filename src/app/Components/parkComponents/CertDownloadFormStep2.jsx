@@ -5,22 +5,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CircleCheck, X } from "lucide-react";
 import OtpInput from "./OtpInput";
 
-const CERT_DOWNLOAD_URL = "/certifications/ksh-certifications.rar";
 const COOLDOWN_SECONDS = 30;
 
 function maskPhone(phone = "") {
   const digits = phone.replace(/\D/g, "");
   if (digits.length <= 4) return phone;
   return phone.replace(/\d(?=\d{4})/g, "*");
-}
-
-function triggerDownload(url) {
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "";
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
 }
 
 const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
@@ -111,7 +101,10 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
         const msg = data.error || "OTP verification failed.";
         if (msg.toLowerCase().includes("expir")) {
           setOtpError("Code expired. Please resend.");
-        } else if (msg.toLowerCase().includes("invalid") || msg.toLowerCase().includes("wrong")) {
+        } else if (
+          msg.toLowerCase().includes("invalid") ||
+          msg.toLowerCase().includes("wrong")
+        ) {
           setOtpError("Invalid code. Please try again.");
         } else {
           setOtpError(msg);
@@ -119,7 +112,6 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
         return;
       }
 
-      triggerDownload(CERT_DOWNLOAD_URL);
       setStep("success");
     } catch {
       setOtpError("Failed to verify OTP. Please try again.");
@@ -149,70 +141,62 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
     return (
       <div className="bg-[#092241] flex flex-col gap-6 w-full px-6 sm:px-8 py-8">
         <div className="flex justify-end">
-          <button onClick={onClose} aria-label="Close" className="text-white/50 hover:text-white transition-colors">
+          <button
+            onClick={onClose}
+            aria-label="Close"
+            className="text-[#E30613] hover:text-red-400 transition-colors"
+          >
             <X size={28} strokeWidth={2} />
           </button>
         </div>
 
-        <div className="flex flex-col items-center text-center gap-5 pb-2">
+        <div className="flex flex-col items-center text-center gap-5 pb-4">
           <CircleCheck size={60} color="#F7E327" strokeWidth={1.5} />
 
           <div>
             <h2 className="fpt-600 text-[26px] sm:text-[28px] text-white leading-[120%] pb-[6px]">
-              Download Started!
+              Thank You!
             </h2>
             <div className="bg-[#F7E327] h-[6px] w-full" />
           </div>
 
           <p className="fsans-400 text-[14px] text-white/60 leading-[170%] max-w-[320px]">
-            Your download has started. A copy has also been sent to{" "}
-            <span className="text-white fsans-600">{email}</span>.
+            Your certification documents have been sent to{" "}
+            <span className="text-white fsans-600">{email}</span>. Please check
+            your inbox.
           </p>
 
-          <a
-            href={CERT_DOWNLOAD_URL}
-            download
-            className="fsans-600 text-[13px] text-[#F7E327] underline underline-offset-2 hover:text-white transition-colors"
+          <button
+            onClick={onClose}
+            className="border border-white/20 h-11 flex items-center text-[14px] fsans-600 text-white px-5 rounded-3xl hover:border-white/50 transition-all duration-300 mt-1"
           >
-            If download didn&apos;t start, click here
-          </a>
-
-          <div className="flex gap-3 flex-wrap justify-center mt-1">
-            <button
-              onClick={() => triggerDownload(CERT_DOWNLOAD_URL)}
-              className="bg-[#E30613] h-11 flex items-center gap-2 text-[14px] fsans-600 text-white px-5 rounded-3xl opacity-90 hover:opacity-100 transition-all duration-300"
-            >
-              Download Again
-              <img src="/rightUpArrow.svg" alt="" className="h-4 w-4 rotate-45 group-hover:rotate-0 transition-transform duration-300" />
-            </button>
-            <button
-              onClick={onClose}
-              className="border border-white/20 h-11 flex items-center text-[14px] fsans-600 text-white px-5 rounded-3xl hover:border-white/50 transition-all duration-300"
-            >
-              Close
-            </button>
-          </div>
+            Close
+          </button>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="bg-[#092241] flex flex-col gap-6 w-full px-6 sm:px-8 py-7">
+    <div className="bg-[#092241] flex flex-col gap-2 w-full px-6 sm:px-8 py-7">
       {/* Header */}
-      <div className="flex justify-between items-start">
+      <div className="flex justify-between items-start mb-3">
         <div>
           <h2 className="fpt-600 text-[26px] sm:text-[28px] text-white leading-[105%] pb-[6px]">
             Verify OTP
           </h2>
           <div className="bg-[#F7E327] h-[6px] w-full" />
         </div>
-        <button onClick={onClose} aria-label="Close" className="text-white/50 hover:text-white transition-colors ml-4 mt-1 flex-shrink-0">
+        <button
+          onClick={onClose}
+          aria-label="Close"
+          className="text-[#E30613] hover:text-red-400 transition-colors ml-4 mt-1 flex-shrink-0"
+        >
           <X size={28} strokeWidth={2} />
         </button>
       </div>
 
-      <p className="fsans-400 text-[14px] text-white/60 leading-[160%] -mt-2">
+      <p className="fsans-400 text-[14px] text-white/60 leading-[160%] mb-5">
         Code sent to{" "}
         <span className="text-white fsans-600">{maskPhone(phone)}</span>
       </p>
@@ -258,10 +242,14 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
             {isResending ? "Resending…" : "Resend OTP"}
           </button>
           {cooldown > 0 ? (
-            <span className="fsans-400 text-[12px] text-white/30">in {cooldown}s</span>
+            <span className="fsans-400 text-[12px] text-white/30">
+              in {cooldown}s
+            </span>
           ) : null}
           {resendMsg ? (
-            <span className="fsans-400 text-[12px] text-green-400">{resendMsg}</span>
+            <span className="fsans-400 text-[12px] text-green-400">
+              {resendMsg}
+            </span>
           ) : null}
         </div>
 
@@ -272,16 +260,30 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
             className="bg-[#E30613] h-12 flex items-center text-[15px] fsans-600 text-white px-6 gap-3 rounded-3xl opacity-90 hover:opacity-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
           >
             <span className="whitespace-nowrap">
-              {isVerifying ? "Verifying…" : "Verify & Download"}
+              {isVerifying ? "Verifying…" : "Verify"}
             </span>
             <AnimatePresence mode="wait">
               {isVerifying ? (
-                <motion.div key="spin" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                <motion.div
+                  key="spin"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                 </motion.div>
               ) : (
-                <motion.div key="arrow" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                  <img src="/rightUpArrow.svg" alt="" className="h-4 w-4 rotate-45 group-hover:rotate-0 transition-transform duration-300" />
+                <motion.div
+                  key="arrow"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  <img
+                    src="/rightUpArrow.svg"
+                    alt=""
+                    className="h-4 w-4 rotate-45"
+                  />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -290,9 +292,14 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
           <button
             type="button"
             onClick={onBack}
-            className="fsans-600 text-[13px] text-white/40 hover:text-white transition-colors"
+            className="flex items-center gap-2 fsans-600 text-[13px] text-white/40 hover:text-white transition-colors"
           >
-            &larr; Edit details
+            <img
+              src="/rightUpArrow.svg"
+              alt=""
+              className="h-3 w-3 rotate-[225deg]"
+            />
+            Edit details
           </button>
         </div>
       </form>

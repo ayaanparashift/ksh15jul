@@ -24,9 +24,9 @@ function validateFields({ name, email, phone }) {
 }
 
 const inputBase =
-  "h-12 bg-[#0d2d4e] text-white border border-[#1f4b78] rounded-[10px] outline-none fsans-400 text-[15px] px-4 w-full placeholder-white/30 focus:border-[#146BD7] transition-colors duration-200";
+  "w-full bg-[#263548] text-white border-b border-[#146BD7] py-2 px-4 outline-none fsans-400 text-[15px] placeholder-white/30 transition-colors duration-200";
 
-const errorInputClass = "border-red-500 focus:border-red-500";
+const errorInputClass = "border-red-500";
 
 function FormField({ error, children }) {
   return (
@@ -39,11 +39,13 @@ function FormField({ error, children }) {
   );
 }
 
-const CertDownloadFormStep1 = ({ onClose, onOtpSent }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [organization, setOrganization] = useState("");
+const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
+  const [name, setName] = useState(savedDetails?.name || "");
+  const [email, setEmail] = useState(savedDetails?.email || "");
+  const [phone, setPhone] = useState(savedDetails?.phone || "");
+  const [organization, setOrganization] = useState(
+    savedDetails?.organization || "",
+  );
   const [honeypot, setHoneypot] = useState("");
   const [errors, setErrors] = useState({});
   const [isSending, setIsSending] = useState(false);
@@ -54,12 +56,20 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent }) => {
     if (fieldErrors[field]) {
       setErrors((prev) => ({ ...prev, [field]: fieldErrors[field] }));
     } else {
-      setErrors((prev) => { const c = { ...prev }; delete c[field]; return c; });
+      setErrors((prev) => {
+        const c = { ...prev };
+        delete c[field];
+        return c;
+      });
     }
   };
 
   const clearError = (field) => {
-    setErrors((prev) => { const c = { ...prev }; delete c[field]; return c; });
+    setErrors((prev) => {
+      const c = { ...prev };
+      delete c[field];
+      return c;
+    });
   };
 
   const handlePhoneChange = (e) => {
@@ -73,9 +83,16 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent }) => {
     // Real-time error: only show once they've typed enough to be clearly wrong
     if (cleaned.length > 3) {
       if (!PHONE_REGEX.test(cleaned)) {
-        setErrors((prev) => ({ ...prev, phone: "Enter a valid phone number (e.g. +919876543210)" }));
+        setErrors((prev) => ({
+          ...prev,
+          phone: "Enter a valid phone number (e.g. +919876543210)",
+        }));
       } else {
-        setErrors((prev) => { const c = { ...prev }; delete c.phone; return c; });
+        setErrors((prev) => {
+          const c = { ...prev };
+          delete c.phone;
+          return c;
+        });
       }
     } else {
       clearError("phone");
@@ -140,14 +157,14 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent }) => {
         <button
           onClick={onClose}
           aria-label="Close"
-          className="text-white/50 hover:text-white transition-colors ml-4 mt-1 flex-shrink-0"
+          className="text-[#E30613] hover:text-red-400 transition-colors ml-4 mt-1 flex-shrink-0"
         >
           <X size={28} strokeWidth={2} />
         </button>
       </div>
 
       <p className="fsans-400 text-[13px] text-white/50 leading-[160%] -mt-2">
-        We&apos;ll send a 6-digit OTP to your phone to verify your identity.
+        We&apos;ll send a 4-digit OTP to your phone to verify your identity.
       </p>
 
       {/* Honeypot */}
@@ -170,7 +187,10 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent }) => {
               type="text"
               placeholder="Full Name *"
               value={name}
-              onChange={(e) => { setName(e.target.value); clearError("name"); }}
+              onChange={(e) => {
+                setName(e.target.value);
+                clearError("name");
+              }}
               onBlur={() => validateField("name", { name, email, phone })}
               className={`${inputBase} ${errors.name ? errorInputClass : ""}`}
               disabled={isSending}
@@ -182,7 +202,10 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent }) => {
               type="email"
               placeholder="Email Address *"
               value={email}
-              onChange={(e) => { setEmail(e.target.value); clearError("email"); }}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                clearError("email");
+              }}
               onBlur={() => validateField("email", { name, email, phone })}
               className={`${inputBase} ${errors.email ? errorInputClass : ""}`}
               disabled={isSending}
@@ -229,12 +252,26 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent }) => {
             </span>
             <AnimatePresence mode="wait">
               {isSending ? (
-                <motion.div key="spin" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                <motion.div
+                  key="spin"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                 </motion.div>
               ) : (
-                <motion.div key="arrow" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                  <img src="/rightUpArrow.svg" alt="" className="h-4 w-4 rotate-45 group-hover:rotate-0 transition-transform duration-300" />
+                <motion.div
+                  key="arrow"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  <img
+                    src="/rightUpArrow.svg"
+                    alt=""
+                    className="h-4 w-4 rotate-45 group-hover:rotate-0 transition-transform duration-300"
+                  />
                 </motion.div>
               )}
             </AnimatePresence>
