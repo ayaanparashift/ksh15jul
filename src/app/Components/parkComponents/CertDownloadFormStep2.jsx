@@ -289,7 +289,7 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
             </AnimatePresence>
           </button>
 
-          <button
+          {/* <button
             type="button"
             onClick={onBack}
             className="flex items-center gap-2 fsans-600 text-[13px] text-white/40 hover:text-white transition-colors"
@@ -300,7 +300,7 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
               className="h-3 w-3 rotate-[225deg]"
             />
             Edit details
-          </button>
+          </button> */}
         </div>
       </form>
     </div>
