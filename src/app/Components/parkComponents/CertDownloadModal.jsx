@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import CertDownloadFormStep1 from "./CertDownloadFormStep1";
 import CertDownloadFormStep2 from "./CertDownloadFormStep2";
@@ -8,20 +8,15 @@ import CertDownloadFormStep2 from "./CertDownloadFormStep2";
 const CertDownloadModal = ({ isOpen, onClose }) => {
   const [step, setStep] = useState("details");
   const [userDetails, setUserDetails] = useState(null);
-  // Track if modal has ever been opened so we know when it's a fresh open vs reopen
-  const hasOpenedRef = useRef(false);
 
   useEffect(() => {
     if (!isOpen) return;
     const handleKey = (e) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") handleClose();
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [isOpen, onClose]);
-
-  // Never reset step/userDetails on close — state persists across open/close cycles.
-  // Only reset on page refresh (component unmount resets useState naturally).
+  }, [isOpen]);
 
   const handleOtpSent = (details) => {
     setUserDetails(details);
@@ -32,8 +27,9 @@ const CertDownloadModal = ({ isOpen, onClose }) => {
     setStep("details");
   };
 
-  // Called by X button — closes modal but keeps step/userDetails intact
   const handleClose = () => {
+    setStep("details");
+    setUserDetails(null);
     onClose();
   };
 
