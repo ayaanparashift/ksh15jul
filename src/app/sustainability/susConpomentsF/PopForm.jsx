@@ -777,7 +777,7 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PopForm = ({
   onClose,
   title = "Download ESG Report",
-  reportLink = "https://www.kshinfra.com/brochure/KSH_ESG_Report_v14.pdf",
+  reportLink = "https://www.kshinfra.com/brochure/KSH_ESG_Report.pdf",
 }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
