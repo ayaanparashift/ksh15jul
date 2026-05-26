@@ -773,7 +773,7 @@ import emailjs from "@emailjs/browser";
 
 const NAME_REGEX = /^[A-Za-z ]{2,}$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+//
 const PopForm = ({
   onClose,
   title = "Download ESG Report",
