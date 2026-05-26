@@ -12,7 +12,6 @@
 //   const plannedDev = 10;
 //   const puneDev = 4;
 //   const restDev = 3;
-//   const expansionMar = "Mumbai, Bengaluru, Chennai";
 
 //   const useAnimatedNumber = (finalValue) => {
 //     const count = useMotionValue(0);

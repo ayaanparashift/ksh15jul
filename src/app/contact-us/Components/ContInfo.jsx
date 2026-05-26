@@ -70,9 +70,11 @@ const ContInfo = () => {
           <p className="fsans-400 text-[18px] leading-[28px] text-[#5E5E5E]">
             {/* Birla Centurion 3rd Floor, Pandurang Budhkar Marg,
             <br /> Worli, Mumbai, Maharashtra 400030 Birla Centurion, Wing - B, */}
-            Cowrks @ Birla Centurion, <br />
-            3rd Floor, Unit # 52, <br /> Pandurang Budhkar Marg, <br /> Worli,
-            Mumbai 400 030
+            INNOV8, 8th Floor, Tower B,
+            <br /> Peninsula Business Park,
+            <br />
+            Lower Parel (W), Mumbai – 400013.
+            <br />
           </p>
         </div>
       </div>

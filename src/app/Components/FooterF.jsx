@@ -220,10 +220,11 @@ const FooterF = () => {
                   KSH INFRA, Mumbai
                 </p>
                 <p className="fsans-400 text-[15px]">
-                  Cowrks @ Birla Centurion,
-                  <br /> 3rd Floor, Unit # 52, <br /> Pandurang Budhkar Marg,
+                  INNOV8, 8th Floor, Tower B,
+                  <br /> Peninsula Business Park,
                   <br />
-                  Worli, Mumbai 400 030 <br />
+                  Lower Parel (W), Mumbai – 400013.
+                  <br />
                 </p>
               </div>
             </div>
@@ -246,5 +247,3 @@ const FooterF = () => {
 };
 
 export default FooterF;
-
-

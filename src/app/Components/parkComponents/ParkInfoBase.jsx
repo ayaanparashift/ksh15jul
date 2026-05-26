@@ -65,9 +65,8 @@ const ParkInfoBase = ({
                 <p className="fsans-600 text-[#00000050] text-[16px]">{note}</p>
               </div>
             ) : null}
-
-            {/* Certification Download CTA — shown only on ksh-hosur-i */}
-            {pathname.includes("ksh-hosur-i") ? (
+            Certification Download CTA — shown only on ksh-hosur-i
+            {/* {pathname.includes("ksh-hosur-i") ? (
               <div className="pt-4">
                 <button
                   onClick={openCertModal}
@@ -81,7 +80,7 @@ const ParkInfoBase = ({
                   />
                 </button>
               </div>
-            ) : null}
+            ) : null} */}
           </motion.div>
         </div>
       </div>

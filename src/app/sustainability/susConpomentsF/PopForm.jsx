@@ -777,7 +777,7 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PopForm = ({
   onClose,
   title = "Download ESG Report",
-  reportLink = "https://www.kshinfra.com/brochure/KSH_ESG_Report_v13.pdf",
+  reportLink = "https://www.kshinfra.com/brochure/KSH_ESG_Report_v14.pdf",
 }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -867,7 +867,7 @@ const PopForm = ({
       const res1 = await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_ESG_REPORT_NOTIFY,
-        notifyParams
+        notifyParams,
       );
       console.log("📧 Notify email sent:", res1);
 
@@ -875,7 +875,7 @@ const PopForm = ({
       const res2 = await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_ESG_REPORT_AUTORESPOND,
-        autoParams
+        autoParams,
       );
       console.log("📧 Auto-respond email sent:", res2);
 
