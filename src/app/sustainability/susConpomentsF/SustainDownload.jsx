@@ -201,9 +201,9 @@ import { AnimatePresence } from "framer-motion";
 import PopForm from "./PopForm";
 
 const ESG_REPORTS = {
-  2023: "https://kshweb.vercel.app/brochure/KSH_ESG_Report_2023.pdf",
+  2023: "https://www.kshinfra.com/brochure/KSH_ESG_Report_2023.pdf",
   "2024-2025":
-    "https://kshweb.vercel.app/brochure/KSH_ESG_Report_2024-2025.pdf",
+    "https://www.kshinfra.com/brochure/KSH_ESG_Report_2024-2025.pdf",
 };
 
 const SustainDownload = () => {

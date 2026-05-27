@@ -53,7 +53,7 @@
 //   // Construct blog URL for sharing.
 //   const baseUrl =
 //     process.env.NEXT_PUBLIC_SITE_URL || "https://www.kshinfra.com";
-//   const finalUrl = `https://kshweb.vercel.app/blogs/${params.slug}`;
+//   const finalUrl = `https://www.kshinfra.com/blogs/${params.slug}`;
 
 //   // Construct message for WhatsApp sharing.
 //   const whatsappMessage = `${blog.title.rendered} - ${finalUrl}`;
@@ -268,7 +268,7 @@
 //     blog.categories.map((cat) => categoryLabels[cat]).find(Boolean) ||
 //     "Uncategorized";
 
-//   const finalUrl = `https://kshweb.vercel.app/blogs/${params.slug}`;
+//   const finalUrl = `https://www.kshinfra.com/blogs/${params.slug}`;
 //   const whatsappMessage = `${blog.title.rendered} - ${finalUrl}`;
 
 //   return (
@@ -484,7 +484,7 @@
 
 //   const authorName = blog._embedded?.author?.[0]?.name || "Unknown Author";
 
-//   const finalUrl = `https://kshweb.vercel.app/blogs/${params.slug}`;
+//   const finalUrl = `https://www.kshinfra.com/blogs/${params.slug}`;
 //   const whatsappMessage = `${blog.title.rendered} - ${finalUrl}`;
 
 //   return (
@@ -743,7 +743,7 @@
 
 //   const authorName = blog._embedded?.author?.[0]?.name || "Unknown Author";
 
-//   const finalUrl = `https://kshweb.vercel.app/blogs/${params.slug}`;
+//   const finalUrl = `https://www.kshinfra.com/blogs/${params.slug}`;
 //   const whatsappMessage = `${blog.title.rendered} - ${finalUrl}`;
 
 //   return (
@@ -965,7 +965,7 @@
 
 //   const image = blog.featuredImage;
 
-//   const url = `https://kshweb.vercel.app/blogs/${params.slug}`;
+//   const url = `https://www.kshinfra.com/blogs/${params.slug}`;
 
 //   return {
 //     title,
@@ -1012,7 +1012,7 @@ import BlogContent from "./Components/BlogContent";
 async function fetchBlogData(slug) {
   const res = await fetch(
     `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?slug=${slug}&_embed`,
-    { next: { revalidate: 60 } }
+    { next: { revalidate: 60 } },
   );
 
   if (!res.ok) return null;
@@ -1027,7 +1027,7 @@ async function fetchBlogData(slug) {
     try {
       const mediaRes = await fetch(
         `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/media/${blog.featured_media}`,
-        { next: { revalidate: 60 } }
+        { next: { revalidate: 60 } },
       );
       if (mediaRes.ok) {
         const mediaData = await mediaRes.json();
@@ -1058,7 +1058,7 @@ export async function generateMetadata({ params }) {
     "Read the latest insights from KSH Infra.";
 
   const image = blog.featuredImage;
-  const url = `https://kshweb.vercel.app/blogs/${params.slug}`;
+  const url = `https://www.kshinfra.com/blogs/${params.slug}`;
 
   return {
     title,

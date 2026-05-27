@@ -7,7 +7,7 @@ import NewsContent from "./Components/NewsContent";
 async function fetchBlogData(slug) {
   const res = await fetch(
     `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?slug=${slug}&_embed`,
-    { next: { revalidate: 60 } }
+    { next: { revalidate: 60 } },
   );
 
   if (!res.ok) return null;
@@ -22,7 +22,7 @@ async function fetchBlogData(slug) {
     try {
       const mediaRes = await fetch(
         `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/media/${blog.featured_media}`,
-        { next: { revalidate: 60 } }
+        { next: { revalidate: 60 } },
       );
       if (mediaRes.ok) {
         const mediaData = await mediaRes.json();
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }) {
     "Read the latest updates from KSH Infra.";
 
   const image = blog.featuredImage;
-  const url = `https://kshweb.vercel.app/news/${slug}`;
+  const url = `https://www.kshinfra.com/news/${slug}`;
 
   return {
     title,

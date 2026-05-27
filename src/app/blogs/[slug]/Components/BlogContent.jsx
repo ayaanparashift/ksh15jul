@@ -61,7 +61,7 @@
 //     year: "numeric",
 //   });
 
-//   const finalUrl = `https://kshweb.vercel.app/blogs/${slug}`;
+//   const finalUrl = `https://www.kshinfra.com/blogs/${slug}`;
 //   const whatsappMessage = `${blog.title.rendered} - ${finalUrl}`;
 
 //   return (
@@ -272,7 +272,7 @@
 //   });
 
 //   // ✅ Use actual category param in URL
-//   const finalUrl = `https://kshweb.vercel.app/${category}/${slug}`;
+//   const finalUrl = `https://www.kshinfra.com/${category}/${slug}`;
 //   const whatsappMessage = `${blog.title.rendered} - ${finalUrl}`;
 
 //   return (
@@ -491,7 +491,7 @@ export default async function BlogContent({ slug }) {
     year: "numeric",
   });
 
-  const finalUrl = `https://kshweb.vercel.app/blogs/${slug}`;
+  const finalUrl = `https://www.kshinfra.com/blogs/${slug}`;
   const whatsappMessage = `${blog.title.rendered} - ${finalUrl}`;
 
   return (
