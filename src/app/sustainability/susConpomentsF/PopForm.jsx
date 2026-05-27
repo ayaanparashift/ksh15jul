@@ -938,44 +938,6 @@ const PopForm = ({
         {!submitted ? (
           <>
             <div className="flex flex-col gap-6">
-              {/* Name */}
-              <div>
-                <input
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  onFocus={() => handleFocus("name")}
-                  placeholder="Name"
-                  className={`w-full bg-[#263548] text-white border-b py-2 px-4 outline-none ${
-                    fieldError.field === "name"
-                      ? "border-red-400"
-                      : "border-[#146BD7]"
-                  }`}
-                />
-                {fieldError.field === "name" && (
-                  <p className="mt-1 text-sm text-red-400">{fieldError.text}</p>
-                )}
-              </div>
-
-              {/* Email */}
-              <div>
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  onFocus={() => handleFocus("email")}
-                  placeholder="Email"
-                  className={`w-full bg-[#263548] text-white border-b py-2 px-4 outline-none ${
-                    fieldError.field === "email"
-                      ? "border-red-400"
-                      : "border-[#146BD7]"
-                  }`}
-                />
-                {fieldError.field === "email" && (
-                  <p className="mt-1 text-sm text-red-400">{fieldError.text}</p>
-                )}
-              </div>
-
               {/* Year */}
               <div className="relative">
                 <select
@@ -1010,6 +972,44 @@ const PopForm = ({
                   </svg>
                 </div>
                 {fieldError.field === "year" && (
+                  <p className="mt-1 text-sm text-red-400">{fieldError.text}</p>
+                )}
+              </div>
+
+              {/* Name */}
+              <div>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  onFocus={() => handleFocus("name")}
+                  placeholder="Name"
+                  className={`w-full bg-[#263548] text-white border-b py-2 px-4 outline-none ${
+                    fieldError.field === "name"
+                      ? "border-red-400"
+                      : "border-[#146BD7]"
+                  }`}
+                />
+                {fieldError.field === "name" && (
+                  <p className="mt-1 text-sm text-red-400">{fieldError.text}</p>
+                )}
+              </div>
+
+              {/* Email */}
+              <div>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  onFocus={() => handleFocus("email")}
+                  placeholder="Email"
+                  className={`w-full bg-[#263548] text-white border-b py-2 px-4 outline-none ${
+                    fieldError.field === "email"
+                      ? "border-red-400"
+                      : "border-[#146BD7]"
+                  }`}
+                />
+                {fieldError.field === "email" && (
                   <p className="mt-1 text-sm text-red-400">{fieldError.text}</p>
                 )}
               </div>
