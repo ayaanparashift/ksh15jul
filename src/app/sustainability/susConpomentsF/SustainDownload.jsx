@@ -219,7 +219,7 @@ const SustainDownload = () => {
   return (
     <div>
       <div className="bgSusDown">
-        <div className="flex flex-col xl:flex-row fix12 justify-around gap-[50px] items-center md:py-10 py-14">
+        <div className="flex flex-col xl:flex-row fix12 justify-center gap-[50px] items-center md:py-10 py-14">
           <div className="flex flex-row gap-6 items-end">
             <div className="flex flex-col items-center gap-2">
               <img
