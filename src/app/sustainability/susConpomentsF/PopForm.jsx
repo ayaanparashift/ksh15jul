@@ -773,14 +773,18 @@ import emailjs from "@emailjs/browser";
 
 const NAME_REGEX = /^[A-Za-z ]{2,}$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//
+
 const PopForm = ({
   onClose,
   title = "Download ESG Report",
-  reportLink = "https://www.kshinfra.com/brochure/KSH_ESG_Report.pdf",
+  esgReports = {
+    2023: "/brochure/KSH_ESG_Report_2023.pdf",
+    "2024-2025": "/brochure/KSH_ESG_Report_2024-2025.pdf",
+  },
 }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [year, setYear] = useState("");
   const [sending, setSending] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -832,8 +836,15 @@ const PopForm = ({
       setFieldError({ field: "email", text: err });
       return;
     }
+    // ✅ Validate year
+    if (!year) {
+      setFieldError({ field: "year", text: "Please select a year." });
+      return;
+    }
 
-    console.log("📨 Submitting form with:", { name, email });
+    const reportLink = esgReports[year];
+
+    console.log("📨 Submitting form with:", { name, email, year });
     setSending(true);
     setErrorMessage("");
     setFieldError({ field: "", text: "" });
@@ -852,6 +863,7 @@ const PopForm = ({
         body: JSON.stringify({
           name,
           email,
+          year,
           timestamp: new Date().toISOString(),
         }),
       });
@@ -898,7 +910,7 @@ const PopForm = ({
     >
       <form
         onSubmit={handleSubmit}
-        className="lg:w-[620px] max-w-full min-h-[318px] w-full bg-[#092241] p-6 md:p-12 flex flex-col gap-0 sm:gap-8 relative overflow-hidden"
+        className="lg:w-[620px] max-w-full min-h-[318px] w-full bg-[#092241] p-6 md:p-12 flex flex-col gap-5 sm:gap-8 relative overflow-hidden"
         noValidate
       >
         <input
@@ -963,12 +975,50 @@ const PopForm = ({
                   <p className="mt-1 text-sm text-red-400">{fieldError.text}</p>
                 )}
               </div>
+
+              {/* Year */}
+              <div className="relative">
+                <select
+                  value={year}
+                  onChange={(e) => setYear(e.target.value)}
+                  onFocus={() => handleFocus("year")}
+                  className={`w-full bg-[#263548] text-white border-b py-2 px-4 outline-none appearance-none pr-8 fsans-400 text-[16px] ${
+                    fieldError.field === "year"
+                      ? "border-red-400"
+                      : "border-[#146BD7]"
+                  }`}
+                >
+                  <option value="" disabled>
+                    Select a Year
+                  </option>
+                  <option value="2023">2023</option>
+                  <option value="2024-2025">2024-2025</option>
+                </select>
+                <div className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-white">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                      fill="#ffffff"
+                    />
+                  </svg>
+                </div>
+                {fieldError.field === "year" && (
+                  <p className="mt-1 text-sm text-red-400">{fieldError.text}</p>
+                )}
+              </div>
             </div>
 
             <button
               type="submit"
               disabled={sending}
-              className="self-start bg-[#E30613] text-white mt-6 py-3 px-6 rounded-full flex items-center gap-2 disabled:opacity-50"
+              className="self-start bg-[#E30613] text-white xl:mt-6 py-3 px-6 rounded-full flex items-center gap-2 disabled:opacity-50"
             >
               {sending ? (
                 "Sending..."

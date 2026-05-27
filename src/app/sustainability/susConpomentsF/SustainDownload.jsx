@@ -197,8 +197,14 @@
 
 "use client";
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import PopForm from "./PopForm";
+
+const ESG_REPORTS = {
+  2023: "https://kshweb.vercel.app/brochure/KSH_ESG_Report_2023.pdf",
+  "2024-2025":
+    "https://kshweb.vercel.app/brochure/KSH_ESG_Report_2024-2025.pdf",
+};
 
 const SustainDownload = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -207,34 +213,34 @@ const SustainDownload = () => {
   const handleClosePopup = () => setShowPopup(false);
 
   useEffect(() => {
-    if (showPopup) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    document.body.style.overflow = showPopup ? "hidden" : "auto";
   }, [showPopup]);
 
   return (
     <div>
       <div className="bgSusDown">
-        <div className="flex flex-col md:flex-row w-[90%] mx-auto justify-center gap-[50px] md:h-[352px] items-center md:py-10 py-14">
-          <div
-          // initial={{ opacity: 0 }}
-          // whileInView={{ opacity: 1 }}
-          // transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
-          // viewport={{ amount: 0.1, once: true }}
-          >
-            <img src="Sustainability/downloadBook.png" alt="Download Book" />
+        <div className="flex flex-col xl:flex-row fix12 justify-around gap-[50px] items-center md:py-10 py-14">
+          <div className="flex flex-row gap-6 items-end">
+            <div className="flex flex-col items-center gap-2">
+              <img
+                src="/Sustainability/esg2023.jpg"
+                alt="ESG Report 2023"
+                className="h-[180px] md:h-[220px] w-auto object-contain"
+              />
+              <span className="text-white fsans-600 text-sm">2023</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <img
+                src="/Sustainability/esg2024-2025.jpg"
+                alt="ESG Report 2024-2025"
+                className="h-[180px] md:h-[220px] w-auto object-contain"
+              />
+              <span className="text-white fsans-600 text-sm">2024-2025</span>
+            </div>
           </div>
-          <div
-            // initial={{ opacity: 0 }}
-            // whileInView={{ opacity: 1 }}
-            // transition={{ duration: 1, ease: [0.7, 0, 0.4, 1], delay: 0.2 }}
-            // viewport={{ amount: 0.3, once: true }}
-            className="text-white flex flex-col gap-8 md:items-start items-center justify-center "
-          >
-            <h2 className="fsans-600 text-center text-xl">
-              View how we prioritize sustainability. Download our ESG Report
+          <div className="text-white flex flex-col gap-8 md:items-start items-center justify-center">
+            <h2 className="fsans-600 text-center md:text-left text-xl">
+              Download our ESG Report
             </h2>
             <button
               className="items-center fsans-600 text-[16px] leading-7 flex py-3 px-8 border gap-[10px] border-[#D7D7D7] rounded-[10px] hover:bg-white group transition-colors duration-[500ms] hover:text-black"
@@ -263,7 +269,9 @@ const SustainDownload = () => {
       </div>
 
       <AnimatePresence>
-        {showPopup && <PopForm onClose={handleClosePopup} />}
+        {showPopup && (
+          <PopForm onClose={handleClosePopup} esgReports={ESG_REPORTS} />
+        )}
       </AnimatePresence>
     </div>
   );
