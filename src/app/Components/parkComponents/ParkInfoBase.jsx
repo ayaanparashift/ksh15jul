@@ -66,7 +66,7 @@ const ParkInfoBase = ({
               </div>
             ) : null}
             Certification Download CTA — shown only on ksh-hosur-i
-            {/* {pathname.includes("ksh-hosur-i") ? (
+            {pathname.includes("ksh-hosur-i") ? (
               <div className="pt-4">
                 <button
                   onClick={openCertModal}
@@ -80,7 +80,7 @@ const ParkInfoBase = ({
                   />
                 </button>
               </div>
-            ) : null} */}
+            ) : null}
           </motion.div>
         </div>
       </div>

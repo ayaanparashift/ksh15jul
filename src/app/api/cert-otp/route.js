@@ -72,26 +72,6 @@ export async function POST(req) {
       );
     }
 
-    // Create user — MiniOrange requires the user to exist before challenge.
-    // If user already exists, the API returns a non-success status which we intentionally ignore.
-    const nameParts = name.trim().split(/\s+/);
-    const createRes = await fetch("https://login.xecurify.com/moas/api/admin/users/create", {
-      method: "POST",
-      headers: generateAuthHeaders(),
-      body: JSON.stringify({
-        customerKey: MINIORANGE_CUSTOMER_KEY,
-        username: emailKey,
-        email: emailKey,
-        firstName: nameParts[0] || "User",
-        lastName: nameParts.slice(1).join(" ") || "-",
-        phone: normalizedPhone,
-        phoneNumber: normalizedPhone,
-        mobileNumber: normalizedPhone,
-      }),
-    });
-    const createData = await createRes.json();
-    console.log("create user:", createData);
-
     const challengeRes = await fetch("https://login.xecurify.com/moas/api/auth/challenge", {
       method: "POST",
       headers: generateAuthHeaders(),
@@ -100,6 +80,7 @@ export async function POST(req) {
         username: emailKey,
         authType: "SMS",
         transactionName: "KSH Certificate Download",
+        phone: normalizedPhone,
       }),
     });
 
