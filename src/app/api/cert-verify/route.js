@@ -1,6 +1,7 @@
 import nodemailer from "nodemailer";
-import crypto from "crypto";
 import path from "path";
+import { initializeApp, getApps, cert } from "firebase-admin/app";
+import { getAuth } from "firebase-admin/auth";
 
 export const runtime = "nodejs";
 
@@ -9,57 +10,57 @@ const CERT_FILE_PATH = path.join(
   "public",
   "Goldberg_certificates.rar",
 );
-const MINIORANGE_CUSTOMER_KEY = process.env.MINIORANGE_CUSTOMER_KEY;
-const MINIORANGE_API_KEY = process.env.MINIORANGE_API_KEY;
 
-function generateAuthHeaders() {
-  const timestamp = Date.now().toString();
-  const hash = crypto
-    .createHash("sha512")
-    .update(MINIORANGE_CUSTOMER_KEY + timestamp + MINIORANGE_API_KEY)
-    .digest("hex");
-  return {
-    "Customer-Key": MINIORANGE_CUSTOMER_KEY,
-    Timestamp: timestamp,
-    Authorization: hash,
-    "Content-Type": "application/json",
-  };
+function getAdminAuth() {
+  if (!getApps().length) {
+    initializeApp({
+      credential: cert({
+        projectId: process.env.FIREBASE_PROJECT_ID,
+        clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+        privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+      }),
+    });
+  }
+  return getAuth();
 }
 
 export async function POST(req) {
   try {
-    const { txId, otp, name, email } = await req.json();
+    const { idToken, name, email, organization } = await req.json();
 
-    if (!txId || !otp) {
+    if (!idToken) {
       return Response.json(
-        { success: false, error: "Transaction ID and OTP are required" },
+        { success: false, error: "ID token is required" },
         { status: 400 },
       );
     }
 
-    // Verify OTP — Customer-Key header only, body is txId + token
-    const verifyRes = await fetch(
-      "https://login.xecurify.com/moas/api/auth/validate",
-      {
-        method: "POST",
-        headers: generateAuthHeaders(),
-        body: JSON.stringify({
-          txId,
-          token: otp.trim(),
-        }),
-      },
-    );
-
-    const verifyData = await verifyRes.json();
-    console.log("verify response:", verifyData);
-
-    if (verifyData.status !== "SUCCESS") {
-      const msg =
-        verifyData.message || verifyData.Message || "Invalid or expired OTP";
-      return Response.json({ success: false, error: msg }, { status: 400 });
+    if (
+      !process.env.FIREBASE_PROJECT_ID ||
+      !process.env.FIREBASE_CLIENT_EMAIL ||
+      !process.env.FIREBASE_PRIVATE_KEY
+    ) {
+      return Response.json(
+        { success: false, error: "Auth service not configured" },
+        { status: 500 },
+      );
     }
 
-    // Send download link to email
+    const adminAuth = getAdminAuth();
+
+    let decodedToken;
+    try {
+      decodedToken = await adminAuth.verifyIdToken(idToken);
+    } catch (err) {
+      console.error("Firebase token verify error:", err);
+      return Response.json(
+        { success: false, error: "Invalid or expired OTP. Please try again." },
+        { status: 400 },
+      );
+    }
+
+    console.log("Verified phone:", decodedToken.phone_number);
+
     if (
       email &&
       process.env.SMTP_HOST &&

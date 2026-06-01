@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
+import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import { auth } from "./firebaseClient";
 
 const NAME_REGEX = /^[a-zA-Z\s]{2,}$/;
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
-// Accepts optional leading +, then 6–15 digits
 const PHONE_REGEX = /^\+?[0-9]{6,15}$/;
 
 function validateFields({ name, email, phone }) {
@@ -50,6 +51,16 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
   const [errors, setErrors] = useState({});
   const [isSending, setIsSending] = useState(false);
   const [serverError, setServerError] = useState("");
+  const recaptchaRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      if (recaptchaRef.current) {
+        try { recaptchaRef.current.clear(); } catch {}
+        recaptchaRef.current = null;
+      }
+    };
+  }, []);
 
   const validateField = (field, values) => {
     const fieldErrors = validateFields(values);
@@ -73,14 +84,12 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
   };
 
   const handlePhoneChange = (e) => {
-    // Allow + only at start, digits only otherwise, no spaces or dashes
     const raw = e.target.value;
     const cleaned = raw.startsWith("+")
       ? "+" + raw.slice(1).replace(/\D/g, "")
       : raw.replace(/\D/g, "");
     if (cleaned.replace(/\D/g, "").length > 15) return;
     setPhone(cleaned);
-    // Real-time error: only show once they've typed enough to be clearly wrong
     if (cleaned.length > 3) {
       if (!PHONE_REGEX.test(cleaned)) {
         setErrors((prev) => ({
@@ -112,33 +121,48 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
     setIsSending(true);
     setServerError("");
 
+    const rawPhone = phone.trim();
+    const normalizedPhone = rawPhone.startsWith("+")
+      ? rawPhone
+      : rawPhone.length === 10
+      ? `+91${rawPhone}`
+      : rawPhone;
+
     try {
-      const response = await fetch("/api/cert-otp", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          phone: phone.trim(),
-          name: name.trim(),
-          email: email.trim(),
-        }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok || !data.success) {
-        setServerError(data.error || "Failed to send OTP. Please try again.");
-        return;
+      // Set up invisible reCAPTCHA on a hidden container
+      if (!recaptchaRef.current) {
+        recaptchaRef.current = new RecaptchaVerifier(auth, "recaptcha-container", {
+          size: "invisible",
+        });
       }
+
+      const confirmationResult = await signInWithPhoneNumber(
+        auth,
+        normalizedPhone,
+        recaptchaRef.current,
+      );
 
       onOtpSent({
         name: name.trim(),
         email: email.trim(),
-        phone: phone.trim(),
+        phone: rawPhone,
         organization: organization.trim(),
-        txId: data.txId,
+        confirmationResult,
       });
-    } catch {
-      setServerError("Failed to send OTP. Please try again.");
+    } catch (err) {
+      console.error("Firebase phone auth error:", err);
+      // Reset reCAPTCHA so it can be retried
+      if (recaptchaRef.current) {
+        try { recaptchaRef.current.clear(); } catch {}
+        recaptchaRef.current = null;
+      }
+      if (err.code === "auth/invalid-phone-number") {
+        setServerError("Invalid phone number. Please use format +919876543210.");
+      } else if (err.code === "auth/too-many-requests") {
+        setServerError("Too many attempts. Please try again later.");
+      } else {
+        setServerError(`Failed to send OTP. (${err.code || err.message})`);
+      }
     } finally {
       setIsSending(false);
     }
@@ -146,6 +170,9 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
 
   return (
     <div className="bg-[#092241] flex flex-col gap-3 lg:gap-6 w-full p-5 lg:p-10">
+      {/* Hidden reCAPTCHA container */}
+      <div id="recaptcha-container" />
+
       {/* Header */}
       <div className="flex justify-between items-start">
         <div>
@@ -164,7 +191,7 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
       </div>
 
       <p className="fsans-400 text-[13px] text-white/50 leading-[160%] -mt-2">
-        We&apos;ll send a 4-digit OTP to your phone to verify your identity.
+        We&apos;ll send a 6-digit OTP to your phone to verify your identity.
       </p>
 
       {/* Honeypot */}
@@ -217,7 +244,7 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
           </FormField>
         </div>
 
-        {/* Phone — plain text, supports paste, any country format */}
+        {/* Phone */}
         <FormField error={errors.phone}>
           <input
             type="tel"

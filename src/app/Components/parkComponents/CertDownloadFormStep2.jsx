@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CircleCheck, X } from "lucide-react";
 import OtpInput from "./OtpInput";
+import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import { auth } from "./firebaseClient";
 
 const COOLDOWN_SECONDS = 30;
 
@@ -15,7 +17,9 @@ function maskPhone(phone = "") {
 
 const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
   const { name, email, phone, organization } = userDetails ?? {};
-  const [txId, setTxId] = useState(userDetails?.txId ?? "");
+  const [confirmationResult, setConfirmationResult] = useState(
+    userDetails?.confirmationResult ?? null,
+  );
 
   const [otp, setOtp] = useState("");
   const [otpError, setOtpError] = useState("");
@@ -25,10 +29,17 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
   const [step, setStep] = useState("otp"); // "otp" | "success"
   const [cooldown, setCooldown] = useState(COOLDOWN_SECONDS);
   const timerRef = useRef(null);
+  const recaptchaRef = useRef(null);
 
   useEffect(() => {
     startCooldown();
-    return () => clearInterval(timerRef.current);
+    return () => {
+      clearInterval(timerRef.current);
+      if (recaptchaRef.current) {
+        try { recaptchaRef.current.clear(); } catch {}
+        recaptchaRef.current = null;
+      }
+    };
   }, []);
 
   function startCooldown() {
@@ -51,26 +62,37 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
     setResendMsg("");
     setOtpError("");
 
+    const rawPhone = phone.trim();
+    const normalizedPhone = rawPhone.startsWith("+")
+      ? rawPhone
+      : rawPhone.length === 10
+      ? `+91${rawPhone}`
+      : rawPhone;
+
     try {
-      const response = await fetch("/api/cert-otp", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ phone, name, email }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok || !data.success) {
-        setResendMsg("Failed to resend OTP. Please try again.");
-        return;
+      if (!recaptchaRef.current) {
+        recaptchaRef.current = new RecaptchaVerifier(auth, "recaptcha-resend-container", {
+          size: "invisible",
+        });
       }
 
-      setTxId(data.txId);
+      const result = await signInWithPhoneNumber(
+        auth,
+        normalizedPhone,
+        recaptchaRef.current,
+      );
+
+      setConfirmationResult(result);
       setOtp("");
       setResendMsg("New code sent!");
       startCooldown();
       setTimeout(() => setResendMsg(""), 3000);
-    } catch {
+    } catch (err) {
+      console.error("Resend OTP error:", err);
+      if (recaptchaRef.current) {
+        try { recaptchaRef.current.clear(); } catch {}
+        recaptchaRef.current = null;
+      }
       setResendMsg("Failed to resend OTP. Please try again.");
     } finally {
       setIsResending(false);
@@ -78,21 +100,22 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
   };
 
   const verifyOtp = async (enteredOtp) => {
+    if (!confirmationResult) {
+      setOtpError("Session expired. Please go back and try again.");
+      return;
+    }
+
     setIsVerifying(true);
     setOtpError("");
 
     try {
+      const credential = await confirmationResult.confirm(enteredOtp);
+      const idToken = await credential.user.getIdToken();
+
       const response = await fetch("/api/cert-verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          txId,
-          phone,
-          otp: enteredOtp,
-          name,
-          email,
-          organization,
-        }),
+        body: JSON.stringify({ idToken, name, email, organization }),
       });
 
       const data = await response.json();
@@ -113,16 +136,24 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
       }
 
       setStep("success");
-    } catch {
-      setOtpError("Failed to verify OTP. Please try again.");
+    } catch (err) {
+      console.error("OTP verify error:", err);
+      if (
+        err.code === "auth/invalid-verification-code" ||
+        err.code === "auth/code-expired"
+      ) {
+        setOtpError("Invalid or expired code. Please try again.");
+      } else {
+        setOtpError("Failed to verify OTP. Please try again.");
+      }
     } finally {
       setIsVerifying(false);
     }
   };
 
   const handleOtpSubmit = async (enteredOtp) => {
-    if (!enteredOtp || enteredOtp.length !== 4) {
-      setOtpError("Please enter the 4-digit code");
+    if (!enteredOtp || enteredOtp.length !== 6) {
+      setOtpError("Please enter the 6-digit code");
       return;
     }
     await verifyOtp(enteredOtp);
@@ -130,8 +161,8 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
 
   const handleVerify = async (e) => {
     e.preventDefault();
-    if (!otp || otp.length !== 4) {
-      setOtpError("Please enter the 4-digit code");
+    if (!otp || otp.length !== 6) {
+      setOtpError("Please enter the 6-digit code");
       return;
     }
     await verifyOtp(otp);
@@ -179,6 +210,9 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
 
   return (
     <div className="bg-[#092241] flex flex-col w-full p-10 gap-5">
+      {/* Hidden reCAPTCHA container for resend */}
+      <div id="recaptcha-resend-container" />
+
       {/* Header */}
       <div className="flex justify-between items-start">
         <div>
@@ -211,7 +245,7 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
             }}
             onSubmit={handleOtpSubmit}
             disabled={isVerifying}
-            length={4}
+            length={6}
           />
           <AnimatePresence mode="wait">
             {otpError ? (
@@ -288,19 +322,6 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
               )}
             </AnimatePresence>
           </button>
-
-          {/* <button
-            type="button"
-            onClick={onBack}
-            className="flex items-center gap-2 fsans-600 text-[13px] text-white/40 hover:text-white transition-colors"
-          >
-            <img
-              src="/rightUpArrow.svg"
-              alt=""
-              className="h-3 w-3 rotate-[225deg]"
-            />
-            Edit details
-          </button> */}
         </div>
       </form>
     </div>
