@@ -8,7 +8,16 @@ import { auth } from "./firebaseClient";
 
 const NAME_REGEX = /^[a-zA-Z\s]{2,}$/;
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
-const PHONE_REGEX = /^\+?[0-9]{6,15}$/;
+
+// Normalize any Indian number format to +91XXXXXXXXXX
+// Accepts: 9876543210 / 09876543210 / 919876543210 / +919876543210 / spaces allowed
+function normalizeIndianPhone(raw) {
+  const digits = raw.replace(/\D/g, "");
+  if (digits.length === 10) return `+91${digits}`;
+  if (digits.length === 11 && digits.startsWith("0")) return `+91${digits.slice(1)}`;
+  if (digits.length === 12 && digits.startsWith("91")) return `+${digits}`;
+  return null; // invalid
+}
 
 function validateFields({ name, email, phone }) {
   const errs = {};
@@ -18,8 +27,8 @@ function validateFields({ name, email, phone }) {
   if (!EMAIL_REGEX.test(email.trim())) {
     errs.email = "Please enter a valid email address";
   }
-  if (!PHONE_REGEX.test(phone.trim())) {
-    errs.phone = "Enter a valid phone number (e.g. +919876543210)";
+  if (!normalizeIndianPhone(phone)) {
+    errs.phone = "Enter a valid 10-digit Indian mobile number";
   }
   return errs;
 }
@@ -85,16 +94,15 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
 
   const handlePhoneChange = (e) => {
     const raw = e.target.value;
-    const cleaned = raw.startsWith("+")
-      ? "+" + raw.slice(1).replace(/\D/g, "")
-      : raw.replace(/\D/g, "");
-    if (cleaned.replace(/\D/g, "").length > 15) return;
+    // Allow digits and spaces only
+    const cleaned = raw.replace(/[^\d\s]/g, "");
+    if (cleaned.replace(/\D/g, "").length > 12) return;
     setPhone(cleaned);
-    if (cleaned.length > 3) {
-      if (!PHONE_REGEX.test(cleaned)) {
+    if (cleaned.replace(/\D/g, "").length >= 10) {
+      if (!normalizeIndianPhone(cleaned)) {
         setErrors((prev) => ({
           ...prev,
-          phone: "Enter a valid phone number (e.g. +919876543210)",
+          phone: "Enter a valid 10-digit Indian mobile number",
         }));
       } else {
         setErrors((prev) => {
@@ -121,12 +129,7 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
     setIsSending(true);
     setServerError("");
 
-    const rawPhone = phone.trim();
-    const normalizedPhone = rawPhone.startsWith("+")
-      ? rawPhone
-      : rawPhone.length === 10
-      ? `+91${rawPhone}`
-      : rawPhone;
+    const normalizedPhone = normalizeIndianPhone(phone);
 
     try {
       // Set up invisible reCAPTCHA on a hidden container
@@ -145,7 +148,7 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
       onOtpSent({
         name: name.trim(),
         email: email.trim(),
-        phone: rawPhone,
+        phone: normalizedPhone,
         organization: organization.trim(),
         confirmationResult,
       });
@@ -248,7 +251,7 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
         <FormField error={errors.phone}>
           <input
             type="tel"
-            placeholder="Phone Number * (e.g. +919876543210)"
+            placeholder="Mobile Number * (e.g. 98765 43210)"
             value={phone}
             onChange={handlePhoneChange}
             onBlur={() => validateField("phone", { name, email, phone })}
