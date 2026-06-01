@@ -23,7 +23,11 @@
 # misc
 .DS_Store
 *.pem
-*.zip  
+*.zip
+*firebase-adminsdk*.json
+*serviceAccount*.json
+*.env.local
+*.env.production
 
 # debug
 npm-debug.log*
