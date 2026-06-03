@@ -62,20 +62,16 @@ export async function POST(req) {
     const expiresAt = Date.now() + OTP_TTL_MS;
     const token = signOtpToken(email, otp, expiresAt);
 
-    // Respond immediately so the UI doesn't wait on SMTP
-    const response = Response.json({ success: true, token });
-
-    // Send OTP email in background — SMTP latency doesn't block the client
-    getTransporter().sendMail({
+    await getTransporter().sendMail({
       from: `"KSH INFRA" <${process.env.SMTP_USER}>`,
       to: email,
       subject: "Your Verification Code – KSH INFRA",
       text: `Hi ${name},\n\nYour one-time verification code is: ${otp}\n\nValid for 5 minutes.\n\nRegards,\nKSH INFRA`,
-    }).catch((err) => console.error("cert-otp sendMail error:", err));
+    });
 
-    return response;
+    return Response.json({ success: true, token });
   } catch (err) {
-    console.error("cert-otp error:", err);
-    return Response.json({ success: false, error: "Failed to send OTP." }, { status: 500 });
+    console.error("cert-otp error:", err.message || err);
+    return Response.json({ success: false, error: "Failed to send OTP. Please try again." }, { status: 500 });
   }
 }
