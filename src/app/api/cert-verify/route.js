@@ -1,9 +1,10 @@
 import nodemailer from "nodemailer";
 import path from "path";
-import { initializeApp, getApps, cert } from "firebase-admin/app";
-import { getAuth } from "firebase-admin/auth";
+import { createHmac } from "crypto";
 
 export const runtime = "nodejs";
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const CERT_FILE_PATH = path.join(
   process.cwd(),
@@ -11,85 +12,85 @@ const CERT_FILE_PATH = path.join(
   "Goldberg_certificates.rar",
 );
 
-function getAdminAuth() {
-  if (!getApps().length) {
-    initializeApp({
-      credential: cert({
-        projectId: process.env.FIREBASE_PROJECT_ID,
-        clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-        privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
-      }),
-    });
+function verifyOtpToken(token, email, otp) {
+  try {
+    const secret = process.env.OTP_SECRET || process.env.SMTP_PASS || "ksh-otp-secret";
+    const [payloadB64, sig] = token.split(".");
+    if (!payloadB64 || !sig) return { valid: false };
+
+    const payload = Buffer.from(payloadB64, "base64url").toString();
+    const [tokenEmail, tokenOtp, expiresAt] = payload.split("|");
+
+    // Verify HMAC
+    const expectedSig = createHmac("sha256", secret).update(payload).digest("hex");
+    if (expectedSig !== sig) return { valid: false, error: "Invalid token." };
+
+    // Check expiry
+    if (Date.now() > Number(expiresAt)) return { valid: false, error: "OTP has expired. Please request a new one." };
+
+    // Check email match
+    if (tokenEmail !== email.toLowerCase()) return { valid: false, error: "Token mismatch." };
+
+    // Check OTP
+    if (tokenOtp !== otp) return { valid: false, error: "Incorrect OTP. Please try again." };
+
+    return { valid: true };
+  } catch {
+    return { valid: false, error: "Invalid token." };
   }
-  return getAuth();
 }
 
 export async function POST(req) {
   try {
-    const { idToken, name, email, organization } = await req.json();
+    const body = await req.json();
 
-    if (!idToken) {
-      return Response.json(
-        { success: false, error: "ID token is required" },
-        { status: 400 },
-      );
+    if (body.website) {
+      return Response.json({ success: true }); // honeypot — silent drop
     }
 
-    if (
-      !process.env.FIREBASE_PROJECT_ID ||
-      !process.env.FIREBASE_CLIENT_EMAIL ||
-      !process.env.FIREBASE_PRIVATE_KEY
-    ) {
-      return Response.json(
-        { success: false, error: "Auth service not configured" },
-        { status: 500 },
-      );
+    const email = (body?.email || "").trim().toLowerCase();
+    const otp = (body?.otp || "").trim();
+    const token = (body?.token || "").trim();
+    const name = (body?.name || "").trim();
+    const organization = (body?.organization || "").trim();
+
+    if (!EMAIL_REGEX.test(email)) {
+      return Response.json({ success: false, error: "Invalid email" }, { status: 400 });
+    }
+    if (!/^\d{4}$/.test(otp)) {
+      return Response.json({ success: false, error: "Invalid OTP format" }, { status: 400 });
+    }
+    if (!token) {
+      return Response.json({ success: false, error: "Session expired. Please request a new OTP." }, { status: 400 });
     }
 
-    const adminAuth = getAdminAuth();
+    const result = verifyOtpToken(token, email, otp);
+    if (!result.valid) {
+      return Response.json({ success: false, error: result.error || "Invalid OTP." }, { status: 400 });
+    }
 
-    let decodedToken;
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT || 587),
+      secure: false,
+      auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+    });
+
     try {
-      decodedToken = await adminAuth.verifyIdToken(idToken);
-    } catch (err) {
-      console.error("Firebase token verify error:", err);
-      return Response.json(
-        { success: false, error: "Invalid or expired OTP. Please try again." },
-        { status: 400 },
-      );
-    }
-
-    console.log("Verified phone:", decodedToken.phone_number);
-
-    if (
-      email &&
-      process.env.SMTP_HOST &&
-      process.env.SMTP_USER &&
-      process.env.SMTP_PASS
-    ) {
-      const transporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST,
-        port: Number(process.env.SMTP_PORT || 587),
-        secure: false,
-        auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+      await transporter.sendMail({
+        from: `"KSH INFRA" <${process.env.SMTP_USER}>`,
+        to: email,
+        subject: "KSH INFRA – Certification Documents",
+        text: `Hi ${name || "there"},\n\nThank you for your interest in KSH INFRA's certification for Hosur Park documents. Please find the files in the attachments.\n\nRegards,\nKSH INFRA`,
+        attachments: [
+          {
+            filename: "Goldberg_certificates.rar",
+            path: CERT_FILE_PATH,
+          },
+        ],
       });
-
-      try {
-        await transporter.sendMail({
-          from: `"KSH INFRA" <${process.env.SMTP_USER}>`,
-          to: email,
-          subject: "KSH INFRA – Certification Documents",
-          text: `Hi ${name || "there"},\n\nThank you for your interest in KSH INFRA's certification for Hosur Park documents. Please find the files in the attachments.\n\nRegards,\nKSH INFRA`,
-          attachments: [
-            {
-              filename: "Goldberg_certificates.rar",
-              path: CERT_FILE_PATH,
-            },
-          ],
-        });
-      } catch (emailError) {
-        console.error("cert-verify email error:", emailError);
-      }
+    } catch (emailErr) {
+      console.error("cert-verify certificate email error:", emailErr);
     }
 
     return Response.json({ success: true });

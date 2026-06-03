@@ -4,22 +4,19 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CircleCheck, X } from "lucide-react";
 import OtpInput from "./OtpInput";
-import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
-import { auth } from "./firebaseClient";
 
-const COOLDOWN_SECONDS = 30;
+const COOLDOWN_SECONDS = 60;
 
-function maskPhone(phone = "") {
-  const digits = phone.replace(/\D/g, "");
-  if (digits.length <= 4) return phone;
-  return phone.replace(/\d(?=\d{4})/g, "*");
+function maskEmail(email = "") {
+  const [local, domain] = email.split("@");
+  if (!domain) return email;
+  const visible = local.slice(0, 2);
+  return `${visible}${"*".repeat(Math.max(1, local.length - 2))}@${domain}`;
 }
 
 const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
-  const { name, email, phone, organization } = userDetails ?? {};
-  const [confirmationResult, setConfirmationResult] = useState(
-    userDetails?.confirmationResult ?? null,
-  );
+  const { name, email, organization } = userDetails ?? {};
+  const [otpToken, setOtpToken] = useState(userDetails?.otpToken || "");
 
   const [otp, setOtp] = useState("");
   const [otpError, setOtpError] = useState("");
@@ -29,17 +26,10 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
   const [step, setStep] = useState("otp"); // "otp" | "success"
   const [cooldown, setCooldown] = useState(COOLDOWN_SECONDS);
   const timerRef = useRef(null);
-  const recaptchaRef = useRef(null);
 
   useEffect(() => {
     startCooldown();
-    return () => {
-      clearInterval(timerRef.current);
-      if (recaptchaRef.current) {
-        try { recaptchaRef.current.clear(); } catch {}
-        recaptchaRef.current = null;
-      }
-    };
+    return () => clearInterval(timerRef.current);
   }, []);
 
   function startCooldown() {
@@ -62,98 +52,57 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
     setResendMsg("");
     setOtpError("");
 
-    const rawPhone = phone.trim();
-    const normalizedPhone = rawPhone.startsWith("+")
-      ? rawPhone
-      : rawPhone.length === 10
-      ? `+91${rawPhone}`
-      : rawPhone;
-
     try {
-      if (!recaptchaRef.current) {
-        recaptchaRef.current = new RecaptchaVerifier(auth, "recaptcha-resend-container", {
-          size: "invisible",
-        });
+      const res = await fetch("/api/cert-otp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, organization, website: "" }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        setResendMsg(data.error || "Failed to resend. Please try again.");
+      } else {
+        setOtpToken(data.token);
+        setOtp("");
+        setResendMsg("New code sent!");
+        startCooldown();
+        setTimeout(() => setResendMsg(""), 3000);
       }
-
-      const result = await signInWithPhoneNumber(
-        auth,
-        normalizedPhone,
-        recaptchaRef.current,
-      );
-
-      setConfirmationResult(result);
-      setOtp("");
-      setResendMsg("New code sent!");
-      startCooldown();
-      setTimeout(() => setResendMsg(""), 3000);
-    } catch (err) {
-      console.error("Resend OTP error:", err);
-      if (recaptchaRef.current) {
-        try { recaptchaRef.current.clear(); } catch {}
-        recaptchaRef.current = null;
-      }
-      setResendMsg("Failed to resend OTP. Please try again.");
+    } catch {
+      setResendMsg("Failed to resend. Please check your connection.");
     } finally {
       setIsResending(false);
     }
   };
 
   const verifyOtp = async (enteredOtp) => {
-    if (!confirmationResult) {
-      setOtpError("Session expired. Please go back and try again.");
-      return;
-    }
-
     setIsVerifying(true);
     setOtpError("");
 
     try {
-      const credential = await confirmationResult.confirm(enteredOtp);
-      const idToken = await credential.user.getIdToken();
-
-      const response = await fetch("/api/cert-verify", {
+      const res = await fetch("/api/cert-verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ idToken, name, email, organization }),
+        body: JSON.stringify({ otp: enteredOtp, token: otpToken, name, email, organization, website: "" }),
       });
+      const data = await res.json();
 
-      const data = await response.json();
-
-      if (!response.ok || !data.success) {
-        const msg = data.error || "OTP verification failed.";
-        if (msg.toLowerCase().includes("expir")) {
-          setOtpError("Code expired. Please resend.");
-        } else if (
-          msg.toLowerCase().includes("invalid") ||
-          msg.toLowerCase().includes("wrong")
-        ) {
-          setOtpError("Invalid code. Please try again.");
-        } else {
-          setOtpError(msg);
-        }
+      if (!res.ok || !data.success) {
+        setOtpError(data.error || "OTP verification failed.");
         return;
       }
 
       setStep("success");
-    } catch (err) {
-      console.error("OTP verify error:", err);
-      if (
-        err.code === "auth/invalid-verification-code" ||
-        err.code === "auth/code-expired"
-      ) {
-        setOtpError("Invalid or expired code. Please try again.");
-      } else {
-        setOtpError("Failed to verify OTP. Please try again.");
-      }
+    } catch {
+      setOtpError("Failed to verify OTP. Please try again.");
     } finally {
       setIsVerifying(false);
     }
   };
 
   const handleOtpSubmit = async (enteredOtp) => {
-    if (!enteredOtp || enteredOtp.length !== 6) {
-      setOtpError("Please enter the 6-digit code");
+    if (!enteredOtp || enteredOtp.length !== 4) {
+      setOtpError("Please enter the 4-digit code");
       return;
     }
     await verifyOtp(enteredOtp);
@@ -161,8 +110,8 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
 
   const handleVerify = async (e) => {
     e.preventDefault();
-    if (!otp || otp.length !== 6) {
-      setOtpError("Please enter the 6-digit code");
+    if (!otp || otp.length !== 4) {
+      setOtpError("Please enter the 4-digit code");
       return;
     }
     await verifyOtp(otp);
@@ -210,9 +159,6 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
 
   return (
     <div className="bg-[#092241] flex flex-col w-full p-10 gap-5">
-      {/* Hidden reCAPTCHA container for resend */}
-      <div id="recaptcha-resend-container" />
-
       {/* Header */}
       <div className="flex justify-between items-start">
         <div>
@@ -232,7 +178,7 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
 
       <p className="fsans-400 text-[14px] text-white/60 leading-[160%]">
         Code sent to{" "}
-        <span className="text-white fsans-600">{maskPhone(phone)}</span>
+        <span className="text-white fsans-600">{maskEmail(email)}</span>
       </p>
 
       <form onSubmit={handleVerify} noValidate className="flex flex-col gap-5">
@@ -245,7 +191,7 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
             }}
             onSubmit={handleOtpSubmit}
             disabled={isVerifying}
-            length={6}
+            length={4}
           />
           <AnimatePresence mode="wait">
             {otpError ? (

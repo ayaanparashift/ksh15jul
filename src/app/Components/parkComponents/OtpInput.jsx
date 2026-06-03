@@ -7,67 +7,58 @@ const OtpInput = ({
   onChange,
   onSubmit,
   disabled = false,
-  length = 6,
+  length = 4,
 }) => {
   const [otp, setOtp] = useState(new Array(length).fill(""));
   const inputRefs = useRef([]);
 
   useEffect(() => {
     const otpArray = value.split("").slice(0, length);
-    while (otpArray.length < length) {
-      otpArray.push("");
-    }
+    while (otpArray.length < length) otpArray.push("");
     setOtp(otpArray);
   }, [value, length]);
 
   useEffect(() => {
-    if (inputRefs.current[0]) {
-      inputRefs.current[0].focus();
-    }
+    inputRefs.current[0]?.focus();
   }, []);
 
-  const handleChange = (e, index) => {
-    const val = e.target.value.replace(/[^\d]/g, "");
-    if (val.length > 1) {
-      // Handle paste
-      const pastedOtp = val.slice(0, length).split("");
-      const newOtp = [...otp];
-      pastedOtp.forEach((digit, i) => {
-        if (index + i < length) {
-          newOtp[index + i] = digit;
-        }
-      });
-      setOtp(newOtp);
-      onChange(newOtp.join(""));
-
-      // Auto-submit if full
-      if (newOtp.every((d) => d !== "")) {
-        setTimeout(() => onSubmit?.(newOtp.join("")), 100);
-      }
-
-      // Focus last filled input
-      const lastFilledIndex = Math.min(
-        index + pastedOtp.length - 1,
-        length - 1,
-      );
-      inputRefs.current[lastFilledIndex]?.focus();
-      return;
-    }
-
-    const newOtp = [...otp];
-    newOtp[index] = val;
+  const commit = (newOtp) => {
     setOtp(newOtp);
     onChange(newOtp.join(""));
-
-    // Auto-submit if full
     if (newOtp.every((d) => d !== "")) {
       setTimeout(() => onSubmit?.(newOtp.join("")), 100);
     }
+  };
 
-    // Move to next input
-    if (val && index < length - 1) {
-      inputRefs.current[index + 1]?.focus();
+  const handleChange = (e, index) => {
+    const val = e.target.value.replace(/\D/g, "");
+    if (!val) {
+      const newOtp = [...otp];
+      newOtp[index] = "";
+      commit(newOtp);
+      return;
     }
+    // Single digit typed
+    const newOtp = [...otp];
+    newOtp[index] = val[0];
+    commit(newOtp);
+    if (index < length - 1) inputRefs.current[index + 1]?.focus();
+  };
+
+  const handlePaste = (e) => {
+    e.preventDefault();
+    const pasted = e.clipboardData
+      .getData("text")
+      .replace(/\D/g, "")
+      .slice(0, length);
+    if (!pasted) return;
+    const newOtp = new Array(length).fill("");
+    pasted.split("").forEach((d, i) => {
+      newOtp[i] = d;
+    });
+    commit(newOtp);
+    const focusIndex = Math.min(pasted.length, length - 1);
+    inputRefs.current[focusIndex]?.focus();
   };
 
   const handleKeyDown = (e, index) => {
@@ -81,7 +72,7 @@ const OtpInput = ({
   };
 
   return (
-    <div className="flex justify-between gap-2 sm:gap-3">
+    <div className="flex justify-start gap-2 sm:gap-3">
       {otp.map((digit, index) => (
         <input
           key={index}
@@ -94,9 +85,9 @@ const OtpInput = ({
           value={digit}
           onChange={(e) => handleChange(e, index)}
           onKeyDown={(e) => handleKeyDown(e, index)}
+          onPaste={handlePaste}
           disabled={disabled}
-          className=" text-center text-xl sm:text-2xl font-bold border-2 border-[#146BD7] bg-[#263548] text-white rounded-lg focus:outline-none focus:border-[#F7E327] transition-colors disabled:opacity-50"
-          style={{ width: "60px", height: "60px" }}
+          className="w-14 h-14 sm:w-14 sm:h-14 text-center text-lg sm:text-xl font-bold border-2 border-[#146BD7] bg-[#263548] text-white rounded-lg focus:outline-none focus:border-[#F7E327] transition-colors disabled:opacity-50"
         />
       ))}
     </div>
@@ -104,4 +95,3 @@ const OtpInput = ({
 };
 
 export default OtpInput;
-// w-12 h-14 sm:w-14 sm:h-16 text-center text-xl sm:text-2xl font-bold border-2 border-[#146BD7] bg-[#263548] text-white rounded-lg focus:outline-none focus:border-[#F7E327] transition-colors disabled:opacity-50

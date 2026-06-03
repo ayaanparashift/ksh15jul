@@ -1,22 +1,19 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
-import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
-import { auth } from "./firebaseClient";
 
 const NAME_REGEX = /^[a-zA-Z\s]{2,}$/;
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
 
-// Normalize any Indian number format to +91XXXXXXXXXX
-// Accepts: 9876543210 / 09876543210 / 919876543210 / +919876543210 / spaces allowed
 function normalizeIndianPhone(raw) {
   const digits = raw.replace(/\D/g, "");
   if (digits.length === 10) return `+91${digits}`;
   if (digits.length === 11 && digits.startsWith("0")) return `+91${digits.slice(1)}`;
   if (digits.length === 12 && digits.startsWith("91")) return `+${digits}`;
-  return null; // invalid
+  if (digits.length === 13 && digits.startsWith("091")) return `+91${digits.slice(3)}`;
+  return null;
 }
 
 function validateFields({ name, email, phone }) {
@@ -53,36 +50,11 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
   const [name, setName] = useState(savedDetails?.name || "");
   const [email, setEmail] = useState(savedDetails?.email || "");
   const [phone, setPhone] = useState(savedDetails?.phone || "");
-  const [organization, setOrganization] = useState(
-    savedDetails?.organization || "",
-  );
+  const [organization, setOrganization] = useState(savedDetails?.organization || "");
   const [honeypot, setHoneypot] = useState("");
   const [errors, setErrors] = useState({});
   const [isSending, setIsSending] = useState(false);
   const [serverError, setServerError] = useState("");
-  const recaptchaRef = useRef(null);
-
-  useEffect(() => {
-    return () => {
-      if (recaptchaRef.current) {
-        try { recaptchaRef.current.clear(); } catch {}
-        recaptchaRef.current = null;
-      }
-    };
-  }, []);
-
-  const validateField = (field, values) => {
-    const fieldErrors = validateFields(values);
-    if (fieldErrors[field]) {
-      setErrors((prev) => ({ ...prev, [field]: fieldErrors[field] }));
-    } else {
-      setErrors((prev) => {
-        const c = { ...prev };
-        delete c[field];
-        return c;
-      });
-    }
-  };
 
   const clearError = (field) => {
     setErrors((prev) => {
@@ -92,24 +64,27 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
     });
   };
 
+  const validateField = (field) => {
+    const fieldErrors = validateFields({ name, email, phone });
+    if (fieldErrors[field]) {
+      setErrors((prev) => ({ ...prev, [field]: fieldErrors[field] }));
+    } else {
+      clearError(field);
+    }
+  };
+
   const handlePhoneChange = (e) => {
-    const raw = e.target.value;
-    // Allow digits and spaces only
-    const cleaned = raw.replace(/[^\d\s]/g, "");
-    if (cleaned.replace(/\D/g, "").length > 12) return;
-    setPhone(cleaned);
-    if (cleaned.replace(/\D/g, "").length >= 10) {
-      if (!normalizeIndianPhone(cleaned)) {
-        setErrors((prev) => ({
-          ...prev,
-          phone: "Enter a valid 10-digit Indian mobile number",
-        }));
+    // Allow: digits, spaces, +, hyphens — anything a phone number could look like while typing
+    const raw = e.target.value.replace(/[^\d\s+\-()]/g, "");
+    // Don't let digit count exceed 13 (worst case: +91 + 10 digits + some spaces/hyphens tolerated)
+    if (raw.replace(/\D/g, "").length > 13) return;
+    setPhone(raw);
+    const digitCount = raw.replace(/\D/g, "").length;
+    if (digitCount >= 10) {
+      if (!normalizeIndianPhone(raw)) {
+        setErrors((prev) => ({ ...prev, phone: "Enter a valid 10-digit Indian mobile number" }));
       } else {
-        setErrors((prev) => {
-          const c = { ...prev };
-          delete c.phone;
-          return c;
-        });
+        clearError("phone");
       }
     } else {
       clearError("phone");
@@ -129,43 +104,35 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
     setIsSending(true);
     setServerError("");
 
-    const normalizedPhone = normalizeIndianPhone(phone);
-
     try {
-      // Set up invisible reCAPTCHA on a hidden container
-      if (!recaptchaRef.current) {
-        recaptchaRef.current = new RecaptchaVerifier(auth, "recaptcha-container", {
-          size: "invisible",
-        });
-      }
+      const res = await fetch("/api/cert-otp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          phone: normalizeIndianPhone(phone),
+          organization: organization.trim(),
+          website: honeypot,
+        }),
+      });
 
-      const confirmationResult = await signInWithPhoneNumber(
-        auth,
-        normalizedPhone,
-        recaptchaRef.current,
-      );
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        setServerError(data.error || "Failed to send OTP. Please try again.");
+        return;
+      }
 
       onOtpSent({
         name: name.trim(),
         email: email.trim(),
-        phone: normalizedPhone,
+        phone: normalizeIndianPhone(phone),
         organization: organization.trim(),
-        confirmationResult,
+        otpToken: data.token,
       });
-    } catch (err) {
-      console.error("Firebase phone auth error:", err);
-      // Reset reCAPTCHA so it can be retried
-      if (recaptchaRef.current) {
-        try { recaptchaRef.current.clear(); } catch {}
-        recaptchaRef.current = null;
-      }
-      if (err.code === "auth/invalid-phone-number") {
-        setServerError("Invalid phone number. Please use format +919876543210.");
-      } else if (err.code === "auth/too-many-requests") {
-        setServerError("Too many attempts. Please try again later.");
-      } else {
-        setServerError(`Failed to send OTP. (${err.code || err.message})`);
-      }
+    } catch {
+      setServerError("Failed to send OTP. Please check your connection.");
     } finally {
       setIsSending(false);
     }
@@ -173,9 +140,6 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
 
   return (
     <div className="bg-[#092241] flex flex-col gap-3 lg:gap-6 w-full p-5 lg:p-10">
-      {/* Hidden reCAPTCHA container */}
-      <div id="recaptcha-container" />
-
       {/* Header */}
       <div className="flex justify-between items-start">
         <div>
@@ -194,10 +158,10 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
       </div>
 
       <p className="fsans-400 text-[13px] text-white/50 leading-[160%] -mt-2">
-        We&apos;ll send a 6-digit OTP to your phone to verify your identity.
+        We&apos;ll send a 4-digit OTP to your email to verify your identity.
       </p>
 
-      {/* Honeypot */}
+      {/* Honeypot — hidden from real users */}
       <input
         type="text"
         name="website"
@@ -221,11 +185,8 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
               type="text"
               placeholder="Full Name *"
               value={name}
-              onChange={(e) => {
-                setName(e.target.value);
-                clearError("name");
-              }}
-              onBlur={() => validateField("name", { name, email, phone })}
+              onChange={(e) => { setName(e.target.value); clearError("name"); }}
+              onBlur={() => validateField("name")}
               className={`${inputBase} ${errors.name ? errorInputClass : ""}`}
               disabled={isSending}
             />
@@ -236,13 +197,11 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
               type="email"
               placeholder="Email Address *"
               value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-                clearError("email");
-              }}
-              onBlur={() => validateField("email", { name, email, phone })}
+              onChange={(e) => { setEmail(e.target.value); clearError("email"); }}
+              onBlur={() => validateField("email")}
               className={`${inputBase} ${errors.email ? errorInputClass : ""}`}
               disabled={isSending}
+              autoComplete="email"
             />
           </FormField>
         </div>
@@ -254,7 +213,7 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
             placeholder="Mobile Number * (e.g. 98765 43210)"
             value={phone}
             onChange={handlePhoneChange}
-            onBlur={() => validateField("phone", { name, email, phone })}
+            onBlur={() => validateField("phone")}
             className={`${inputBase} ${errors.phone ? errorInputClass : ""}`}
             disabled={isSending}
             autoComplete="tel"
