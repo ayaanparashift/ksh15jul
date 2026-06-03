@@ -51,9 +51,8 @@ export async function POST(req) {
     await transporter.sendMail({
       from: `"KSH INFRA" <${process.env.SMTP_USER}>`,
       to: email,
-      subject: "Your OTP for Certificate Download",
-      text: `Hi ${name},\n\nYour OTP is: ${otp}\n\nThis code expires in 5 minutes. Do not share it with anyone.\n\nRegards,\nKSH INFRA`,
-      // plain text only — no HTML
+      subject: "Your Verification Code – KSH INFRA",
+      text: `Hi ${name},\n\nYour one-time verification code is: ${otp}\n\nValid for 5 minutes.\n\nRegards,\nKSH INFRA`,
     });
 
     // Return the signed token to the client — it carries the OTP hash for stateless verification

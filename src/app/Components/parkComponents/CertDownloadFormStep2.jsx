@@ -142,9 +142,8 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
           </div>
 
           <p className="fsans-400 text-[14px] text-white/60 leading-[170%] max-w-[320px]">
-            Your certification documents have been sent to{" "}
-            <span className="text-white fsans-600">{email}</span>. Please check
-            your inbox.
+            Your certification documents are on their way to{" "}
+            <span className="text-white fsans-600">{email}</span>. Please check your inbox.
           </p>
 
           <button

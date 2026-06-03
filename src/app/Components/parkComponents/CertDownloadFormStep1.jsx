@@ -46,11 +46,11 @@ function FormField({ error, children }) {
   );
 }
 
-const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
-  const [name, setName] = useState(savedDetails?.name || "");
-  const [email, setEmail] = useState(savedDetails?.email || "");
-  const [phone, setPhone] = useState(savedDetails?.phone || "");
-  const [organization, setOrganization] = useState(savedDetails?.organization || "");
+const CertDownloadFormStep1 = ({ onClose, onOtpSent }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [organization, setOrganization] = useState("");
   const [honeypot, setHoneypot] = useState("");
   const [errors, setErrors] = useState({});
   const [isSending, setIsSending] = useState(false);
@@ -74,9 +74,7 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
   };
 
   const handlePhoneChange = (e) => {
-    // Allow: digits, spaces, +, hyphens — anything a phone number could look like while typing
     const raw = e.target.value.replace(/[^\d\s+\-()]/g, "");
-    // Don't let digit count exceed 13 (worst case: +91 + 10 digits + some spaces/hyphens tolerated)
     if (raw.replace(/\D/g, "").length > 13) return;
     setPhone(raw);
     const digitCount = raw.replace(/\D/g, "").length;
@@ -99,25 +97,6 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
     if (Object.keys(fieldErrors).length > 0) {
       setErrors(fieldErrors);
       return;
-    }
-
-    // If a valid unexpired token already exists (user closed & reopened), skip re-sending
-    if (savedDetails?.otpToken) {
-      const firstToken = savedDetails.otpToken.split(",")[0];
-      try {
-        const payload = atob(firstToken.split(".")[0].replace(/-/g, "+").replace(/_/g, "/"));
-        const [, , expiresAt] = payload.split("|");
-        if (Number(expiresAt) > Date.now()) {
-          onOtpSent({
-            name: name.trim(),
-            email: email.trim(),
-            phone: normalizeIndianPhone(phone),
-            organization: organization.trim(),
-            otpToken: savedDetails.otpToken,
-          });
-          return;
-        }
-      } catch {}
     }
 
     setIsSending(true);
@@ -192,12 +171,7 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
         aria-hidden="true"
       />
 
-      <form
-        onSubmit={handleSubmit}
-        noValidate
-        className="flex flex-col gap-3 lg:gap-6"
-      >
-        {/* Name + Email */}
+      <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-3 lg:gap-6">
         <div className="flex flex-col sm:flex-row gap-3 lg:gap-4">
           <FormField error={errors.name}>
             <input
@@ -214,7 +188,7 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
           <FormField error={errors.email}>
             <input
               type="email"
-              placeholder="Email Address *"
+              placeholder="Email *"
               value={email}
               onChange={(e) => { setEmail(e.target.value); clearError("email"); }}
               onBlur={() => validateField("email")}
@@ -225,11 +199,10 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
           </FormField>
         </div>
 
-        {/* Phone */}
         <FormField error={errors.phone}>
           <input
             type="tel"
-            placeholder="Mobile Number * (e.g. 98765 43210)"
+            placeholder="Phone *"
             value={phone}
             onChange={handlePhoneChange}
             onBlur={() => validateField("phone")}
@@ -239,10 +212,9 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
           />
         </FormField>
 
-        {/* Organization */}
         <input
           type="text"
-          placeholder="Organization (optional)"
+          placeholder="Organization"
           value={organization}
           onChange={(e) => setOrganization(e.target.value)}
           className={inputBase}
@@ -264,26 +236,12 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
             </span>
             <AnimatePresence mode="wait">
               {isSending ? (
-                <motion.div
-                  key="spin"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                >
+                <motion.div key="spin" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                 </motion.div>
               ) : (
-                <motion.div
-                  key="arrow"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                >
-                  <img
-                    src="/rightUpArrow.svg"
-                    alt=""
-                    className="h-4 w-4 rotate-45 group-hover:rotate-0 transition-transform duration-300"
-                  />
+                <motion.div key="arrow" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                  <img src="/rightUpArrow.svg" alt="" className="h-4 w-4 rotate-45 group-hover:rotate-0 transition-transform duration-300" />
                 </motion.div>
               )}
             </AnimatePresence>
