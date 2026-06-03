@@ -1,6 +1,1 @@
-{
-  "functions": {
-    "src/app/api/cert-otp/route.js": { "regions": ["bom1"] },
-    "src/app/api/cert-verify/route.js": { "regions": ["bom1"] }
-  }
-}
+{}
