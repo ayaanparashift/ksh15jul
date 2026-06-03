@@ -19,6 +19,27 @@ export function signOtpToken(email, otp, expiresAt) {
   return Buffer.from(payload).toString("base64url") + "." + sig;
 }
 
+let _transporter = null;
+function getTransporter() {
+  if (!_transporter) {
+    _transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT || 587),
+      secure: false,
+      pool: true,
+      maxConnections: 5,
+      maxMessages: 100,
+      socketTimeout: 10000,
+      greetingTimeout: 10000,
+      connectionTimeout: 10000,
+      auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+    });
+    // Warm the connection pool at module load so first request isn't slow
+    _transporter.verify().catch(() => {});
+  }
+  return _transporter;
+}
+
 export async function POST(req) {
   try {
     const body = await req.json();
@@ -41,22 +62,18 @@ export async function POST(req) {
     const expiresAt = Date.now() + OTP_TTL_MS;
     const token = signOtpToken(email, otp, expiresAt);
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT || 587),
-      secure: false,
-      auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-    });
+    // Respond immediately so the UI doesn't wait on SMTP
+    const response = Response.json({ success: true, token });
 
-    await transporter.sendMail({
+    // Send OTP email in background — SMTP latency doesn't block the client
+    getTransporter().sendMail({
       from: `"KSH INFRA" <${process.env.SMTP_USER}>`,
       to: email,
       subject: "Your Verification Code – KSH INFRA",
       text: `Hi ${name},\n\nYour one-time verification code is: ${otp}\n\nValid for 5 minutes.\n\nRegards,\nKSH INFRA`,
-    });
+    }).catch((err) => console.error("cert-otp sendMail error:", err));
 
-    // Return the signed token to the client — it carries the OTP hash for stateless verification
-    return Response.json({ success: true, token });
+    return response;
   } catch (err) {
     console.error("cert-otp error:", err);
     return Response.json({ success: false, error: "Failed to send OTP." }, { status: 500 });
