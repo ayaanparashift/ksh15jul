@@ -1,6 +1,7 @@
 import nodemailer from "nodemailer";
 import path from "path";
 import { createHmac } from "crypto";
+import { after } from "next/server";
 
 export const runtime = "nodejs";
 
@@ -41,17 +42,13 @@ function verifyOtpToken(token, email, otp) {
     const payload = Buffer.from(payloadB64, "base64url").toString();
     const [tokenEmail, tokenOtp, expiresAt] = payload.split("|");
 
-    // Verify HMAC
     const expectedSig = createHmac("sha256", secret).update(payload).digest("hex");
     if (expectedSig !== sig) return { valid: false, error: "Invalid token." };
 
-    // Check expiry
     if (Date.now() > Number(expiresAt)) return { valid: false, error: "OTP has expired. Please request a new one." };
 
-    // Check email match
     if (tokenEmail !== email.toLowerCase()) return { valid: false, error: "Token mismatch." };
 
-    // Check OTP
     if (tokenOtp !== otp) return { valid: false, error: "Incorrect OTP. Please try again." };
 
     return { valid: true };
@@ -84,21 +81,26 @@ export async function POST(req) {
       return Response.json({ success: false, error: "Session expired. Please request a new OTP." }, { status: 400 });
     }
 
-    // tokens is a comma-separated list — try each until one validates
     const tokens = token.split(",").map((t) => t.trim()).filter(Boolean);
     const result = tokens.map((t) => verifyOtpToken(t, email, otp)).find((r) => r.valid);
     if (!result) {
-      // Return the error from the most recent token
       const lastErr = verifyOtpToken(tokens[tokens.length - 1], email, otp);
       return Response.json({ success: false, error: lastErr.error || "Invalid OTP." }, { status: 400 });
     }
 
-    await getTransporter().sendMail({
-      from: `"KSH INFRA" <${process.env.SMTP_USER}>`,
-      to: email,
-      subject: "KSH INFRA – Certification Documents",
-      text: `Hi ${name || "there"},\n\nThank you for your interest in KSH INFRA's certification for Hosur Park documents. Please find the files in the attachments.\n\nRegards,\nKSH INFRA`,
-      attachments: [{ filename: "Goldberg_certificates.rar", path: CERT_FILE_PATH }],
+    // OTP is valid — respond immediately, send certificate email after response is delivered
+    after(async () => {
+      try {
+        await getTransporter().sendMail({
+          from: `"KSH INFRA" <${process.env.SMTP_USER}>`,
+          to: email,
+          subject: "KSH INFRA – Certification Documents",
+          text: `Hi ${name || "there"},\n\nThank you for your interest in KSH INFRA's certification for Hosur Park documents. Please find the files in the attachments.\n\nRegards,\nKSH INFRA`,
+          attachments: [{ filename: "Goldberg_certificates.rar", path: CERT_FILE_PATH }],
+        });
+      } catch (emailErr) {
+        console.error("cert-verify certificate email error:", emailErr);
+      }
     });
 
     return Response.json({ success: true });
