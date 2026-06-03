@@ -12,6 +12,26 @@ const CERT_FILE_PATH = path.join(
   "Goldberg_certificates.rar",
 );
 
+let _transporter = null;
+function getTransporter() {
+  if (!_transporter) {
+    _transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT || 587),
+      secure: false,
+      pool: true,
+      maxConnections: 5,
+      maxMessages: 100,
+      socketTimeout: 30000,
+      greetingTimeout: 15000,
+      connectionTimeout: 15000,
+      auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+    });
+    _transporter.verify().catch(() => {});
+  }
+  return _transporter;
+}
+
 function verifyOtpToken(token, email, otp) {
   try {
     const secret = process.env.OTP_SECRET || process.env.SMTP_PASS || "ksh-otp-secret";
@@ -73,31 +93,15 @@ export async function POST(req) {
       return Response.json({ success: false, error: lastErr.error || "Invalid OTP." }, { status: 400 });
     }
 
-    // Respond immediately — don't let email sending block or timeout the response
-    const response = Response.json({ success: true });
+    await getTransporter().sendMail({
+      from: `"KSH INFRA" <${process.env.SMTP_USER}>`,
+      to: email,
+      subject: "KSH INFRA – Certification Documents",
+      text: `Hi ${name || "there"},\n\nThank you for your interest in KSH INFRA's certification for Hosur Park documents. Please find the files in the attachments.\n\nRegards,\nKSH INFRA`,
+      attachments: [{ filename: "Goldberg_certificates.rar", path: CERT_FILE_PATH }],
+    });
 
-    // Fire-and-forget the certificate email
-    (async () => {
-      try {
-        const transporter = nodemailer.createTransport({
-          host: process.env.SMTP_HOST,
-          port: Number(process.env.SMTP_PORT || 587),
-          secure: false,
-          auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-        });
-        await transporter.sendMail({
-          from: `"KSH INFRA" <${process.env.SMTP_USER}>`,
-          to: email,
-          subject: "KSH INFRA – Certification Documents",
-          text: `Hi ${name || "there"},\n\nThank you for your interest in KSH INFRA's certification for Hosur Park documents. Please find the files in the attachments.\n\nRegards,\nKSH INFRA`,
-          attachments: [{ filename: "Goldberg_certificates.rar", path: CERT_FILE_PATH }],
-        });
-      } catch (emailErr) {
-        console.error("cert-verify certificate email error:", emailErr);
-      }
-    })();
-
-    return response;
+    return Response.json({ success: true });
   } catch (err) {
     console.error("cert-verify error:", err);
     return Response.json(
