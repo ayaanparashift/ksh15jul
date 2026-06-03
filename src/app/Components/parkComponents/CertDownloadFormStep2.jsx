@@ -62,7 +62,8 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
       if (!res.ok || !data.success) {
         setResendMsg(data.error || "Failed to resend. Please try again.");
       } else {
-        setOtpToken(data.token);
+        // Keep old token(s) so previous OTPs still work within their 5-min window
+        setOtpToken((prev) => prev ? `${prev},${data.token}` : data.token);
         setOtp("");
         setResendMsg("New code sent!");
         startCooldown();

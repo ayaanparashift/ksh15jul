@@ -101,6 +101,25 @@ const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
       return;
     }
 
+    // If a valid unexpired token already exists (user closed & reopened), skip re-sending
+    if (savedDetails?.otpToken) {
+      const firstToken = savedDetails.otpToken.split(",")[0];
+      try {
+        const payload = atob(firstToken.split(".")[0].replace(/-/g, "+").replace(/_/g, "/"));
+        const [, , expiresAt] = payload.split("|");
+        if (Number(expiresAt) > Date.now()) {
+          onOtpSent({
+            name: name.trim(),
+            email: email.trim(),
+            phone: normalizeIndianPhone(phone),
+            organization: organization.trim(),
+            otpToken: savedDetails.otpToken,
+          });
+          return;
+        }
+      } catch {}
+    }
+
     setIsSending(true);
     setServerError("");
 

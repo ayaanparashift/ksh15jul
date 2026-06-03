@@ -29,7 +29,7 @@ const CertDownloadModal = ({ isOpen, onClose }) => {
 
   const handleClose = () => {
     setStep("details");
-    setUserDetails(null);
+    // Keep userDetails so existing OTP token survives if user reopens within 5 min
     onClose();
   };
 

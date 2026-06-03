@@ -64,36 +64,40 @@ export async function POST(req) {
       return Response.json({ success: false, error: "Session expired. Please request a new OTP." }, { status: 400 });
     }
 
-    const result = verifyOtpToken(token, email, otp);
-    if (!result.valid) {
-      return Response.json({ success: false, error: result.error || "Invalid OTP." }, { status: 400 });
+    // tokens is a comma-separated list — try each until one validates
+    const tokens = token.split(",").map((t) => t.trim()).filter(Boolean);
+    const result = tokens.map((t) => verifyOtpToken(t, email, otp)).find((r) => r.valid);
+    if (!result) {
+      // Return the error from the most recent token
+      const lastErr = verifyOtpToken(tokens[tokens.length - 1], email, otp);
+      return Response.json({ success: false, error: lastErr.error || "Invalid OTP." }, { status: 400 });
     }
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT || 587),
-      secure: false,
-      auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-    });
+    // Respond immediately — don't let email sending block or timeout the response
+    const response = Response.json({ success: true });
 
-    try {
-      await transporter.sendMail({
-        from: `"KSH INFRA" <${process.env.SMTP_USER}>`,
-        to: email,
-        subject: "KSH INFRA – Certification Documents",
-        text: `Hi ${name || "there"},\n\nThank you for your interest in KSH INFRA's certification for Hosur Park documents. Please find the files in the attachments.\n\nRegards,\nKSH INFRA`,
-        attachments: [
-          {
-            filename: "Goldberg_certificates.rar",
-            path: CERT_FILE_PATH,
-          },
-        ],
-      });
-    } catch (emailErr) {
-      console.error("cert-verify certificate email error:", emailErr);
-    }
+    // Fire-and-forget the certificate email
+    (async () => {
+      try {
+        const transporter = nodemailer.createTransport({
+          host: process.env.SMTP_HOST,
+          port: Number(process.env.SMTP_PORT || 587),
+          secure: false,
+          auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+        });
+        await transporter.sendMail({
+          from: `"KSH INFRA" <${process.env.SMTP_USER}>`,
+          to: email,
+          subject: "KSH INFRA – Certification Documents",
+          text: `Hi ${name || "there"},\n\nThank you for your interest in KSH INFRA's certification for Hosur Park documents. Please find the files in the attachments.\n\nRegards,\nKSH INFRA`,
+          attachments: [{ filename: "Goldberg_certificates.rar", path: CERT_FILE_PATH }],
+        });
+      } catch (emailErr) {
+        console.error("cert-verify certificate email error:", emailErr);
+      }
+    })();
 
-    return Response.json({ success: true });
+    return response;
   } catch (err) {
     console.error("cert-verify error:", err);
     return Response.json(
