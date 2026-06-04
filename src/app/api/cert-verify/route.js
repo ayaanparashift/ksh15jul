@@ -71,6 +71,7 @@ export async function POST(req) {
     const name = (body?.name || "").trim();
     const phone = (body?.phone || "").trim();
     const organization = (body?.organization || "").trim();
+    const source = (body?.source || "").trim();
 
     if (!EMAIL_REGEX.test(email)) {
       return Response.json({ success: false, error: "Invalid email" }, { status: 400 });
@@ -103,7 +104,7 @@ export async function POST(req) {
         fetch(process.env.SHEET_URL_PARK_CERTIFICATE, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, phone, organization, sources: "" }),
+          body: JSON.stringify({ name, email, phone, organization, source }),
         }).catch((err) => console.error("cert-verify sheet error:", err)),
       ]);
     });

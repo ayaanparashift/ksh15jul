@@ -5,21 +5,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import CertDownloadFormStep1 from "./CertDownloadFormStep1";
 import CertDownloadFormStep2 from "./CertDownloadFormStep2";
 
-const CertDownloadModal = ({ isOpen, onClose }) => {
+const CertDownloadModal = ({ isOpen, onClose, source = "" }) => {
   const [step, setStep] = useState("details");
   const [userDetails, setUserDetails] = useState(null);
 
-  useEffect(() => {
-    if (!isOpen) return;
-    const handleKey = (e) => {
-      if (e.key === "Escape") handleClose();
-    };
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, [isOpen]);
-
   const handleOtpSent = (details) => {
-    setUserDetails(details);
+    setUserDetails({ ...details, source });
     setStep("otp");
   };
 
@@ -38,21 +29,19 @@ const CertDownloadModal = ({ isOpen, onClose }) => {
       {isOpen ? (
         <>
           <motion.div
-            className="fixed inset-0 bg-black/70 z-[10000]"
+            className="fixed inset-0 bg-black/70 !z-[100000000000]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            onClick={handleClose}
           />
 
           <motion.div
-            className="fixed inset-0 z-[10001] flex items-center justify-center p-4"
+            className="fixed inset-0 !z-[100000000000] flex items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            onClick={handleClose}
           >
             <motion.div
               onClick={(e) => e.stopPropagation()}

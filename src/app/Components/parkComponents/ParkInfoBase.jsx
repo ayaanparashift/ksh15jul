@@ -123,7 +123,7 @@ const ParkInfoBase = ({
       </AnimatePresence>
 
       {/* Certification Download Modal */}
-      <CertDownloadModal isOpen={showCertModal} onClose={closeCertModal} />
+      <CertDownloadModal isOpen={showCertModal} onClose={closeCertModal} source="KSH Hosur Park I" />
     </>
   );
 };
