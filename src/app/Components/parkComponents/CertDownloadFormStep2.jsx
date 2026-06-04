@@ -15,7 +15,7 @@ function maskEmail(email = "") {
 }
 
 const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
-  const { name, email, organization } = userDetails ?? {};
+  const { name, email, phone, organization } = userDetails ?? {};
   const [otpToken, setOtpToken] = useState(userDetails?.otpToken || "");
 
   const [otp, setOtp] = useState("");
@@ -84,7 +84,7 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
       const res = await fetch("/api/cert-verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ otp: enteredOtp, token: otpToken, name, email, organization, website: "" }),
+        body: JSON.stringify({ otp: enteredOtp, token: otpToken, name, email, phone, organization, website: "" }),
       });
       const data = await res.json();
 

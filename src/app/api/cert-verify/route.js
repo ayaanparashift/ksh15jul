@@ -69,6 +69,7 @@ export async function POST(req) {
     const otp = (body?.otp || "").trim();
     const token = (body?.token || "").trim();
     const name = (body?.name || "").trim();
+    const phone = (body?.phone || "").trim();
     const organization = (body?.organization || "").trim();
 
     if (!EMAIL_REGEX.test(email)) {
@@ -88,19 +89,23 @@ export async function POST(req) {
       return Response.json({ success: false, error: lastErr.error || "Invalid OTP." }, { status: 400 });
     }
 
-    // OTP is valid — respond immediately, send certificate email after response is delivered
+    // OTP is valid — respond immediately, run email + sheet in background after response
     after(async () => {
-      try {
-        await getTransporter().sendMail({
+      await Promise.allSettled([
+        getTransporter().sendMail({
           from: `"KSH INFRA" <${process.env.SMTP_USER}>`,
           to: email,
           subject: "KSH INFRA – Certification Documents",
           text: `Hi ${name || "there"},\n\nThank you for your interest in KSH INFRA's certification for Hosur Park documents. Please find the files in the attachments.\n\nRegards,\nKSH INFRA`,
           attachments: [{ filename: "Goldberg_certificates.rar", path: CERT_FILE_PATH }],
-        });
-      } catch (emailErr) {
-        console.error("cert-verify certificate email error:", emailErr);
-      }
+        }).catch((err) => console.error("cert-verify email error:", err)),
+
+        fetch(process.env.SHEET_URL_PARK_CERTIFICATE, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, phone, organization, sources: "" }),
+        }).catch((err) => console.error("cert-verify sheet error:", err)),
+      ]);
     });
 
     return Response.json({ success: true });
