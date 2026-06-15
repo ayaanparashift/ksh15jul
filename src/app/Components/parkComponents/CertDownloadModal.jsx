@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import CertDownloadFormStep1 from "./CertDownloadFormStep1";
 import CertDownloadFormStep2 from "./CertDownloadFormStep2";
@@ -8,9 +8,16 @@ import CertDownloadFormStep2 from "./CertDownloadFormStep2";
 const CertDownloadModal = ({ isOpen, onClose, source = "" }) => {
   const [step, setStep] = useState("details");
   const [userDetails, setUserDetails] = useState(null);
+  // Accumulate all tokens issued across modal open/close cycles so any
+  // OTP sent within the last 5 minutes still works on re-open.
+  const allTokensRef = useRef("");
 
   const handleOtpSent = (details) => {
-    setUserDetails({ ...details, source });
+    const newToken = details.otpToken || "";
+    allTokensRef.current = allTokensRef.current
+      ? `${allTokensRef.current},${newToken}`
+      : newToken;
+    setUserDetails({ ...details, source, otpToken: allTokensRef.current });
     setStep("otp");
   };
 
@@ -20,7 +27,8 @@ const CertDownloadModal = ({ isOpen, onClose, source = "" }) => {
 
   const handleClose = () => {
     setStep("details");
-    setUserDetails(null);
+    // Keep userDetails (and allTokensRef) so re-opening pre-fills fields
+    // and old tokens remain valid — only wipe on success (handled in Step2 via onClose after success)
     onClose();
   };
 
@@ -78,6 +86,7 @@ const CertDownloadModal = ({ isOpen, onClose, source = "" }) => {
                       userDetails={userDetails}
                       onClose={handleClose}
                       onBack={handleBack}
+                      onTokenUpdate={(t) => { allTokensRef.current = t; }}
                     />
                   </motion.div>
                 )}

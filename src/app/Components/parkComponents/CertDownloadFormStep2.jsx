@@ -14,7 +14,7 @@ function maskEmail(email = "") {
   return `${visible}${"*".repeat(Math.max(1, local.length - 2))}@${domain}`;
 }
 
-const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
+const CertDownloadFormStep2 = ({ userDetails, onClose, onBack, onTokenUpdate }) => {
   const { name, email, phone, organization, source } = userDetails ?? {};
   const [otpToken, setOtpToken] = useState(userDetails?.otpToken || "");
 
@@ -63,7 +63,11 @@ const CertDownloadFormStep2 = ({ userDetails, onClose, onBack }) => {
         setResendMsg(data.error || "Failed to resend. Please try again.");
       } else {
         // Keep old token(s) so previous OTPs still work within their 5-min window
-        setOtpToken((prev) => prev ? `${prev},${data.token}` : data.token);
+        setOtpToken((prev) => {
+          const merged = prev ? `${prev},${data.token}` : data.token;
+          onTokenUpdate?.(merged);
+          return merged;
+        });
         setOtp("");
         setResendMsg("New code sent!");
         startCooldown();

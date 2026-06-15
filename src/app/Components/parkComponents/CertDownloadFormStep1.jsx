@@ -46,11 +46,11 @@ function FormField({ error, children }) {
   );
 }
 
-const CertDownloadFormStep1 = ({ onClose, onOtpSent }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [organization, setOrganization] = useState("");
+const CertDownloadFormStep1 = ({ onClose, onOtpSent, savedDetails }) => {
+  const [name, setName] = useState(savedDetails?.name || "");
+  const [email, setEmail] = useState(savedDetails?.email || "");
+  const [phone, setPhone] = useState(savedDetails?.phone || "");
+  const [organization, setOrganization] = useState(savedDetails?.organization || "");
   const [honeypot, setHoneypot] = useState("");
   const [errors, setErrors] = useState({});
   const [isSending, setIsSending] = useState(false);
