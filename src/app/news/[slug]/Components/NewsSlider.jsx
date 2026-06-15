@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -27,17 +27,6 @@ export default function NewsSlider({ relatedNews }) {
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
-
-  useEffect(() => {
-    if (!showNav) return;
-    const swiperInstance = document.querySelector(".swiper").swiper;
-    if (swiperInstance) {
-      swiperInstance.params.navigation.nextEl = "#arrowright";
-      swiperInstance.params.navigation.prevEl = "#arrowleft";
-      swiperInstance.navigation.init();
-      swiperInstance.navigation.update();
-    }
-  }, [showNav]);
 
   return (
     <div className="fix12 py-[70px]">

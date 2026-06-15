@@ -147,7 +147,6 @@
 //     </div>
 //   );
 // }
-import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -155,16 +154,6 @@ import "swiper/css/navigation";
 import BCard from "../Components/BCard";
 
 export default function BCSlider({ relatedBlogs }) {
-  useEffect(() => {
-    const swiperInstance = document.querySelector(".swiper").swiper;
-    if (swiperInstance) {
-      swiperInstance.params.navigation.nextEl = "#arrowright";
-      swiperInstance.params.navigation.prevEl = "#arrowleft";
-      swiperInstance.navigation.init();
-      swiperInstance.navigation.update();
-    }
-  }, []);
-
   return (
     <div className="fix12 py-[70px]">
       {/* Section Title */}

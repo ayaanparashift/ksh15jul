@@ -579,6 +579,10 @@
 import { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, FreeMode, EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/free-mode";
+import "swiper/css/effect-fade";
 import BentoHeaderF from "./BentoHeaderF";
 import Bento from "./Bento";
 import Bento2 from "./Bento2";
