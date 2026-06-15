@@ -25,11 +25,11 @@ const ParkInfoBase = ({
   const closeCertModal = () => setShowCertModal(false);
 
   const certSource = pathname.includes("ksh-hosur-i")
-    ? "KSH Hosur Park I"
+    ? "ksh-hosur-i"
     : pathname.includes("ksh-chakan-iv")
-    ? "KSH Chakan Park IV"
+    ? "ksh-chakan-iv"
     : pathname.includes("ksh-chakan-iii")
-    ? "KSH Chakan Park III"
+    ? "ksh-chakan-iii"
     : "";
 
   useEffect(() => {

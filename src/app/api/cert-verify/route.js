@@ -7,11 +7,23 @@ export const runtime = "nodejs";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const CERT_FILE_PATH = path.join(
-  process.cwd(),
-  "public",
-  "Goldberg_certificates.rar",
-);
+const CERT_FILES = {
+  "ksh-hosur-i": {
+    filename: "Goldberg_certificates.rar",
+    path: path.join(process.cwd(), "public", "Goldberg_certificates.rar"),
+    label: "Hosur Park",
+  },
+  "ksh-chakan-iii": {
+    filename: "KSH-Chakan-III-Certificates.rar",
+    path: path.join(process.cwd(), "public", "KSH-Chakan-III-Certificates.rar"),
+    label: "Chakan III Park",
+  },
+  "ksh-chakan-iv": {
+    filename: "KSH-Chakan-IV-Certificates.rar",
+    path: path.join(process.cwd(), "public", "KSH-Chakan-IV-Certificates.rar"),
+    label: "Chakan IV Park",
+  },
+};
 
 let _transporter = null;
 function getTransporter() {
@@ -35,21 +47,30 @@ function getTransporter() {
 
 function verifyOtpToken(token, email, otp) {
   try {
-    const secret = process.env.OTP_SECRET || process.env.SMTP_PASS || "ksh-otp-secret";
+    const secret =
+      process.env.OTP_SECRET || process.env.SMTP_PASS || "ksh-otp-secret";
     const [payloadB64, sig] = token.split(".");
     if (!payloadB64 || !sig) return { valid: false };
 
     const payload = Buffer.from(payloadB64, "base64url").toString();
     const [tokenEmail, tokenOtp, expiresAt] = payload.split("|");
 
-    const expectedSig = createHmac("sha256", secret).update(payload).digest("hex");
+    const expectedSig = createHmac("sha256", secret)
+      .update(payload)
+      .digest("hex");
     if (expectedSig !== sig) return { valid: false, error: "Invalid token." };
 
-    if (Date.now() > Number(expiresAt)) return { valid: false, error: "OTP has expired. Please request a new one." };
+    if (Date.now() > Number(expiresAt))
+      return {
+        valid: false,
+        error: "OTP has expired. Please request a new one.",
+      };
 
-    if (tokenEmail !== email.toLowerCase()) return { valid: false, error: "Token mismatch." };
+    if (tokenEmail !== email.toLowerCase())
+      return { valid: false, error: "Token mismatch." };
 
-    if (tokenOtp !== otp) return { valid: false, error: "Incorrect OTP. Please try again." };
+    if (tokenOtp !== otp)
+      return { valid: false, error: "Incorrect OTP. Please try again." };
 
     return { valid: true };
   } catch {
@@ -74,32 +95,52 @@ export async function POST(req) {
     const source = (body?.source || "").trim();
 
     if (!EMAIL_REGEX.test(email)) {
-      return Response.json({ success: false, error: "Invalid email" }, { status: 400 });
+      return Response.json(
+        { success: false, error: "Invalid email" },
+        { status: 400 },
+      );
     }
     if (!/^\d{4}$/.test(otp)) {
-      return Response.json({ success: false, error: "Invalid OTP format" }, { status: 400 });
+      return Response.json(
+        { success: false, error: "Invalid OTP format" },
+        { status: 400 },
+      );
     }
     if (!token) {
-      return Response.json({ success: false, error: "Session expired. Please request a new OTP." }, { status: 400 });
+      return Response.json(
+        { success: false, error: "Session expired. Please request a new OTP." },
+        { status: 400 },
+      );
     }
 
-    const tokens = token.split(",").map((t) => t.trim()).filter(Boolean);
-    const result = tokens.map((t) => verifyOtpToken(t, email, otp)).find((r) => r.valid);
+    const tokens = token
+      .split(",")
+      .map((t) => t.trim())
+      .filter(Boolean);
+    const result = tokens
+      .map((t) => verifyOtpToken(t, email, otp))
+      .find((r) => r.valid);
     if (!result) {
       const lastErr = verifyOtpToken(tokens[tokens.length - 1], email, otp);
-      return Response.json({ success: false, error: lastErr.error || "Invalid OTP." }, { status: 400 });
+      return Response.json(
+        { success: false, error: lastErr.error || "Invalid OTP." },
+        { status: 400 },
+      );
     }
 
     // OTP is valid — respond immediately, run email + sheet in background after response
+    const cert = CERT_FILES[source] || CERT_FILES["ksh-hosur-i"];
     after(async () => {
       await Promise.allSettled([
-        getTransporter().sendMail({
-          from: `"KSH INFRA" <${process.env.SMTP_USER}>`,
-          to: email,
-          subject: "KSH INFRA – Certification Documents",
-          text: `Hi ${name || "there"},\n\nThank you for your interest in KSH INFRA's certification for Hosur Park documents. Please find the files in the attachments.\n\nRegards,\nKSH INFRA`,
-          attachments: [{ filename: "Goldberg_certificates.rar", path: CERT_FILE_PATH }],
-        }).catch((err) => console.error("cert-verify email error:", err)),
+        getTransporter()
+          .sendMail({
+            from: `"KSH INFRA" <${process.env.SMTP_USER}>`,
+            to: email,
+            subject: "KSH INFRA – Certification",
+            text: `Hi ${name || "there"},\n\nThank you for your interest in KSH INFRA's certification for ${cert.label}. Please find the files in the attachments.\n\nRegards,\nKSH INFRA`,
+            attachments: [{ filename: cert.filename, path: cert.path }],
+          })
+          .catch((err) => console.error("cert-verify email error:", err)),
 
         fetch(process.env.SHEET_URL_PARK_CERTIFICATE, {
           method: "POST",
