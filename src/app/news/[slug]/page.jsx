@@ -5,35 +5,42 @@ import NewsContent from "./Components/NewsContent";
 
 // Reusable fetcher
 async function fetchBlogData(slug) {
-  const res = await fetch(
-    `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?slug=${slug}&_embed`,
-    { next: { revalidate: 60 } },
-  );
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 5000);
+    const res = await fetch(
+      `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?slug=${slug}&_embed`,
+      { next: { revalidate: 60 }, signal: controller.signal },
+    );
+    clearTimeout(timeout);
 
-  if (!res.ok) return null;
-  const data = await res.json();
-  if (data.length === 0) return null;
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (data.length === 0) return null;
 
-  const blog = data[0];
-  let featuredImage =
-    blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null;
+    const blog = data[0];
+    let featuredImage =
+      blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null;
 
-  if (!featuredImage && blog.featured_media) {
-    try {
-      const mediaRes = await fetch(
-        `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/media/${blog.featured_media}`,
-        { next: { revalidate: 60 } },
-      );
-      if (mediaRes.ok) {
-        const mediaData = await mediaRes.json();
-        featuredImage = mediaData.source_url || null;
+    if (!featuredImage && blog.featured_media) {
+      try {
+        const mediaRes = await fetch(
+          `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/media/${blog.featured_media}`,
+          { next: { revalidate: 60 } },
+        );
+        if (mediaRes.ok) {
+          const mediaData = await mediaRes.json();
+          featuredImage = mediaData.source_url || null;
+        }
+      } catch {
+        // media fetch failed, use default
       }
-    } catch (error) {
-      console.error("Media fetch error:", error);
     }
-  }
 
-  return { ...blog, featuredImage: featuredImage || "/default-image.jpg" };
+    return { ...blog, featuredImage: featuredImage || "/default-image.jpg" };
+  } catch {
+    return null;
+  }
 }
 
 // Dynamic Metadata

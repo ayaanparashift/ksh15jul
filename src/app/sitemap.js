@@ -103,10 +103,13 @@ export default async function sitemap() {
     let totalPages = 1;
 
     while (currentPage <= totalPages) {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 5000);
       const res = await fetch(
         `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?per_page=${perPage}&page=${currentPage}&_embed`,
-        { next: { revalidate: 3600 } }
+        { next: { revalidate: 3600 }, signal: controller.signal }
       );
+      clearTimeout(timeout);
 
       if (!res.ok) break;
 
@@ -129,8 +132,8 @@ export default async function sitemap() {
     }
 
     blogs = allPosts;
-  } catch (err) {
-    // silent fail (Next.js does not allow console in route handlers)
+  } catch {
+    // timed out or failed — sitemap falls back to static routes only
   }
 
   // Blog + News routes

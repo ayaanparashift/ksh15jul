@@ -219,40 +219,7 @@
 // }
 import Parent from "./Parent";
 
-export default async function PFetch() {
-  async function getNews() {
-    try {
-      const res = await fetch(
-        "https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?categories=7&per_page=3&_embed",
-        { next: { revalidate: 60 } } // ✅ ISR: revalidates every 60s
-      );
-
-      if (!res.ok) throw new Error("Failed to fetch news");
-      const data = await res.json();
-
-      return data.map((item) => ({
-        id: item.id,
-        title: item.title.rendered,
-        content: item.excerpt.rendered.replace(/<[^>]+>/g, ""), // strip HTML
-        image:
-          item._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
-          "/blog/default.jpg",
-        href: `/news/${item.slug}`,
-        newTab: false,
-        date: new Date(item.date).toLocaleDateString("en-US", {
-          day: "numeric",
-          month: "short",
-          year: "numeric",
-        }),
-      }));
-    } catch (err) {
-      console.warn("News fetch failed:", err);
-      return []; // ✅ fallback to empty array
-    }
-  }
-
-  const newsData = await getNews();
-
+export default function PFetch() {
   const staticData = {
     "Case Studies": [
       {
@@ -289,7 +256,38 @@ export default async function PFetch() {
         date: "Kawasaki",
       },
     ],
-    News: newsData, // ✅ dynamic from server
+    News: [
+      {
+        id: 3,
+        title: "Mapletree Investments Acquires KSH INFRA's logistics asset",
+        content: "Mapletree Investments Acquires KSH INFRA's logistics asset",
+        image: "/blog/news/news1.jpg",
+        href: "/news/mapletree-investments-acquires-ksh-infras-logistics-asset",
+        newTab: false,
+        date: "Dec 23, 2022",
+      },
+      {
+        id: 4,
+        title:
+          "The COVID-19 pandemic has disrupted every single industry over the course of just a few months",
+        content:
+          "The COVID-19 pandemic has disrupted every single industry over the course of just a few months",
+        image: "/blog/news/news2.jpg",
+        href: "/news/post-covid-19-opportunities-in-india",
+        newTab: false,
+        date: "Sept 28, 2022",
+      },
+      {
+        id: 5,
+        title: "Prioritising Ergonomics in Industrial and Warehouse Operations",
+        content:
+          "Prioritising Ergonomics in Industrial and Warehouse Operations",
+        image: "/blog/news/news3.jpg",
+        href: "/news/benefits-of-moving-into-a-sustainable-industrial-park",
+        newTab: false,
+        date: "Sept 28, 2022",
+      },
+    ],
     "Press Release": [
       {
         id: 6,
@@ -327,3 +325,4 @@ export default async function PFetch() {
 
   return <Parent staticData={staticData} />;
 }
+
