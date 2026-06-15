@@ -845,20 +845,6 @@ const formatDate = (dateString) => {
   });
 };
 
-const fetchBlogByPage = async () => {
-  try {
-    const resp = await fetch(
-      `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?per_page=3&page=1&_embed`,
-      { next: { revalidate: 60 } }
-    );
-    if (!resp.ok) return null;
-    const data = await resp.json();
-    return data;
-  } catch {
-    return null;
-  }
-};
-
 const SkeletonCard = ({ className = "" }) => (
   <div className={`relative bg-gray-200 animate-pulse ${className}`}>
     <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
@@ -874,38 +860,25 @@ const Bento = () => {
   const [blogs, setBlogs] = useState(null);
 
   useEffect(() => {
-    let interval;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 5000);
     const fetchData = async () => {
-      const data = await fetchBlogByPage();
-      if (data?.length === 3) {
-        // Determine dynamic paths for logging
-        data.forEach((blog) => {
-          const categoryIds = Array.isArray(blog.categories)
-            ? blog.categories.map((id) => Number(id))
-            : [];
-          let currentPath = "blogs"; // default
-          if (categoryIds.includes(7)) currentPath = "news";
-          else if (categoryIds.includes(6)) currentPath = "blogs";
-
-          console.log(
-            "Blog slug:",
-            blog.slug,
-            "| Category IDs:",
-            categoryIds,
-            "| Dynamic path:",
-            currentPath
-          );
-        });
-
-        setBlogs(data);
-        clearInterval(interval);
+      try {
+        const resp = await fetch(
+          `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?per_page=3&page=1&_embed`,
+          { signal: controller.signal }
+        );
+        clearTimeout(timeout);
+        if (!resp.ok) return;
+        const data = await resp.json();
+        if (data?.length === 3) setBlogs(data);
+      } catch {
+        // timed out or failed — blog cards stay as skeleton
       }
     };
 
     fetchData();
-    interval = setInterval(fetchData, 10000);
-
-    return () => clearInterval(interval);
+    return () => { clearTimeout(timeout); controller.abort(); };
   }, []);
 
   return (

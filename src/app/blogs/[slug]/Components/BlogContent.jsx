@@ -423,43 +423,50 @@ function cleanHTML(html) {
 }
 
 async function fetchBlogData(slug) {
-  const res = await fetch(
-    `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?slug=${slug}&_embed`,
-    { next: { revalidate: 60 } },
-  );
-  if (!res.ok) return null;
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 5000);
+    const res = await fetch(
+      `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?slug=${slug}&_embed`,
+      { next: { revalidate: 60 }, signal: controller.signal },
+    );
+    clearTimeout(timeout);
+    if (!res.ok) return null;
 
-  const data = await res.json();
-  if (data.length === 0) return null;
+    const data = await res.json();
+    if (data.length === 0) return null;
 
-  const blog = data[0];
+    const blog = data[0];
 
-  let featuredImage =
-    blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null;
+    let featuredImage =
+      blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null;
 
-  if (!featuredImage && blog.featured_media) {
-    try {
-      const mediaRes = await fetch(
-        `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/media/${blog.featured_media}`,
-        { next: { revalidate: 60 } },
-      );
-      if (mediaRes.ok) {
-        const mediaData = await mediaRes.json();
-        featuredImage = mediaData.source_url || null;
+    if (!featuredImage && blog.featured_media) {
+      try {
+        const mediaRes = await fetch(
+          `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/media/${blog.featured_media}`,
+          { next: { revalidate: 60 } },
+        );
+        if (mediaRes.ok) {
+          const mediaData = await mediaRes.json();
+          featuredImage = mediaData.source_url || null;
+        }
+      } catch {
+        // media fetch failed
       }
-    } catch (error) {
-      console.error("Media fetch error:", error);
     }
-  }
 
-  return {
-    ...blog,
-    featuredImage: featuredImage || "/default-image.jpg",
-    content: {
-      ...blog.content,
-      rendered: cleanHTML(blog.content.rendered),
-    },
-  };
+    return {
+      ...blog,
+      featuredImage: featuredImage || "/default-image.jpg",
+      content: {
+        ...blog.content,
+        rendered: cleanHTML(blog.content.rendered),
+      },
+    };
+  } catch {
+    return null;
+  }
 }
 
 export default async function BlogContent({ slug }) {

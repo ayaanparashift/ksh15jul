@@ -214,23 +214,16 @@ import BCSlider from "./BCslider";
 
 async function fetchAllBlogs() {
   try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 5000);
     const res = await fetch(
       `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?_embed&per_page=20`,
-      { 
-        next: { revalidate: 86400 }, // caching for 1 day
-      }
+      { next: { revalidate: 86400 }, signal: controller.signal }
     );
-    
-    if (!res.ok) {
-      console.error(`Fetch failed with status: ${res.status}`);
-      return [];
-    }
-    
-    const data = await res.json();
-    console.log(`Fetched ${data.length} blogs for related posts`);
-    return data;
-  } catch (err) {
-    console.error("Blog fetch failed:", err);
+    clearTimeout(timeout);
+    if (!res.ok) return [];
+    return await res.json();
+  } catch {
     return [];
   }
 }

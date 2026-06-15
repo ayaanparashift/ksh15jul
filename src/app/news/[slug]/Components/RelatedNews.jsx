@@ -10,17 +10,21 @@ async function fetchNewsOnce() {
   if (cachedNews) return cachedNews;
   if (inflight) return inflight;
 
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 5000);
+
   inflight = fetch(
     "https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?_embed&per_page=100",
+    { signal: controller.signal }
   )
-    .then((res) => (res.ok ? res.json() : []))
+    .then((res) => { clearTimeout(timeout); return res.ok ? res.json() : []; })
     .then((data) => {
       cachedNews = data;
       inflight = null;
       return data;
     })
-    .catch((err) => {
-      console.error("News fetch failed:", err);
+    .catch(() => {
+      clearTimeout(timeout);
       inflight = null;
       return [];
     });

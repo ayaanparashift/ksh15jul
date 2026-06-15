@@ -47,33 +47,29 @@ const TabBlogs = ({ blogs, loadingOverride = false }) => {
   }, [tab, searchParams]);
 
   useEffect(() => {
-    let intervalId;
+    if (!isNews) return;
+    setLoadingNews(true);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 5000);
 
     const fetchNews = async () => {
       try {
         const res = await fetch(
           `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?categories=7&per_page=100&_embed`,
+          { signal: controller.signal }
         );
+        clearTimeout(timeout);
         if (!res.ok) throw new Error("Failed to fetch");
         const data = await res.json();
         setNewsBlogs(data);
-        // console.log(data._embedded["wp:featuredmedia"][0].source_url);
-        console.log(data);
         setLoadingNews(false);
-        clearInterval(intervalId);
-      } catch (err) {
-        console.warn("News fetch failed, will retry..");
+      } catch {
         setLoadingNews(false);
       }
     };
 
-    if (isNews) {
-      setLoadingNews(true); // ✅ Always set loading
-      fetchNews();
-      intervalId = setInterval(fetchNews, 10000);
-    }
-
-    return () => clearInterval(intervalId);
+    fetchNews();
+    return () => { clearTimeout(timeout); controller.abort(); };
   }, [isNews]);
 
   useEffect(() => {

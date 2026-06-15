@@ -702,54 +702,34 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
-const fetchBlogByPage = async () => {
-  try {
-    const resp = await fetch(
-      `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?per_page=6&page=1&_embed`,
-      { next: { revalidate: 60 }, cache: "no-store" }
-    );
-    if (!resp.ok) return [];
-    const data = await resp.json();
-    return data;
-  } catch (error) {
-    console.error("Bento2 Fetch failed:", error);
-    return [];
-  }
-};
-
 const Bento2 = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 5000);
     let ignore = false;
     const fetchData = async () => {
-      const blogData = await fetchBlogByPage();
-      if (!ignore && blogData.length >= 6) {
-        // Log dynamic paths
-        blogData.slice(3, 6).forEach((blog) => {
-          const categoryIds = Array.isArray(blog.categories)
-            ? blog.categories.map((id) => Number(id))
-            : [];
-          let currentPath = "blogs"; // default
-          if (categoryIds.includes(7)) currentPath = "news";
-          else if (categoryIds.includes(6)) currentPath = "blogs";
-
-          console.log(
-            "Blog slug:",
-            blog.slug,
-            "| Category IDs:",
-            categoryIds,
-            "| Dynamic path:",
-            currentPath
-          );
-        });
-
-        setBlogs(blogData);
+      try {
+        const resp = await fetch(
+          `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?per_page=6&page=1&_embed`,
+          { signal: controller.signal }
+        );
+        clearTimeout(timeout);
+        if (!resp.ok || ignore) return;
+        const blogData = await resp.json();
+        if (!ignore && blogData.length >= 6) {
+          setBlogs(blogData);
+        }
+      } catch {
+        // timed out or failed — blog cards stay hidden
       }
     };
     fetchData();
     return () => {
       ignore = true;
+      clearTimeout(timeout);
+      controller.abort();
     };
   }, []);
 

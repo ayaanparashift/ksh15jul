@@ -586,20 +586,6 @@ import Bento2 from "./Bento2";
 import BlogCard from "./BlogCard";
 import Bento3 from "./Bento3";
 
-const fetchBlogByPage = async () => {
-  const resp = await fetch(
-    `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?per_page=6&page=1&_embed`,
-    { next: { revalidate: 60 } }
-  );
-
-  if (!resp.ok) {
-    throw new Error("Failed to fetch blog data");
-  }
-
-  const data = await resp.json();
-  return data;
-};
-
 const BentoSlider = () => {
   const [blogs, setBlogs] = useState([]);
   const [sliding, setSliding] = useState(false);
@@ -614,16 +600,26 @@ const BentoSlider = () => {
   const mobileNext = useRef(null);
 
   useEffect(() => {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 5000);
     const fetchData = async () => {
       try {
-        const blogData = await fetchBlogByPage();
-        setBlogs(blogData);
-      } catch (error) {
-        console.error("Error fetching blogs:", error);
+        const resp = await fetch(
+          `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?per_page=6&page=1&_embed`,
+          { signal: controller.signal }
+        );
+        clearTimeout(timeout);
+        if (resp.ok) {
+          const data = await resp.json();
+          setBlogs(data);
+        }
+      } catch {
+        // timed out or failed — blogs section stays empty
       }
     };
 
     fetchData();
+    return () => { clearTimeout(timeout); controller.abort(); };
   }, []);
 
   useEffect(() => {
