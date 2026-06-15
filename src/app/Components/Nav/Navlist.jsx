@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import Link from "next/link";
 //
@@ -633,7 +634,6 @@
 
 // export default Navlist;
 
-"use client";
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";

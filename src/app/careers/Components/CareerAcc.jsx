@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import React, { useState } from "react";
 // import { motion } from "framer-motion";
@@ -117,7 +118,6 @@
 
 // export default CareerAcc;
 
-"use client";
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 

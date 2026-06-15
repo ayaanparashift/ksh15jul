@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import { motion, AnimatePresence } from "framer-motion";
 // import Link from "next/link";
@@ -99,7 +100,6 @@
 // };
 
 // export default Card;
-"use client";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 

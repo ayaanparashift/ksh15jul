@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import { useEffect, useState, useRef } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
@@ -181,7 +182,6 @@
 
 // export default ParkSlider;
 
-"use client";
 import React, { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";

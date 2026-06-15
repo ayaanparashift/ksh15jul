@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 //
 // import { motion } from "framer-motion";
@@ -65,7 +66,6 @@
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 99999999999999999999999999
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 99999999999999999999999999
 
-"use client";
 
 import { motion } from "framer-motion";
 import { isLeftHandSideExpression } from "typescript";

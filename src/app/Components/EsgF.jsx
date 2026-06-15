@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 //
 // import { motion } from "framer-motion";
@@ -246,7 +247,6 @@
 
 // export default EsgF;
 
-"use client";
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import LineHead from "./Heading/LineHead";

@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import { useState, useEffect, useRef } from "react";
 // import { motion } from "framer-motion";
@@ -106,7 +107,6 @@
 
 // export default MapSlideMob;
 
-"use client";
 import { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";

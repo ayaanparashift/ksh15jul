@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import React, { useState, useRef, useEffect } from "react";
 // import { Swiper, SwiperSlide } from "swiper/react";
@@ -263,7 +264,6 @@
 // };
 
 // export default CapabilitiesF;
-"use client";
 import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, EffectFade } from "swiper/modules";

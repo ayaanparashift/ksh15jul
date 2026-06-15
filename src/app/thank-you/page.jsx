@@ -1,3 +1,4 @@
+﻿"use client";
 // import { CircleCheck } from "lucide-react";
 // import Link from "next/link";
 // import React from "react";
@@ -109,7 +110,6 @@
 // };
 
 // export default Page;
-"use client";
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";

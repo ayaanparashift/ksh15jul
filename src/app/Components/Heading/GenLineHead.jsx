@@ -1,3 +1,4 @@
+﻿"use client";
 // // "use client";
 // //
 // // import { motion } from "framer-motion";
@@ -220,7 +221,6 @@
 
 // export default GenLineHead;
 
-"use client";
 
 import { motion } from "framer-motion";
 import { useEffect } from "react";

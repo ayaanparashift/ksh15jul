@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Navigation, FreeMode } from "swiper/modules";
@@ -147,8 +147,6 @@
 //     </div>
 //   );
 // }
-"use client";
-
 import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";

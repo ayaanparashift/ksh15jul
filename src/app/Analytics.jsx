@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import Script from "next/script";
 // import { usePathname } from "next/navigation";
@@ -175,7 +176,6 @@
 //     </>
 //   );
 // }
-"use client";
 import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";

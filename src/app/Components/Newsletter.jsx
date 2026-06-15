@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 //
 
 // const Newsletter = () => {
@@ -626,7 +626,6 @@
 // };
 
 // export default Newsletter;
-"use client";
 
 import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";

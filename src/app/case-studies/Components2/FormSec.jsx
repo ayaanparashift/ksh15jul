@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import { motion } from "framer-motion";
 // import { useRef } from "react";
@@ -662,7 +663,6 @@
 
 // export default FormSec;
 
-"use client";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";

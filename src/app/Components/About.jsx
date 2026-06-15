@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import Image from "next/image";
 // import { motion } from "framer-motion";
@@ -211,7 +212,6 @@
 
 // export default About;
 
-"use client";
 import { motion } from "framer-motion";
 import Countersec from "./Counter/Countersec";
 import ButtomComp from "./ButtonComp";

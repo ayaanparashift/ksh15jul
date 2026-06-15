@@ -1,3 +1,4 @@
+﻿"use client";
 // const TestimonialSlider = () => {
 //   return (
 //     <div className="w-full 2xl:min-h-[100vh] min-h-[110vh] min-1920:min-h-[60vh] lg:flex flex-col hidden gap-10 justify-center items-center py-16 bg-[url('/testimonial/testibg.webp')] bg-no-repeat bg-cover bg-center text-white">
@@ -107,7 +108,6 @@
 
 // export default TestimonialSlider;
 
-"use client";
 import { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, FreeMode, EffectCoverflow } from "swiper/modules";

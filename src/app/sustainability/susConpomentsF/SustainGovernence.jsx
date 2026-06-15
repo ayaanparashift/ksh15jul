@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import React, { useState } from "react";
 // import { AnimatePresence, motion } from "framer-motion";
@@ -144,7 +145,6 @@
 
 // export default SustainGovernence;
 
-"use client";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 const SustainGovernence = () => {

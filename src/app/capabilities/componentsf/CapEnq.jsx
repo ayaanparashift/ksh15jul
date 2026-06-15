@@ -1,3 +1,4 @@
+﻿"use client";
 // // CapEnq.js
 // "use client";
 // import React, { useState } from "react";
@@ -62,7 +63,6 @@
 
 // export default CapEnq;
 
-"use client";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import EnquireNow from "../../Components/EnquireNow";

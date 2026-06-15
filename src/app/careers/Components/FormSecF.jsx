@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 
 // import { motion } from "framer-motion";
@@ -1005,7 +1006,6 @@
 //     </div>
 //   );
 // }
-"use client";
 import { motion } from "framer-motion";
 import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";

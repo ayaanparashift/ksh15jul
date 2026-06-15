@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import Image from "next/image";
 // import ParkOvBtn from "./ParkOvBtn";
@@ -80,7 +81,6 @@
 
 // export default TabSec;
 
-"use client";
 import Image from "next/image";
 import ParkOvBtn from "./ParkOvBtn";
 import Link from "next/link";

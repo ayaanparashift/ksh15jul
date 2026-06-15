@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 
 // import { motion } from "framer-motion";
@@ -54,7 +55,6 @@
 
 // export default ContactSpot;
 
-"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";

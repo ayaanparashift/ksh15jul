@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import { motion } from "framer-motion";
 // const SwiperCard = ({ title, icon, content, transform, fsize }) => {
@@ -90,7 +91,6 @@
 
 // export default SwiperCard;
 
-"use client";
 import { motion } from "framer-motion";
 
 const SwiperCard = ({ title, icon, content }) => {

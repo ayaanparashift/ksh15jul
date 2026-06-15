@@ -1,3 +1,4 @@
+﻿"use client";
 // //////////////
 // //////////////
 // //////////////
@@ -9,7 +10,6 @@
 // //////////////
 // //////////////
 
-"use client";
 import React, { useState, useEffect } from "react";
 import Main from "./Main";
 import TabLineHead from "../Heading/TabLineHead";

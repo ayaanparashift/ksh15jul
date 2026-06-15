@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import { useState, useRef } from "react";
 // import { Swiper, SwiperSlide } from "swiper/react";
@@ -236,7 +237,6 @@
 //   );
 // };
 // export default SlideSectionF;
-"use client";
 import { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion, AnimatePresence } from "framer-motion";

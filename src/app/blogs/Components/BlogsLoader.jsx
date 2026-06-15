@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 
 // import { useEffect, useState } from "react";
@@ -121,7 +122,6 @@
 //   );
 // }
 
-"use client";
 import { useEffect } from "react";
 import SlideBlog from "./SlideBlog";
 import TabBlogs from "./TabBlogs";

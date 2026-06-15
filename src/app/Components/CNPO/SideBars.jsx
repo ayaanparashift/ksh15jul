@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 //
 
@@ -35,7 +36,6 @@
 
 // export default SideBars;
 
-"use client";
 
 import { motion } from "framer-motion";
 

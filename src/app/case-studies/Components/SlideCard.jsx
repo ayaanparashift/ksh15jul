@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 
 // const SlideCard = () => {
@@ -36,7 +37,6 @@
 
 // export default SlideCard;
 
-"use client";
 
 import Link from "next/link";
 

@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 
 // import { motion } from "framer-motion";
@@ -96,7 +97,6 @@
 
 // export default InvFlip;
 
-"use client";
 
 import { motion } from "framer-motion";
 import LineHead from "../../Components/Heading/LineHead";

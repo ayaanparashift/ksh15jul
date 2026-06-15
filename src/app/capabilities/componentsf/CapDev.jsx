@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import React, { useState } from "react";
 // import { AnimatePresence, motion } from "framer-motion";
@@ -118,7 +119,6 @@
 
 // export default CapDev;
 
-"use client";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 

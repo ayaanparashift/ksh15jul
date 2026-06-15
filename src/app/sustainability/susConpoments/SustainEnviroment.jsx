@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import React, { useRef, useState, useEffect } from "react";
 // import { Swiper, SwiperSlide } from "swiper/react";
@@ -130,7 +131,6 @@
 
 // export default SustainEnviroment;
 
-"use client";
 import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation } from "swiper/modules";

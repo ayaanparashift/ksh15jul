@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import React, { useState } from "react";
 // import { motion } from "framer-motion";
@@ -59,7 +60,6 @@
 // };
 
 // export default CasINSpot;
-"use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";

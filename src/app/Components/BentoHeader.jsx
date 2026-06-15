@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import { motion } from "framer-motion";
 // import LineHead from "./Heading/LineHead";
@@ -57,7 +58,6 @@
 
 // export default BentoHeader;
 
-"use client";
 import { motion } from "framer-motion";
 import LineHead from "./Heading/LineHead";
 import Image from "next/image";

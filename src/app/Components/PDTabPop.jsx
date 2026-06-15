@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import { motion } from "framer-motion";
 
@@ -110,7 +111,6 @@
 // };
 
 // export default PDTabPop;
-"use client";
 import { motion } from "framer-motion";
 
 const PDTabPop = ({ src, onClose, bwidth }) => {

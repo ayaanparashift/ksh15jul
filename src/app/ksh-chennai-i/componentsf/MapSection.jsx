@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import React, { useState } from "react";
 // import MapCard from "./MapCard";
@@ -72,7 +73,6 @@
 
 // export default MapSection;
 
-"use client";
 import React, { useState } from "react";
 import MapCard from "./MapCard";
 import MapSlider from "./MapSlider";

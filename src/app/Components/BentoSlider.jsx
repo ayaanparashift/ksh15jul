@@ -1,4 +1,4 @@
-// "use client";
+﻿"use client";
 
 // import { useState, useRef, useEffect } from "react";
 // import Link from "next/link";
@@ -576,7 +576,6 @@
 // };
 
 // export default BentoSlider;
-"use client";
 import { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, FreeMode, EffectFade } from "swiper/modules";
@@ -611,6 +610,17 @@ const BentoSlider = () => {
         clearTimeout(timeout);
         if (resp.ok) {
           const data = await resp.json();
+          // Preload all 6 images immediately
+          data.forEach((post) => {
+            const url = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
+            if (url) {
+              const link = document.createElement("link");
+              link.rel = "preload";
+              link.as = "image";
+              link.href = url;
+              document.head.appendChild(link);
+            }
+          });
           setBlogs(data);
         }
       } catch {
@@ -665,13 +675,13 @@ const BentoSlider = () => {
               className="max-w-full"
             >
               <SwiperSlide>
-                <Bento pointerEvents={!sliding} />
+                <Bento pointerEvents={!sliding} blogs={blogs.slice(0, 3)} />
               </SwiperSlide>
               <SwiperSlide>
                 <Bento3 pointerEvents={!sliding} />
               </SwiperSlide>
               <SwiperSlide>
-                <Bento2 pointerEvents={!sliding} />
+                <Bento2 pointerEvents={!sliding} blogs={blogs.slice(3, 6)} />
               </SwiperSlide>
             </Swiper>
           </div>

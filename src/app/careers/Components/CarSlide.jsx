@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import { useState } from "react";
 // import { motion } from "framer-motion";
@@ -225,7 +226,6 @@
 //     </div>
 //   );
 // };
-"use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";

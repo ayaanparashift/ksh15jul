@@ -1,5 +1,5 @@
+﻿"use client";
 // 1. Create a context file - context/TabContext.js
-"use client";
 import { createContext, useContext, useState } from "react";
 
 const TabContext = createContext();

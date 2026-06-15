@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import React, { useState, useEffect } from "react";
 // import { Toaster, toast } from "react-hot-toast";
@@ -300,7 +301,6 @@
 // };
 
 // export default ContFF;
-"use client";
 import React, { useState, useEffect } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import emailjs from "@emailjs/browser";

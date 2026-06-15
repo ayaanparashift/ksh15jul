@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 
 // import { motion } from "framer-motion";
@@ -250,7 +251,6 @@
 
 // export default CertCard;
 
-"use client";
 
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";

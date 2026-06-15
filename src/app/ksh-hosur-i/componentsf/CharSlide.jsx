@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import React, { useState, useEffect } from "react";
 // import CharCard from "./CharCard";
@@ -156,7 +157,6 @@
 
 // export default CharSlide;
 
-"use client";
 import React, { useState, useEffect } from "react";
 import CharCard from "./CharCard";
 import { motion } from "framer-motion";

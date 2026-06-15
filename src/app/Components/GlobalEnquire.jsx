@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import React, { useState } from "react";
 // import EnquireNow from "./EnquireNow";
@@ -152,7 +153,6 @@
 // };
 
 // export default GlobalEnquire;
-"use client";
 import React from "react";
 import EnquireNow from "./EnquireNow";
 import { AnimatePresence, motion } from "framer-motion";

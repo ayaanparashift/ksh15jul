@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import { motion } from "framer-motion";
 // // import LineHead from "@/app/Components/Heading/LineHead";
@@ -65,7 +66,6 @@
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> //
 
-"use client";
 import { motion } from "framer-motion";
 // import LineHead from "@/app/Components/Heading/LineHead";
 import LineHead from "../../Components/Heading/LineHead";

@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import Link from "next/link";
 //
@@ -57,7 +58,6 @@
 
 // export default MapSC;
 
-"use client";
 import Link from "next/link";
 
 import { motion } from "framer-motion";

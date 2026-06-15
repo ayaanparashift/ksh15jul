@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import React, { useState } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
@@ -125,7 +126,6 @@
 // };
 
 // export default ParkinSpot;
-"use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import EnquireNow from "../../Components/EnquireNow";

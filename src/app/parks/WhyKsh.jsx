@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import React, { useState, useRef } from "react";
 // import { Swiper, SwiperSlide } from "swiper/react";
@@ -253,7 +254,6 @@
 // };
 // export default WhyKsh;
 
-"use client";
 import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, EffectFade } from "swiper/modules";

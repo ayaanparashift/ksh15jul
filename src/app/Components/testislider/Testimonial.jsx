@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 
 // import { useRef, useState } from "react";
@@ -158,7 +159,6 @@
 //
 // {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{Final Testimonial Component}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
 
-"use client";
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";

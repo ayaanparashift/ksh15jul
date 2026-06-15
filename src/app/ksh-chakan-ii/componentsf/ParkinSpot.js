@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import React, { useState } from "react";
 // import Image from "next/image";
@@ -133,7 +134,6 @@
 // };
 
 // export default ParkinSpot;
-"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";

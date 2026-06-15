@@ -1,3 +1,4 @@
+﻿"use client";
 //
 // import LineHead from "./Heading/LineHead";
 // import Link from "next/link";
@@ -831,9 +832,7 @@
 // };
 
 // export default Bento;
-"use client";
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 
 const formatDate = (dateString) => {
@@ -856,30 +855,8 @@ const SkeletonCard = ({ className = "" }) => (
   </div>
 );
 
-const Bento = () => {
-  const [blogs, setBlogs] = useState(null);
-
-  useEffect(() => {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 5000);
-    const fetchData = async () => {
-      try {
-        const resp = await fetch(
-          `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?per_page=3&page=1&_embed`,
-          { signal: controller.signal }
-        );
-        clearTimeout(timeout);
-        if (!resp.ok) return;
-        const data = await resp.json();
-        if (data?.length === 3) setBlogs(data);
-      } catch {
-        // timed out or failed — blog cards stay as skeleton
-      }
-    };
-
-    fetchData();
-    return () => { clearTimeout(timeout); controller.abort(); };
-  }, []);
+const Bento = ({ blogs: blogsProp = [], pointerEvents }) => {
+  const blogs = blogsProp.length === 3 ? blogsProp : null;
 
   return (
     <div className="flex pt-0 md:pt-[20px] sm:flex-row flex-col gap-[20px] items-center justify-between h-fit">

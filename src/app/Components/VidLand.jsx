@@ -1,3 +1,4 @@
+﻿"use client";
 // //
 // // import { motion } from "framer-motion";
 
@@ -139,7 +140,6 @@
 // };
 
 // export default VidLand;
-"use client";
 
 import { motion } from "framer-motion";
 

@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import { motion } from "framer-motion";
 // const Card = ({ todos, activeSidebar }) => {
@@ -142,7 +143,6 @@
 //////// 9999999999999999999999999999999999
 //////// 9999999999999999999999999999999999
 //////// 9999999999999999999999999999999999
-"use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
 const getLinkData = (acbtn) => {

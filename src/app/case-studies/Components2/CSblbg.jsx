@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import Link from "next/link";
 //
@@ -73,7 +74,6 @@
 // };
 
 // export default CSbgbl;
-"use client";
 import Link from "next/link";
 
 import { useState } from "react";

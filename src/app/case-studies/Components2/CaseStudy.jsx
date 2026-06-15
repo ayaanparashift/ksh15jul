@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 
 // import { useRef } from "react";
@@ -90,7 +91,6 @@
 
 // export default CaseStudy;
 
-"use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";

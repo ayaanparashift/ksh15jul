@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 //
 // import { motion } from "framer-motion";
@@ -905,7 +906,6 @@
 // 9999999999999999999999999999999999999999
 // 9999999999999999999999999999999999999999
 
-"use client";
 import React, { useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";

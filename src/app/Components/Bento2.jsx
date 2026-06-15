@@ -1,3 +1,4 @@
+﻿"use client";
 //
 // import LineHead from "./Heading/LineHead";
 // import Link from "next/link";
@@ -210,10 +211,10 @@
 //     <div className="flex pt-0 md:pt-[20px] sm:flex-row flex-col gap-[20px] items-center justify-between h-fit">
 //       {/* Card 1 */}
 //       <Link
-//         href={`/blogs/${blogs[3].slug}`}
+//         href={`/blogs/${blogs[0].slug}`}
 //         className="relative h-[585px] md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out w-full sm:w-[33%] cursor-pointer xl:w-[385px] flex flex-col justify-end px-4 xl:px-[25px] pb-[20px] gap-[10px]"
 //         style={{
-//           background: `url(${blogs[3]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
+//           background: `url(${blogs[0]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
 //           backgroundPosition: "center center",
 //           backgroundRepeat: "no-repeat",
 //           backgroundSize: "cover",
@@ -221,7 +222,7 @@
 //       >
 //         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
 //         <p
-//           dangerouslySetInnerHTML={{ __html: blogs[3].title?.rendered }}
+//           dangerouslySetInnerHTML={{ __html: blogs[0].title?.rendered }}
 //           className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
 //         />
 //         <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
@@ -234,10 +235,10 @@
 
 //       {/* Card 2 */}
 //       <Link
-//         href={`/blogs/${blogs[4].slug}`}
+//         href={`/blogs/${blogs[1].slug}`}
 //         className="relative h-[585px] md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out w-full sm:w-[33%] cursor-pointer xl:w-[315px] flex flex-col justify-end px-4 xl:px-[31px] pb-[20px] sm:pt-[50px] gap-[10px]"
 //         style={{
-//           background: `url(${blogs[4]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
+//           background: `url(${blogs[1]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
 //           backgroundPosition: "center center",
 //           backgroundRepeat: "no-repeat",
 //           backgroundSize: "cover",
@@ -245,7 +246,7 @@
 //       >
 //         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
 //         <p
-//           dangerouslySetInnerHTML={{ __html: blogs[4].title?.rendered }}
+//           dangerouslySetInnerHTML={{ __html: blogs[1].title?.rendered }}
 //           className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
 //         />
 //         <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
@@ -259,10 +260,10 @@
 //       {/* Card 3 */}
 //       <div className="relative h-[578px] transition-[transform] duration-300 w-full sm:w-[33%] xl:w-[515px] flex justify-end flex-col-reverse sm:flex-col gap-[30px]">
 //         <Link
-//           href={`/blogs/${blogs[5].slug}`}
+//           href={`/blogs/${blogs[2].slug}`}
 //           className="relative md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out h-[479px] flex flex-col items-start justify-end px-4 xl:px-[50px] pb-[20px] gap-[10px] cursor-pointer"
 //           style={{
-//             background: `url(${blogs[5]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
+//             background: `url(${blogs[2]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
 //             backgroundPosition: "center center",
 //             backgroundRepeat: "no-repeat",
 //             backgroundSize: "cover",
@@ -270,7 +271,7 @@
 //         >
 //           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
 //           <p
-//             dangerouslySetInnerHTML={{ __html: blogs[5].title?.rendered }}
+//             dangerouslySetInnerHTML={{ __html: blogs[2].title?.rendered }}
 //             className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
 //           />
 //           <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
@@ -349,10 +350,10 @@
 //     <div className="flex pt-0 md:pt-[20px] sm:flex-row flex-col gap-[20px] items-center justify-between h-fit">
 //       {/* Card 1 */}
 //       <Link
-//         href={`/blogs/${blogs[3].slug}`}
+//         href={`/blogs/${blogs[0].slug}`}
 //         className="relative h-[585px] md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out w-full sm:w-[33%] cursor-pointer xl:w-[385px] flex flex-col justify-end px-4 xl:px-[25px] pb-[20px] gap-[10px]"
 //         style={{
-//           background: `url(${blogs[3]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
+//           background: `url(${blogs[0]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
 //           backgroundPosition: "center center",
 //           backgroundRepeat: "no-repeat",
 //           backgroundSize: "cover",
@@ -360,7 +361,7 @@
 //       >
 //         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
 //         <p
-//           dangerouslySetInnerHTML={{ __html: blogs[3].title?.rendered }}
+//           dangerouslySetInnerHTML={{ __html: blogs[0].title?.rendered }}
 //           className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
 //         />
 //         <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
@@ -373,10 +374,10 @@
 
 //       {/* Card 2 */}
 //       <Link
-//         href={`/blogs/${blogs[4].slug}`}
+//         href={`/blogs/${blogs[1].slug}`}
 //         className="relative h-[585px] md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out w-full sm:w-[33%] cursor-pointer xl:w-[315px] flex flex-col justify-end px-4 xl:px-[31px] pb-[20px] sm:pt-[50px] gap-[10px]"
 //         style={{
-//           background: `url(${blogs[4]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
+//           background: `url(${blogs[1]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
 //           backgroundPosition: "center center",
 //           backgroundRepeat: "no-repeat",
 //           backgroundSize: "cover",
@@ -384,7 +385,7 @@
 //       >
 //         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
 //         <p
-//           dangerouslySetInnerHTML={{ __html: blogs[4].title?.rendered }}
+//           dangerouslySetInnerHTML={{ __html: blogs[1].title?.rendered }}
 //           className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
 //         />
 //         <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
@@ -398,10 +399,10 @@
 //       {/* Card 3 */}
 //       <div className="relative h-[578px] transition-[transform] duration-300 w-full sm:w-[33%] xl:w-[515px] flex justify-end flex-col-reverse sm:flex-col gap-[30px]">
 //         <Link
-//           href={`/blogs/${blogs[5].slug}`}
+//           href={`/blogs/${blogs[2].slug}`}
 //           className="relative md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out h-[479px] flex flex-col items-start justify-end px-4 xl:px-[50px] pb-[20px] gap-[10px] cursor-pointer"
 //           style={{
-//             background: `url(${blogs[5]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
+//             background: `url(${blogs[2]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
 //             backgroundPosition: "center center",
 //             backgroundRepeat: "no-repeat",
 //             backgroundSize: "cover",
@@ -409,7 +410,7 @@
 //         >
 //           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
 //           <p
-//             dangerouslySetInnerHTML={{ __html: blogs[5].title?.rendered }}
+//             dangerouslySetInnerHTML={{ __html: blogs[2].title?.rendered }}
 //             className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
 //           />
 //           <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
@@ -485,10 +486,10 @@
 //     <div className="flex pt-0 md:pt-[20px] sm:flex-row flex-col gap-[20px] items-center justify-between h-fit">
 //       {/* Card 1 */}
 //       <Link
-//         href={`/blogs/${blogs[3].slug}`}
+//         href={`/blogs/${blogs[0].slug}`}
 //         className="relative h-[585px] md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out w-full sm:w-[33%] cursor-pointer xl:w-[385px] flex flex-col justify-end px-4 xl:px-[25px] pb-[20px] gap-[10px]"
 //         style={{
-//           background: `url(${blogs[3]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
+//           background: `url(${blogs[0]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
 //           backgroundPosition: "center center",
 //           backgroundRepeat: "no-repeat",
 //           backgroundSize: "cover",
@@ -496,7 +497,7 @@
 //       >
 //         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
 //         <p
-//           dangerouslySetInnerHTML={{ __html: blogs[3].title?.rendered }}
+//           dangerouslySetInnerHTML={{ __html: blogs[0].title?.rendered }}
 //           className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
 //         />
 //         <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
@@ -509,10 +510,10 @@
 
 //       {/* Card 2 */}
 //       <Link
-//         href={`/blogs/${blogs[4].slug}`}
+//         href={`/blogs/${blogs[1].slug}`}
 //         className="relative h-[585px] md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out w-full sm:w-[33%] cursor-pointer xl:w-[315px] flex flex-col justify-end px-4 xl:px-[31px] pb-[20px] sm:pt-[50px] gap-[10px]"
 //         style={{
-//           background: `url(${blogs[4]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
+//           background: `url(${blogs[1]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
 //           backgroundPosition: "center center",
 //           backgroundRepeat: "no-repeat",
 //           backgroundSize: "cover",
@@ -520,7 +521,7 @@
 //       >
 //         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
 //         <p
-//           dangerouslySetInnerHTML={{ __html: blogs[4].title?.rendered }}
+//           dangerouslySetInnerHTML={{ __html: blogs[1].title?.rendered }}
 //           className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
 //         />
 //         <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
@@ -534,10 +535,10 @@
 //       {/* Card 3 */}
 //       <div className="relative h-[578px] transition-[transform] duration-300 w-full sm:w-[33%] xl:w-[515px] flex justify-end flex-col-reverse sm:flex-col gap-[30px]">
 //         <Link
-//           href={`/blogs/${blogs[5].slug}`}
+//           href={`/blogs/${blogs[2].slug}`}
 //           className="relative md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out h-[479px] flex flex-col items-start justify-end px-4 xl:px-[50px] pb-[20px] gap-[10px] cursor-pointer"
 //           style={{
-//             background: `url(${blogs[5]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
+//             background: `url(${blogs[2]?.yoast_head_json?.schema?.["@graph"]?.[0]?.thumbnailUrl})`,
 //             backgroundPosition: "center center",
 //             backgroundRepeat: "no-repeat",
 //             backgroundSize: "cover",
@@ -545,7 +546,7 @@
 //         >
 //           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
 //           <p
-//             dangerouslySetInnerHTML={{ __html: blogs[5].title?.rendered }}
+//             dangerouslySetInnerHTML={{ __html: blogs[2].title?.rendered }}
 //             className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
 //           />
 //           <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
@@ -618,10 +619,10 @@
 //     <div className="flex pt-0 md:pt-[20px] sm:flex-row flex-col gap-[20px] items-center justify-between h-fit">
 //       {/* Card 1 */}
 //       <Link
-//         href={`/blogs/${blogs[3].slug}`}
+//         href={`/blogs/${blogs[0].slug}`}
 //         className="relative h-[585px] md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out w-full sm:w-[33%] cursor-pointer xl:w-[385px] flex flex-col justify-end px-4 xl:px-[25px] pb-[20px] gap-[10px]"
 //         style={{
-//           background: `url(${blogs[3]?._embedded?.["wp:featuredmedia"]?.[0]?.source_url})`,
+//           background: `url(${blogs[0]?._embedded?.["wp:featuredmedia"]?.[0]?.source_url})`,
 //           backgroundPosition: "center center",
 //           backgroundRepeat: "no-repeat",
 //           backgroundSize: "cover",
@@ -629,7 +630,7 @@
 //       >
 //         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
 //         <p
-//           dangerouslySetInnerHTML={{ __html: blogs[3].title?.rendered }}
+//           dangerouslySetInnerHTML={{ __html: blogs[0].title?.rendered }}
 //           className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
 //         />
 //         <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
@@ -642,10 +643,10 @@
 
 //       {/* Card 2 */}
 //       <Link
-//         href={`/blogs/${blogs[4].slug}`}
+//         href={`/blogs/${blogs[1].slug}`}
 //         className="relative h-[585px] md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out w-full sm:w-[33%] cursor-pointer xl:w-[315px] flex flex-col justify-end px-4 xl:px-[31px] pb-[20px] sm:pt-[50px] gap-[10px]"
 //         style={{
-//           background: `url(${blogs[4]?._embedded?.["wp:featuredmedia"]?.[0]?.source_url})`,
+//           background: `url(${blogs[1]?._embedded?.["wp:featuredmedia"]?.[0]?.source_url})`,
 //           backgroundPosition: "center center",
 //           backgroundRepeat: "no-repeat",
 //           backgroundSize: "cover",
@@ -653,7 +654,7 @@
 //       >
 //         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
 //         <p
-//           dangerouslySetInnerHTML={{ __html: blogs[4].title?.rendered }}
+//           dangerouslySetInnerHTML={{ __html: blogs[1].title?.rendered }}
 //           className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
 //         />
 //         <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
@@ -667,10 +668,10 @@
 //       {/* Card 3 */}
 //       <div className="relative h-[578px] transition-[transform] duration-300 w-full sm:w-[33%] xl:w-[515px] flex justify-end flex-col-reverse sm:flex-col gap-[30px]">
 //         <Link
-//           href={`/blogs/${blogs[5].slug}`}
+//           href={`/blogs/${blogs[2].slug}`}
 //           className="relative md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out h-[479px] flex flex-col items-start justify-end px-4 xl:px-[50px] pb-[20px] gap-[10px] cursor-pointer"
 //           style={{
-//             background: `url(${blogs[5]?._embedded?.["wp:featuredmedia"]?.[0]?.source_url})`,
+//             background: `url(${blogs[2]?._embedded?.["wp:featuredmedia"]?.[0]?.source_url})`,
 //             backgroundPosition: "center center",
 //             backgroundRepeat: "no-repeat",
 //             backgroundSize: "cover",
@@ -678,7 +679,7 @@
 //         >
 //           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
 //           <p
-//             dangerouslySetInnerHTML={{ __html: blogs[5].title?.rendered }}
+//             dangerouslySetInnerHTML={{ __html: blogs[2].title?.rendered }}
 //             className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
 //           />
 //           <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
@@ -698,51 +699,22 @@
 // };
 
 // export default Bento2;
-"use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 
-const Bento2 = () => {
-  const [blogs, setBlogs] = useState([]);
+const Bento2 = ({ blogs: blogsProp = [], pointerEvents }) => {
+  const blogs = blogsProp;
 
-  useEffect(() => {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 5000);
-    let ignore = false;
-    const fetchData = async () => {
-      try {
-        const resp = await fetch(
-          `https://wordpress-819107-5295407.cloudwaysapps.com/wp-json/wp/v2/posts?per_page=6&page=1&_embed`,
-          { signal: controller.signal }
-        );
-        clearTimeout(timeout);
-        if (!resp.ok || ignore) return;
-        const blogData = await resp.json();
-        if (!ignore && blogData.length >= 6) {
-          setBlogs(blogData);
-        }
-      } catch {
-        // timed out or failed — blog cards stay hidden
-      }
-    };
-    fetchData();
-    return () => {
-      ignore = true;
-      clearTimeout(timeout);
-      controller.abort();
-    };
-  }, []);
-
-  if (blogs.length < 6) return null;
+  if (blogs.length < 3) return null;
 
   return (
     <div className="flex pt-0 md:pt-[20px] sm:flex-row flex-col gap-[20px] items-center justify-between h-fit">
       {/* Card 1 */}
       <Link
-        href={`/blogs/${blogs[3].slug}`} // still hardcoded, dynamic path logged above
+        href={`/blogs/${blogs[0].slug}`} // still hardcoded, dynamic path logged above
         className="relative h-[585px] md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out w-full sm:w-[33%] cursor-pointer xl:w-[385px] flex flex-col justify-end px-4 xl:px-[25px] pb-[20px] gap-[10px]"
         style={{
-          background: `url(${blogs[3]?._embedded?.["wp:featuredmedia"]?.[0]?.source_url})`,
+          background: `url(${blogs[0]?._embedded?.["wp:featuredmedia"]?.[0]?.source_url})`,
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -750,7 +722,7 @@ const Bento2 = () => {
       >
         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
         <p
-          dangerouslySetInnerHTML={{ __html: blogs[3].title?.rendered }}
+          dangerouslySetInnerHTML={{ __html: blogs[0].title?.rendered }}
           className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
         />
         <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
@@ -763,10 +735,10 @@ const Bento2 = () => {
 
       {/* Card 2 */}
       <Link
-        href={`/blogs/${blogs[4].slug}`}
+        href={`/blogs/${blogs[1].slug}`}
         className="relative h-[585px] md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out w-full sm:w-[33%] cursor-pointer xl:w-[315px] flex flex-col justify-end px-4 xl:px-[31px] pb-[20px] sm:pt-[50px] gap-[10px]"
         style={{
-          background: `url(${blogs[4]?._embedded?.["wp:featuredmedia"]?.[0]?.source_url})`,
+          background: `url(${blogs[1]?._embedded?.["wp:featuredmedia"]?.[0]?.source_url})`,
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -774,7 +746,7 @@ const Bento2 = () => {
       >
         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
         <p
-          dangerouslySetInnerHTML={{ __html: blogs[4].title?.rendered }}
+          dangerouslySetInnerHTML={{ __html: blogs[1].title?.rendered }}
           className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
         />
         <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">
@@ -788,10 +760,10 @@ const Bento2 = () => {
       {/* Card 3 */}
       <div className="relative h-[578px] transition-[transform] duration-300 w-full sm:w-[33%] xl:w-[515px] flex justify-end flex-col-reverse sm:flex-col gap-[30px]">
         <Link
-          href={`/blogs/${blogs[5].slug}`}
+          href={`/blogs/${blogs[2].slug}`}
           className="relative md:hover:translate-y-[-10px] transition-[transform] duration-300 ease-in-out h-[479px] flex flex-col items-start justify-end px-4 xl:px-[50px] pb-[20px] gap-[10px] cursor-pointer"
           style={{
-            background: `url(${blogs[5]?._embedded?.["wp:featuredmedia"]?.[0]?.source_url})`,
+            background: `url(${blogs[2]?._embedded?.["wp:featuredmedia"]?.[0]?.source_url})`,
             backgroundPosition: "center center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -799,7 +771,7 @@ const Bento2 = () => {
         >
           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent z-40" />
           <p
-            dangerouslySetInnerHTML={{ __html: blogs[5].title?.rendered }}
+            dangerouslySetInnerHTML={{ __html: blogs[2].title?.rendered }}
             className="fsans-400 text-[22px] leading-[130%] text-white relative z-50 line-clamp-3"
           />
           <p className="fsans-400 text-[16px] leading-[130%] text-white opacity-50 relative z-50">

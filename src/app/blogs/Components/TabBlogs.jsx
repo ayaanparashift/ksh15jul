@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import { useState } from "react";
 // import BlogCard from "./BlogCard";
@@ -1950,7 +1951,6 @@
 //
 //
 //
-"use client";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation"; // ✅ import this
 import ContentCard from "./ContentCard";

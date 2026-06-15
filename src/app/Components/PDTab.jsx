@@ -1,3 +1,4 @@
+﻿"use client";
 // "use client";
 // import { useState, useRef } from "react";
 // import { Swiper, SwiperSlide } from "swiper/react";
@@ -602,7 +603,6 @@
 //
 //
 
-"use client";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import PDTabPop from "./PDTabPop";
