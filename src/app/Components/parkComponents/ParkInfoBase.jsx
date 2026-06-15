@@ -24,6 +24,14 @@ const ParkInfoBase = ({
   const openCertModal = () => setShowCertModal(true);
   const closeCertModal = () => setShowCertModal(false);
 
+  const certSource = pathname.includes("ksh-hosur-i")
+    ? "KSH Hosur Park I"
+    : pathname.includes("ksh-chakan-iv")
+    ? "KSH Chakan Park IV"
+    : pathname.includes("ksh-chakan-iii")
+    ? "KSH Chakan Park III"
+    : "";
+
   useEffect(() => {
     const anyOpen = showEnquire || showCertModal;
     document.body.style.overflow = anyOpen ? "hidden" : "auto";
@@ -65,8 +73,7 @@ const ParkInfoBase = ({
                 <p className="fsans-600 text-[#00000050] text-[16px]">{note}</p>
               </div>
             ) : null}
-            Certification Download CTA — shown only on ksh-hosur-i
-            {pathname.includes("ksh-hosur-i") ? (
+            {(pathname.includes("ksh-hosur-i") || pathname.includes("ksh-chakan-iv") || pathname.includes("ksh-chakan-iii")) ? (
               <div className="pt-4">
                 <button
                   onClick={openCertModal}
@@ -123,7 +130,7 @@ const ParkInfoBase = ({
       </AnimatePresence>
 
       {/* Certification Download Modal */}
-      <CertDownloadModal isOpen={showCertModal} onClose={closeCertModal} source="KSH Hosur Park I" />
+      <CertDownloadModal isOpen={showCertModal} onClose={closeCertModal} source={certSource} />
     </>
   );
 };
